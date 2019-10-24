@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-10-22 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-10-22.html" />
+<meta name="description" content="Highlights[ ]
+
+Recent code merges
+	Lightweight Wallet API support
+		Sub-addresses" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-10-22.html" />
+
+    <title>DevMeeting 2017-10-22 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-10-22.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-10-22</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="12" role="article" about="/index.php/article/devmeeting_2017-10-22" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-10-22" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-10-22T20:11:11+00:00">Sun, 10/22/2017 - 16:11</span>
+          <span property="schema:dateCreated" content="2017-10-22T20:11:11+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-10-22&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>Recent code merges
+	<ul><li>Lightweight Wallet API support</li>
+		<li>Sub-addresses</li>
+	</ul></li>
+	<li>Bugfix release(0.11.0.1) may be as early as October 23, 2017 (Monday). (This will *not* enable the features above.)</li>
+	<li>Discussions involving dotnetrussel's (Verge) twitter bot.
+	<ul><li>It's really not worth rebuttal as there's no vulnerability.</li>
+		<li>It's just watching for connections on a port via "netstat". Not indicative of a Monero user or transaction.</li>
+		<li>dEBRUYNE may write something official up.</li>
+	</ul></li>
+	<li>Discussions of the Monero Hardware wallet will likely migrate to the Monero Community meetings.</li>
+	<li>redfish and hyc are working through some database sync and corruption issues.</li>
+</ul><p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-10-22&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. Any additional meeting items
+&lt;fluffypony&gt; 5. Confirm next meeting date/time
+* rehrar (~Critical@173-12-204-46-Albuquerque.hfc.comcastbusiness.net) has joined
+&lt;surae&gt; howdy!
+&lt;fluffypony&gt; and an additional point that I guess we can put in between 3 and 4: "Should regular hardware development reporting and discussion be part of #monero-dev (biweekly meetings), #monero-community (biweekly meetings), or something else?"
+&lt;msvb-lab&gt; Hello.
+&lt;rbrunner&gt; Grüezi mitenand
+&lt;rehrar&gt; I thought that could fall under 4., sorry
+&lt;ArticMine&gt; hi
+&lt;hyc&gt; hi
+&lt;iDunk&gt; Hi.
+&lt;endogenic&gt; Hi fluffypony!
+&lt;rehrar&gt; hi endogenic
+&lt;Jaquee&gt; hey
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; moneromooo / hyc / luigi1111 you guys around?
+&lt;hyc&gt; nope
+* goksinen has quit (Remote host closed the connection)
+&lt;moneromooo&gt; I'm here
+&lt;endogenic&gt; o/ rehrar
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; so moving on to 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; loads of merges
+&lt;fluffypony&gt; the big ones are lightweight wallet API support
+&lt;fluffypony&gt; and subaddresses
+* goksinen (~pgupta@94.119.64.18) has joined
+&lt;endogenic&gt; Omg
+&lt;surae&gt; at MRL, i wrote up a prototype for the spectre blockchain algorithm. i'm pushing it to my github later today. it is functional, but can be made prettier and more efficient, but it's pretty much ready for stress testing so we can really see whether it's a waste of energy or not
+* POJO_ (~quassel@078088029217.dynamic-ra-06.vectranet.pl) has joined
+* POJO_ has quit (Remote host closed the connection)
+* Huskar has quit (Quit: Konversation terminated!)
+&lt;fluffypony&gt; we also have a number of PRs going into the 0.11 branch, specifically: 2478, 2493, 2514, 2632, 2639, 2654
+&lt;fluffypony&gt; and then we'll tag and release 0.11.1
+&lt;moneromooo&gt; yay ^_^
+&lt;hyc&gt; :D
+* monero (~monero@192.30.252.45) has joined
+&lt;monero&gt; [monero] shmacoshmuesday closed pull request #2671: Add Dependencies for Fedora (master...master) https://git.io/vdyMC
+* monero (~monero@192.30.252.45) has left
+&lt;surae&gt; the research-lab project has a PR waiting to be merged from my github on a similar note
+* POJO has quit (Ping timeout: 248 seconds)
+&lt;fluffypony&gt; surae: ok cool I'll merge it now
+&lt;hyc&gt; that spectre stuff sounds great
+&lt;rehrar&gt; link to spectre stuff?
+&lt;surae&gt; hyc they just roll with this idea of having 10 blocks a second, it's nutters
+&lt;surae&gt; https://eprint.iacr.org/2016/1159.pdf
+&lt;rehrar&gt; thanks
+&lt;surae&gt; zooko mentioned it to me, btw. :P gotta give credit where credit is due
+&lt;fluffypony&gt; ok moving on to 3
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+* goksinen has quit (Ping timeout: 252 seconds)
+&lt;hyc&gt; is the set of patches for 11.0.1 pretty well settled?
+&lt;fluffypony&gt; unless there are some others beyond that list
+&lt;moneromooo&gt; I just cherry picked the OpenBSD one earlier, but it's low impact.
+&lt;fluffypony&gt; I'll add that to the list
+&lt;fluffypony&gt; ok so then I'd like to bring up the latest Verge FUD for discussion
+&lt;fluffypony&gt; for those that haven't seen it
+&lt;fluffypony&gt; https://twitter.com/moneroident
+&lt;fluffypony&gt; https://dotnetrussell.com/index.php/2017/10/21/locating-monero-users-via-transaction-broadcasts/
+&lt;fluffypony&gt; https://github.com/DotNetRussell/MoneroUserScraper
+&lt;fluffypony&gt; it's literally just netstat
+&lt;moneromooo&gt; It'd be easier to just run print_cn or print_pl.
+&lt;fluffypony&gt; and then it excludes some nodes that he decided are "server nodes" (whatever that means)
+&lt;hyc&gt; lol
+&lt;fluffypony&gt; moneromooo: too sophisticated
+&lt;fluffypony&gt; lol
+&lt;endogenic&gt; Lol
+&lt;fluffypony&gt; that said, I have received several messages from people who are quite concerned that Monero is not private
+&lt;surae&gt; well
+&lt;fluffypony&gt; oh - there's also this fun article: https://bitsonline.com/monero-exploit-threatens-privacy/
+&lt;fluffypony&gt; lol
+&lt;surae&gt; i haven't seen these latest criticisms at all yet
+&lt;surae&gt; but i have to ask
+&lt;rbrunner&gt; The "fun article" is really bad
+&lt;surae&gt; what is our policy going to be for writing responses to criticisms?
+&lt;surae&gt; because
+&lt;surae&gt; consider the miller and kumar papers, right? long papers. writing responses takes a long time...
+&lt;pigeons&gt; DoS by stupid claims
+&lt;endogenic&gt; rbrunner: looks more like a hit piece
+&lt;fluffypony&gt; the anonymint post is even longer, and we largely ignored it
+&lt;fluffypony&gt; because it was a massive waste of time
+&lt;saddam&gt; If you don't want to be on his "list", just leave your monerod running 24/7
+&lt;moneromooo&gt; I say ignore the obvious bullshit. People gonna pump and dump anyway.
+&lt;surae&gt; not all their criticisms are false (although a lot are outdated), but my point is this: if someone writes a 1000 word article claiming something about monero's privacy, it will in general take 9000 words to "debunk" the false parts and explain why the true parts are either part of the design or already on our roadmap for improvement
+&lt;endogenic&gt; Arent there other cases of having published this data anyway? Like monero node maps
+&lt;hyc&gt; 'The amount of energy required to dispel bullshit is an order of magnitude greater than that required to propagate it'.
+&lt;hyc&gt; 1 reply 1 retweet 0 likes
+&lt;vtnerd&gt; wow, that article is really dumb
+&lt;surae&gt; hyc ha, i was close with a factor of 9
+&lt;endogenic&gt; So alternative to refutation is be like yeah get with the times
+&lt;surae&gt; i liked the monero challenge thing
+&lt;surae&gt; i *love* that idea
+&lt;gingeropolous&gt; how close is i2p?
+&lt;gingeropolous&gt; er, kovri
+&lt;fluffypony&gt; gingeropolous: still a little ways away - but we'd still need to refute this criticism even if it was in place
+&lt;endogenic&gt; Also want to know
+&lt;endogenic&gt; gingeropolous:
+&lt;fluffypony&gt; because aiui the way that Verge works is that it's only Tor or i2p
+&lt;fluffypony&gt; which is open to isolation and Sybil attacks, but they don't care about that
+&lt;moneromooo&gt; I'm not sure how this is complicated. If you want your IP to be hidden, use Tor. Like everyone else.
+&lt;fluffypony&gt; moneromooo: in the same way that ZCash can say "if you want your transaction to be hidden use shielded addresses"
+&lt;ArticMine&gt; Kovri will fix all of this anyway
+&lt;pigeons&gt; there are people that try to connect to as many nodes as possible and record which transactions they first see relayed from those nodes, but that's not new
+&lt;moneromooo&gt; Well, that is true, no ?
+&lt;gingeropolous&gt; i mean, the only response is to explain how blockchains and the internet works
+&lt;fluffypony&gt; yes - but if it's not the default mode then it's not worth talking about
+&lt;moneromooo&gt; OK. Then we're not anonymous, and we'll be once kovri, done.
+&lt;moneromooo&gt; Much easier than dealing with the bullshit ^_^
+&lt;surae&gt; fluffypony "we'd still need to refute this criticism" &lt;--- i totally disagree. this is not only a known issue, we are building kovri around solving it
+&lt;pigeons&gt; if people were surprised by this its good they are aware of it
+&lt;fluffypony&gt; anonimal: what are your thoughts on us spending some time building out the mixnet stuff, and bundling Tor until Kovri is ready?
+&lt;fluffypony&gt; surae: their netstat bot would continue to publish node IPs and they'd continue to push that agenda
+&lt;endogenic&gt; Surae: arent those two facts what makes refutation possible? :p
+&lt;endogenic&gt; Make
+&lt;moneromooo&gt; fluffypony: is that takes time, I'm against it. It's just wasting time for something which wasn't in good faith to begin with.
+&lt;surae&gt; fluffypony: what refutation would get them to stop publishing node IPs?
+&lt;moneromooo&gt; Or, at least, I won't waste my own time on it.
+&lt;rehrar&gt; The only valid criticsm I think they have (but correct me if I'm wrong) is that in a country where Monero is 100% outlawed, the government could see an IP address connecting to the Monero network (can't see if/when transactions are sent though), and that person could get in trouble. But that's the only information they have, no?
+&lt;Yohkii&gt; Just make a bot that does the same to verge, including where transactions come and go
+&lt;Yohkii&gt; less effort
+&lt;rbrunner&gt; Wouldn't they happily go on and publish Tor IP's anyway, people would not know these
+&lt;fluffypony&gt; moneromooo: we have to build out the ipv4 / mixnet stuff anyway, we'd just be plugging Tor in instead of Kovri till Kovri is ready, so it's 95% useful work, 5% effort that will be replaced later
+&lt;surae&gt; fluffypony: oh your recommended tactic here, then, is to first push tor until kovri is ready?
+&lt;fluffypony&gt; surae: none - but a published refutation would allow us to point people to it - the getmonero.org post responding to the Miller paper is my go-to when people ask about it
+&lt;fluffypony&gt; surae: yes that's what I was thinking
+&lt;dEBRUYNE&gt; I can write a post fwiw
+&lt;moneromooo&gt; OK, if it's shared stuff then that's good.
+&lt;dEBRUYNE&gt; But would probably need some help on the really technical stuff
+&lt;rbrunner&gt; Is it even technical? Internet 1x1: IPs!
+&lt;gingeropolous&gt; im kinda confused - our proposed kovri implementation was gonna keep blocks on clearnet anyway, so this "attack" would still be able to "identify" monero users
+&lt;moneromooo&gt; AIUI, it can do both.
+&lt;gingeropolous&gt; are we just gonna switch too 100% kobri, all the time?
+&lt;moneromooo&gt; Well, it will be able to do both :)
+&lt;gingeropolous&gt; right. but the bandwidth.
+&lt;dEBRUYNE&gt; gingeropolous: There was supposed to be i2p only | i2p/ip | ip only
+&lt;fluffypony&gt; gingeropolous: yes that's what I was saying to surae
+&lt;dEBRUYNE&gt; iirc
+&lt;dEBRUYNE&gt; Also, iirc if you push blocks over i2p you might incur latency issues, which increases the probability of an orphan
+&lt;fluffypony&gt; yes
+&lt;Slack_2&gt; &lt;richie&gt; (moneromoo, do you have a slack account i can DM, dont' wannt interrupt what you guys are doing)
+&lt;moneromooo&gt; No
+&lt;pigeons&gt; which transactions came from which nodes/ips affects privacy more than knowing you run monero. if you relayed a block first, yeah it could make your pool a traget, but there are other mitigations for that
+&lt;moneromooo&gt; Just post the URL in #monero
+* anonimal has quit (Ping timeout: 248 seconds)
+&lt;rbrunner&gt; I have a hunch the Verge people will use the log of this meeting to show that "Monero devs are in panic"...
+&lt;fluffypony&gt; rbrunner: lol
+&lt;endogenic&gt; Is this issue within sarang’s wheelhouse? I know he was looking into working on kovri
+&lt;gingeropolous&gt; pigeons, yeah I get that. but this "criticism" doesn't even address that.
+&lt;gingeropolous&gt; its just ermagerd ips
+&lt;pigeons&gt; gingeropolous: well that isnt interesting
+&lt;fluffypony&gt; gingeropolous: great summary
+&lt;fluffypony&gt; lol
+&lt;fluffypony&gt; ok well we'll wait for anonimal to comment on it, and we can go from there
+&lt;gingeropolous&gt; i know. but ppl have tried to explain the cost of actual sybil using the public ips and trying to track txs with this "weakness"
+&lt;fluffypony&gt; let's move on to 3. b.
+* anonimal (~anonimal@gateway/tor-sasl/anonimal) has joined
+&lt;fluffypony&gt; Should regular hardware development reporting and discussion be part of #monero-dev (biweekly meetings), #monero-community (biweekly meetings), or something else?
+&lt;msvb-lab&gt; There are some good reasons that hardware development progress reports and discussion should be moved from the biweekly #monero-dev schedule (where the accepted forum proposal mandates.)
+&lt;msvb-lab&gt; So unless anyone strongly objects, it's gone from now on and will become part of either (1) #monero-community meetings or (2) #monero-hardware meetings.
+&lt;msvb-lab&gt; Whoever wants to know if it will be (1) or (2) should attend next week's #community meeting which will decide, okay?
+&lt;moneromooo&gt; What's the difference between #monero-aparataro and #monero-hardware btw ?
+&lt;moneromooo&gt; Both seem empty.
+* lkolstad (~ljk@c-24-16-12-195.hsd1.wa.comcast.net) has joined
+&lt;msvb-lab&gt; I created aparataro but then changed it to hardware.
+&lt;moneromooo&gt; Ah OK.
+&lt;msvb-lab&gt; ...since the IRC channel 'community' is english non esperanto.
+&lt;msvb-lab&gt; So I wanted to be consistent there.
+&lt;msvb-lab&gt; Speaking of esperanto, before the hardware story fades into the sunset, here's a new topic.
+&lt;msvb-lab&gt; We tried and failed to give RFC-HWALLET-1 an esperanto name, so will rename our repository 'Sekura' to rfchwallet, okay?
+&lt;msvb-lab&gt; github.com/monero-project/rfchwallet
+* ncr (~ncr@c-24-130-225-90.hsd1.ca.comcast.net) has joined
+&lt;endogenic&gt; I enjoy naming. I’ll let you know later if i have some suggestions
+&lt;msvb-lab&gt; We need a person to handle surveying a number of related Monero groups in order to get a good name that doesn't conflict in any way.
+&lt;msvb-lab&gt; No person is able to take this role, so if it appears it will be much later after risk of failure drops.
+&lt;msvb-lab&gt; endogenic: Thanks
+* dkoleary88 (401f605e@gateway/web/freenode/ip.64.31.96.94) has joined
+&lt;msvb-lab&gt; 73.
+&lt;fluffypony&gt; ok endogenic is in charge of naming
+&lt;fluffypony&gt; Chief Naming Officer
+&lt;msvb-lab&gt; Ha.
+&lt;endogenic&gt; 👷
+&lt;hyc&gt; one of the hardest problems in CS. good man
+&lt;msvb-lab&gt; Report on a privacy conference CCC puts on which I did a workshop at today after the meeting finishes.
+&lt;msvb-lab&gt; There was Monero activity and considerable interest...
+&lt;endogenic&gt; Now we just need to let them in on kovri and...
+&lt;hyc&gt; next?
+&lt;endogenic&gt; I think monero-hardware would be a better venue
+&lt;endogenic&gt; For hardware specific mtgs
+&lt;endogenic&gt; Status updates propagate anyway
+* vtnerd_ (~vtnerd_@2607:fb90:359:a8b3:8055:e7fc:77f5:9386) has joined
+&lt;msvb-lab&gt; endogenic: I'll let the #community folks know that's your opinion. They won't agree.
+&lt;endogenic&gt; And maybe i can figure out a way to give michael op :p
+&lt;endogenic&gt; Oh ok
+&lt;msvb-lab&gt; op? An operation?
+&lt;endogenic&gt; I guess all ffs mtgs now go in community lolol
+&lt;endogenic&gt; Op -&gt; operator status
+&lt;msvb-lab&gt; Nice.
+&lt;msvb-lab&gt; Even better, I want business cards like fluffypony.
+&lt;fluffypony&gt; lol
+* dkoleary_ (~dkoleary8@64-31-96-94.static-ip.telepacific.net) has joined
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; let's move on to 4. Any additional meeting items
+* erciccione_ (~ErCiccion@109.163.234.142) has joined
+* ErCiccione has quit (Read error: Connection reset by peer)
+&lt;fluffypony&gt; anything up for discussion?
+&lt;moneromooo&gt; When are you releasing 0.11.0.1 ? Before tomorrowish ?
+&lt;rehrar&gt; luigi is site repo maintainer now right?
+&lt;fluffypony&gt; moneromooo: it'll be tomorrow - but I'll do the merges now and start building
+&lt;fluffypony&gt; rehrar: yes
+&lt;moneromooo&gt; OK, thanks.
+* dkoleary_ is now known as dkoleary88_
+* dkoleary88 has quit (Quit: Page closed)
+* dkoleary88_ is now known as dkoleary88
+&lt;redfish&gt; regarding https://github.com/monero-project/monero/issues/2545#issuecomment-337374284
+&lt;redfish&gt; just wanted to put in a vote for db-safe to be the default during sync as well
+&lt;fluffypony&gt; hyc: thoughts? ^^
+&lt;redfish&gt; (i ended up running a node for months with a corrupt blockchain DB)
+&lt;rbrunner&gt; Is the speed difference known on a typical PC?
+&lt;hyc&gt; it'll beat most drives to shit. and be slow.
+&lt;redfish&gt; we can add to the readme in the "Running monerod" section, that "you have an option to speed up, if you can be confident that the node will not fail while synching"
+&lt;hyc&gt; I mean, most consumer storage devices will probably see premature death.
+&lt;rbrunner&gt; Death by Monero :)
+&lt;redfish&gt; hyc: why? it won't matter after sync, and sync is temporary
+&lt;hyc&gt; ?
+&lt;redfish&gt; didn't you say daemon is in db-safe mode after sync completes, already.
+&lt;hyc&gt; yes
+&lt;redfish&gt; so, why would increasing the load on the disk during the hours/few days of syncing make that big of a difference on the disk lifetime?
+&lt;hyc&gt; during normal operation whenyou're already sync'd, you're getting 1 new data item per 2 minutes.
+&lt;redfish&gt; (btw, sidenote: with slow disks, despite there being so little new data, it spends 90% of those 2 minutes reading)
+&lt;gingeropolous&gt; hrm... perhaps we should make kovri the default network interface when it is ready. The only nodes that really could be affected by delays are pools. We should be private by default. If a pool wants to get gains by running over clearnet, they can run a flag. A regular user isn't affected if they are 2-4 minutes behind the current state.
+&lt;redfish&gt; my disks right now are so slow, that the node actually can't keep up. (Disk usage is continuous, monerod in D state continously)
+&lt;redfish&gt; but this is sidetracking. I'm still not clear on hyc's point about db-safe during sync being a disk killer.
+&lt;hyc&gt; if you had more RAM it woukd have more cached, and less read load
+&lt;redfish&gt; yeah, there's only 2GB, of which only ~1GB is free for the caching...
+&lt;hyc&gt; but large number of IOs spread over 2 minutes is gentler than spit out as fast as possible
+&lt;hyc&gt; SSDs need time for background wear-leveling to do its thing
+&lt;fluffypony&gt; let's wind it down and continue this discussion after the meeting
+&lt;redfish&gt; are you referring to operation after sync or during sync?
+&lt;hyc&gt; ok
+&lt;fluffypony&gt; is everyone happy with Nov 5th as the next meeting date ?
+&lt;hyc&gt; sure
+&lt;fluffypony&gt; ok cool - meeting over
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/12","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"12"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-03-04 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-03-04.html" />
+<meta name="description" content="Highlights
+
+Ledger (Blue/Nano S) code has been merged
+	There should be a final push of patches this week.
+	The exact height of the fork will be published in the next few days.
+	General consensus points to a new default ringsize of 7.
+	Bulletproof audit funding (FFS) is scheduled for Monday, March 5th." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-03-04.html" />
+
+    <title>DevMeeting 2018-03-04 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-03-04.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-03-04</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="7" role="article" about="/index.php/article/devmeeting_2018-03-04" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-03-04" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-03-04T21:04:41+00:00">Sun, 03/04/2018 - 16:04</span>
+          <span property="schema:dateCreated" content="2018-03-04T21:04:41+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights</h1>
+
+<ul><li>Ledger (Blue/Nano S) code has been merged</li>
+	<li>There should be a final push of patches this week.</li>
+	<li>The exact height of the fork will be published in the next few days.</li>
+	<li>General consensus points to a new default ringsize of 7.</li>
+	<li>Bulletproof audit funding (FFS) is scheduled for Monday, March 5th. Sarang will have more info.</li>
+	<li>If you're interested in a *technical* discussion of key re-use mitigations, <a class="external free" href="https://github.com/monero-project/monero/pull/3322" rel="nofollow">https://github.com/monero-project/monero/pull/3322</a></li>
+</ul><p> </p>
+
+<h1>Full Log</h1>
+
+<pre>
+12:01 PM &lt;rehrar&gt; https://github.com/monero-project/meta/issues/188
+12:01 PM &lt;rbrunner&gt; Hoi zäme
+12:01 PM &lt;sgp_&gt; hello!
+12:02 PM &lt;knifeofpi&gt; hello!
+12:02 PM &lt;rehrar&gt; ArticMine luigi1111 luigi1111w smooth vtnerd endogenic anonimal pigeons
+12:02 PM &lt;rehrar&gt; gingeropolous ErCiccione medusa_ dsc_ MoroccanMalinois xmrscott[m]
+12:03 PM &lt;rehrar&gt; I know I'm missing people. Ping them? :)
+12:03 PM &lt;ErCiccione&gt; Hi!
+12:03 PM &lt;knifeofpi&gt; rbrunner
+12:03 PM &lt;rehrar&gt; dEBRUYNE iDunk
+12:03 PM &lt;rehrar&gt; all hands on deck people. binaryFate
+12:03 PM &lt;rbrunner&gt; Here :)
+12:03 PM &lt;iDunk&gt; Hi
+12:03 PM &lt;dEBRUYNE&gt; here
+12:04 PM &lt;knifeofpi&gt; suraeNoether sarang
+12:04 PM → +monero (voiced) joined  
+12:04 PM &lt;+monero&gt; [monero] fluffypony pushed 2 new commits to master: https://git.io/vAHR7
+12:04 PM &lt;+monero&gt; monero/master e745c1e cslashm: Code modifications to integrate Ledger HW device into monero-wallet-cli....
+12:04 PM &lt;+monero&gt; monero/master c7ace5f Riccardo Spagni: Merge pull request #3303...
+12:04 PM mode: @binaryFate (opped)  ↔ +monero (voiced) nipped out  
+12:04 PM &lt;+monero&gt; [monero] fluffypony closed pull request #3303: Ledger Nano S (master...Ledger-NanoS) https://git.io/vAuCx
+12:04 PM ← +monero left (~monero@coreteam.getmonero.org)
+12:04 PM &lt;@fluffypony&gt; boom
+12:04 PM &lt;sgp_&gt; woo-hoo, Ledger Nano S code merged!
+12:04 PM &lt;rehrar&gt; So as was decided last week, meetings will become weekly until the March hardfork, just so devs can get everything necessary and needed together and touch base a bit more often
+12:04 PM &lt;@ArticMine&gt; hi
+12:05 PM &lt;@fluffypony&gt; +1
+12:05 PM &lt;rehrar&gt; Let's jump right in. :)
+12:05 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+12:05 PM &lt;@fluffypony&gt; ok so
+12:05 PM &lt;@fluffypony&gt; we had a bit of a slow down because of the Ledger PR
+12:05 PM &lt;@fluffypony&gt; it touched a LOT of the code, and they have limited resources
+12:06 PM &lt;@fluffypony&gt; so we held off on merging till they were done, to save them the hassle of dealing with rebases whilst still trying to get their PR done
+12:06 PM &lt;+hyc&gt; so, time for a new mergefest now that that's out of the way?
+12:07 PM &lt;@fluffypony&gt; there are parts of the PR that moneromooo and vtnerd and stoffu would like to further improve, but as of a few hours ago it got to a point where it could be merged
+12:07 PM &lt;@fluffypony&gt; hyc yes indeed - I'm going to give it ~24 hours for dust to settle, and then merge tomorrow
+12:08 PM &lt;@fluffypony&gt; so please be on the lookout in 24 hour's time for anything that may need rebasing, and anything that breaks
+12:08 PM → BobBarker joined (~null@2607:5300:60:1c3f::)
+12:08 PM &lt;@fluffypony&gt; we're also going to start cutting back on merging things that can go in post-branch
+12:09 PM &lt;@fluffypony&gt; with a view to branching by, say, next weekend, if everyone thinks that is wise
+12:09 PM &lt;@fluffypony&gt; (not to go too far from agenda item 1)
+12:10 PM &lt;rehrar&gt; Well, it doesn't sound like there's much else done this past week because of holding off for Ledger, so it kind of moves nicely into the next item
+12:10 PM &lt;rehrar&gt; 3. March hardfork items + code freeze
+12:10 PM &lt;rehrar&gt; officially on-topic fluffypony
+12:10 PM &lt;@fluffypony&gt; ok
+12:10 PM &lt;@fluffypony&gt; what I was thinking for this
+12:11 PM &lt;@fluffypony&gt; is if anyone with open PRs that they think should form part of the imminent release, if you could please change the title to include a [RELEASE] prefix
+12:11 PM &lt;@fluffypony&gt; and think carefully about whether it is truly an important / urgent fix that must go in, or if it can hold off till the next release
+12:11 PM &lt;@fluffypony&gt; and/or a point release
+12:12 PM &lt;rbrunner&gt; How are the chances for a point release?
+12:12 PM → psychocrypt joined (~psychocry@p200300ED73F2670005FC1ADC94FB1D8B.dip0.t-ipconnect.de)
+12:12 PM &lt;@fluffypony&gt; alternatively if you don't feel like editing titles just dump PR numbers in channel and flag me
+12:12 PM → netrik182 and foobar000 joined  ⇐ xnbya quit  
+12:12 PM &lt;@fluffypony&gt; rbrunner: we almost always have a point release pretty soon after to catch any nagging issues / regressions
+12:12 PM &lt;dEBRUYNE&gt; rbrunner: I'd say quite likely, as there are always bugs that are only caught by general usage
+12:13 PM &lt;rbrunner&gt; Thanks, expected this
+12:13 PM → Madilyn36Herzog joined (~Madilyn36@ns334669.ip-5-196-64.eu)
+12:15 PM &lt;@fluffypony&gt; how does everyone feel about branching on the weekend, with an expectation that code freeze is soon thereafter ?
+12:15 PM &lt;@fluffypony&gt; (soon™)
+12:16 PM → xnbya joined (~quassel@ec2-54-72-128-94.eu-west-1.compute.amazonaws.com)
+12:16 PM &lt;knifeofpi&gt; No objection
+12:16 PM &lt;+hyc&gt; sounds good
+12:17 PM &lt;ErCiccione&gt; ok
+12:17 PM &lt;psychocrypt&gt; does this also mean that the POW change get locked and that the POW is definitiv changed?
+12:18 PM &lt;@fluffypony&gt; psychocrypt: yes
+12:18 PM &lt;knifeofpi&gt; has the bias in the PoW change been fixed?
+12:18 PM &lt;@fluffypony&gt; moneromooo: ^^
+12:18 PM &lt;sarang&gt; Hullo
+12:19 PM &lt;psychocrypt&gt; I will only vote against the fast pow change. IMO the time to change the POW is not long enough to test everything well
+12:19 PM &lt;rehrar&gt; I am a bit inclined to agree with psychocrypt
+12:19 PM &lt;+moneromooo&gt; Yes.
+12:20 PM &lt;rehrar&gt; I appreciate what it's trying to do, but it was a bit sudden
+12:20 PM &lt;rehrar&gt; and I'm not sure that it would be detrimental to think about pushing it to September to allow for testing and stuff
+12:20 PM &lt;iDunk&gt; That was the whole point :)
+12:20 PM &lt;psychocrypt&gt; I am absolutly fine with the change but the time for test is to short
+12:20 PM &lt;knifeofpi&gt; It's already been announced. Reversing that would be considered by many to be a breach of trust
+12:20 PM &lt;@ArticMine&gt; ... but likely necessary
+12:20 PM &lt;@fluffypony&gt; the point is to have a short time
+12:20 PM &lt;gingeropolous&gt; ^^
+12:20 PM &lt;knifeofpi&gt; fluffypony: exactly
+12:20 PM &lt;@fluffypony&gt; if we wait till September then new ASICs will be taped out
+12:20 PM &lt;@fluffypony&gt; the end
+12:20 PM &lt;rehrar&gt; *shrug* ok
+12:21 PM &lt;knifeofpi&gt; \o/
+12:21 PM &lt;DaveJones&gt; well he is right ... you would have to develop some change in hidden... how do you want to test sth thats hidden and review it ?
+12:21 PM &lt;psychocrypt&gt; are there ASICs on the way?
+12:21 PM &lt;+moneromooo&gt; The fork is pushed back to end of march, due to the two weeks faffing around.
+12:21 PM &lt;@fluffypony&gt; psychocrypt: ASICs already exist
+12:21 PM &lt;medusa_&gt; well is there anything we dont know in that regard ?
+12:21 PM &lt;medusa_&gt; really ?
+12:22 PM &lt;knifeofpi&gt; fluffypony: what??
+12:22 PM ⇐ foobar000 quit (b99f9d09@gateway/web/freenode/ip.185.159.157.9) Ping timeout: 260 seconds
+12:22 PM &lt;knifeofpi&gt; somebody made an FPGA
+12:22 PM &lt;knifeofpi&gt; but ASICs...?
+12:22 PM &lt;@fluffypony&gt; somebody taped out an ASIC
+12:22 PM &lt;knifeofpi&gt; when did this happen?
+12:22 PM &lt;medusa_&gt; the reddit post you mean ?
+12:22 PM &lt;rehrar&gt; link?
+12:22 PM &lt;@fluffypony&gt; sidechannelled to me, not public
+12:22 PM &lt;@fluffypony&gt; a handful of others have had similar confirmation via via
+12:22 PM &lt;psychocrypt&gt; @fluffypony: are this ASICS or FPGAs?
+12:23 PM &lt;@fluffypony&gt; were it just me I would find it suspicious
+12:23 PM &lt;@fluffypony&gt; psychocrypt: ASICs, not FPGAs
+12:23 PM &lt;sgp_&gt; Do you have estimated hashrate, estimated quantity of these, etc?
+12:23 PM &lt;@fluffypony&gt; sgp_: I've asked
+12:23 PM &lt;knifeofpi&gt; Cost? Efficiency?
+12:24 PM &lt;psychocrypt&gt;  fluffypony: What is the planned date for the hard fork? My only information is end of this month
+12:24 PM &lt;+hyc&gt; "not enough time to test" I would consider this a valid argument if you propose an actual testing schedule that you will adhere to
+12:24 PM &lt;rehrar&gt; fair point hyc
+12:24 PM &lt;@fluffypony&gt; psychocrypt: we'll set the exact fork height in the next few days
+12:25 PM &lt;rbrunner&gt; Aaaand ... where will you set it, aproximately?
+12:25 PM ⇐ Madilyn36Herzog quit (~Madilyn36@ns334669.ip-5-196-64.eu) Ping timeout: 248 seconds
+12:25 PM &lt;@fluffypony&gt; rbrunner: month end
+12:25 PM &lt;knifeofpi&gt; so, three weeks or so
+12:25 PM &lt;rbrunner&gt; Sounds good, 2 weeks + for testing
+12:26 PM &lt;psychocrypt&gt; hyc: currently the pull request is not up to date. Therefore we need not to think about a schedule
+12:26 PM &lt;+moneromooo&gt; Helpful.
+12:26 PM &lt;+moneromooo&gt; Did vtnerd not PR a patch for the latest variant code ?
+12:27 PM &lt;+hyc&gt; I thought he already did, yeah
+12:27 PM &lt;psychocrypt&gt; I correct myself: it is up to date since yesterday or the day before
+12:28 PM &lt;rbrunner&gt; Maybe also a question when Testnet will fork?
+12:28 PM &lt;+moneromooo&gt; Testnet has forked.
+12:28 PM &lt;rbrunner&gt; Oh ... so I lost overview
+12:28 PM &lt;+moneromooo&gt; Though it will need to again...
+12:28 PM &lt;+moneromooo&gt; :)
+12:28 PM &lt;@luigi1111&gt; :)
+12:29 PM &lt;iDunk&gt; Maybe that was about stagingnet.
+12:29 PM &lt;medusa_&gt; i geuss thats what he means yes :)
+12:29 PM &lt;+moneromooo&gt; Whenever the PoW patch goes in. Then seed nodes update within... some time.
+12:29 PM &lt;+moneromooo&gt; Oh, that one I have no idea.
+12:29 PM &lt;+moneromooo&gt; I think it's down to the people who asked for it to decide.
+12:29 PM &lt;medusa_&gt; riolling back testnet is always a little messy
+12:29 PM — iDunk is not sure if he's pushing through v7/8 again
+12:29 PM &lt;+moneromooo&gt; I was thinking they'd need some pre-rct txes in there, but I'm not sure.
+12:30 PM &lt;gingeropolous&gt; if ppl need to test the new PoW there's a private testnet mining pool on killallasics.moneroworld.com
+12:30 PM &lt;+hyc&gt; gingeropolous: running latest PoW patch?
+12:30 PM &lt;rbrunner&gt; Cool name
+12:30 PM ⇐ TheoStorm quit (~dnaleor@host-im1adb.cbn1.zeelandnet.nl) Quit: Leaving
+12:30 PM &lt;knifeofpi&gt; best name
+12:31 PM &lt;gingeropolous&gt; hyc, yeah. right moneromooo ?
+12:31 PM &lt;+moneromooo&gt; Yes.
+12:31 PM &lt;+hyc&gt; great
+12:34 PM &lt;ocinvfvsUIOIvdsb&gt; testing pre ringct txs seems important
+12:34 PM &lt;ocinvfvsUIOIvdsb&gt; many still have old cold storage created during that time
+12:34 PM &lt;+hyc&gt; they already exist on current testnet. this seems to only be a question for the new stagenet
+12:34 PM &lt;+moneromooo&gt; Yes, I meant this for the new stagenet indeed.
+12:35 PM &lt;rbrunner&gt; Just to be sure: stagenet is that which is is kept on the same version as release?
+12:35 PM &lt;+hyc&gt; yes
+12:35 PM &lt;+hyc&gt; as mainnet
+12:35 PM &lt;rbrunner&gt; Ok :)
+12:36 PM &lt;rbrunner&gt; Puff, you don't watch a few days, one more net :)
+12:36 PM &lt;+moneromooo&gt; I guess we'll need to fork it a bit before mainnet... but mainly same.
+12:36 PM &lt;@fluffypony&gt; lol
+12:36 PM &lt;knifeofpi&gt; lol
+12:36 PM &lt;@fluffypony&gt; just wait for moonet
+12:36 PM &lt;@fluffypony&gt; and hycnet
+12:36 PM &lt;knifeofpi&gt; cnet?
+12:37 PM &lt;+moneromooo&gt; moonet is only if you can get on my inter-VM network ^_^
+12:37 PM &lt;psychocrypt&gt; I have a big wish: Is it possible to announce the hard fork hight next time more than two month before the fork? This would also help the exchanges to schedule there updates and if we change the pow now each fork this will help us to schedule our work.
+12:37 PM &lt;+moneromooo&gt; Depends if you're OK with it changing if necessary.
+12:38 PM &lt;+moneromooo&gt; Still, people could have aimed for mid march without knowing the exact height.
+12:38 PM &lt;rbrunner&gt; IT and release dates, a checkered history, right?
+12:38 PM &lt;gingeropolous&gt; psychocrypt, hard forks are ^^ yeah what mooo said
+12:38 PM &lt;rehrar&gt; I think it's necessary to be flexible with time if it means better security.
+12:39 PM &lt;scoobybejesus&gt; i've been aiming for mid-march since october
+12:40 PM &lt;+moneromooo&gt; It may be that people in general don't know about the periodic forks though, but that's kinda different.
+12:40 PM &lt;ocinvfvsUIOIvdsb&gt; If ASICs exist already how do we know that they will not have 51% of network hash rate by hard fork time at end of March?
+12:40 PM &lt;+moneromooo&gt; I suppose having a warning a month or two before as a matter of course is noit a bad idea.
+12:40 PM &lt;+moneromooo&gt; They may well do, but we needed that extra two weeks for miner testing.
+12:40 PM &lt;+hyc&gt; don't we already have that warning in monerod?
+12:41 PM &lt;+moneromooo&gt; We do. A bit late for such a purpose though maybe.
+12:41 PM &lt;+moneromooo&gt; It started moaning a couple weeks ago I think.
+12:41 PM &lt;+hyc&gt; we could just permanently add it to the startup banner - "next hardfork on XX" where XX is approx 6 months from current release date
+12:41 PM &lt;+moneromooo&gt; Could do. With "expected" wording.
+12:41 PM &lt;+hyc&gt; right
+12:42 PM &lt;@fluffypony&gt; yeah
+12:42 PM &lt;@fluffypony&gt; hyc: nobody reads startup banners I'm afraid
+12:42 PM &lt;knifeofpi&gt; some people do, lol
+12:42 PM &lt;rbrunner&gt; But it can't hurt
+12:42 PM &lt;+moneromooo&gt; Though I guess many of the "heaviest" users may not start it often, and might be unattended.
+12:42 PM &lt;rehrar&gt; Make it like those annoying pop ups that want your email when you get into a website
+12:42 PM &lt;rehrar&gt; Need to check four separate checkboxes to close it
+12:42 PM &lt;+hyc&gt; ok, so we could do periodic warnings like we currently have, just start them sooner
+12:43 PM &lt;+hyc&gt; once/month, then once/week, then once/day, etc. as the date approaches
+12:43 PM &lt;+moneromooo&gt; Maybe best to add another state to the "do I think I need an update" a couple months before and moan less loudly then.
+12:43 PM &lt;rehrar&gt; I think that's an overall smart idea though, and points to fp saying that it's good to keep relative consistency in fork dates
+12:43 PM &lt;+moneromooo&gt; Yes, agreed.
+12:43 PM &lt;+moneromooo&gt; It's on my list now.
+12:45 PM &lt;rehrar&gt; Anything else on hard fork/code freeze?
+12:45 PM &lt;sgp_&gt; Just a reminder the code for the ringsize needs to be changed
+12:45 PM &lt;+hyc&gt; ?
+12:45 PM &lt;ocinvfvsUIOIvdsb&gt; 7
+12:45 PM &lt;rehrar&gt; aha, yes. There was loose consensus last meeting to change the minimum ringsize to 7.
+12:45 PM &lt;dEBRUYNE&gt; I am not sure if there was consensus on that
+12:45 PM &lt;rehrar&gt; Shall we open that up for a second discussion?
+12:45 PM &lt;ocinvfvsUIOIvdsb&gt; loose consensus from last meeting
+12:46 PM &lt;dEBRUYNE&gt; It seems like a too abrupt change
+12:46 PM &lt;knifeofpi&gt; dEBRUYNE: I disagree
+12:46 PM &lt;rehrar&gt; Let's talk about it. ;)
+12:46 PM &lt;knifeofpi&gt; min 7 is absolutely necessary at this point, IMO.
+12:46 PM &lt;@ArticMine&gt; I am in favor on the increase in min ringsize to 7
+12:46 PM &lt;Slack_4&gt; &lt;nicolas.misiura&gt; Will this release affect the wallet (api)?
+12:46 PM &lt;ocinvfvsUIOIvdsb&gt; agree with knife of pi
+12:46 PM &lt;sgp_&gt; Well, I don't have any more data than last week. If anyone needs it again I can provide it
+12:47 PM &lt;sarang&gt; I'm in favor
+12:47 PM &lt;ocinvfvsUIOIvdsb&gt; + sarang
+12:47 PM &lt;ocinvfvsUIOIvdsb&gt; +1
+12:47 PM &lt;DaveJones&gt; +1
+12:47 PM &lt;rbrunner&gt; +1
+12:47 PM &lt;knifeofpi&gt; +1
+12:47 PM &lt;rehrar&gt; My opinion is that sgp did the work to show that it is helpful, unless someone will do the work to show it's tradeoffs are worse than the benefits, I think sgp has shown enough to convince (me at least) that it's worth it
+12:47 PM &lt;knifeofpi&gt; rehrar: agreed
+12:47 PM &lt;@fluffypony&gt; +1
+12:48 PM &lt;ErCiccione&gt; i'm in favor too
+12:48 PM &lt;+hyc&gt; yep. +1 rehrar
+12:48 PM &lt;dEBRUYNE&gt; rehrar: smooth posted some compelling retorts on github fwiw
+12:48 PM &lt;@ArticMine&gt; link
+12:48 PM &lt;dEBRUYNE&gt; Anyway, if it gets increased, please increase the consensus and not merely the wallet default
+12:48 PM &lt;rbrunner&gt; That was left hanging last time
+12:48 PM &lt;@ArticMine&gt; I am talking about consensus
+12:48 PM &lt;ocinvfvsUIOIvdsb&gt; I think everyone here read all of smooths posts in GitHub. I still vote for 7 based on SGP and other data
+12:48 PM &lt;+moneromooo&gt; The min ring size is necessarily consensus.
+12:49 PM &lt;dEBRUYNE&gt; ArticMine: https://github.com/monero-project/monero/issues/3035#issuecomment-368273632
+12:49 PM &lt;rehrar&gt; His retorts amounted to: the numbers for the model are chosen arbitrarily, so it's not hard proof that the tradeoffs are worth it
+12:49 PM &lt;rehrar&gt; so in the absence of hard proof we should not be rushing into things
+12:49 PM &lt;knifeofpi&gt; tx size increase is fairly negligible though
+12:50 PM &lt;knifeofpi&gt; we need to assume a worst case scenario
+12:50 PM &lt;rehrar&gt; these are indeed arguments that I respect to a degree, because arbitrariness leads to things like how Sumo handles things
+12:50 PM &lt;dEBRUYNE&gt; 7-8% verification time increase is significant though
+12:50 PM &lt;rehrar&gt; but how does one 'plan for an attack' except by threat modeling to the best of their ability
+12:50 PM &lt;knifeofpi&gt; didn't moneromooo have a 10% speedup for some kind of verification?
+12:50 PM &lt;ocinvfvsUIOIvdsb&gt; Well we have auditors lined up now. Post FFS quickly and we can move up bulletproofs to this summer if needed
+12:51 PM &lt;rehrar&gt; modeled I think to a reasonable adversarial model (50% compromised outputs).
+12:51 PM &lt;+moneromooo&gt; I do have that for borromean sig verification, but it was deemed not worth the code complexification at the time.
+12:51 PM &lt;knifeofpi&gt; understood
+12:51 PM &lt;+moneromooo&gt; It wasn't very complex though, just straightforward avoidance of conversions.
+12:51 PM &lt;rehrar&gt; And even smooth's alternative % of compromised outputs still had convincing numbers, at least for me
+12:52 PM &lt;@ArticMine&gt; The small increase in verification time has to be balanced against the privacy threat. So yes I understand smooth's argument about a slippery slope but at this point in time it is simply prudent to increase to 7
+12:52 PM &lt;rehrar&gt; smooth: "For example, at 50% (in some sense perhaps the optimal share for making  the argument for an increased ring size), going from ring size 5 to 10  reduces the compromise rate from 6.25% to 0.195%. But with an assumed  compromise share of 20%, going from ring size 5 to 10 decreases from  0.16% to 0.000051% and with an assumed compromise share of 80%, from 40%  to 13%."
+12:52 PM &lt;Slack_4&gt; &lt;serhack&gt; Hello everyone, I agreed with sgp.
+12:52 PM &lt;rehrar&gt; smooth: "I suppose there are probably different views on how to interpret these  numbers, but it is clear to me that both the numbers and character of  the improvements changes greatly depending on the assumed compromise share, with no real basis to choose one assumption over another afaik."
+12:52 PM &lt;rehrar&gt; He's right that different people will see those numbers differently
+12:53 PM &lt;rehrar&gt; I realize we're discussing 7 not 10, however.
+12:53 PM &lt;rbrunner&gt; If XMV flies high we might have a second such fork on our hands even before the next hardfork ...
+12:53 PM &lt;dEBRUYNE&gt; rehrar: I think smooth's point is that the output varies wildly based on what (arbitrary) input is given
+12:53 PM &lt;+hyc&gt; sure, the basic point is these are minimal changes that won't make a night-and-day difference
+12:53 PM &lt;ocinvfvsUIOIvdsb&gt; Just like last week, we seem to have loose (or arguably farily strong) consensus, sans smooth and a few others. Can we agree on 7 as default and min?
+12:54 PM &lt;knifeofpi&gt; ocinvfvsuioivdsb: concur
+12:54 PM &lt;ocinvfvsUIOIvdsb&gt; I dont think we have debated fixed ring size enough yet to move to that (although many support fixing it)
+12:54 PM &lt;@ArticMine&gt; Going from 5 to 7 is significant privacy wise
+12:54 PM &lt;sgp_&gt; Yeah, last meeting we agreed this isn't the time for a single fixed ringsize
+12:55 PM &lt;@ArticMine&gt; A singe fixed ringsize at this point is very premature
+12:55 PM &lt;+hyc&gt; right, one step at a time.
+12:55 PM &lt;rehrar&gt; #fixedringsizeseptember
+12:55 PM &lt;sgp_&gt; I think most people agree that an increase from 5 to 7 provides measurable benefits under realistic scenarios at limited cost
+12:56 PM &lt;rehrar&gt; Alright, so it comes down to it.
+12:56 PM &lt;rehrar&gt; We doing 7 min or not?
+12:56 PM &lt;@ArticMine&gt; Yes
+12:56 PM &lt;ocinvfvsUIOIvdsb&gt; yes +1
+12:56 PM &lt;scoobybejesus&gt; Aye
+12:56 PM &lt;knifeofpi&gt; Yes
+12:56 PM &lt;Slack_4&gt; &lt;serhack&gt; +1
+12:57 PM &lt;knifeofpi&gt; So consensus is min-7?
+12:57 PM &lt;Slack_4&gt; &lt;janowitz&gt; yes
+12:57 PM &lt;rehrar&gt; yes
+12:57 PM &lt;ocinvfvsUIOIvdsb&gt; We still need a pull request for fluffypony to merge on ring size issue
+12:57 PM &lt;+moneromooo&gt; It's on my list.
+12:57 PM &lt;rbrunner&gt; Make it with love :)
+12:57 PM &lt;sgp_&gt; ty moneromooo
+12:57 PM &lt;@fluffypony&gt; &lt;3
+12:57 PM &lt;ocinvfvsUIOIvdsb&gt; ty
+12:57 PM &lt;sarang&gt; In the interest of time, is there anything relating to BPs or the audit that there are questions on?
+12:58 PM &lt;sarang&gt; (he said, butting in)
+12:58 PM &lt;+moneromooo&gt; Moar Pippenger!
+12:58 PM &lt;sarang&gt; lol yes
+12:58 PM &lt;sarang&gt; Consensus seems to be split between 2 or 3 auditors
+12:58 PM &lt;rehrar&gt; Can we have it moved to funding required on Monday?
+12:58 PM &lt;sarang&gt; yep
+12:58 PM &lt;sarang&gt; that's the plan
+12:59 PM &lt;sgp_&gt; good
+12:59 PM &lt;sarang&gt; I'll prioritize 3 of them, with checkpoints
+12:59 PM &lt;sarang&gt; If we hit 2, we fund 2
+12:59 PM &lt;sarang&gt; If we hit 3, we fund 3
+12:59 PM &lt;sarang&gt; plain and simple
+12:59 PM &lt;rehrar&gt; Can we target all four?
+12:59 PM &lt;rehrar&gt; And if we hit three we fund three?
+12:59 PM &lt;ocinvfvsUIOIvdsb&gt; + 1 rehrat
+12:59 PM &lt;rehrar&gt; and if we hit four, we can do all four?
+12:59 PM &lt;sarang&gt; I think 4 is severely diminishing returns
+12:59 PM &lt;rehrar&gt; rehrat is the best name
+12:59 PM &lt;ocinvfvsUIOIvdsb&gt; why not checkpoints for 4?
+12:59 PM &lt;sarang&gt; I'd be happy with 2, TBH
+12:59 PM &lt;sarang&gt; But I'm also happy with 3
+12:59 PM &lt;rbrunner&gt; Yes, we may need XMR later for other important things
+12:59 PM &lt;dEBRUYNE&gt; 3 would be optimal imo
+1:00 PM &lt;sarang&gt; ^
+1:00 PM &lt;dEBRUYNE&gt; Sarang, the total will be for 3 then?
+1:00 PM &lt;rehrar&gt; Alright, we can just do three then. :)
+1:00 PM &lt;sarang&gt; Yep
+1:00 PM &lt;dEBRUYNE&gt; And dependent on the percentage we hit we pick 2 or 3
+1:00 PM &lt;@ArticMine&gt; There is a point of diminishing return here 3 is optimal
+1:00 PM &lt;xmrmatterbridge&gt; &lt;pinkphloid&gt; Hi all
+1:00 PM &lt;sarang&gt; That gives 1 audit of the maths directly, and up to 2 on the implementation
+1:00 PM &lt;rbrunner&gt; Which is the 2?
+1:00 PM &lt;sarang&gt; Bunz will be first on the list
+1:00 PM &lt;+moneromooo&gt; If you want more reviewing, how about getting the second review group to review, say, multisig instead ?
+1:00 PM &lt;sarang&gt; Then QuarksLab, then Dudelski
+1:00 PM &lt;sarang&gt; *Kudelski
+1:01 PM &lt;sarang&gt; moneromooo: we'd have to do a separate SoW requst
+1:01 PM &lt;dEBRUYNE&gt; I'd prefer Kudelski Quarkslab and Buenz
+1:01 PM &lt;sarang&gt; dEBRUYNE: in that order?
+1:01 PM &lt;dEBRUYNE&gt; No not necessarily
+1:01 PM &lt;xmrmatterbridge&gt; &lt;pinkphloid&gt; I’m on a flight from Fra to dxb so will probably lose signal.  How this this update affect the wallet api.  My lead dev doc is on too.
+1:01 PM &lt;knifeofpi&gt; excellent!
+1:01 PM &lt;dEBRUYNE&gt; I am quite sure we'd be able to get funding for 3
+1:01 PM &lt;dEBRUYNE&gt; especially if the general dev fund kickstarts the proposal
+1:01 PM &lt;@fluffypony&gt; definitely
+1:01 PM &lt;ocinvfvsUIOIvdsb&gt; +1 moneromooo idea for multisig review (in addition to the 2-3 based on checkpoints for bulletproofs)
+1:01 PM &lt;+moneromooo&gt; The wallet API will change, but I expect it will be backward compatible AFAIK.
+1:01 PM &lt;rehrar&gt; Alright, it's past time. Shall we end, or do we want code disucssion?
+1:02 PM &lt;rehrar&gt; Can we also get a RingCT vet?
+1:02 PM &lt;sarang&gt; OK, expect FFS posting tomorrow
+1:02 PM &lt;Slack_4&gt; &lt;serhack&gt; How will Wallet Api change moneromooo?
+1:02 PM &lt;sarang&gt; I think it'll open the door to additional excellent discussion on future audits, which I'd love to see a part of our dev process for big new changes
+1:02 PM — sarang is done talking now
+1:02 PM &lt;+moneromooo&gt; Well, since many people are reading, I want to point out that it would be good to publicize the existence of the key reuse mitigtions (mainly the ring db).
+1:02 PM &lt;iDunk&gt; moneromooo will never be the same, serhack.
+1:03 PM &lt;ocinvfvsUIOIvdsb&gt; the more review we have the easier it is to defend against FUD like this: https://twitter.com/matthew_d_green/status/832971753186029570
+1:03 PM &lt;+hyc&gt; meh. trollnoise.
+1:03 PM &lt;+moneromooo&gt; Especially to those people who will be using a key reusing fork. Spending safely is not hard (unless it's really a key stealing trojan).
+1:03 PM &lt;sgp_&gt; Yes, the mitigations are very useful tools
+1:03 PM &lt;rbrunner&gt; You never win such fights ...
+1:03 PM &lt;@fluffypony&gt; heh
+1:03 PM &lt;rehrar&gt; Alright. 6. Confirm next meeting date/time (for those who need to leave, discussion can continue after of course)
+1:04 PM &lt;@fluffypony&gt; whatever happened to the "next few months" besides MoneroLink, which was a fail
+1:04 PM &lt;rehrar&gt; Next week?
+1:04 PM &lt;@fluffypony&gt; rehrar: same time, same place, same pony, same moo
+1:04 PM &lt;rehrar&gt; March 11, 17:00 UTC
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/7","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"7"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

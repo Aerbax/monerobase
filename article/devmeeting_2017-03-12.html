@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-03-12 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-03-12.html" />
+<meta name="description" content="Summary[ ]
+
+C++11
+	How much C++11 do we adopt
+		How maintable is it for us?" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-03-12.html" />
+
+    <title>DevMeeting 2017-03-12 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-03-12.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-03-12</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="25" role="article" about="/article/devmeeting_2017-03-12" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-03-12" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-03-12T20:24:25+00:00">Sun, 03/12/2017 - 16:24</span>
+          <span property="schema:dateCreated" content="2017-03-12T20:24:25+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Summary<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-03-12&amp;action=edit&amp;section=1" title="Edit section: Summary"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>C++11
+	<ul><li>How much C++11 do we adopt</li>
+		<li>How maintable is it for us?</li>
+		<li>Does it add too much complexity?
+		<ul><li>It may, but that may pay off better in the long run.</li>
+			<li>And is it possible to evolve Monero's code into a modular and manageable set of libraries and tools?</li>
+			<li>Starting with a few core libraries seems to be the agreed upon way to go</li>
+			<li>This may be served better by a more in-depth review of what would need to be rewritten</li>
+			<li>This ties in to the next topic...</li>
+		</ul></li>
+	</ul></li>
+	<li>0.10.2.2 is almost ready for tagging.
+	<ul><li>After these are fixed, automated builds can restart and a release can be finalized.
+		<ul><li>There are still two PR's that need to merge</li>
+			<li>There is a race condition that needs a fix. This may be fixed within a day.</li>
+			<li>"Fluffy blocks" issue.</li>
+		</ul></li>
+	</ul></li>
+</ul><h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-03-12&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>Note: This is a long one, today...</li>
+</ul><pre>
+&lt;@fluffypony&gt; ArticMine / NoodleDoodle / luigi1111 / luigi1112 / othe / smooth / moneromooo / hyc / anonimal / dEBRUYNE / endogenic / gingeropolous / IPGlider / @NanoAkron / anyone I forgot
+&lt;@fluffypony&gt; meeting about to start
+&lt;@ArticMine&gt; hi
+&lt;@fluffypony&gt; anonimal: do you want meeting bot up for this, or not really?
+&lt;+hyc&gt; hi
+&lt;endogenic&gt; knaccc / kenshi84 / vtnerd / pigeons
+&lt;bigreddmachine&gt; hi
+&lt;binaryFate&gt; hi
+&lt;jwinterm&gt; Ready to form Voltron. Activate interlock.
+&lt;i2p-relay&gt; {-JJAbr} iDunk: give me more precise indications
+&lt;+moneromooo&gt; Can't hurt to have it, he might get angry if it's not and he wanted it.
+&lt;iDunk&gt; Never mind
+&lt;@fluffypony&gt; lol
+&lt;@fluffypony&gt; and an angry anonimal never forgets
+&lt;i2p-relay&gt; {-JJAbr} where to look?
+&lt;i2p-relay&gt; {-JJAbr} contact me in pvt if needed
+&lt;i2p-relay&gt; {-olark} hello
+&lt;i2p-relay&gt; {-JJAbr} i'm glad to give a support
+&lt;@fluffypony&gt; JJAbr: meeting starting, can continue the translation discussion after if needed
+&lt;bigreddmachine&gt; fluffy - that's JJ Abrams. he's working on a translation to Klingon for the next Star Trek movie. let's not upset him!
+&lt;@fluffypony&gt; hah hah
+&lt;@fluffypony&gt; just waiting for binaryFate to turn his laptop on
+&lt;@fluffypony&gt; he just got here
+&lt;bigreddmachine&gt; he said "hi" a min ago
+&lt;endogenic&gt; sup ferret
+&lt;@fluffypony&gt; bigreddmachine: I mean he physically just got here
+&lt;@fluffypony&gt; he's sitting at the table with me and we're meeting-ing together
+&lt;bigreddmachine&gt; oOo
+&lt;binaryFate&gt; &lt;fluffypony&gt; just waiting for binaryFate to turn his laptop on &lt;-- in da place
+&lt;@fluffypony&gt; ok
+&lt;binaryFate&gt; sorry everyone ^^
+&lt;@fluffypony&gt; meeting-bot is up
+&lt;meeting-bot&gt; [fluffypony] testing
+&lt;@fluffypony&gt; ok cool
+&lt;@fluffypony&gt; agenda is at https://github.com/monero-project/meta/issues/51
+&lt;@fluffypony&gt; so to start, 1. Greetings
+&lt;@fluffypony&gt; hi
+&lt;i2p-relay&gt; {-olark} o/
+&lt;pero&gt; o/
+&lt;iDunk&gt; Hi
+&lt;@fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;@fluffypony&gt; so mostly fiddly bits as we get ready for the 0.10.2.2 tag and release
+&lt;@fluffypony&gt; but we'll discuss that more in 4
+&lt;@fluffypony&gt; so 3. A discussion of PR 1816, &amp; perhaps a more general discussion of C++ templating etc.
+&lt;@fluffypony&gt; relevant link: https://github.com/monero-project/monero/pull/1816
+&lt;@fluffypony&gt; so part of the ongoing discussion happening there is "how much C++11 do we adopt"
+&lt;@fluffypony&gt; and part of the discussion I wanted to have today is "how maintainable is C++11 for us"
+&lt;+moneromooo&gt; Maybe it's a bit less about C++11 and more about making things overcomplex.
+&lt;@fluffypony&gt; yes
+&lt;+moneromooo&gt; A bit of both I guess.
+&lt;@fluffypony&gt; so if I may, I thought I'd give my largely uninformed opinion, and then I'd particularly like to hear what hyc and moneromooo and tewinget and others feel
+&lt;@fluffypony&gt; I feel that a lot of this ties into our long-term goals as developers and contributors to the Monero Project, and where we'd like to take things
+&lt;@fluffypony&gt; some of this code complexity leads to easier management later on, but requires a steep learning curve now
+&lt;+hyc&gt; I'm not up on the latest in C++. so when it comes to deciding what features to adopt, I'll stay out of it
+&lt;@fluffypony&gt; or requires things to be a little harder to manage now, but this leads to an easier to manage set of classes / functions / etc. later on
+&lt;+moneromooo&gt; Are you saying that the code being more complex makes easier to maintain later ?
+&lt;+hyc&gt; IMO though most of this stuff is complex syntax for things that have much simpler approaches already
+&lt;+moneromooo&gt; OK, I can buy that.
+&lt;binaryFate&gt; fluffypony: "this code complexity leads to easier management later on" &lt;-- is that true for touching part of this very code too? Seems to be the opposite
+&lt;@fluffypony&gt; but if our goal is just to "maintain" the current code base with a view to rewriting later, then obviously this is a silly exercise right now
+&lt;@fluffypony&gt; so part of this discussion really comes down to: do we, as developers, feel that we can evolve this code to a modular, manageable set of libraries and tools? or is that a pipe dream and a parallel rewrite is a better idea?
+&lt;+moneromooo&gt; I think these are separate things (or easily separatable anyway).
+&lt;+moneromooo&gt; You can do modular/manageable with simple code and complex code, and spaghetti/unminageable with simple and complex code.
+&lt;@ArticMine&gt; My question here is: Which approach is the least likely to introduce bugs?
+&lt;+moneromooo&gt; So let's do one at a time.
+&lt;endogenic&gt; do you guys know of Rich Hickey and his view/definition of simple vs complex, easy vs difficult?
+* moneromooo feels wary
+&lt;+hyc&gt; I think a parallel rewrite is the way to go. least chance of breaking the current code base.
+&lt;+hyc&gt; least intrusive overall until we have something workable on the rewrite
+&lt;@fluffypony&gt; hyc just wants to rewrite everything in C :-P
+&lt;+hyc&gt; well. yeah ;)
+&lt;@fluffypony&gt; is a rewrite too ambitious a goal? do we want resources to focus on that and the current codebase effectively plateaus?
+* floam412 has quit (Ping timeout: 256 seconds)
+&lt;@fluffypony&gt; (bearing in mind that there are lots of bits we can re-use, such as vast portions of the crypto / blockchainDB stuff)
+&lt;+moneromooo&gt; I'd rewrite bit by bit, if you want to rewrite.
+&lt;+hyc&gt; good question. I tink a rewrite is low priority until the curent codebase does everything we want. i.e., multisig + kovri and whatever else
+&lt;pigeons&gt; is vtnerd here? last week he had the most to say about c++ technique. The main concern was who else is comfortable with review
+&lt;+moneromooo&gt; Look at 0mq, which is a rewrite of just the RPC protocol. It's been a year or something.
+&lt;+hyc&gt; true
+&lt;binaryFate&gt; I and prolly many others have no grasp of the actual usage of epee in code base. What sort of workload are we talking about to replicate?
+&lt;binaryFate&gt; ball park
+&lt;+moneromooo&gt; Shitloads :)
+&lt;@fluffypony&gt; 0MQ's kinda a bad example, moneromooo - tewinget has had stuff on his plate that has interrupted his ability to work on Monero
+&lt;+moneromooo&gt; Besides you have to have both work in the same binary if you want to fork from one to the other at some point.
+&lt;@fluffypony&gt; but in principle, yeah, this is a multi-year project
+&lt;binaryFate&gt; ok...
+&lt;@fluffypony&gt; moneromooo: I wonder if we couldn't pull the project in as a submodule and just reference the common files in it that we need?
+&lt;+hyc&gt; well, if someone were on it full time it wouldn't be so bad
+&lt;+moneromooo&gt; Sure, and my default view, unless proven wrong, is that it'd DoS us.
+&lt;@fluffypony&gt; pigeons: I've pinged him, but he's not here atm
+&lt;i2p-relay&gt; {-olark} I agree with hyc. A rewrite in C should only become feasible once the current codebase is "feature-complete" kovri, multisig, 0mq etc etc
+&lt;@fluffypony&gt; olark: the opposite might be true - the more "features" we add the harder it is to rewrite
+&lt;@fluffypony&gt; what if we approached it differently
+&lt;i2p-relay&gt; {-olark} If what is being worked on can be ported to C without technical debt that is good too.
+&lt;@fluffypony&gt; what if we have a new project whose focus is to build libraries out
+&lt;@fluffypony&gt; so maybe it starts with a consensus library that can validate txs and blocks, and knows how to build txs and blocks
+&lt;endogenic&gt; that’s almost exactly what i was typing
+&lt;@fluffypony&gt; and then the main Monero project uses that
+* oranges11 has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;+hyc&gt; sounds reasonble
+&lt;@fluffypony&gt; and eventually the project becomes a collection of files that can be dropped because they're no longer needed, and just dumb interfaces that hook into libs
+&lt;i2p-relay&gt; {-olark} A slow transition would be ideal
+&lt;endogenic&gt; at that point their internal implementations can be replaced with C etc right?
+&lt;@ArticMine&gt; So the rewrite is done library by library
+&lt;@fluffypony&gt; it would be massively unrestricted, since everything is created from scratch and could even have (gasp) whitespace fixes
+* oranges11 (c6690004@gateway/web/cgi-irc/kiwiirc.com/ip.198.105.0.4) has joined #monero-dev
+&lt;+hyc&gt; I was thinking about refactoring the blockchainDB stuff. it should all be hidden behind an interface class. nobody outside of blockchainDB should be including db_lmdb.h or instantiating blockchainLMDB direcftly
+&lt;@fluffypony&gt; I'm not against doing it in C, and that is super portable, but by going that low-level on everything aren't we also making it harder on ourselves?
+&lt;@fluffypony&gt; hyc: I agree with that
+&lt;endogenic&gt; did not intend to suggest C whatsoever
+&lt;@fluffypony&gt; endogenic: too late :-P
+&lt;+hyc&gt; right, pure C is my personal goal. I wouldn't impose that on the project.
+&lt;+moneromooo&gt; tbh, the idea of spending shitloads of time and effort to replace with the same, in a way that hardforks every single part of the consensus seems outrageous. The only reason it doesn't is because the dangling prize (a nice, bug free C implementation which didn't fork) is not.
+&lt;+hyc&gt; are you saying too much risk for too little reward? or possibility of no reward?
+&lt;@fluffypony&gt; well let's be brutally honest here: we didn't write this code, and parts of it are well-written whilst others are simply *not*
+&lt;@fluffypony&gt; (didn't write it initially I mean)
+&lt;+moneromooo&gt; Too much risk for a reward that's not too easy to quantify.
+&lt;endogenic&gt; we’ll prolly be well served by enumerating exactly what interfaces we would need (i.e. solutions to what problems) in the process of judging risk-reward - cause there may be low hanging but high value fruit
+&lt;@fluffypony&gt; perhaps we need to consider it this way: at what point do we NEED a massive rewrite that gets rid of all the technical debt?
+&lt;+hyc&gt; yeah, sounds like we need an actual review.
+* codehalo (~user@ool-44c256e1.dyn.optonline.net) has joined #monero-dev
+&lt;@fluffypony&gt; like I can't imagine there still being dredges of epee in 10 year's time
+&lt;+hyc&gt; look at all of the existing code, draw high level boxes around pieces that make sense.
+&lt;binaryFate&gt; After features required for decent growth of the ecosystem are there, imo
+&lt;+hyc&gt; then walk away, if you zoom in on the boxes again, does the layout you would reasonably expect to see match what exists.
+&lt;binaryFate&gt; So answer depends with you would trade those efforts against
+&lt;binaryFate&gt; *what
+&lt;+hyc&gt; so the assumption is that the code we have now actually works. i.e. is solid enough to continue building on top.
+&lt;@fluffypony&gt; hyc: perhaps that answer leads us to the next point in the meeting
+&lt;@fluffypony&gt; so let's open that up so that it can form part of the discussion
+&lt;@fluffypony&gt; 4. A Series of Unfortunate Events: the v0.10.2.x release failures, massive regressions, and serious issues. How do we do better in future?
+&lt;@fluffypony&gt; given how many issues we've had with 0.10.2.x, IS the code solid enough?
+&lt;+moneromooo&gt; This whole thing is assuming that a rewrite would be bug free, which is a preposterous assumption.
+&lt;+hyc&gt; true, most ground-up rewrites are worse than what you started with
+&lt;binaryFate&gt; issues in 0.10.2 are due to new stuff not old ones, no?
+&lt;+moneromooo&gt; We'd have to go find a list, but I think so, mostly.
+&lt;@fluffypony&gt; moneromooo: no no, not bug free, but something with a more complete test suite, and easier to review / manage
+&lt;+moneromooo&gt; Writing more tests is completely independent of rewriting.
+&lt;codehalo&gt; i am writing a few applications in Swift, and I had to create a lot of C bindings to the C++ code.
+&lt;codehalo&gt; It would have been so much easier if the codebase was just C...
+&lt;+hyc&gt; ^^ for cross-language portability our public APIs should be C
+* fluffypony ponders
+&lt;codehalo&gt; the Swift framework for LMDB has been easier to get up and running
+&lt;+hyc&gt; not sure how we could have tested more. the batch-txn changes had been in testing for a couple months
+&lt;@fluffypony&gt; I have a suspicion that going C-only would somewhat restrict our potential contributor base
+&lt;+moneromooo&gt; Why ?
+&lt;+hyc&gt; with several live blockchain reorgs and no problem. had no way to suspect a race condition was lurking.
+* ferretinjapan has quit (Ping timeout: 246 seconds)
+* bearretinjapan (~ferretinj@f1.42.5177.ip4.static.sl-reverse.com) has joined #monero-dev
+&lt;binaryFate&gt; Surviving in C is possible for every C++ coder, but writing proper C for cryptocurrency software, not
+&lt;@fluffypony&gt; moneromooo: I know competent C++ developers who are mediocre when working solely in C
+&lt;codehalo&gt; As hyc said, at least have a strong C api available
+&lt;@fluffypony&gt; sure
+&lt;binaryFate&gt; You can do crazy sneaky things in C in terms of malicious commits, look at the contests for that it's fun.
+&lt;@fluffypony&gt; I agree with that
+&lt;+moneromooo&gt; C++ too...
+&lt;binaryFate&gt; Reviewers able to catch that, you'd have way less of them than in C++
+&lt;binaryFate&gt; moneromooo not if you expect writer to write proper C++, then it's obvious if it's going low-level unnecessarily
+&lt;+moneromooo&gt; WTF.
+&lt;+moneromooo&gt; Why are half the reasons given above completely suprious ?
+&lt;+hyc&gt; I think we need to back away from C vs C++. the codebase is primarily C++ now.
+&lt;+hyc&gt; we deal with what we have.
+&lt;endogenic&gt; i agree. porting to C for whole codebase seems an answer in search of a problem - bound to go badly - is it an API issue? or is it a performance issue? can C by applied selectively, establishing standalone libs, while enabling us to maintain the expertise, past testing, etc of the existing codebase?
+&lt;@fluffypony&gt; moneromooo: spurious?
+&lt;endogenic&gt; imo the biggest problem coming into monero initially for me was “how do i integrate with this?” or “what specifically do i integrate with?”
+&lt;+moneromooo&gt; Maybe not the right word, but... I feel like half the reasons for a choice given by people above either don't apply, or also apply to the other choice.
+&lt;codehalo&gt; api issue
+&lt;+moneromooo&gt; Like, you don't need C to write tests.
+&lt;@fluffypony&gt; moneromooo: no I was asking if that's what you meant, you said "suprious" :)
+&lt;+moneromooo&gt; Or if you require "proper C++", then you should require "proper C" when comparing maintainability of both.
+&lt;+moneromooo&gt; Oh yes, spurious.
+* bearretinjapan has quit (Ping timeout: 268 seconds)
+* tortuga (d97b16af@gateway/web/freenode/ip.217.123.22.175) has joined #monero-dev
+&lt;@fluffypony&gt; well look, I'd like Monero to become a collection of well written, well documented libraries, with bindings in many languages
+&lt;+hyc&gt; yes, fine.
+&lt;endogenic&gt; spurious arguments really get a pony going
+&lt;endogenic&gt; :x
+&lt;+moneromooo&gt; :D
+&lt;@fluffypony&gt; so the public side of the API should be C, even if the rest of the code is C++
+&lt;binaryFate&gt; moneromooo yes and I was saying there is less people able to do that in C than in C++
+&lt;@fluffypony&gt; lol endogenic
+&lt;+hyc&gt; do we really need integration at the object code level? wouldn't most integrations be via RPC?
+&lt;@fluffypony&gt; hyc: no, not for libraries
+&lt;+moneromooo&gt; To write underhanded code ?
+&lt;endogenic&gt; hyc: one problem i found was needing to use the wallet2.cpp code
+&lt;@fluffypony&gt; consider a client written in Go that just wants to use the consensus library
+&lt;endogenic&gt; still have that issue - Snipa did too
+&lt;codehalo&gt; @fluffy yes. a lot of libraries is the key
+&lt;+hyc&gt; yeah
+&lt;+hyc&gt; actually I've started writing that in C to do the LMDB version
+&lt;binaryFate&gt; moneromooo less people to review and prevent people to write underhanded code
+&lt;@fluffypony&gt; ok so being able to hook into things at an object code level is a requirement
+&lt;@fluffypony&gt; also as an idea
+&lt;@fluffypony&gt; what if the "rewrite" / refactor / library effort happened in the source tree?
+&lt;+hyc&gt; hmmm. binaryFate - in that regard, C++ *is* a superset of C. so if you can't recognize underhanded code in C, you wouldn't have seen it in C++ either.
+* vertp (18768144@gateway/web/freenode/ip.24.118.129.68) has joined #monero-dev
+&lt;+moneromooo&gt; Less people to review C for underhanded code, than people to review C++ for underhanded code. Assuming we require proper/nice code for both (otherwise this is a spurious argument). Maybe. It doesn't sound like a very convincing argument though.
+&lt;binaryFate&gt; hyc for most part of the code a commiter is expected to work at a level of abstraction that is way above that of C
+&lt;+hyc&gt; fluffypony wdy mean
+&lt;+moneromooo&gt; I'd be fine with a part-by-part rewrite as we go, as I said above.
+&lt;pero&gt; there was a discussion of c++ and crypto on hn in the last week - wondering if anyone has seen it. if not, i'll drop a link after the meeting
+&lt;@fluffypony&gt; hyc: instead of a parallel rewrite in a separate project, it can be done in the source tree in a separate directory, and can rewrite / move files into that directory, as long as references are adjusted accordingly
+&lt;@fluffypony&gt; tks pero that would be appreciated
+&lt;+hyc&gt; strikes me as being hard to coordinate, but ok
+&lt;+moneromooo&gt; I'd keep them both plugged, and fork on a height. Because they're bound to behave differently in corner cases.
+&lt;+moneromooo&gt; (for the consensus changes anyway,  the rest can be changed at once I guess)
+&lt;@fluffypony&gt; moneromooo: then it may as well be done in a separate project, unless there's another reason to keep it in the source tree?
+&lt;+moneromooo&gt; Yes, because people won't exit monerod-c++ and restart monerod-c at the fork height all at once.
+&lt;bigreddmachine&gt; doing it in the source tree... you'd have to be working on parts of the codebase that are basically set in stone at this point, or else really keeping up with codebase, no? otherwise, wouldn't it end up like some of the other things that have been worked on in a branch that then cause merging to be hell? I don't really know what I'm talking about, but that's been what it's seemed like on a few things fro
+&lt;bigreddmachine&gt; m an outside perspective at least...
+&lt;+hyc&gt; yeah that's what I meant about tough to coordinate
+&lt;+moneromooo&gt; But maybe I missed the point you brought fluffypony ?
+&lt;@fluffypony&gt; bigreddmachine: yes it would cause merging hell, but we merge PRs quickly enough that it shouldn't be terrible
+&lt;+hyc&gt; when I've done this scale of changes on past projects, it was only after a code freeze. feature freeze.
+&lt;@fluffypony&gt; moneromooo: well I was thinking about the way we did the blockchainDB
+&lt;@fluffypony&gt; we first created this generic class
+&lt;@fluffypony&gt; and then did the LMDB implementation for that
+&lt;+hyc&gt; which is why I wouldn't bother to start here until we have kovri etc.
+&lt;pero&gt; found it quicker than i thought i would - https://news.ycombinator.com/item?id=13807693
+&lt;@fluffypony&gt; and THEN went back and did the in-memory implementation for that class
+&lt;+moneromooo&gt; There was no fork for this, right ? People updated mostly at the same time, but with a long tail ?
+&lt;@fluffypony&gt; yes
+&lt;@fluffypony&gt; so the in-memory interface went from being *the thing you use* to having all its functions updated to exist behind blockchainDB
+&lt;@fluffypony&gt; which was effectively a refactor effort, more than anything else
+&lt;+moneromooo&gt; I kinda like doing it like that. Though the swapping at a fork adds security.
+&lt;@fluffypony&gt; yes 100%
+&lt;@fluffypony&gt; especially for libmonero-consensus or whatever
+* zoko (4d600f05@gateway/web/freenode/ip.77.96.15.5) has joined #monero-dev
+* oranges11 has quit (Ping timeout: 264 seconds)
+&lt;+hyc&gt; ok. that sounds good for mid to long term
+&lt;+hyc&gt; what do we need to do now, for 10.2 ?
+&lt;bigreddmachine&gt; why the need to swap at a fork? if the new implementation isn't 100% compatible, wouldn't it break on a resync when inspecting older-than-the-fork blocks? so fork or no, if there's a bug it's a mess?
+&lt;@fluffypony&gt; bigreddmachine: a corner case can come up 6 months after deployment
+&lt;@fluffypony&gt; before I get to hyc's question
+&lt;+moneromooo&gt; That seems to assume a non adversarial system.
+* bearretinjapan (~ferretinj@ppp121-45-66-58.bras1.adl6.internode.on.net) has joined #monero-dev
+&lt;bigreddmachine&gt; fluffypony: so a fork lets you make sure it's compatible for everything to date, but if a corner case came up later, the old version wouldn't matter?
+&lt;@fluffypony&gt; since vtnerd is playing around with the library stuff (conceptually), any objection to him working on this? we kinda want the library stuff for the lightweight remote wallet tool (ie. open-source MyMonero-like stuff)
+&lt;@fluffypony&gt; bigreddmachine: if you don't do it at a fork height then the old version might be widely deployed
+&lt;bigreddmachine&gt; yep, okay makes sense, thanks
+&lt;_Slack&gt; &lt;nanoakron&gt; moneromooo I’m not seeing any INFO messages about ‘synchronised OK’ or ‘new block candidate’ etc. at log-level 1
+&lt;+moneromooo&gt; I'm fine with that, sure. I'd ask to not rewrite too much stuff at once, though, just because it DoSes reviewers.
+&lt;+moneromooo&gt; Especially when the code is damn hard to read/review :/
+&lt;+hyc&gt; heh
+&lt;@fluffypony&gt; moneromooo: ok agreed
+&lt;@fluffypony&gt; I'll also ask him to consider manageability / reviewability
+&lt;+moneromooo&gt; (by people who don't know much recent C++)
+&lt;+moneromooo&gt; I'm sure he can't review it quickly :P
+&lt;+moneromooo&gt; er, can.
+&lt;i2p-relay&gt; {-JJAbr} all in Matlab, I suggest
+&lt;@fluffypony&gt; LOL
+&lt;bigreddmachine&gt; JJAbr - I can finally review something!
+&lt;+hyc&gt; there's an LMDB driver for Matlab, fine with me :P
+&lt;+moneromooo&gt; For future things to discuss, I think it would be best if we could discuss them one at a time when they're not intertwined.
+&lt;+moneromooo&gt; Like, test coverage is unrelated to C or C++, rewrite or not.
+&lt;+hyc&gt; true
+&lt;+moneromooo&gt; Just merging them makes it harder to decide each.
+&lt;i2p-relay&gt; {-JJAbr} I'm not joking
+&lt;+hyc&gt; I think we got sidetracked by C vs C++
+&lt;@fluffypony&gt; JJAbr: when we have more libraries then that's fully feasible
+&lt;@fluffypony&gt; moneromooo: that's fair
+&lt;i2p-relay&gt; {-JJAbr} I'm somehow visionary, write it to Matlab, generate it into C/c++
+&lt;@fluffypony&gt; I think we should fork Rust and create our own programming language
+&lt;i2p-relay&gt; {-JJAbr} check it with Polyspace, and it works
+&lt;@fluffypony&gt; with blackjack and hookers
+&lt;+moneromooo&gt; About tests, there's a set of functional tests that's long dead. It does transfers using wallet2 and daemon.
+&lt;+moneromooo&gt; OK, nevermind.
+&lt;i2p-relay&gt; {-JJAbr} Visionary = see what automotive world currenty do
+&lt;i2p-relay&gt; {-JJAbr} does*
+&lt;endogenic&gt; so confused
+&lt;+hyc&gt; automotive world writes millions of lines of code just to control an engine. that's not a good model.
+&lt;pigeons&gt; who is working on the ethereum solidity port? :P
+&lt;endogenic&gt; i am
+&lt;i2p-relay&gt; {-JJAbr} "just to control an engine" = simple?
+&lt;endogenic&gt; JJAbr: this is a dev meeting tho
+&lt;endogenic&gt; can we chat afterwards?
+&lt;i2p-relay&gt; {-JJAbr} you don't know what youìre talking about
+&lt;i2p-relay&gt; {-JJAbr} anyways, sorry for the disturb
+&lt;pigeons&gt; motion to move to next topic
+&lt;@fluffypony&gt; ok
+&lt;i2p-relay&gt; {-JJAbr} you're talking about refactoring? do you know about what're you talking about?
+&lt;endogenic&gt; JJAbr: yes
+&lt;endogenic&gt; thanks
+* amiuhle (~amiuhle@p5B2E620A.dip0.t-ipconnect.de) has joined #monero-dev
+&lt;@fluffypony&gt; 5. Code + ticket discussion / Q &amp; A
+&lt;i2p-relay&gt; {-JJAbr} ok
+* tinusMars (54c0d41e@gateway/web/freenode/ip.84.192.212.30) has joined #monero-dev
+&lt;i2p-relay&gt; {-JJAbr} sorry to all
+&lt;@fluffypony&gt; so going back to hyc's question
+&lt;@fluffypony&gt; we're ready to tag 0.10.2.2
+&lt;@fluffypony&gt; except for the race condition stuff
+&lt;@fluffypony&gt; and I think there are two PRs that I need to merge
+&lt;@fluffypony&gt; if we get the race condition stuff done tonight then we can tag and re-start builds, finalise actual release tomorrow
+&lt;+moneromooo&gt; And a fix for the fluffy block thing smooth found earlier today.
+&lt;+hyc&gt; isn't that odd, fluffy blocks shouldn't have been live on mainnet yet
+&lt;+moneromooo&gt; Some people have been enabling it on mainnet anyway.
+&lt;+hyc&gt; ok
+&lt;+moneromooo&gt; Which, in this case, is good, because we found a couple bugs without having it fully on :P
+&lt;binaryFate&gt; note fluffypony in front of me is busy IRL
+&lt;endogenic&gt; we need that livecast drone man
+* floam412 (~floam412@unaffiliated/floam412) has joined #monero-dev
+&lt;dEBRUYNE&gt; moneromooo: https://www.reddit.com/r/Monero/comments/5yzeht/monero_wallet_error_v_01021/
+* Billy-B has quit (Ping timeout: 260 seconds)
+&lt;bigreddmachine&gt; While we wait, I have a Q if that's okay
+&lt;+moneromooo&gt; ugh. Thanks.
+&lt;+moneromooo&gt; bigreddmachine: if it's dev related, go for it.
+&lt;bigreddmachine&gt; Q: probably dumb, but what's the distinction that makes this 0.10.2.2 rather than 0.10.3? I know the iteration from 0.9 to 0.10 to 0.11 etc essentially means major changes, but what distinguishes iterating the 3rd digit from 4th digit?
+* huskar (~a@46.189.67.3) has joined #monero-dev
+&lt;+hyc&gt; bug fixes
+&lt;+hyc&gt; as opposed to feature changes
+&lt;@fluffypony&gt; bigreddmachine: it's a build that fixes issues in the point release
+&lt;bigreddmachine&gt; thanks. i saw an opening so thought i'd ask.
+&lt;+moneromooo&gt; I have noticed people attach a lot of importance to the version labels btw. Looks like some won't use the GUI because it's got beta in the name for instance.
+&lt;+moneromooo&gt; I guess they got bitten before :)
+&lt;pigeons&gt; i think those people shouldn't use the gui yet. it is definately beta
+&lt;endogenic&gt; moneromooo: yeah prolly a good thing actually!
+&lt;bigreddmachine&gt; moneromooo: for me it's more a Q of "should i update everything asap or is this just a bug fix thing and update soon but don't kill myself.
+&lt;+hyc&gt; people are asking for it to be on the front page / download page
+&lt;dEBRUYNE&gt; moneromooo: Should I ask for a log level 2?
+&lt;pero&gt; that's a good point moneromooo - perhaps a versioning scheme change to .x could be considered?
+&lt;+moneromooo&gt; Log level 2 of the wallet making the tx would be helpful, yes.
+&lt;+moneromooo&gt; But would also reveal private info about owned outputs.
+* smauginjapan (~ferretinj@gateway/vpn/privateinternetaccess/ferretinjapan) has joined #monero-dev
+&lt;dEBRUYNE&gt; All right, will ask. What's the command for in wallet? set log-level 2?
+&lt;_Slack&gt; &lt;nanoakron&gt; So if this fluffy fix works, does that mean it’s nearly ready for prime-time?
+&lt;pero&gt; (not necessarily now, but perhaps in the not so distant future)
+&lt;+moneromooo&gt; set_log 2
+&lt;dEBRUYNE&gt; All right
+* bearretinjapan has quit (Ping timeout: 258 seconds)
+&lt;_Slack&gt; &lt;nanoakron&gt; pero are you saying this should be 0.10.3 to encourage uptake?
+&lt;pero&gt; no no no - was talking specifically about gooey transitioning to .1 or something as opposed to beta3 for next release
+&lt;bigreddmachine&gt; nanoakron i think they were talking about GUI. btw, sorry if i sidetracked this.
+* amiuhle has quit (Ping timeout: 240 seconds)
+&lt;_Slack&gt; &lt;nanoakron&gt; doh
+* smauginjapan is now known as bearretinjapan
+&lt;endogenic&gt; binaryFate: all well?
+&lt;binaryFate&gt; note fluffy is still busy
+&lt;binaryFate&gt; no worries, just busy
+&lt;_Slack&gt; &lt;nanoakron&gt; You guys in Ghent?
+&lt;binaryFate&gt; were yes, brussels now
+&lt;_Slack&gt; &lt;nanoakron&gt; You visiting Bruges?
+&lt;+hyc&gt; hah I was just in brussels last week
+&lt;binaryFate&gt; nanoakron nope, I'm partly living in brussels so no special visit for me, and fluffy not this time afaik
+&lt;@fluffypony&gt; sorry about that
+&lt;@fluffypony&gt; so to move on to 6. Any additional meeting items
+&lt;_Slack&gt; &lt;nanoakron&gt; Hope you get to see Bruges sometime FP - lovely city
+&lt;@fluffypony&gt; does anyone have anything else to add?
+&lt;_Slack&gt; &lt;nanoakron&gt; Not here
+&lt;@fluffypony&gt; I think we have a fairly good idea as to how we can move forward, and also what's required for the release
+&lt;+hyc&gt; cool
+&lt;@fluffypony&gt; which brings us to 7. Confirm next meeting date/time
+&lt;_Slack&gt; &lt;nanoakron&gt; :)
+* bearretinjapan has quit (Quit: Leaving)
+* bearretinjapan (~ferretinj@gateway/vpn/privateinternetaccess/ferretinjapan) has joined #monero-dev
+&lt;@fluffypony&gt; March 26th?
+&lt;@fluffypony&gt; 2 weeks from now
+&lt;+moneromooo&gt; Well, we've not talked about how to make things sturdier.
+&lt;@fluffypony&gt; well
+&lt;@fluffypony&gt; I think the current release is obviously urgent, as it fixes bugs
+&lt;+moneromooo&gt; Except when I started mentioning existing tests, but chat was spammy so got dropped.
+&lt;@fluffypony&gt; but maybe the next release we need to set some testnet time frame
+&lt;_Slack&gt; &lt;nanoakron&gt; What would you like to see implemented on that front moneromooo?
+&lt;@fluffypony&gt; like freeze it, and then do 4 weeks on testnet
+&lt;@fluffypony&gt; can always tag an older commit
+&lt;+moneromooo&gt; There's also a possibility to branch when doing a release, so you can cherry-pick simple fixes.
+&lt;+moneromooo&gt; That way, simple fix releases don't also come with new features that can also be buggy.
+&lt;@fluffypony&gt; as long as the version's bumped
+&lt;@fluffypony&gt; branching it for testing is not a bad idea
+&lt;+moneromooo&gt; Also, there aren't too many people on testnet, so stuff just ends up being tested on mainnet when it's released anyway (beyond obvious stuff).
+&lt;+moneromooo&gt; nanoakron: those tests aren't run, they've been disabled for a long while, I have no idea if they even work.
+&lt;+moneromooo&gt; It was already a fairly massive effort to bring all the core tests back to life...
+&lt;_Slack&gt; &lt;nanoakron&gt; Oh right
+&lt;_Slack&gt; &lt;nanoakron&gt; Eek
+&lt;+moneromooo&gt; I think 0MQ RPC tests would be nice, since everything's changed there AFAICT.
+&lt;binaryFate&gt; Why not discuss this on a release-basis prior to release rather than fixing principles? Sometimes a long freeze may be superfluous, but for instance something touching fees and block sizes could use thoroughly-discussed different conditions on testnet
+* vtnerd (~general_l@173-23-209-122.client.mchsi.com) has joined #monero-dev
+* tortuga has quit (Quit: Page closed)
+&lt;+moneromooo&gt; Something which might be helpful is a user simulator.
+&lt;_Slack&gt; &lt;nanoakron&gt; Unfortunately @binaryfate the fee/block size issue, whilst it really really should be analysed and studied for a while to ensure it’s the right solution for the long run, is hindering us from growing capacity now :(
+&lt;@ArticMine&gt; But one could take a two stage approach on the fee blocksize issue
+&lt;@ArticMine&gt; A one time increase to 250000 byte min blocksize and adding the 4x fee level
+&lt;_Slack&gt; &lt;jollymort&gt; +1
+&lt;bigreddmachine&gt; moneromooo: user simulator, as in something just creating random txs and such? i'm happy to make that and run on my desktop. it's already connected to testnet
+&lt;@ArticMine&gt; Then apply jollymort's proposal from 25000 to 125000 as the second stage
+&lt;huskar&gt; moneromoo: a user simulator can be written as a system of time dependent differential equations
+&lt;+moneromooo&gt; bigreddmachine: yes, something that actually tests the testnet. Snipa has one. It's best when run on a local testnet though, so as not to spam the main one too much :)
+&lt;_Slack&gt; &lt;nanoakron&gt; @ArcticMine @jollymort ok :)
+&lt;pero&gt; does testnet need nodes?
+&lt;@ArticMine&gt; This allows more careful review of 2) while addressing the immediate issue also
+&lt;_Slack&gt; &lt;jollymort&gt; 250kB would make a huge difference by itself; it would reduce the min.fee 4-times and reduce the size issue
+&lt;_Slack&gt; &lt;jollymort&gt; so you could set a x4 as the default
+&lt;_Slack&gt; &lt;jollymort&gt; and it would be the same old 0.3$
+&lt;_Slack&gt; &lt;jollymort&gt; then, the pools could use the min.fee
+&lt;bigreddmachine&gt; i was working on a testnet faucet - it's basically done, just need to deploy - but i could easily add something that just sends out a tx or two every 5 minutes or something like that, just to create some volume
+&lt;_Slack&gt; &lt;jollymort&gt; and normal users the x4 fee
+&lt;_Slack&gt; &lt;jollymort&gt; so normal users never wait
+&lt;_Slack&gt; &lt;jollymort&gt; and pool payments sit in the mempool until regular users clear out
+&lt;@ArticMine&gt; Without an increase in the default fee
+&lt;_Slack&gt; &lt;nanoakron&gt; What we don’t want is to be stuck in some philosophical rut like a certain other cryptocurrency…we need agreement (which I’m pretty sure we all have) that an algorithmic determination of block size is better than a human one
+&lt;_Slack&gt; &lt;jollymort&gt; we have that, but we made a unintended anomaly
+&lt;_Slack&gt; &lt;jollymort&gt; exibit: https://raw.githubusercontent.com/JollyMort/monero-research/master/Monero%20Dynamic%20Block%20Size%20and%20Dynamic%20Minimum%20Fee/Images/Fig3.1-7.png
+&lt;_Slack&gt; &lt;jollymort&gt; no wait, wrong chart
+&lt;@ArticMine&gt; an increase in tx size to ~13000 bytes from ~500 bytes
+&lt;_Slack&gt; &lt;nanoakron&gt; Yes, and a binomial distribution thereof
+&lt;_Slack&gt; &lt;jollymort&gt; this one: https://raw.githubusercontent.com/JollyMort/monero-research/master/Monero%20Dynamic%20Block%20Size%20and%20Dynamic%20Minimum%20Fee/Images/Fig3.1-6.png
+&lt;_Slack&gt; &lt;jollymort&gt; the spike was introduced solely by RCT
+&lt;Snipa&gt; The user simulator I have isn't particularly complex.  I may see about writing a more complex one in the future if it's something we need.
+&lt;_Slack&gt; &lt;jollymort&gt; the green one was pre-RCT
+* bearretinjapan has quit (Ping timeout: 246 seconds)
+&lt;+moneromooo&gt; Dunno if we need more complex for now. Yours did find bugs already :)
+* mochaccinuh (~mochaccin@37.26.221.159) has joined #monero-dev
+&lt;_Slack&gt; &lt;jollymort&gt; with 250kB that spike would surely be less severe
+&lt;@ArticMine&gt; That is why I propose the two stage approach
+&lt;_Slack&gt; &lt;jollymort&gt; i can draw the charts if you want
+&lt;_Slack&gt; &lt;jollymort&gt; make it part of the paper, too
+&lt;@fluffypony&gt; can we formally end the meeting and take meeting bot offline?
+&lt;@fluffypony&gt; we're getting out of meeting stuff anyway
+&lt;@ArticMine&gt; Sure
+* meeting-bot has quit (Remote host closed the connection)
+&lt;@fluffypony&gt; ok done
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/25","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"25"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

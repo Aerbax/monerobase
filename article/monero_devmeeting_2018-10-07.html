@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Monero DevMeeting 2018-10-07 | Monerobase" />
+<link rel="canonical" href="monero_devmeeting_2018-10-07.html" />
+<meta name="description" content="Highlights
+
+Lots of code merges this week in preparation for the v0.13.0 release.
+	Binaries are expected to become available throughout this week.  CLI will likely be first, GUI after that.
+		TheCharlatan will announce/advise the availability of the reproducible builds
+		Should this fail, code/binaries will be release similar to that in the past, and reproducible builds will be targeted for v0.13.1
+		
+		The translations team still have a few files to work with before release.
+	
+	Future builds/versio" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="monero_devmeeting_2018-10-07.html" />
+
+    <title>Monero DevMeeting 2018-10-07 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="monero_devmeeting_2018-10-07.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">Monero DevMeeting 2018-10-07</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="57" role="article" about="/article/monero_devmeeting_2018-10-07" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="Monero DevMeeting 2018-10-07" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-10-07T20:51:06+00:00">Sun, 10/07/2018 - 16:51</span>
+          <span property="schema:dateCreated" content="2018-10-07T20:51:06+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4><u>Highlights</u></h4>
+
+<ul></ul><ul><li>Lots of code merges this week in preparation for the v0.13.0 release.
+	<ul><li>Binaries are expected to become available throughout this week.  CLI will likely be first, GUI after that.</li>
+		<li>TheCharlatan will announce/advise the availability of the reproducible builds
+		<ul><li>Should this fail, code/binaries will be release similar to that in the past, and reproducible builds will be targeted for v0.13.1</li>
+		</ul></li>
+		<li>The translations team still have a few files to work with before release.</li>
+	</ul></li>
+	<li>Future builds/versions
+	<ul><li>The build team is looking to provide v0.14.x in January 2019 - well ahead of the next protocol upgrade.</li>
+		<li>A month+ of testing, and then a final release in February.</li>
+		<li>The goal is to migrate to a less hectic schedule - less cramming features in so close to release.</li>
+		<li>A good example of that goal is how Bulletproofs were handled.  They were originally scheduled for earlier in 2018, but were pushed out due to auditing the code, and that procedure worked very well.</li>
+	</ul></li>
+	<li>The v0.13.x GUI release <em><strong>may </strong></em>also see the inclusion of a guide/documentation: <a href="https://github.com/monero-ecosystem/monero-GUI-guide/releases/tag/1.4">https://github.com/monero-ecosystem/monero-GUI-guide/releases/tag/1.4</a>
+	<ul><li>There is ongoing discussion about how to properly package it. </li>
+		<li>PDF's are great for documentation but can be an attack vector. </li>
+		<li>The team is looking into alternative options.</li>
+	</ul></li>
+	<li>Ledger support for Macs in v0.13.x has not received enough testing.  cslashm, one of the devs working on Ledger integration does not have access to a Mac.
+	<ul><li>As such, there may be a bug regarding pressing buttons too fast or too slow.</li>
+	</ul></li>
+	<li>Next meeting is October 14th - 17:00 UTC</li>
+</ul><h4><u>Full Log</u></h4>
+
+<pre>
+1:02 PM &lt;rehrar&gt; 1. Greetings
+1:02 PM &lt;@ArticMine&gt; Hi
+1:03 PM &lt;ErCiccione&gt; Hi
+1:03 PM &lt;rbrunner&gt; Hoi zäme
+1:03 PM &lt;i2p-relay&gt; {-oneiric_} hiyo
+1:03 PM &lt;iDunk&gt; Hi
+1:04 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:07 PM &lt;rehrar&gt; it's been one of those weeks
+1:07 PM &lt;@fluffypony&gt; merges
+1:07 PM &lt;rbrunner&gt; There must be a RC somewhere, just don't know where
+1:07 PM &lt;@fluffypony&gt; lots of merges
+1:07 PM &lt;rehrar&gt; I also think many many people are at the conference
+1:07 PM &lt;rbrunner&gt; All to go into 0.13.0.0 still?
+1:08 PM &lt;@fluffypony&gt; last call for 0.13 is today
+1:08 PM &lt;@fluffypony&gt; we're tagging tomorrow
+1:08 PM &lt;@ArticMine&gt; oh excellent
+1:08 PM &lt;rehrar&gt; yay!
+1:08 PM &lt;rehrar&gt; builds out one day soon sometime maybe then also?
+1:08 PM &lt;@fluffypony&gt; yeah
+1:09 PM &lt;@fluffypony&gt; TheCharlatan will advise as to whether repro builds are good to go, even if it's just for a platofrm
+1:09 PM &lt;@fluffypony&gt; *platform
+1:09 PM &lt;@fluffypony&gt; else we'll do it old school
+1:09 PM → tnsepta joined (~tnsepta@community.of.aeonminingpool.com)
+1:09 PM &lt;@fluffypony&gt; and maybe 13.1 can be repro built
+1:10 PM &lt;rbrunner&gt; So that's already that far along with "repro"? Didn't notice
+1:10 PM &lt;iDunk&gt; Maybe we need to talk about deps versions in depends.
+1:10 PM → Sterl joined (~Sterl@unaffiliated/sterl)
+1:10 PM &lt;iDunk&gt; OpenSSL is 1.0.1k for example (IIRC).
+1:11 PM &lt;rehrar&gt; That's still kind of super exciting.
+1:11 PM &lt;iDunk&gt; But they build fine here :)
+1:11 PM &lt;xmrscott&gt; Quick Q: Close to finishing up translating the daemon for all but the simple_wallet context. For the sake of clarifying for better localization in tools::wallet2 context does 'escape' in "Wallet password (escape/quote as needed)" refers to escape characters, not some other kind of escaping like ctrl+c, right
+1:11 PM &lt;xmrscott&gt; ?
+1:12 PM &lt;endogenic&gt; yep
+1:12 PM &lt;ErCiccione&gt; fluffypony: what about GUI? that would be build tuesday right? i still have some translation who have to be merged, and i have to refresh all language files again before tagging
+1:12 PM &lt;+moneromooo&gt; Escaping means signalling a character is to be interpreted as itself, not as a command or similar.
+1:12 PM &lt;+moneromooo&gt; So \$ to mean $, etc.
+1:12 PM &lt;@fluffypony&gt; ErCiccione: I'm entirely open to suggestions on the GUI, you guys must decide how urgent the release schedule is for the GUI
+1:12 PM &lt;@fluffypony&gt; I don't think it has to be on Tuesday
+1:13 PM &lt;rbrunner&gt; The GUI compilation might stumble over the new build directory layout for Monero
+1:13 PM &lt;@fluffypony&gt; but it has to be pretty soon
+1:13 PM &lt;xmrscott&gt; Yep yep, I just wanted to make sure given the quote; I never heard 'quote as needed', just 'escape as needed' so I was a bit puzzled L)
+1:13 PM &lt;@fluffypony&gt; rbrunner: that's fixed with the usesinglebuilddir flag
+1:13 PM &lt;rbrunner&gt; Ok, so somebody took the hammer to fix the problem :)
+1:13 PM &lt;ErCiccione&gt; fluffypony: last news i have from luigi, he wanted to tag on tuesday, so i'm getting everything ready for that day
+1:14 PM &lt;@fluffypony&gt; ErCiccione: ok cool that works
+1:15 PM &lt;rehrar&gt; is dEBRUYNE medusa_ or dsc_ around to briefly talk about the GUI then?
+1:16 PM &lt;rehrar&gt; oh, didn't see ErCiccione's comment about Tuesday
+1:16 PM &lt;endogenic&gt; xmrscott: single quotes output the exact string. but double quotes doesnt do so if the string contains anything like a $ - the $ would have to be escaped to appear literally
+1:18 PM &lt;ErCiccione&gt; rehrar: yes, basically only translations missing, and the slider to choose the ringsize will be removed, since it will be fixed now
+1:19 PM → +Guest23908 (voiced) joined  ⇐ lancillott0 quit  
+1:20 PM &lt;+Guest23908&gt; [monero] TheCharlatan opened pull request #4510: Consolidate HID depends makefiles into single recipe (master...staticHID) https://git.io/fxsPz
+1:20 PM ← +Guest23908 left (fluffypony@coreteam.getmonero.org)
+1:20 PM &lt;rbrunner&gt; So it looks like this time we are ready quite early before the HF. Comforting.
+1:20 PM → lancillott0 joined (~lancillot@141.255.164.67.adsl.inet-telecom.org)
+1:20 PM &lt;@fluffypony&gt; rbrunner: we can do way better tho
+1:20 PM &lt;rehrar&gt; what would you suggets fluffypony?
+1:21 PM &lt;ErCiccione&gt; oh, the GUI will have a 'Pirate' language for 0.13, don't know if you guys noticed. big feature there
+1:21 PM &lt;@ArticMine&gt; Yes I agree we are still cutting it close
+1:21 PM &lt;@fluffypony&gt; well this time what was nice is that we started making waves early
+1:21 PM &lt;@fluffypony&gt; for the next hard fork I think we should aim to put out 0.14 RC in January
+1:21 PM &lt;@fluffypony&gt; and then over January it's bug fixes to the branch only
+1:21 PM &lt;@fluffypony&gt; and release final in February
+1:22 PM &lt;rbrunner&gt; January is awfully close already ...
+1:22 PM &lt;@ArticMine&gt; Yes that sounds like a good approach
+1:22 PM &lt;endogenic&gt; rbrunner: much will be added by then
+1:22 PM &lt;@fluffypony&gt; rbrunner: I agree, but we need to get into the habit of going "this feature won't be ready, we'll leave it for the next release"
+1:22 PM &lt;@fluffypony&gt; instead of trying to cram things in
+1:23 PM &lt;rbrunner&gt; Right. I better hurry with "my" MMS then to get it in.
+1:23 PM &lt;@fluffypony&gt; we did VERY well with Bulletproofs for that
+1:23 PM &lt;rehrar&gt; And it's only the first time that we transition to such a schedule that it will be close. After that, things will start going into another branch
+1:23 PM &lt;@fluffypony&gt; we had pressure to get it in early in the year, and we just said no
+1:23 PM &lt;@fluffypony&gt; because it needed more vetting
+1:23 PM &lt;xmrscott&gt; What about anti-asic-ness? Do we really want to put that out three months early giving manufacturers 9 months legroom to manufacture and mine with, or is that still safe enough?
+1:24 PM &lt;rbrunner&gt; Maybe post-HF hashrate will tell
+1:24 PM &lt;rehrar&gt; xmrscott: I think with the falling block reward, and the fact that it WILL change we are hoping it to be cost prohibitive enough that they won't do it at all
+1:24 PM &lt;rbrunner&gt; Very large fall -&gt; maybe there were already ASICs again
+1:24 PM &lt;rehrar&gt; they'll focus on other, easier coins
+1:24 PM &lt;rbrunner&gt; Don't believe it, however
+1:24 PM &lt;@fluffypony&gt; xmrscott: that's a good point, but I think a few extra months of prep won't make a diff
+1:24 PM &lt;rehrar&gt; but yeah, we'll see post HF
+1:25 PM → TheCharlatan joined (~TheCharla@109.236.87.57)
+1:26 PM &lt;rehrar&gt; Ok, any discussion about code or tickets?
+1:26 PM &lt;ErCiccione&gt; Now it's time to bother about my guide once more. How is going to be included in the GUI for 0.13? rbrunner installer? manually added by pony?
+1:27 PM &lt;ErCiccione&gt; fyi it's ready and released in both markdown and PDF versions
+1:27 PM &lt;rbrunner&gt; I assume it will be in the official 0.13 Windows ZIP where I get it and package it
+1:28 PM &lt;pigeons&gt; PR submit to a docs/ directory in the gui repo?
+1:28 PM &lt;endogenic&gt; is a pdf an attack vector, btw?
+1:28 PM &lt;endogenic&gt; guess jpgs could be too by the same token
+1:28 PM &lt;i2p-relay&gt; {-oneiric_} yes, embedded js and other nastiness endogenic
+1:28 PM &lt;ErCiccione&gt; pigeons: opened this yesterday https://github.com/monero-project/monero-gui/pull/1602
+1:29 PM &lt;rbrunner&gt; Only if somebody manages to get a fake build in, I guess, with ActionScript in the PDF
+1:29 PM &lt;ErCiccione&gt; endogenic: it could be, since i could add malicious links, that's why i think the submodule was the best idea to include it. And then build it to the archive from there, as fluffypony suggested
+1:30 PM &lt;@fluffypony&gt; yeah I think submodule + add to the final build dir via make
+1:30 PM &lt;@fluffypony&gt; even if the source repo is attacked it doesn't matter
+1:30 PM &lt;@fluffypony&gt; the submodule is linked to a particular hash
+1:30 PM &lt;@fluffypony&gt; commit hashj
+1:31 PM &lt;endogenic&gt; ah cool
+1:31 PM &lt;ErCiccione&gt; the point is that i seriously doubt the submodule + make thing will be finalized before tuesday, so the question remain: how is it going to be included in 0.13?
+1:32 PM &lt;ErCiccione&gt; PDF version can be found here btw: https://github.com/monero-ecosystem/monero-GUI-guide/releases/tag/1.4
+1:32 PM &lt;medusa_&gt; rehrar: some of us are in prague enjoying ourselfs. I heard some prs need to be merged,but otherwise gui should be ready. Tag on wednesday should fit
+1:32 PM &lt;endogenic&gt; ErCiccione you could put a txt file in the docs dir with that link and say it will be included in the next release
+1:32 PM &lt;rehrar&gt; medusa_: have fun! sorry to bother
+1:33 PM &lt;@ArticMine&gt; ... but since this is not consensus can it not go into 0.13.1.xx
+1:33 PM &lt;rbrunner&gt; Well, it should be only 1 manual copy over away, done by fluffypony just once now, with make file not yet ready
+1:33 PM &lt;@fluffypony&gt; yes of course
+1:33 PM &lt;qif&gt; that's a gret job erciccione
+1:33 PM &lt;qif&gt; i have just seen it
+1:33 PM &lt;i2p-relay&gt; {-oneiric_} https://github.com/perfaram/pdf-zip-nes-polyglot
+1:34 PM &lt;@fluffypony&gt; of course, I think we need to be very strict with ourselves that things that go into the release-v0.13 branch after the release are bug fixes *only*
+1:34 PM &lt;@fluffypony&gt; perhaps with an exception for reproducible build functionality which is critical
+1:34 PM &lt;ErCiccione&gt; endogenic: that's an option, but i would still prefer to add it manually to the archive. Nobody will evr see it in 'docs'
+1:34 PM &lt;endogenic&gt; yep .. hotfixes basically
+1:35 PM &lt;ErCiccione&gt; thanks qif :)
+1:35 PM &lt;selsta&gt; so we will drop the RC tag tomorrow? (sorry missed the meeting)
+1:36 PM &lt;selsta&gt; asking because nobody tested Ledger on macOS yet apart from me and shipping broken Ledger support would be bad
+1:36 PM &lt;@fluffypony&gt; selsta: yes
+1:37 PM &lt;selsta&gt; sending is half broken for me at least
+1:37 PM &lt;rbrunner&gt; Half broken? Does that exist?
+1:38 PM &lt;selsta&gt; sending works sometimes, but fails when you accept the fee on the ledger too fast or too slow
+1:40 PM &lt;endogenic&gt; still no hwdevice sending in simplewallet, right?
+1:42 PM &lt;@fluffypony&gt; selsta: have you opened an issue and tagged Ledger?
+1:44 PM &lt;selsta&gt; yes https://github.com/monero-project/monero/pull/4203#issuecomment-409894321 also I’ve talked with cslashm about it but he has no Mac to debug it
+1:44 PM &lt;selsta&gt; okay, I can open an issue about it
+1:44 PM → +Guest23908 (voiced) joined  
+1:44 PM &lt;+Guest23908&gt; [monero] moneromooo-monero opened pull request #4511: tests: update crypto tests data file after PRNG changes (master...ct-data) https://git.io/fxsX0
+1:44 PM ← +Guest23908 left (fluffypony@coreteam.getmonero.org)
+1:45 PM &lt;rehrar&gt; Alright, any other meeting items that need discussing?
+1:45 PM &lt;endogenic&gt; could be nice to send him a mac mini
+1:45 PM &lt;rbrunner&gt; Maybe a call on Reddit? Maybe somebody has a spare
+1:47 PM &lt;ErCiccione&gt; rbrunner: imho a call of reddit it's a good idea to get some eyes on the issue
+1:50 PM &lt;rehrar&gt; well, if there's nothing else I think we can wrap for the day
+1:50 PM &lt;rehrar&gt; should we hold a meeting next week, or go back to two weeks?
+1:50 PM → +Guest23908 (voiced) joined  
+1:50 PM &lt;+Guest23908&gt; [monero] fluffypony pushed 2 new commits to master: https://git.io/fxsXK
+1:50 PM &lt;+Guest23908&gt; monero/master f9485a3 moneromooo-monero: tests: update crypto tests data file after PRNG changes
+1:50 PM &lt;+Guest23908&gt; monero/master ad99a35 Riccardo Spagni: Merge pull request #4511...
+1:51 PM ↔ +Guest23908 (voiced) nipped out  
+1:51 PM &lt;+Guest23908&gt; [monero] fluffypony closed pull request #4511: tests: update crypto tests data file after PRNG changes (master...ct-data) https://git.io/fxsX0
+1:51 PM ← +Guest23908 left (fluffypony@coreteam.getmonero.org)
+1:51 PM &lt;@ArticMine&gt; I would suggest nest week ahead of the fork
+1:51 PM → +Guest23908 (voiced) joined  
+1:51 PM &lt;+Guest23908&gt; [monero] fluffypony pushed 2 new commits to master: https://git.io/fxsXP
+1:51 PM &lt;+Guest23908&gt; monero/master 21a624a TheCharlatan: Consolidate HID depends makefiles into single recipe...
+1:51 PM &lt;+Guest23908&gt; monero/master 890824d Riccardo Spagni: Merge pull request #4510...
+1:51 PM ↔ +Guest23908 (voiced) nipped out  
+1:51 PM &lt;+Guest23908&gt; [monero] fluffypony closed pull request #4510: Consolidate HID depends makefiles into single recipe (master...staticHID) https://git.io/fxsPz
+1:51 PM ← +Guest23908 left (fluffypony@coreteam.getmonero.org)
+1:51 PM &lt;@ArticMine&gt; Even if it is brief
+1:51 PM &lt;rehrar&gt; alright. Well, see you guys next week then. 17:00 UTC
+1:51 PM &lt;rbrunner&gt; Can do no harm
+1:51 PM &lt;rehrar&gt; thanks for coming!
+</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/57","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"57"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

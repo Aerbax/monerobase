@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-04-09 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-04-09.html" />
+<meta name="description" content="Highlights[ ]
+
+No major issues from the 0.10.3.1 release.
+	0.10.3.2 will likely be release" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-04-09.html" />
+
+    <title>DevMeeting 2017-04-09 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-04-09.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-04-09</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="23" role="article" about="/index.php/article/devmeeting_2017-04-09" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-04-09" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-04-09T20:22:36+00:00">Sun, 04/09/2017 - 16:22</span>
+          <span property="schema:dateCreated" content="2017-04-09T20:22:36+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-04-09&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>No major issues from the 0.10.3.1 release.</li>
+	<li>0.10.3.2 will likely be release before the April 14th hardfork. This will address some GUI issues, and a bug that mostly affects exchanges.</li>
+	<li>Discussion regarding renaming of the monero toolset. ie. Do we want to continue with "GUI" or "core" or something else. Tabled.</li>
+	<li>The Monero website redesign is continuing forward. It sounds like we're nearing a final design.</li>
+	<li>MoneroMooo closed several bugs. Fluffy will be closing them in the next few days.</li>
+	<li>Technical discussion of <a class="external text" href="https://github.com/monero-project/monero/issues/1673" rel="nofollow">Raising the mandatory ringsize in the Sept 2017 hardfork</a>
+	<ul><li>Would possibly implement a static set of ring sizes for all users - which could increase anonymity.</li>
+		<li>To further illustrate, if a user continually used a non-commonly used number like "27", it would be easier to demask.</li>
+		<li>The static ring size numbers are all up for discussion. 10,20,50,100 was brought up.</li>
+		<li>An MRL paper on the topic may need to be created.</li>
+	</ul></li>
+	<li>kenshi84's disposable addresses patch may be pulled in soon. Fluffy needs to re-review.</li>
+	<li>April 23rd, 2017 is next meeting.</li>
+</ul><h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-04-09&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;@fluffypony&gt; https://github.com/monero-project/meta/issues/60
+&lt;@fluffypony&gt; 1. Greetings
+&lt;@fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;@fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;@fluffypony&gt; 4. GetMonero.org redesign discussion
+&lt;@fluffypony&gt; 5. Any additional meeting items
+&lt;@fluffypony&gt; 6. Confirm next meeting date/time
+&lt;@fluffypony&gt; so 1. Greetings
+&lt;@fluffypony&gt; hi
+&lt;jwinterm&gt; o/
+&lt;vtnerd1112&gt; Hello
+&lt;Jaquee&gt; hi!
+&lt;anonimal&gt; hi
+&lt;Slack_4&gt; &lt;sgp_&gt; hey!
+&lt;Slack_4&gt; &lt;rehrar&gt; Yo
+&lt;+hyc&gt; hi
+&lt;pero&gt; o/
+&lt;i2p-relay&gt; {-olark} \o
+&lt;iDunk&gt; Hi
+&lt;endogenic&gt; o/
+&lt;gingeropolous&gt; hello
+&lt;vertp&gt; hi
+* swalecko (2e050299@gateway/web/freenode/ip.46.5.2.153) has joined #monero-dev
+* hrumag2 (~hrumag@151.25.216.60) has joined #monero-dev
+* hrumag2 has quit (Client Quit)
+&lt;endogenic&gt; lol vtnerd1112
+* hrumag2 (~hrumag@151.25.216.60) has joined #monero-dev
+&lt;@fluffypony&gt; ArticMine, luigi1111, othe, smooth, moneromooo, tewinget, dEBRUYNE, IPGlider, Jaquee, kenshi84, knaccc, medusa_, NoodleDoodle ^^
+&lt;@fluffypony&gt; oh and luigi1112, luigi1115
+&lt;Jaquee&gt; I said hi!
+&lt;Jaquee&gt; :P
+&lt;@fluffypony&gt; oh I missed that, sorry Jaquee
+&lt;+moneromooo&gt; yes
+&lt;hrumag2&gt; Hi there.
+* moneromooo greets
+&lt;luigi1112&gt; so many Luigis
+&lt;@fluffypony&gt; lol
+&lt;medusa_&gt; oh hi
+&lt;@fluffypony&gt; ok
+&lt;@fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;@fluffypony&gt; so the main thing was the 0.10.3.1 release
+&lt;@fluffypony&gt; which has mostly been fine, no major breaking issues
+* hrumag has quit (Ping timeout: 255 seconds)
+* hrumag2 has quit (Client Quit)
+&lt;@fluffypony&gt; there are some GUI fixes that will go into 0.10.3.2, which we aim to tag and release soon
+* hrumag2 (~hrumag@151.25.216.60) has joined #monero-dev
+&lt;medusa_&gt; before or after the fork ?
+&lt;@fluffypony&gt; which brings us to
+&lt;+moneromooo&gt; There's this bug with not merging destinations, which is overeager in not merging.
+&lt;@fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;@fluffypony&gt; medusa_: probably before, due to the thing that moneromooo just pointed out, which is a bit of an annoyance for exchanges
+&lt;medusa_&gt; allright thats good. i think a possible bugfix release after the fork shoudl be completely seperate too
+&lt;@fluffypony&gt; medusa_: is there something you're expecting will break at the fork? :-P
+&lt;medusa_&gt; lets hope nothing is needed &lt;3
+&lt;medusa_&gt; no
+&lt;@fluffypony&gt; ok shew
+&lt;@fluffypony&gt; I'm planning on merging PRs over the next couple of days
+&lt;@fluffypony&gt; are there any that are don't-merge-yet?
+&lt;vtnerd1112&gt; The one I have outstanding for bin2hex
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Before merging the PR to name Monero GUI back to Monero Core, I thought it would be good to have a discussion here about that. But perhaps that can be saved for the end of today's meeting.
+&lt;+moneromooo&gt; Oh, I'd kinda forgot-ish about that one...
+&lt;Jaquee&gt; #658 and #667 obviously
+&lt;vtnerd1112&gt; It's currently unmergeable and I don't know if anyone looked at it recently
+* bigreddmachine (~bigreddma@c-98-245-86-104.hsd1.co.comcast.net) has joined #monero-dev
+&lt;@fluffypony&gt; xmr_eric - we can discuss it now, it's part of this section anyway
+&lt;vtnerd1112&gt; monermooo I will revise and push later today
+&lt;luigi1112&gt; is he copying me
+&lt;vtnerd1112&gt; rebase, damn phone
+&lt;@fluffypony&gt; vtnerd1112: I haven't since looking at it the first time, sounds good
+&lt;endogenic&gt; lol
+&lt;@fluffypony&gt; luigi1112: yes
+&lt;@fluffypony&gt; /nick fluffypony1112
+* MineCoins has quit (Ping timeout: 240 seconds)
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Ok, well I'd like to hear from Jaquee. But my thoughts are that we rename Monero GUI back to Monero Core. Gingeropolous originally named it back to Monero GUI at the time, which was a decent idea, but I think in the end the central Monero software that the public is going to use should be called Core
+&lt;@fluffypony&gt; @xmr_eric that was among the reasons for calling it Core initially
+&lt;Slack_4&gt; &lt;xmr_eric&gt; I spent some time yesterday trying to find a word other than Core to differentiate ourselves from Bitcoin, like Monero Essentials or something, but none really work as well.
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Right. I think we should go back to that.
+* Lloydimiller4 (~Lloydimil@unaffiliated/lloydimiller4) has joined #monero-dev
+&lt;@fluffypony&gt; also because I think that the current monero repo will become libmonero
+&lt;pero&gt; and then monero-cli?
+&lt;@fluffypony&gt; yeah
+&lt;pero&gt; makes sense
+&lt;Jaquee&gt; so we end up with 3 repos?
+&lt;Jaquee&gt; gui, cli and lib?
+&lt;@fluffypony&gt; Jaquee: yes eventually
+&lt;Jaquee&gt; ok cool
+* ogres has quit ()
+&lt;@fluffypony&gt; Jaquee: what are your thoughts on GUI vs. Core
+&lt;Jaquee&gt; libwallet API is only used by gui for now. so i'm thining it could be moved to gui repo.
+&lt;Jaquee&gt; i would prefer GUI
+&lt;Jaquee&gt; https://github.com/monero-project/monero-core/issues/663
+&lt;endogenic&gt; how about 'official' instead of 'core'? cause it'll be specified as the official 'gui', cli etc
+&lt;Slack_4&gt; &lt;xmr_eric&gt; This isn't just naming the repo, this is naming the piece of software the repo produces
+&lt;bigreddmachine&gt; As for names, I assume "Monero Qt" is out? That was once the standard for cryptocurrency wallets but seems to have lost favor.
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Essentially, it is branding
+&lt;pero&gt; if we're going to have lib and cli, and those seems like the optimal nomenclature for those, then i think the logical one for the gui is gui
+&lt;Jaquee&gt; +1
+&lt;endogenic&gt; or maybe core gui..
+&lt;Slack_4&gt; &lt;xmr_eric&gt; The public doesn't think in terms of CLI GUI
+&lt;Slack_4&gt; &lt;xmr_eric&gt; People won't know what GUI means
+&lt;Jaquee&gt; do they know what core means?
+&lt;Jaquee&gt; i don't :P
+&lt;pero&gt; yea but core is kind of confusing since core seems to be lib
+&lt;@fluffypony&gt; pero: I was thinking more like libmonero, monero-tools, monero-core
+&lt;bigreddmachine&gt; pero: i'd argue the optimal name for a gui should *not* have "gui" in the name. They aren't called FireFox GUI, Chrome GUI, Word GUI, etc
+&lt;gingeropolous&gt; just Monero
+&lt;Slack_4&gt; &lt;xmr_eric&gt; No, but the point is Core is a word that people will begin to associate with that piece of software
+&lt;hrumag2&gt; gingeropulos I agree
+&lt;Slack_4&gt; &lt;xmr_eric&gt; What does Linux mean?
+&lt;jwinterm&gt; I think core does have a bit of stench to it now
+&lt;+hyc&gt; at worst, monero app
+&lt;hrumag2&gt; The application has to be the most atomic
+&lt;jwinterm&gt; bigreddmachine: there's no lynx like version of firefox or chrome tho
+&lt;jwinterm&gt; that I'm aware of
+&lt;hrumag2&gt; To the public I mean
+&lt;Slack_4&gt; &lt;xmr_eric&gt; The problem with naming it just Monero is that no other piece of software gets to be called Monero
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Which I'm ok with
+&lt;pero&gt; yes i can see reason in that argument bigreddmachine
+&lt;+hyc&gt; MoneroUser
+&lt;Slack_4&gt; &lt;xmr_eric&gt; But it isn't good from a nomenclature standpoint
+&lt;bigreddmachine&gt; "Monero Wallet"?
+&lt;pero&gt; what's monero-tools fluffypony ? the cli?
+&lt;@fluffypony&gt; pero: yes
+&lt;@fluffypony&gt; especially since they ship with the GUI
+&lt;Slack_4&gt; &lt;sgp_&gt; ^ anyone can make their own wallet
+&lt;+moneromooo&gt; Could we maybe get on with the *dev* meeting...
+&lt;@fluffypony&gt; so that seems to make some sense
+&lt;@fluffypony&gt; ok let's table this for the next meeting, we can open a thread or discuss it further under an existing one
+&lt;@fluffypony&gt; s/thread/issue
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Great
+&lt;hrumag2&gt; At least "Monero node", "Monero wallet cli", "Monero wallet gui"
+&lt;gingeropolous&gt; moneromooo, I like this bike shed. It can fit many bikes
+&lt;@fluffypony&gt; and then we'll make a decision at the next meeting
+&lt;Jaquee&gt; sounds good
+&lt;anonimal&gt; Two cents: 2 repos: libmonero and monero. monero has optional cli build alongside gui.
+&lt;@fluffypony&gt; ok so 4. GetMonero.org redesign discussion
+&lt;@fluffypony&gt; rehrar wanted to show us the designs and get our input on it
+&lt;Slack_4&gt; &lt;rehrar&gt; I don't want to take much time. Just want to get a special opinion from all the devs about the two proposed designs.
+&lt;Slack_4&gt; &lt;rehrar&gt; If you haven't seen them already, you can find them here
+&lt;Slack_4&gt; &lt;rehrar&gt; Design 1: http://imgur.com/a/MwyxX
+&lt;Slack_4&gt; &lt;rehrar&gt; Design 2: http://imgur.com/a/H9i3z
+&lt;anonimal&gt; github link too?
+&lt;unknownids&gt; design 1 third draft imo
+&lt;Slack_4&gt; &lt;rehrar&gt; The idea will be to redesign the current website and also to make an assets document that will have the HTML and CSS framework that we make so anyone can easily make more pages.
+&lt;i2p-relay&gt; {-olark} Will these sites still be usable with javascript disabled?
+&lt;Slack_4&gt; &lt;rehrar&gt; No JavaScript will be used.
+&lt;anonimal&gt; https://github.com/monero-project/monero-site/issues/245
+&lt;Slack_4&gt; &lt;rehrar&gt; All in Jekyll
+&lt;Slack_4&gt; &lt;rehrar&gt; Sorry, thank you anonimal
+&lt;vertp&gt; design 1 - draft 3 is the most popular on reddit. Most people are asking to add some of the community sponsored youtube vids to the homepage as well.
+&lt;hrumag2&gt; 1 totally. Marketing addicted
+&lt;pero&gt; im pretty big on the 2nd one
+&lt;gingeropolous&gt; will these sites still be editable via github by random people, like the current site?
+&lt;@fluffypony&gt; design 2 is nice, but a little too clean
+&lt;@fluffypony&gt; gingeropolous: yes
+&lt;pero&gt; the first one is too generic and reminds me of shitty webapps/startups
+&lt;pero&gt; first one with some tweaks
+&lt;pero&gt; erm
+&lt;endogenic&gt; i agree, maybe some pretty-fication to #2
+&lt;aerbax&gt; I think it's important to include one of the Monero introductory videos on the frontpage of whatever design is chosen.
+&lt;pero&gt; second one*
+&lt;i2p-relay&gt; {-olark} Ok
+&lt;endogenic&gt; cause it's an OSS / tech project after all
+&lt;@fluffypony&gt; vertp: I don't know if we really need multiple videos on the home page, just the intro one
+&lt;Slack_4&gt; &lt;rehrar&gt; I think the second design is the most modular and easy to adapt to others making more pages as the site progresses after I'm done with it.
+&lt;Jaquee&gt; i also prefer #2
+&lt;Slack_4&gt; &lt;sgp_&gt; As I mentioned, I still like 1.3 the best. 2 is still better than what we have right now though
+&lt;anonimal&gt; Since no one here will probably read that github issue, #2 looks like a tech spec but #1 can be worked with. If reddit has good response for #1 draft 3 then that direction is something to consider.
+&lt;@fluffypony&gt; endogenic / pero: I'm leaning that way too
+&lt;+tewinget&gt; didn't realize we were doing a meeting this week; I'll be around in like an hour, have to catch a bus.
+&lt;vertp&gt; fluffypony: yes, good point. shouldn't have used the plural tense.
+&lt;Slack_4&gt; &lt;rehrar&gt; We were playing with adding some color to design 2
+&lt;@fluffypony&gt; anonimal: otoh we can take some of the elements from design 1, draft 3 and incorporate them into design 2 - @rehrar?
+&lt;Slack_4&gt; &lt;rehrar&gt; And I think we have a good idea of how to do it.
+&lt;Slack_4&gt; &lt;rehrar&gt; We should have something for it soon.
+&lt;Slack_4&gt; &lt;rehrar&gt; Yes, we'll work on that.
+&lt;pero&gt; site should be an information portal ultimately, the first design is getting the user to download an app asap imo
+&lt;Slack_4&gt; &lt;rehrar&gt; Any particular things from that design to Port?
+&lt;pero&gt; it is not aligned with what the site's goals should be
+&lt;gingeropolous&gt; i like #2
+&lt;Slack_4&gt; &lt;rehrar&gt; I agree.
+&lt;anonimal&gt; Site's goals? It's a website.
+&lt;pero&gt; yes the goal of providing information
+&lt;Slack_4&gt; &lt;rehrar&gt; Monero is a unique project, and having a standard site is doing Monero a disservice imo.
+&lt;@fluffypony&gt; @rehrar the world background and the different sections are nice
+&lt;@fluffypony&gt; backgrounds for different sections I mean
+&lt;Slack_4&gt; &lt;rehrar&gt; I agree that design 2 is a bit sterilized.
+&lt;anonimal&gt; Old people need to be able to use this too. Old people don't like to read most of the time because fonts are too small and if they are computer illiterate they don't know how to zoom.
+&lt;anonimal&gt; Technical illiteracy = most of planet earth.
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Websites are absolutely about a main goal first. That's what good design is about. Funneling people into a path that they already want to go. Eg "What is this Monero thing?"
+&lt;pero&gt; that argument is pointless anonimal
+* lithiumpt has quit (Ping timeout: 252 seconds)
+&lt;pero&gt; old people that are actively using the internet have learned how to deal with those issues
+&lt;@fluffypony&gt; anonimal: old people aren't going to use Monero, they'll use some L2 or L3 system on top of it
+&lt;anonimal&gt; pero this is a dev meeting, feel free to leave anytime.
+&lt;anonimal&gt; You are not a dev.
+&lt;pero&gt; else they wouldnt be using it
+&lt;pero&gt; lol
+&lt;@fluffypony&gt; so it's also got to serve the target audience
+&lt;+moneromooo&gt; Yeah, maybe we could have dev meeting and monero meeting.
+&lt;Slack_4&gt; &lt;rehrar&gt; If the overwhelming majority thinks design 1 even after draft 3 of design 2 then I will probably go with it
+&lt;@fluffypony&gt; moneromooo: this is specifically to get dev input on the design
+&lt;Slack_4&gt; &lt;rehrar&gt; But we're going to add some color to the design 2.
+&lt;hrumag2&gt; I think it should be given more underlining about how to buy Monero. Where do you think to put the link?
+&lt;Slack_4&gt; &lt;rehrar&gt; Monero just has very...Specific branding colors. XD
+&lt;@fluffypony&gt; @rehrar let's see what you come up with on design 2 and then see
+&lt;Slack_4&gt; &lt;rehrar&gt; Aight. Will do.
+&lt;@fluffypony&gt; hrumag2: no, definitely not, that sort of funnel makes us liable
+&lt;hrumag2&gt; ... more than "get involved" I think
+&lt;anonimal&gt; When I say 'old', I mean plebeian elders of planet earth.
+&lt;Slack_4&gt; &lt;rehrar&gt; That's all from me.
+&lt;Slack_4&gt; &lt;rehrar&gt; Any last second opinions?
+&lt;pero&gt; i have a concern with project scope/budget
+&lt;pero&gt; i think the work effort is being underestimated and it's underbudgeted
+&lt;Slack_4&gt; &lt;rehrar&gt; Not underestimated, but underbudgeted for sure.
+&lt;@fluffypony&gt; @rehrar well we do a second FFS if needed, let's see how it goes
+&lt;Slack_4&gt; &lt;rehrar&gt; On purpose. Part of it is my donation to the community. I believe in it.
+&lt;Slack_4&gt; &lt;rehrar&gt; Ok. :)
+&lt;@fluffypony&gt; ok on that note
+&lt;@fluffypony&gt; let's move on to 5. Any additional meeting items
+&lt;@fluffypony&gt; only thing I want to ask is just to find out from Jaquee if he managed to get hold of Qt
+&lt;Jaquee&gt; no, sorry. i've had a busy week
+&lt;+moneromooo&gt; Well, I had this list of bugs I think can be closed. Which should be greppable with mooo.*bug.*clos
+&lt;Jaquee&gt; will take care of that issue in a couple of days
+&lt;@fluffypony&gt; np
+&lt;@fluffypony&gt; moneromooo: yep I'll be closing issues in the next few days too
+&lt;+moneromooo&gt; Thanks.
+&lt;@fluffypony&gt; anything else?
+&lt;bigreddmachine&gt; I have a Q: What is the "correct" way to propose an improvement / protocol change to Monero? Bitcoin has the BIP system, whereas for Monero things are basically handled via GitHub issues in the main repo. That means that, though discussions are documented permanently, they can be difficult to find and track over time. Is Monero getting to where it is big enough and has enough contributors that maybe we s
+&lt;bigreddmachine&gt; hould have a BIP-like process?
+&lt;@fluffypony&gt; bigreddmachine: easiest way is just for us to have a label on Github (for consensus-critical changes)
+* eyejay_3 has quit (Quit: Connection closed for inactivity)
+&lt;i2p-relay&gt; {-olark} I have a few things I would like to talk about regarding https://github.com/monero-project/monero/issues/1673 I should post another update soon
+* Fcukmommas23 (c0285f0e@gateway/web/freenode/ip.192.40.95.14) has joined #monero-dev
+&lt;i2p-relay&gt; {-olark} I can wait
+&lt;bigreddmachine&gt; fluffypony: but is that the ideal way to do it? after getting merged, closed, etc, those discussions are very tough to find. Something like BIP is a much better long-term place for those discussions
+&lt;@fluffypony&gt; bigreddmachine: I think that changes should be written up as an MRL paper
+&lt;bigreddmachine&gt; I'm not asking because I have a specific proposal to make, but because it seems we don't have an ideal system that can grow well
+&lt;bigreddmachine&gt; fluffypony: and submitted to MRL?
+&lt;@fluffypony&gt; yes
+&lt;@fluffypony&gt; available permanently as an MRL research bulletin, which makes recommendations to the implementors, and exists as a living document
+&lt;bigreddmachine&gt; okay - then shouldn't that be the case for anything consensus changing?
+* JacobJeweler (~Jaac@unaffiliated/jacobjeweler) has joined #monero-dev
+&lt;bigreddmachine&gt; what got me thinking about it is that the discussions behind this month's hard fork are very tough to find. i know it's a small change, but i feel like we don't have a precedent set
+&lt;@fluffypony&gt; bigreddmachine: mostly yes, although I think some things are a little small to write up and might have to be bundled together
+&lt;@fluffypony&gt; let's give that a spin and see how it goes, we can always change the process later on
+&lt;bigreddmachine&gt; what makes something "too small" though? I guess my point is that maybe we need to add guidelines to the main repo that explain all this for people to see in the future
+&lt;@fluffypony&gt; olark: do you want to discuss 1673 now? we still have 19 mins before the Kovri meeting
+&lt;bigreddmachine&gt; I am happy to do that and make the PR,
+&lt;i2p-relay&gt; {-olark} Sure
+&lt;i2p-relay&gt; {-olark} I just wanted to talk about a couple quick things
+&lt;@fluffypony&gt; bigreddmachine: it's subjective - when we changed the block time from 1 min to 2 mins, for eg., the reasons were obvious - yes please do write it up and PR it
+&lt;i2p-relay&gt; {-olark} What people think about having 3 static ringsizes for monero similar to how we have static fee priorities.
+&lt;i2p-relay&gt; {-olark} This was an idea moneromooo had brought up in the issue
+&lt;Slack_4&gt; &lt;sgp_&gt; What ringsizes are you proposing?
+&lt;i2p-relay&gt; {-olark} To protect users from making foolish mistakes reusing irregular ringsizes
+&lt;+moneromooo&gt; I was about to write "I like it", so I now see why I do... :D
+&lt;@fluffypony&gt; olark: I like it because it removes fingerprinting / metadata leaks
+&lt;i2p-relay&gt; {-olark} Well if September is mandatory 4 i was thinking like 4, 12, 50 or something similar the details don't matter at this moment but just what people think about having this in place.
+&lt;@fluffypony&gt; I'm fine with it, but 4 is way too small as the minimum, even per the old MRL recommendations
+&lt;i2p-relay&gt; {-olark} The other thing was since I have been surveying the bitcoin blockchain for a while there is large bias for spent outputs in the past day
+&lt;bigreddmachine&gt; to clarify - unlike fees, which *could* be changed on the user-end to something else, this will make non-standard ring sizes be against the consensus protocol?
+* asjdjjj (d93317f0@gateway/web/freenode/ip.217.51.23.240) has joined #monero-dev
+&lt;i2p-relay&gt; {-olark} and how this affects the attack in MRL-001
+&lt;@fluffypony&gt; bigreddmachine: yes
+&lt;+moneromooo&gt; We could wait to see luigi1112's final ringct sizes, then see how those vary with increasing mixin.
+&lt;@fluffypony&gt; moneromooo: agreed
+&lt;jwinterm&gt; why only three choices?
+&lt;@fluffypony&gt; jwinterm: so that people actually use the two other than the default
+&lt;+moneromooo&gt; To avoid splitting txes in too many classes.
+&lt;Slack_4&gt; &lt;sgp_&gt; So how about 10, 20, 50, 100? Something like that. Pending the research of course
+&lt;@fluffypony&gt; you want to get lost in the mix, remember :)
+&lt;vtnerd1112&gt; So fireice_uk is working on the rpc download changes before any crypto stuff ... ?
+&lt;i2p-relay&gt; {-olark} The assumption in MRL-001 is that an attacker would need roughly 80% of outputs in the entire blockchain to de-anon a transaction but in reality if we use an output selection algo similar to what my survey results convey than in reality an attacker would only need 70%ish of spent outputs in the past day to reliably de-anon  some transactions
+&lt;vtnerd1112&gt; Oops thought that topic was done
+&lt;Slack_4&gt; &lt;sgp_&gt; ^ with what ringsize?
+&lt;@fluffypony&gt; vtnerd1112: yes - we decided in the last meeting that he'd switch milestone orders around
+&lt;+moneromooo&gt; Oh, that ought to be done on 0MQ then.
+&lt;i2p-relay&gt; {-olark} Smooth and myself had come to a conclusion that mixin 4 is fine but if the attack in MRL-001 is made easier with a selection algo like I am suggesting we may need to increase the mandatory ringsizes to protect against an attack like MRL-001
+&lt;@fluffypony&gt; olark: this changes with zipf, right?
+&lt;@fluffypony&gt; ie. a great portion of the ring uses the past day's outputs
+&lt;vtnerd1112&gt; Ok, pigeons told me mymonero seemed to be under lots of load. Ive got some preliminary work done that he could continue to completion
+&lt;vtnerd1112&gt; Just enough to give mymonero a bump hopefully
+&lt;@fluffypony&gt; vtnerd1112: that's fine, maybe ping him and tell him that? fireice_uk never attends dev meetings and is never on IRC
+&lt;+moneromooo&gt; Maybe that's not actually bad.
+&lt;i2p-relay&gt; {-olark} What to increase it to is up in the air obviously. Still have more work to do
+&lt;i2p-relay&gt; {-olark} fluffypony: Yes. Based on the survey I have done so far roughly 70% of spent outputs are from the past day. Future surveying will be going over 2011-2012 to see if there is any change in the distributions.
+* Lloydimiller4- (~Lloydimil@unaffiliated/lloydimiller4) has joined #monero-dev
+&lt;@fluffypony&gt; ok I'm fine with that - olark, what are your thoughts on writing it up as an MRL paper later on once the discussion is finalised?
+&lt;+moneromooo&gt; I think current min is still 2. We could go to 4 in september, and still increase later.
+&lt;Slack_4&gt; &lt;sgp_&gt; I think we should increase it &gt;4 in September
+&lt;bigreddmachine&gt; -olark: is there a way to see what the distribution looks like for txs not related to mining? i'd guess a lot of the quickness in spending is from pools transfering out coins to miners, but in the future this might be a much smaller proportion
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Are we still playing around with having a static ringsize?
+&lt;+moneromooo&gt; Pool payment txes are often with more than 2 outputs.
+&lt;Slack_4&gt; &lt;sgp_&gt; @xmr_eric yes
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Cool
+&lt;@fluffypony&gt; moneromooo: with the new range proofs etc. it might be worthwhile just making the min based on that
+&lt;+moneromooo&gt; Not a guarantee of course. Especially now -_-
+&lt;i2p-relay&gt; {-olark} fluffypony: Sure I can write an MRL paper once I have more of it fleshed out.
+&lt;@fluffypony&gt; can always use like a 10 output tx as a measuring bar
+&lt;+moneromooo&gt; fluffypony: sounds good
+&lt;gingeropolous&gt; ^ interesting
+&lt;i2p-relay&gt; {-olark} xmr_eric: The idea is having 3 static ringsizes for varying levels of paranoia similar to the different fee priorities we have.
+&lt;Slack_4&gt; &lt;xmr_eric&gt; Right
+&lt;bigreddmachine&gt; moneromooo: if we're just looking for a filter on pool txs, we can always use the pools' apis to get txids. my point was those txs might be 50% of all txs now, but 5% two years from now, which impacts the math.
+&lt;gingeropolous&gt; are disposable / one-time addresses happening? I didn't see it make the list of things not to pull in.
+* Lloydimiller4 has quit (Ping timeout: 240 seconds)
+&lt;+moneromooo&gt; That allows me to...
+&lt;+moneromooo&gt; luigi1112: is kenshi84's disposable address patch ready in the theoretical sense, you think ? ie, can I go over it again assuming the math/crypto's final ?
+&lt;@fluffypony&gt; I haven't looked at it in a while, I'll have to re-review the PR to both the MRL and normal repos
+* mochaccinuh (~mochaccin@cm-84.211.122.198.getinternet.no) has joined #monero-dev
+* dani (c38ae40d@gateway/web/freenode/ip.195.138.228.13) has joined #monero-dev
+&lt;@fluffypony&gt; ok we need to wrap up - let's discuss it further later on
+&lt;@fluffypony&gt; 6. Confirm next meeting date/time
+&lt;@fluffypony&gt; April 23rd?
+&lt;jwinterm&gt; meeting adjourned?
+&lt;+moneromooo&gt; I wanted to know whether I could review usefully (ie, without fundamental stuff getting changed later).
+&lt;jwinterm&gt; if so, what is with the txs paying 0.2 XMR fee lately: http://moneroblocks.info/block/1285010 ?
+&lt;@fluffypony&gt; moneromooo: I'm sure luigi1112 will answer the q when he's around, but for now we'll park it
+&lt;@fluffypony&gt; jwinterm: Kovri meeting now, will take a look at it after that
+&lt;Slack_4&gt; &lt;rehrar&gt; Just one quick question. Can I drop the new design here when it's ready for you all to look at?
+&lt;+moneromooo&gt; Sure.
+&lt;Slack_4&gt; &lt;rehrar&gt; Woot
+&lt;@fluffypony&gt; @rehrar sure, or just link everyone here to the repo update or whatever
+&lt;@fluffypony&gt; anonimal: all yours
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/23","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"23"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

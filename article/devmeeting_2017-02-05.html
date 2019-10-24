@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-02-05 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-02-05.html" />
+<meta name="description" content="Highlights[ ]
+
+~Two months since the mast meeting
+	Merged commits
+	batched txns for" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-02-05.html" />
+
+    <title>DevMeeting 2017-02-05 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-02-05.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-02-05</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="26" role="article" about="/article/devmeeting_2017-02-05" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-02-05" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-02-05T21:25:10+00:00">Sun, 02/05/2017 - 16:25</span>
+          <span property="schema:dateCreated" content="2017-02-05T21:25:10+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-02-05&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>~Two months since the mast meeting</li>
+	<li>Merged commits
+	<ul><li>batched txns for node syncing - reduces I/O load (2x-3x improvement on spinning disks). This also helped fix some corruption seen on Windows.</li>
+		<li><a class="new" href="https://monerobase.com/w/index.php?title=Fluffyblocks&amp;action=edit&amp;redlink=1" title="Fluffyblocks (page does not exist)">Fluffyblocks</a> may soon be enabled on MainNet - as TestNet is showing no issues</li>
+		<li><a class="new" href="https://monerobase.com/w/index.php?title=MoneroMooo&amp;action=edit&amp;redlink=1" title="MoneroMooo (page does not exist)">MoneroMooo</a> has a new logging implementation</li>
+	</ul></li>
+	<li>Due to a lack of Github permission robustness, there's a need to setup a bot to handle closing issues and notifications.</li>
+	<li>Some discussion regarding block sizes and fees..no conclusion.</li>
+	<li><a href="https://monerobase.com/wiki/GUI" title="GUI">GUI</a> remains in beta</li>
+</ul><p> </p>
+
+<h1>Transcript<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-02-05&amp;action=edit&amp;section=2" title="Edit section: Transcript"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; welcome to the 77th annual hunger games
+&lt;hyc&gt; oof
+&lt;fluffypony&gt; 1. greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. Any additional meeting items
+&lt;fluffypony&gt; 5. Confirm next meeting date/time
+&lt;fluffypony&gt; so let's start with 1
+&lt;fluffypony&gt; hi
+&lt;pero&gt; HOLA
+&lt;hyc&gt; hi. I'm hyc, and I'm a monerophile
+&lt;Snipa&gt; Morning.
+&lt;DaveyJones&gt; ArcticMine, luigi1111, luigi1114, luigi1112,  othe, hyc, smooth, jaquee, m5M400, medusa_, tewinget, zone117x, dEBRUYNE, moneromooo
+&lt;i2p-relay&gt; {-olark} greetings
+&lt;_Slack&gt; [xmr_eric] hullo
+&lt;Jaquee&gt; hey
+&lt;DaveyJones&gt; one question... is there free margeritas?
+&lt;anonimal&gt; Present in Q state.
+&lt;_Slack&gt; [endogenic] *hands DaveyJones a margarita*
+&lt;fluffypony&gt; DaveyJones: of course, dev meetings are 100% serious business and you need margaritas for that
+&lt;ArticMine&gt; greetings
+&lt;fluffypony&gt; ok let's move on to 2
+&lt;hyc&gt; when was the last meeting?
+&lt;DaveyJones&gt; 2 weeks before christmas?
+&lt;fluffypony&gt; it's been nearly 2 months since the last dev meeting because of end-of-year and me travelling etc.
+&lt;fluffypony&gt; does anyone want to mention stuff that's been done
+&lt;meeting-bot&gt; [EinMByte] Hi
+&lt;fluffypony&gt; (brb hopping out of taxi)
+&lt;meeting-bot&gt; [i2p-relay] {-anonimal} ^ FYI, monero meeting, kovri in 55 minutes.
+&lt;hyc&gt; many many commits have been merged
+&lt;dEBRUYNE&gt; I am here
+&lt;hyc&gt; I will mention my own, using batched txns for node syncing, to reduce I/O demand
+&lt;meeting-bot&gt; [EinMByte] anonimal: Oh right, should be keeping an eye on the meta repository too
+&lt;hyc&gt; this seems to speed up syncing on HDD by 2-3x while improving stability
+&lt;Jaquee&gt; great stuff hyc!
+&lt;anonimal&gt; hyc: sounds tasty
+&lt;hyc&gt; (the actual goal was to eliminate the few corruptions we've see non Windows)
+&lt;hyc&gt; seen on
+&lt;anonimal&gt; So the corruptions were fixed too?
+&lt;hyc&gt; so far it appears so.
+&lt;hyc&gt; I examined 3 corrupted Windows data.mdb files. they all had zero pages at the tail of the file
+&lt;hyc&gt; due to not being sync'd before OS crashed
+&lt;hyc&gt; the new code syncs more frequently, but in a background thread
+&lt;hyc&gt; so throughput is still high because foreground doesn't have to wait for it
+&lt;hyc&gt; but syncs are more often, to reduce the chance of unsync'd pages during a crash
+&lt;hyc&gt;   but there's no 100% guarantee there.
+&lt;anonimal&gt; IIRC, this fix/addition was after latest point release? Was point release before or after the previous meeting?
+&lt;hyc&gt; this is for the default "fast" mode. you can still use "safe" mode for 100% guarantee, but super-slow.
+&lt;hyc&gt; and this is recent, merge was only a week or so ago
+&lt;anonimal&gt; ok
+&lt;fluffypony&gt; ok back, just got to sXpher's house
+&lt;hyc&gt; cool. I think that's it for me.
+&lt;fluffypony&gt; hyc: tons of commits
+&lt;hyc&gt; yeah
+&lt;fluffypony&gt; was fluffy blocks already merged in by the last meeting?
+&lt;anonimal&gt; I think so?... That was before point release right?
+&lt;hyc&gt; I thought fluffyblocks was in 0.10.1
+&lt;Jaquee&gt; yes, pretty sure it was
+&lt;iDunk&gt; It was
+&lt;moneromooo&gt; I think it could be enabled on mainnet now, since testnet's not shown anything wrong with it.
+&lt;fluffypony&gt; anonimal: I can't remember
+&lt;fluffypony&gt; moneromooo: agreed
+&lt;Jaquee&gt; +1
+&lt;anonimal&gt; moneromooo's new logging implementation, this is new.
+&lt;moneromooo&gt; Snipa: you did test it with a private testnet with only such nodes, right ?
+&lt;gingeropolous&gt; the crazy reorgs on testnet are due to old nodes on testnet?
+&lt;fluffypony&gt; yeah the new logging colours threw me for a loop :-P
+&lt;medusa_&gt; yes logging is new, GUi scope for next release is like this:
+&lt;medusa_&gt; extended x64 x86 linux support / cold signing / view only wallets / restore from private keys / integrated mining  / better logging / daemon status button /
+&lt;medusa_&gt; +display unlock time and confirmation
+&lt;Snipa&gt; moneromooo - No, I didn't test on a private testnet, but my personal nodes all have patches enabling it on mainnet between them, and I'm not seeing any issues with it yet.
+&lt;Snipa&gt; All of my testnet nodes of course, have been running it as well without issues.
+&lt;moneromooo&gt; OK, I guess my point was lost. I don't have the disk space for many blockchains to test though...
+&lt;Snipa&gt; If I need to go setup another one, I've got enough disk space to do so.  IIRC we thought it wasn't needed because all of the active testnet nodes were using it.
+&lt;fluffypony&gt; medusa_: ok great
+&lt;fluffypony&gt; I think for future we should have a separate line item for GUI stuff
+&lt;moneromooo&gt; My point was that I wanted to see if it worked on a network with ONLY fluffy blocks being sent.
+&lt;fluffypony&gt; (if there is GUI stuff I mean)
+&lt;moneromooo&gt; But it seems everyone just mentally removes the "only" word :D
+&lt;Snipa&gt; Ah, sorry, I must of missed that.  I can set that up still if it's wanted.  I've got more than enough nodes to do so.
+&lt;moneromooo&gt; That'd be great, yes.
+&lt;moneromooo&gt; I thought you'd already done that actually.
+&lt;moneromooo&gt; What I want to know is whether there is a failure mode when a node can't sync from a fluffy block, but gets the block anyway from another peer.
+&lt;fluffypony&gt; can't we just make testnet fluffy blocks only?
+&lt;fluffypony&gt; and then we test it there
+&lt;Snipa&gt; kk, I'll go figure out how to isolate a bunch of nodes this afternoon, and setup a small network to mine on.
+&lt;moneromooo&gt; We could.
+&lt;fluffypony&gt; testnet seems pretty robust given the amount of stuff we've done on it
+&lt;fluffypony&gt; lol
+&lt;medusa_&gt; Snipa: https://github.com/moneroexamples/private-testnet
+&lt;Snipa&gt; I mean, I leave a couple hundred h/s there on my test pool.  And have ~10-ish nodes up on it.
+&lt;Snipa&gt; Oh, so I can add multiple exclusive nodes?  I think that was one of the questionmarks I was running into.
+&lt;fluffypony&gt; okyes
+&lt;fluffypony&gt; *yes
+&lt;Snipa&gt; Good stuff, I'll go fight with that here in a bit.
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; let's move on
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; issues on Github are starting to pile up, and I think we should get on top of that
+&lt;fluffypony&gt; as discussed before, the lack of granularity in Github's permissions is a bit of an irritation
+&lt;fluffypony&gt; we've discussed having a second repo with more collaborators, but I think that's going to create more confusion than anything else
+&lt;fluffypony&gt; so my suggestion would be that we set up an issue closing bot that has collab status
+&lt;fluffypony&gt; and then that has a list of people that can ping it to close issues
+&lt;hyc&gt; that sounds cool
+&lt;fluffypony&gt; I haven't had a chance to see if such a thing exists, but if not it isn't hard to write
+&lt;pero&gt; https://github.com/foosel/GitIssueBot
+&lt;medusa_&gt; that sounds great
+&lt;fluffypony&gt; and if we set it up to do re-labelling too
+&lt;i2p-relay&gt; {-anonimal} How to protect from troll abuse?
+&lt;Jaquee&gt; cool. could it handle labeling too?
+&lt;pero&gt; cant close yet but perhaps can be extended
+&lt;moneromooo&gt; by "list of people"
+&lt;fluffypony&gt; anonimal: only specific people can ping it
+&lt;i2p-relay&gt; {-anonimal} k
+&lt;medusa_&gt; a good start would be if everyone also takes care of their own issues in the meantime ( i know me included)
+&lt;fluffypony&gt; medusa_: agreed
+&lt;fluffypony&gt; ok any Q&amp;A items?
+&lt;moneromooo&gt; About what ? Anything ?
+&lt;fluffypony&gt; moneromooo: yes
+&lt;fluffypony&gt; hi, I'm fluffypony, AMA
+&lt;pero&gt; i'm actually curious about the status of paybee
+&lt;pero&gt; ;p
+&lt;moneromooo&gt; Then I'm annoyed at the merge commits, which can embed some arbitrary amount of dross, making things easy for an external attacker with access to github to slip pwnage.
+&lt;moneromooo&gt; Does anyone know a good way to prevent those (with manual exceptions since tewinget already said he wouldn't rebase the massive 0MQ branch) ?
+&lt;fluffypony&gt; pero: we can talk about it later
+&lt;DaveyJones&gt; any word from tewinget? did not read a thing from him recently, regarding 0mq
+&lt;moneromooo&gt; A git hook looks like the obvious option, though it's still vulnerable to github.
+&lt;pero&gt; i asked him last night - sec
+&lt;fluffypony&gt; moneromooo: you mean to merge without the merge commit?
+&lt;Jaquee&gt; that would require a rebase by the merger?
+&lt;pero&gt; &lt;tewinget&gt; &lt;pero&gt; very little movement on that front - the pr hasnt been touched in 2 months  &lt;--- I haven't commented on it in as much time, but I've worked on it.  Not as much as I could/should have, of course, but...
+&lt;moneromooo&gt; I'm not sure about that. AIUI, it's needed for the signatures. I'm not super knowledgeable about what that entails wrt amount of dross.
+&lt;i2p-relay&gt; {-anonimal} fluffypony: you very recently finished your extended 1 month+ tour, can you fill us in with details of any notable experiences?
+&lt;fluffypony&gt; moneromooo: it *is* needed for the signature, not everyone is signing their commits
+&lt;moneromooo&gt; Yes, rebase would fix, but that'd need a LOT of rebases, so isn't practical.
+&lt;hyc&gt; and cherry-picking would lose signature?
+&lt;moneromooo&gt; cherry-pick -S resigns.
+&lt;fluffypony&gt; it re-signs
+&lt;fluffypony&gt; and we want to maintain author sigs where they exist
+&lt;hyc&gt; but with picker's key, not original key?
+* anonimal believes so
+&lt;moneromooo&gt; Yes, if someone else cherry-picks, then you can't preserve sig.
+&lt;moneromooo&gt; This massive hole just annoys me, but I'm not sure how to fix it.
+&lt;fluffypony&gt; moneromooo: me neither
+&lt;luigi1112&gt; are you talking about the merge commits into master or like merging instead of rebasing
+&lt;fluffypony&gt; I don't think it's a solvable problem
+&lt;moneromooo&gt; My automated sig checking on make thing is also vulnerable to that, since it trusts anyuthing the pony signs.
+&lt;fluffypony&gt; luigi1112: merge commits into master
+&lt;moneromooo&gt; Well, we can ask him to rebase, that's not hard.
+&lt;moneromooo&gt; It is for tewinget due to the amount of stuff, but that's a special case.
+&lt;fluffypony&gt; moneromooo: rebasing will also make it hard to use Github to track PRs, surely?
+&lt;fluffypony&gt; rebase-only I mean
+&lt;luigi1112&gt; so you want the maintainers merge commits to go away?
+&lt;moneromooo&gt; I meant rebasing before PR. The merger would still do a merge commit, unfortunately.
+&lt;moneromooo&gt; No, just yours, if you PR any. I understood fluffypony's line to mean this, maybe I misunderdtood.
+&lt;hyc&gt; well,we can solve this but the procedure gets more awkward:
+&lt;hyc&gt; PR author rebases before merge
+&lt;hyc&gt; which mean merger has to contact PR author immediately before each merge
+&lt;moneromooo&gt; Oh, I hadn't seem luigi1112's first line. Ignore my last 2 then.
+&lt;moneromooo&gt; Yes, that's what I ment by not practical :/
+&lt;fluffypony&gt; yeah that won't work
+&lt;fluffypony&gt; :(
+&lt;anonimal&gt; Question:
+&lt;fluffypony&gt; anonimal: answer
+&lt;fluffypony&gt; :-P
+&lt;moneromooo&gt; I guess the best we can do it some kind of subjective "rebased not too long ago so any extra dross diff is small enough".
+&lt;DaveyJones&gt; i know ... i know ... 42
+&lt;anonimal&gt; Ok, two questions: is PR author out of the picture? Poof/gone?
+&lt;moneromooo&gt; But it requires the merge to check it.
+&lt;moneromooo&gt; anonimal: usually not, but maybe a couple days' latency. Which means the merger has all the latencies in series.
+* anonimal not 100% following the problem
+&lt;anonimal&gt; Oh, ok.
+&lt;i2p-relay&gt; {-olark} What about hosting code on something that is under our control and not github? This would involve not using github though.
+&lt;fluffypony&gt; moneromooo: but this is all in an effort to make sure that maintainers can't introduce extra bits in, right?
+&lt;moneromooo&gt; I guess most of the problem is fixed by refusing any patch with irrelevant crap, with merge commits, and when they also cause more than trivial diffs in the final merge commit.
+&lt;fluffypony&gt; olark: that's not the problem, my merge commits are GPG signed, so *I'm* the failure mode, not Github
+&lt;i2p-relay&gt; {-olark} right
+&lt;anonimal&gt; So, why not close their PR and reopen a new one with their branch merged (not rebased) to maintain original sigs?
+&lt;moneromooo&gt; Well, maintainers and anyone who could fool the maintainer into signing a large merge.
+&lt;anonimal&gt; If they can't keep up, then do the work for them?
+&lt;moneromooo&gt; anonimal: I do not understand "why not close their PR and reopen a new one with their branch merged (not rebased) to maintain original sigs?"
+&lt;hyc&gt; neither do I
+&lt;hyc&gt; sounds to me like it would create exactly the problem we're trying to address
+&lt;hyc&gt; PRs with irrelevant changes sliding in
+&lt;anonimal&gt; I think I don't understand the problem, so my question doesn't make sense.
+* anonimal is 25% here, preparing for kovri meeting
+&lt;fluffypony&gt; moneromooo: otoh it's not like we have so many eyes on PRs that nothing at all could be snuck past us, so maybe we're trying to solve a problem that is ultimately a non-issue
+&lt;hyc&gt; I think we should continue this after the meeting, probably won't solve it here.
+&lt;moneromooo&gt; So... we're screwed alrady, might as well not care ?
+&lt;luigi1112&gt; :-)
+&lt;fluffypony&gt; moneromooo: yes :-P
+&lt;moneromooo&gt; I guess it is a practical solution for now.
+&lt;moneromooo&gt; Though, an easy win is to automatically reject any PR with a merge commit in it.
+&lt;i2p-relay&gt; {-olark} hmm
+&lt;moneromooo&gt; If github could be set up to reject those, that'd remove a good chunk of dross already.
+&lt;fluffypony&gt; moneromooo: I'm happy with that - could the requester fix it by rebase + force-push ?
+&lt;moneromooo&gt; (though still vulberable to github itself, but we said we don't care for now)
+&lt;hyc&gt; do you have a recent example of a problematic PR?
+&lt;moneromooo&gt; Yes. That's what I do when I fix a trivial thing in a PR of mine.
+&lt;_Slack&gt; [nanoakron] That’s what I do with mine
+&lt;hyc&gt; and yes, I usually rebase my PRs on latest master
+&lt;fluffypony&gt; on the topic of Github, pigeons has a Gitlab mirror running on our (Monero's) hardware, so we're reasonably resilient to weirdness
+&lt;moneromooo&gt; Not a recent one. I found one, but it's a very odd behavior on a single VM.
+&lt;moneromooo&gt; A mirror isn't really a good protection against this I think.
+&lt;fluffypony&gt; ok so new rule is that people submitting PRs should be asked to rebase + force-push if a merge commit exists in their PR
+&lt;moneromooo&gt; Yes, please. I do when I see them, but I often look just at the diffs and forget commits.
+&lt;hyc&gt; yeah that sounds reasonable
+&lt;Jaquee&gt; yep
+&lt;moneromooo&gt; But it could be automated I think.
+&lt;fluffypony&gt; I'll look to see if there's a hook
+&lt;fluffypony&gt; would be nice to automate things like notices on buildbot failures
+&lt;moneromooo&gt; I just saw a java jar one. Which seemed... meh.
+&lt;fluffypony&gt; or on first-buildbot-failure
+&lt;_Slack&gt; [jollymort] i have one q: what if the price explodes again and does 10x - what to do with fees? make F0 in the dynamic fee calc 10x smaller? somehow i feel it would call for a one time 10x blocksize bump as well to keep the proportions same, otherwise we'd need huge multipliers to get to the point where increasing fee gives incentive to bump the blocks
+&lt;fluffypony&gt; ArticMine: ^^
+&lt;ArticMine&gt; A price increase without a corresponding increase in blocksize?
+&lt;_Slack&gt; [jollymort] yeah
+&lt;pigeons&gt; the ircbot for buildbot can notify when a job goes success-&gt;fail
+&lt;_Slack&gt; [nanoakron] @jollymort it’s not really reasonable to ask the blockchain to care about the fiat price because that requires gameable oracles
+&lt;fluffypony&gt; pigeons: can it notify on the PR tho?
+&lt;pigeons&gt; yes
+&lt;fluffypony&gt; pigeons: ok cool - let's chat about it later / tomorrow and figure out which platforms we want to target with that
+&lt;_Slack&gt; [jollymort] nanoakron i get it, but with the current set-up we decided on an arbitrary starting point
+&lt;_Slack&gt; [nanoakron] You mean 60k blocks?
+&lt;DaveyJones&gt; also jollymort ... what is a reasonable time-frame to call sth a higher price to even justify changing F0 ?
+&lt;moneromooo&gt; fwiw, there's so much constant failures that I ignore the buildot pings now (sorry)
+&lt;ArticMine&gt; Over time the assumption is that price follows transaction demand. Over the short term ther may well be a delay.
+&lt;_Slack&gt; [jollymort] good point Davey... but i can imagine a scenario where we have 3$ fees for some period
+&lt;_Slack&gt; [nanoakron] @jollymort What is a $3 fee? How does the system determine that in a zero-trust manner?
+&lt;_Slack&gt; [jollymort] it doesn't
+&lt;_Slack&gt; [jollymort] maybe difficulty is a loose peg
+&lt;_Slack&gt; [nanoakron] Fees are an economic negotiation between miners and users
+&lt;ArticMine&gt; If the price rises very fast it could happen. There is another complication factor here namely one time changes in transaction size
+&lt;_Slack&gt; [jollymort] yeah, was RCT size bump considered?
+&lt;DaveyJones&gt; maybe if sth like the average tx over a given time period sink TOO low some kind of mechanism would detect such a behaviour and see it as too expensive TX
+&lt;ArticMine&gt; Ultimately fees are set by the blocksize penalty / demand / base reward
+&lt;_Slack&gt; [jollymort] nanoakron i know that, but the minimum fee could become problematic in case of price bump
+&lt;_Slack&gt; [nanoakron] The sudden increase to RCT sizes should have perhaps been considered in advance. The problem is people who panicked and refused to use RCT Tx, thereby keeping an odd mix of large and small Tx in each block, preventing proper upwards adjustment in size and downwards adjustment in fee
+&lt;DaveyJones&gt; buth my math is way to bad to give a better example :D
+&lt;_Slack&gt; [jollymort] so just changing F0 would probably be ok
+&lt;ArticMine&gt; Yes the minimuim fee could need to be adjusted
+&lt;_Slack&gt; [nanoakron] @jollymort can you please model what you want to happen first and submit it as a post or code somewhere so it can be considered formally? A bit of academic rigour would be nice here
+&lt;ArticMine&gt; We just had an effective increase in TX size ~10x +
+&lt;DaveyJones&gt; without changing F0
+&lt;ArticMine&gt; F0 was changed just before in anticipation
+&lt;DaveyJones&gt; ah okay
+&lt;_Slack&gt; [jollymort] cool
+&lt;_Slack&gt; [jollymort] anyway, i'll do some study
+&lt;_Slack&gt; [jollymort] but just wanted to see your thoughts
+&lt;ArticMine&gt; The relevant question is the change in RingCT Tx size and further optimizations
+&lt;_Slack&gt; [nanoakron] I’m not averse to the idea, so long as it can be justified with a nice model of the expected behaviour and consideration of the potential attack surface
+&lt;_Slack&gt; [xmr_eric] I have a question. When should the GUI come out of beta status? Because things are feeling pretty stable and the featureset seems complete to me.
+&lt;ArticMine&gt; Since this influences blocksize and consequently fee paid
+&lt;hyc&gt; It should be perpetually beta. It gets lonely around here without the reassuring lull of "where's the GUI" in the background
+&lt;_Slack&gt; [jollymort] i was thinking of: increase baseline block size x5 and reduce F0 with x0.2
+&lt;_Slack&gt; [jollymort] but block size is consensus so..
+&lt;moneromooo&gt; Where's the LMDB wallet file ?
+&lt;_Slack&gt; [jollymort] needs some justifications
+&lt;DaveyJones&gt; nanoakron like i said... maybe sth like the average tx numbers decrease drastically for a given time frame could be a trust-less way too do it... but i have no clue how to get a decent formula
+&lt;_Slack&gt; [nanoakron] Hrm...
+&lt;DaveyJones&gt; as actual example... the price pumps and suddenly it is WAY to expensive to do any tx for the people
+&lt;_Slack&gt; [jollymort] tx numbers can be gamed
+&lt;ArticMine&gt; jollymort there is merit to this
+&lt;_Slack&gt; [nanoakron] @hyc is it possible to auto-scan the database file if the system wants to crash? e.g. “Database corrupt after block 120842…rewinding…"
+&lt;_Slack&gt; [jollymort] x5 due to RCT size increase
+&lt;_Slack&gt; [jollymort] when the original 60kb was set, probably RCT was not in the works
+&lt;_Slack&gt; [jollymort] so it was based on TXes of 1kb
+&lt;luigi1112&gt; yes
+&lt;ArticMine&gt; the issue is the relative size of the tx to minim blocksize
+&lt;_Slack&gt; [jollymort] or whatever was the pre-RCT size
+&lt;luigi1112&gt; is dev meeting over
+&lt;hyc&gt; nanoakron: not in general. since we only keep 2 persistent versions of the DB.
+&lt;_Slack&gt; [jollymort] ArcticMine yes, that's how i see it
+* bigreddmachine (~bigreddma@c-98-245-86-104.hsd1.co.comcast.net) has joined
+&lt;hyc&gt; nanoakron: if the OS failed to sync the previous two txns, then the corruption is uncrecoverable.
+&lt;_Slack&gt; [nanoakron] @hyc :( How about these pages of zeroes - if that’s a consistent failure mode can they be unwound?
+* MineCoins (~MineCoins@gateway/tor-sasl/minecoins) has joined
+&lt;_Slack&gt; [nanoakron] Oh
+&lt;fluffypony&gt; ok guys
+&lt;_Slack&gt; [jollymort] anyways, just wanted to know if anyone else thought about this; won't take any more of your time
+* buddhaghosa (chatzilla@gateway/vpn/mullvad/x-wjsxoyjfujunuoqn) has joined
+&lt;fluffypony&gt; let's wrap it up
+&lt;_Slack&gt; [nanoakron] That’s all it takes?
+&lt;_Slack&gt; [nanoakron] 2 Tx
+&lt;fluffypony&gt; Kovri meeting starting in 5 minutes
+&lt;hyc&gt; nanoakron: yes. we could change this.
+* gutterball (d5cdfd00@gateway/web/freenode/ip.213.205.253.0) has joined
+&lt;DaveyJones&gt; fluffypony ... AMA after the kovri meeting? :D about your journey and paybee?
+&lt;hyc&gt; nanoakron: use a longer delay before reusing old pages.
+&lt;DaveyJones&gt; if you got something to tell ^^
+&lt;_Slack&gt; [nanoakron] @hyc Ok. At least there’s a potential way through it.
+&lt;i2p-relay&gt; {-olark} I opened an issue to start discussing alternatives to the ringsize increase in September 2017 that negates a lot of possible attack vectors on ring signatures and still ensure a 'true' strength of ringsize 4 at minimum for all transactions. It is here https://github.com/monero-project/monero/issues/1673 I think it requires serious consideration moving forward. I won't go too much into it and
+&lt;i2p-relay&gt; {-olark} just let everyone read the writeup :p
+* thrmo (~thrmo@unaffiliated/thrmo) has joined
+&lt;_Slack&gt; [nanoakron] @olark I’d like knaccc to contribute too with his modelling of churn
+&lt;_Slack&gt; [xmr_eric] I like the idea of a static ringsize
+&lt;_Slack&gt; [jollymort] i like the "static" proposal
+&lt;_Slack&gt; [xmr_eric] ^^
+&lt;_Slack&gt; [jollymort] and yes, also churn
+&lt;fluffypony&gt; DaveyJones: sounds good - I've got to step out for a little bit
+&lt;_Slack&gt; [xmr_eric] No thoughts on getting GUI out of beta status, everybody
+&lt;i2p-relay&gt; {-olark} because the current situation is... undesirable to say the least
+&lt;moneromooo&gt; What is beta status ?
+&lt;hyc&gt; xmr_eric: sounds like not yet.
+&lt;Jaquee&gt; xmr_eric: i think we need one more beta release at least.
+&lt;knaccc&gt; nanoakron kenshi84 blew some big holes in my churn suggestion btw, so my model isn't good yet.
+&lt;_Slack&gt; [nanoakron] @knaccc Ah…well, all discussion is good
+&lt;_Slack&gt; [xmr_eric] Cool
+&lt;hyc&gt; knaccc: cool, is that written anywhere?
+&lt;_Slack&gt; [nanoakron] @xmr_eric and if you see bugs, please bring them up on github
+&lt;fluffypony&gt; ok anonimal the floor is yours
+&lt;_Slack&gt; [jollymort] also, opened discussion on multiple PID / TX : ) https://github.com/monero-project/monero/issues/1659
+&lt;knaccc&gt; hyc only in my IRC logs. Summary is that the churn only works if you're churning with pure ringct trees, doesn't work if there are non-ringCT transactions mixed in
+&lt;hyc&gt; thx
+&lt;meeting-bot&gt; [i2p-relay] {-anonimal} I have 2 minutes to prepare
+&lt;_Slack&gt; [jollymort] i thought you can't mix rct+non-rct outputs anyway
+&lt;meeting-bot&gt; [i2p-relay] {-anonimal} 17:59 1 minute!
+&lt;_Slack&gt; Action: jollymort freezes
+&lt;Jaquee&gt; +1 lmdb wallet
+&lt;_Slack&gt; [nanoakron] _waits with bated breath_
+* moneromooo congratulates nanoakron for correct spelling.
+&lt;_Slack&gt; [nanoakron] :grimacing:
+&lt;anonimal&gt; Any objections to me typing in #monero-dev?
+&lt;knaccc&gt; jollymort it's when you mix with an output that is a ringct output but whose inputs are non ring-ct. that breaks churn
+&lt;meeting-bot&gt; [fluffypony] none from fluffy-on-this-side either
+&lt;fluffypony&gt; none
+&lt;hyc&gt; no objection
+&lt;moneromooo&gt; That wasn't sarcasm actually :D
+&lt;meeting-bot&gt; [i2p-relay] {-ArticMine} Fine with me
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/26","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"26"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

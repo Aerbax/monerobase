@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2016-11-27 | Monerobase" />
+<link rel="canonical" href="devmeeting_2016-11-27.html" />
+<meta name="description" content="Highlights[ ]
+
+vtnerd is reworking the threading model
+	moneromooo, Jaquee, abrkn, and xmr-" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2016-11-27.html" />
+
+    <title>DevMeeting 2016-11-27 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2016-11-27.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2016-11-27</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="27" role="article" about="/index.php/article/devmeeting_2016-11-27" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2016-11-27" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2016-11-27T21:25:56+00:00">Sun, 11/27/2016 - 16:25</span>
+          <span property="schema:dateCreated" content="2016-11-27T21:25:56+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2016-11-27&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>vtnerd is reworking the threading model</li>
+	<li>moneromooo, Jaquee, abrkn, and xmr-eric worked on bug fixes and features</li>
+	<li>kenshi84 started working on "one-time" addresses. These will work without using the integrated address format.</li>
+	<li>MacOS(and possibly others) is segfaulting on the latest dev builds - this will temporarily block the next tagged release.</li>
+	<li>Shen has begun a thorough review of the <a href="https://monerobase.com/wiki/RingCT" title="RingCT">RingCT</a> implementation</li>
+	<li>There will be a mandatory tagged release before the <a class="new" href="https://monerobase.com/w/index.php?title=January_2017_hard_fork&amp;action=edit&amp;redlink=1" title="January 2017 hard fork (page does not exist)">January 2017 hard fork</a>.</li>
+	<li>Will likely release the <a href="https://monerobase.com/wiki/GUI" title="GUI">GUI</a> along with that tagged release.</li>
+	<li>Ongoing discussion on Crypto libraries - spawned by issue 1271</li>
+</ul><p> </p>
+
+<h1>Full chat transcript<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2016-11-27&amp;action=edit&amp;section=2" title="Edit section: Full chat transcript"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;@fluffypony&gt; othe / smooth / moneromooo / dEBRUYNE / ferretinjapan / Jaquee / jwinterm / luigi1112 / medusa_ / NoodleDoodle / pigeons / vtnerd
+&lt;@fluffypony&gt; and anyone I've forgotten
+&lt;+hyc&gt; hola
+&lt;ferretinjapan&gt; yo
+&lt;@fluffypony&gt; welcome, welcome
+&lt;@fluffypony&gt; ok so
+&lt;@fluffypony&gt; since we last met
+&lt;Jaquee&gt; hi
+&lt;@fluffypony&gt; there have been quite a few merge sessions
+&lt;@fluffypony&gt; or merge sesh's as I like to call them
+&lt;@fluffypony&gt; coz, you know, when you've been a maintainer as long as I have, you learn to give things little names otherwise you'll go mad
+&lt;Jaquee&gt; lol
+&lt;@fluffypony&gt; there have been some major reworks to the threading model, courtesy of vtnerd
+&lt;@fluffypony&gt; who also split part of monero-wallet-cli off into monero-wallet-rpc
+&lt;@fluffypony&gt; (which we had previously done on the old dev branch, as you may recall)
+&lt;@fluffypony&gt; gingeropolous started pushing more code than a troll dev should, so he's kinda progressed beyond that
+&lt;@fluffypony&gt; moneromooo shot down bug after bug
+&lt;@fluffypony&gt; kenshi84 started working on one-time addresses without using the integrated address format we currently have
+&lt;@fluffypony&gt; @NanoAkron also fixed some errant armv8 things
+&lt;@fluffypony&gt; and then on the Monero Core side tons of fixes, small and large, primarily by moneromooo and Jaquee
+&lt;@fluffypony&gt; abrkn also had their first PR merged to Monero Core, so welcome to a new contributor
+&lt;@fluffypony&gt; xmr-eric also had a pair of PRs, so he's almost at 5 PRs which is excellent
+&lt;@fluffypony&gt; as it stands right now there is a weird segfault occurring occasionally, at least on macOS
+&lt;@fluffypony&gt; and possibly other operating systems
+&lt;@fluffypony&gt; this is a blocker to the next tagged release
+&lt;ferretinjapan&gt; ubuntu as well^
+&lt;@fluffypony&gt; also running LMDB in "fast" mode may be unsuitable for Windows - hyc, what are your thoughts on that?
+&lt;asok&gt; debian also ^
+&lt;+hyc&gt; still gathering data
+&lt;+hyc&gt; asked that user what happened oin his prior run, whether PC crashed etc
+&lt;@fluffypony&gt; ok - so that's a possible blocker to the tagged release
+&lt;@fluffypony&gt; and then in new, relevant info, Shen has begun a thorough review of the RingCT implementation
+&lt;@fluffypony&gt; and already there are a couple of nigglies, some carried across from his rough implementation
+&lt;@fluffypony&gt; so this means we will have to have a mandatory tagged release out before the Jan hard fork
+&lt;+moneromooo&gt; yay!
+&lt;@fluffypony&gt; given that there are 2-3 blockers to the tagged release, and given its nature, we will likely release it alongside the GUI
+&lt;@fluffypony&gt; so that we get a fair degree of pre-fork adoption
+&lt;@ArticMine&gt; That makes a lot of sense
+&lt;@fluffypony&gt; in the meantime
+&lt;@fluffypony&gt; pigeons is setting up links to built binaries on the buildbot infrastructure
+&lt;@fluffypony&gt; and I'll set forwarders up or something for those
+&lt;@fluffypony&gt; so that people will be able to grab nightlies of both Monero and Monero Core
+&lt;@fluffypony&gt; this is not a small amount of work, but it should make it a LOT easier for non-developers to test
+&lt;@fluffypony&gt; and we need ongoing functional testing, over and above test suite regressions
+&lt;@fluffypony&gt; speaking of which; the next step on that is to run and publish performance test data on a per-PR basis
+&lt;@fluffypony&gt; so we can spot performance improvements / regressions
+&lt;@fluffypony&gt; last thing that I want to open the floor to
+&lt;@fluffypony&gt; is issue 1271
+&lt;@fluffypony&gt; https://github.com/monero-project/monero/issues/1271
+&lt;@fluffypony&gt; opened by paragonie-scott
+&lt;@fluffypony&gt; currently we hit /dev/urandom for a random seed, basically
+&lt;@fluffypony&gt; and then use the Keccak sponge function for random numbers thereafter
+&lt;@fluffypony&gt; a userland PRNG is not ideal, but this doesn't really represent an attack surface that an attacker can take advantage of right now
+&lt;@fluffypony&gt; to alleviate this we need to pick a crypto lib, and slowly start using it in various parts of the application
+&lt;@fluffypony&gt; refactoring out the in-source implementations we currently have for most things
+&lt;@fluffypony&gt; the only two really worth considering are CryptoC++ and libsodium
+&lt;@fluffypony&gt; if anonimal is around, maybe he can tell us why Kovri settled on cryptocpp
+&lt;i2p-relay&gt; {-olark} What about TweetNaCl?
+&lt;@fluffypony&gt; oh yes
+&lt;@fluffypony&gt; so
+&lt;@fluffypony&gt; TweetNaCl is great for the core crypto bits where the most important thing is getting it verifiably right
+&lt;@fluffypony&gt; TweetNaCl's simplicity lends itself towards formal verification
+&lt;@fluffypony&gt; a larger library like libsodium or cryptocpp will NEVER be formally verified
+&lt;+hyc&gt; I'm not convinced of the original argument. userland PRNGs are not a liability
+&lt;+hyc&gt; and haveged itself was recently recommended on crypto list http://www.metzdowd.com/pipermail/cryptography/2016-November/030930.html
+&lt;@fluffypony&gt; hyc: I agree, but there's also nothing wrong with just hitting /dev/urandom each time
+&lt;i2p-relay&gt; {-anonimal} Since there is a heavy reliance on crypto, and most of the implementation was already written with crypto++ in mind (though it is more 'abstracted' now), any swap-out of crypto would *not* be worth the benefits gained.
+&lt;@fluffypony&gt; haveged would still be of benefit there as it affects the chain from /dev/random -&gt; /dev/urandom
+&lt;+moneromooo&gt; There's a tendency for security researchers to hype every small thing too, fwiw.
+&lt;+hyc&gt; hitting /dev/urandom every time leaves an obvious footprint. I suppose it's more of an issue for closed-source s/w
+&lt;@fluffypony&gt; hyc: yeah - for Monero a root user would be able to trivially trap for any obfuscation we add
+&lt;+hyc&gt; IME, reverse engineering closed source, it's harder to break a PRNG n a binary with no symbols and no syscalls
+&lt;+hyc&gt; but yeah, not relevant for open source
+&lt;@ArticMine&gt; Yes but we are not implementing DRM here
+&lt;i2p-relay&gt; {-anonimal} * was responding to fluffypony's ping for kovri, what wasn't an endorsement or argument for/against anything for monero
+&lt;i2p-relay&gt; {-anonimal} s/what/that/
+&lt;@fluffypony&gt; anonimal: sure, but it's advantageous if Kovri and Monero use the same lib
+&lt;+hyc&gt; less code to maintain, yeah
+&lt;+hyc&gt; bigger impact if a flaw is found
+&lt;@fluffypony&gt; (for functions TweetNaCl doesn't have, or where performance greater than TweetNaCl's is required)
+&lt;@fluffypony&gt; sure, but we're not protecting ourselves by using libsodium vs. cryptocpp
+&lt;@fluffypony&gt; unless we know in advance that one will have an implementation flawthat the other won't
+&lt;endogenic&gt; is a C++ dep an issue going into the future with talk of porting to pure C?
+&lt;i2p-relay&gt; {-anonimal} Can someone give a tl;dr of all crypto schemes required by monero (aside from ed25519, keccak, and any PRNG concern)?
+&lt;@fluffypony&gt; blake256, chacha8, groestl, skein, jh, keccak
+&lt;+hyc&gt; cryptonight uses keccak, groestl,
+&lt;+hyc&gt; yeah what fluffy said
+&lt;@fluffypony&gt; lol
+&lt;+moneromooo&gt; There's all the stuff in crypto-ops.c
+&lt;@fluffypony&gt; moneromooo: that's covered by TweetNaCl
+&lt;@fluffypony&gt; ie. covered by SUPERCOP
+&lt;+hyc&gt; I presume we're gonna support TLS on rpc connections too?
+&lt;+moneromooo&gt; Do you mean that it'd be still used if we were to change to cryptocpp ?
+&lt;@fluffypony&gt; hyc: kinda - vtnerd is working on it atm
+&lt;@fluffypony&gt; we're going to have easy instructions on TLS wrappers, and then authentication on the RPC layer
+&lt;@fluffypony&gt; moneromooo: yes
+&lt;+moneromooo&gt; Why change, then ?
+&lt;+moneromooo&gt; If it's only part change, I mean.
+&lt;@fluffypony&gt; &lt;vtnerd&gt; I wanted to mention that I would recommend _not_ adding SSL support directly to the codebase. I think using SSH tunneling or a SSL proxy like hitch would be better. I can write a guide and some basic strategies if you have someone in particular that wants the rpc stream encrypted
+&lt;@fluffypony&gt; &lt;vtnerd&gt; one of the advantages is not having to configure all of the keys, etc. I'm thinking about adding a warning that can only be suppressed with a CLI option or user-input if someone binds to a non-loopback IP
+&lt;i2p-relay&gt; {-anonimal} I used that argument for kovri last year, it was quickly shot down by str4d and zzz.
+&lt;vtnerd&gt; https://github.com/varnish/hitch
+&lt;@fluffypony&gt; moneromooo: to get away from the in-source implementations that are mostly obscure or not massively common
+&lt;vtnerd&gt; i2p-relay: do you recall the arguments against doing it that way?
+&lt;i2p-relay&gt; {-anonimal} Expecting users to use a guide or 3rd party is probably not a good idea.
+&lt;i2p-relay&gt; {-anonimal} vtnerd: there may be a log pasted in a closed github issue
+&lt;+hyc&gt; I would just use stunnel, it's already proven and pretty simple
+&lt;i2p-relay&gt; {-anonimal} Basically what I just said.
+&lt;+moneromooo&gt; It's a lot easier to do the wrong thing thogh.
+&lt;@fluffypony&gt; I think if we can detect and warn users that their behaviour is unsafe, but here's what they can do to fix it, that's enough
+&lt;+moneromooo&gt; The same users that asked a question that I had answers with a red message when bitmonerod stopped, but they had somehow missed ? :)
+&lt;i2p-relay&gt; {-anonimal} openssl is a dependency for kovri anyway, implementing tls/ssl sockets is trivial. Are we talking more about than sockets though?
+&lt;vtnerd&gt; if SSL support is integrated public keys still have to be generated, stored, and then copied remotely ... so its still frustrating
+&lt;@fluffypony&gt; moneromooo: what if it won't start when bound to an external IP, unless you pass a flag to override it?
+&lt;+hyc&gt; that's life. we can write a certificate generator/mini-CA
+&lt;+moneromooo&gt; Maybe. I don't know near enough about this to have a useful opinion anyway.
+&lt;+hyc&gt; I already have one I wrote for OpenLDAP back in 2000 (mini-CA)
+&lt;vtnerd&gt; CA key still has to be distributed ...
+&lt;+moneromooo&gt; CA key ?
+&lt;+hyc&gt; CA cert, not key
+&lt;i2p-relay&gt; {-anonimal} Certs for whom?
+&lt;vtnerd&gt; its still just a public key
+&lt;i2p-relay&gt; {-anonimal} Is there an open issue for this with discussion so I catch up?
+&lt;pigeons&gt; my understanding is that one reason bitcoin is removing integrated tls support from their rpc server is to discourage people from exposing that surface to the internet when they don't have the resources to give it the same review as p2p/etc interfaces
+&lt;+hyc&gt; on a personal node, you only care that your personal clients can connect. you generate your own CA, a server cert for your node, and a client cert for your wallets.
+&lt;pigeons&gt; but for monero, there is already remote daemon support so perhaps not relevant
+&lt;i2p-relay&gt; {-anonimal} Oh, personal nodes, ok thanks hyc.
+&lt;+hyc&gt; and you use full cert verification in both directions, to prevent any foreign apps from connecting.
+&lt;@fluffypony&gt; hmmmm
+&lt;vtnerd&gt; which can be done with SSH easily too
+&lt;i2p-relay&gt; {-anonimal} Not everyone has access to ssh nor know how to use ssh.
+&lt;+hyc&gt; yeah, if you're going to keep a long running ssh tunnel alive
+&lt;vtnerd&gt; I haven't seen an easy way to "auto-configure" because the clients still need to know server pub key
+&lt;+hyc&gt; node and client need a copy of the CA cert
+&lt;vtnerd&gt; I guess blindly accepting the cert is better ?
+&lt;@fluffypony&gt; with TLS clients can just approve a fingerprint
+&lt;@fluffypony&gt; then it's a visual comparison to a self-signed cert's fingerprint
+&lt;pigeons&gt; tofu seems acceptable to people, despite its weaknesses
+&lt;+hyc&gt; ugh.
+&lt;pigeons&gt; i know
+&lt;+hyc&gt; if you're going to document best practice for TLS, don't document shortcuts. that's garbage.
+&lt;@fluffypony&gt; we're bikeshedding - we need to put a peg in the sand and make a decision, even if it's the wrong decision
+&lt;@fluffypony&gt; I'm in favour of not building things and ripping them out later
+&lt;@fluffypony&gt; but rather not having them until there is an overwhelming demand for it
+&lt;+moneromooo&gt; erf
+&lt;+hyc&gt; yeah, fine. no built-in TLS support for now
+&lt;+moneromooo&gt; I'd be fine with that plus the --force-plaintext-bind-to-non-local-ip
+&lt;@fluffypony&gt; we'll use the fail-on-start method if there are RPC bindings to non-loopback addresses, and we'll have a guide that documents hitch and stunnel
+&lt;vtnerd&gt; I already have a patch ready that forces a user to confirm if the rpc-bind-ip is not loopback
+&lt;@fluffypony&gt; hyes
+&lt;@fluffypony&gt; vtnerd: can we make it fail-unless-overridden-by-flag?
+&lt;@fluffypony&gt; we're trying to avoid interaction on the daemon
+&lt;vtnerd&gt; the patch has both. Without the flag set it prompts the user
+&lt;vtnerd&gt; --confirm-external-bind
+&lt;+moneromooo&gt; Maybe test if stdin is tty, fail if not.
+&lt;+moneromooo&gt; Oh, wait, windows. Nevermind.
+&lt;+hyc&gt; sounds like just fail without the flag is simpler
+&lt;vtnerd&gt; definitely. will do then
+&lt;vtnerd&gt; that is_yes patch is less useful now, but I guess it did cleanup simpler_wallet.cpp some
+&lt;+moneromooo&gt; Next thing. Did shen give an idea when he might have a first pass of things that need fixing ?
+&lt;+moneromooo&gt; I have time to fix, and we're pressed for time :D
+&lt;@fluffypony&gt; othe: ^^
+&lt;@fluffypony&gt; ok
+&lt;@fluffypony&gt; we wait for othe
+&lt;+moneromooo&gt; Later, then.
+&lt;@fluffypony&gt; in the meantime - anyone want to bring up anything else?
+&lt;@fluffypony&gt; oh - also, if anyone has any strong opinions on the crypto lib we should be using, now is a good time to mention them
+&lt;@fluffypony&gt; my inclination is to cryptocpp for a few reasons
+&lt;@fluffypony&gt; https://en.wikipedia.org/wiki/Comparison_of_cryptography_libraries is a good starting point if anyone wants to compare it to the others
+&lt;pero&gt; i had some discussion points wrt to the gooey if no one else has anything
+&lt;@fluffypony&gt; pero: go ahead
+&lt;pero&gt; i think the navigation menu might need a 2nd level
+&lt;@fluffypony&gt; medusa_ / dEBRUYNE ^^
+&lt;@fluffypony&gt; slash Jaquee
+&lt;pero&gt; perhaps an advanced or something to that effect to house verify payment and sign/verify
+&lt;pero&gt; those are features that are not going to be very often
+&lt;pero&gt; especially sign/verify
+&lt;pero&gt; sign/verify needs to be renamed to 'Signatures' i think
+&lt;pero&gt; it's kind of confusing with 'verify payment'
+&lt;pero&gt; but i think if they were thrown into an Advanced top-level tab then there would be less possible confusion for most users
+&lt;pero&gt; the other thing- what's up with that qt title bar?
+&lt;pero&gt; isnt that best left for the OS to handle
+&lt;+moneromooo&gt; IIRC, people slightly preferred keeping it.
+&lt;pero&gt; i dont think 'preferring' makes it the right decision
+&lt;+hyc&gt; oh, as a point of curiosity - monerod runs quite happily on a phone even on 2G. using --out-peers 2.
+&lt;+hyc&gt; hardly any bandwidth used.
+&lt;pero&gt; i have 2 titlebars in gnome
+&lt;pero&gt; is that the case for all OSs?
+&lt;iDunk&gt; no
+&lt;@fluffypony&gt; no
+&lt;pero&gt; doesnt apple have it's buttons on the left side?
+&lt;+moneromooo&gt; I have two too. But then I have a special setup.
+&lt;@fluffypony&gt; then it's a bug
+&lt;@fluffypony&gt; moneromooo: you *are* special
+&lt;@fluffypony&gt; :-P
+&lt;@fluffypony&gt; 2 minutes and then I bring up meeting bot, so let's wrap this up
+&lt;Jaquee&gt; i agree on using the os default
+* fluffypony hates the OS default
+&lt;pero&gt; we're also going against OS-specific consistent user experience
+&lt;+moneromooo&gt; ... wat...
+&lt;Jaquee&gt; and that we need to work on the ux.
+&lt;pero&gt; against their design standards
+&lt;Jaquee&gt; yes
+&lt;i2p-relay&gt; {-olark} re: crypto libraries, imo, use TweetNaCl for what you can. Cryptopp for everything else.
+&lt;+hyc&gt; agree with pero - app should leave widgets to user's window manager
+&lt;@fluffypony&gt; olark: agreed
+&lt;+hyc&gt; title bar included
+&lt;@fluffypony&gt; we don't want it looking like it's from 1995 tho :-P
+&lt;+hyc&gt; we don't want it looking different from everything else on their desktop
+&lt;@fluffypony&gt; I'd prefer that the Monero Core app is consistent across platforms
+&lt;+hyc&gt; it was a pretty jarring experience for me running it on windows
+&lt;pero&gt; well it's just a titlebar
+&lt;@fluffypony&gt; ok let's discuss it later, meeting bot coming online
+&lt;Jaquee&gt; ok
+&lt;pero&gt; it's not going to consistent - some platforms might have it maximized
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/27","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"27"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

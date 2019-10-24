@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-12-03 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-12-03.html" />
+<meta name="description" content="Highlights[ ]
+
+The MRL(Monero Research Lab) has working Java test code for multi-output bulletproofs" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-12-03.html" />
+
+    <title>DevMeeting 2017-12-03 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-12-03.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-12-03</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="10" role="article" about="/index.php/article/devmeeting_2017-12-03" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-12-03" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-12-03T21:08:55+00:00">Sun, 12/03/2017 - 16:08</span>
+          <span property="schema:dateCreated" content="2017-12-03T21:08:55+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-12-03&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>The MRL(Monero Research Lab) has working Java test code for multi-output bulletproofs
+	<ul><li>Currently being ported to C++ (non-multi-output)</li>
+		<li>Research is ongoing for how fee structures are impacted (a large number of outputs could form a Denial of Service)</li>
+		<li>A Single output BulletProof(BP) is 704 bytes - and a 2 output is ~768 bytes. For comparison, single and double outputs in the current version of Monero are 6k and 12k, respectively.</li>
+		<li>In testing, most BulletProof transactions average about 2.2k</li>
+		<li>BulletProofs may make the September 2018 fork.</li>
+		<li>A testnet build might be ready within a week.</li>
+	</ul></li>
+	<li>A code freeze is scheduled for the end of this month (Dec 2017)</li>
+	<li>Surae Noether is completing his review of Monero's MultiSig implementation.</li>
+	<li>MultiSig is expected to be included in the freeze (so it will be in the next release).
+	<ul><li>If you're interested in the development aspect or code review for MultiSig, *now* is the time to look.</li>
+	</ul></li>
+	<li>ZeroMQ(0MQ) is also expected to be in the next release. But at this point there are still some features missing.</li>
+	<li>Research continues into switching Monero's Random Number Generator(RNG) to one of Bitcoin's.</li>
+</ul><p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-12-03&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. Any additional meeting items
+&lt;fluffypony&gt; 5. Confirm next meeting date/time
+&lt;fluffypony&gt; so 1. Greetings
+&lt;fluffypony&gt; hi
+&lt;ArticMine&gt; Hi
+&lt;iDunk&gt; o/
+&lt;fluffypony&gt; luigi1111 (if you're back) / smooth / hyc / moneromooo etc.
+&lt;moneromooo&gt; here
+&lt;gingeropolous&gt; etc here
+* hotoatmeal watching
+* WWW-XMRTalk-Org| (b84bd44d@gateway/web/cgi-irc/kiwiirc.com/ip.184.75.212.77) has joined
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;Slack_3&gt; &lt;serhack&gt; hi :slightly_smiling_face:
+&lt;fluffypony&gt; lots of stuff
+&lt;sarang&gt; MRL has working Java test code for complete multi-output bulletproofs
+&lt;sarang&gt; It's being ported over to C++
+&lt;moneromooo&gt; (not the multi output one)
+&lt;sarang&gt; The Java part is complete
+&lt;moneromooo&gt; Sorry, I meant just about the port ^_^
+&lt;sarang&gt; Discussions are ongoing about if/how the fee structure would be modified to prevent large-output txn DoS
+&lt;fluffypony&gt; what's wrong with per-byte fees?
+&lt;sarang&gt; You can load a txn with tons of outputs
+&lt;sarang&gt; but verification is linear in the # of outputs
+&lt;dEBRUYNE&gt; fluffypony: verification is linear, whilst size is log
+&lt;dEBRUYNE&gt; basically
+&lt;sarang&gt; So for low fees you can force the network to verify
+&lt;fluffypony&gt; ah ok, makes sense
+&lt;sarang&gt; So we need to incentivize the use of aggregate BPs while basically scaling the fee to the number of outputs etc.
+&lt;sarang&gt; But things are looking good
+&lt;sarang&gt; Verification is still quite efficient
+&lt;sarang&gt; and with the multi-output setup, space savings are unreal
+&lt;moneromooo&gt; In fact, the per byte fee needs to be done first, as per kB is way too coarse for this.
+&lt;sarang&gt; Yeah a single output BP is about 704 bytes, while a 2-output BP is something like 768 bytes
+&lt;sarang&gt; (including commitments)
+&lt;sarang&gt; it's just too damn good
+&lt;fluffypony&gt; nice
+&lt;dEBRUYNE&gt; For clarification, a single output is currently ~ 6 kB, whereas a 2-output is ~ 12 kB
+* hotoatmeal was about to ask
+&lt;sarang&gt; So we'll continue moving forward with porting and testing
+&lt;manifest&gt; serhack here?
+&lt;dEBRUYNE&gt; A typical Monero transaction has 2 ins + 2 outs
+&lt;Slack_3&gt; &lt;serhack&gt; yep manifest
+&lt;manifest&gt; i was wondering who was the m8 that was gonna work on the go-library since i started on it myself a little bit swell
+&lt;fluffypony&gt; dEBRUYNE: this would also be a major cost-saving for pool payments
+&lt;fluffypony&gt; manifest: we're in a meeting
+&lt;sarang&gt; For reference, the size of an M-output BP is 32*(2*log(64*M)+9) bytes (this doesn't count the amount commitments)
+&lt;sarang&gt; add 32 bytes for each of the M amount commitments if you want to include them
+&lt;sarang&gt; (log is base 2)
+&lt;Slack_3&gt; &lt;rehrar&gt; manifest you can hop on mattermost.getmonero.org. Serhack is also there and you guys can PM and chat so as not to disrupt the meeting. Thanks. :)
+&lt;ArticMine&gt; I have to give some thought to the fees to deal with  the verification issue
+&lt;fluffypony&gt; ok so beyond BP is there anything else worth noting?
+&lt;sarang&gt; We do require a power of 2 in the # of outputs
+* Gdhhyfjjs467 (adf42c28@gateway/web/cgi-irc/kiwiirc.com/ip.173.244.44.40) has joined
+&lt;pigeons&gt; So sometimes you just create an additional change output, or how do you cause always a power of 2?
+&lt;sarang&gt; We'll need to either pad with dummy outputs or split into power-of-2 proofs
+&lt;ArticMine&gt; Split the change into two tx
+* WWW-XMRTalk-Org| has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;pigeons&gt; OK
+&lt;sarang&gt; The dummy output doesn't need to actually represent anything
+&lt;sarang&gt; It just needs to be there for the proof
+&lt;sarang&gt; It can be amount 0
+&lt;ArticMine&gt; that will work also
+&lt;sarang&gt; Anyway, that's my 3 cents
+&lt;luigi1111&gt; Better to split
+&lt;luigi1111&gt; Space is cheap gp
+&lt;luigi1111&gt; Cpu is expensive*
+&lt;ArticMine&gt; We will have to price cpu
+&lt;moneromooo&gt; There's a possible optimization for "filler" outs AIUI.
+&lt;luigi1111&gt; Probably not as good as not using them :)
+&lt;sarang&gt; There aren't any security proofs for a non-power-of-2 proof
+&lt;moneromooo&gt; I was led to think it was not inherent in the scheme, though ?
+&lt;sarang&gt; It is
+&lt;moneromooo&gt; aw...
+&lt;sarang&gt; At least for right now
+&lt;sarang&gt; There's a recursive step that split arrays in half
+&lt;ArticMine&gt; The issue I see is that the penalty only prices space
+&lt;sarang&gt; The authors of the paper are looking into a generalization, but it doesn't exist yet
+&lt;luigi1111&gt; That's interesting
+&lt;fluffypony&gt; ok so
+&lt;fluffypony&gt; anything else from the last two weeks worth noting?
+&lt;sarang&gt; suraeNoether is completing review for multisig
+&lt;sarang&gt; He is unable to be here today
+* amiuhle (~amiuhle@206.223.178.27) has joined
+&lt;Gdhhyfjjs467&gt; Has a code freeze date for the next for been set yet?
+&lt;fluffypony&gt; Gdhhyfjjs467: yeah we'll be branching towards the end of the month
+&lt;fluffypony&gt; assuming our comfort levels are ok
+&lt;Slack_3&gt; &lt;rehrar&gt; This was discussed briefly in MRL channel with the idea that if BPs are not too far off, would it be worth delaying the next hard fork by a couple months so it can be in?
+&lt;dEBRUYNE&gt; The plan is to include multisig right?
+&lt;dEBRUYNE&gt; ^ fluffypony
+&lt;luigi1111&gt; Yes
+&lt;fluffypony&gt; no need to delay the hard fork
+&lt;luigi1111&gt; I don't think the upcoming fork does anything useful though
+&lt;luigi1111&gt; So there's that
+&lt;fluffypony&gt; if BP is ready it'll go into the Sept fork
+&lt;dEBRUYNE&gt; Should we fork if there's nothing to fork for?
+&lt;luigi1111&gt; Who knows ^_^
+&lt;fluffypony&gt; luigi1111: consistency, then
+&lt;fluffypony&gt; well, that's what we committed to with the fork schedule
+&lt;fluffypony&gt; "even if it's just bumping the block version number"
+&lt;dEBRUYNE&gt; Sure, but didn't we also discuss slowing things down once the ecosystem got bigger?
+&lt;moneromooo&gt; We did not commit to an exact fork schedule.
+&lt;luigi1111&gt; And who is this we :)
+&lt;moneromooo&gt; I, at least, did not :P
+&lt;hotoatmeal&gt; does the wallet release schedule track the protocol fork schedule exactly?
+&lt;hotoatmeal&gt; or do they have different cadences
+&lt;moneromooo&gt; The wallet needs to update for a fairly large subset of consensus changes.
+&lt;pigeons&gt; the wallet-cli and wallet-rpc are included with the daemon release that supports the fork
+&lt;moneromooo&gt; So it's convenient to release at the same time.
+&lt;fluffypony&gt; dEBRUYNE: I don't think we're at a point where we can go to annual
+&lt;moneromooo&gt; Besides, the wallet and daemon rely on the same libs.
+&lt;Slack_3&gt; &lt;rehrar&gt; Isn't ZMQ also in the new release? Or has that been there for a while now?
+&lt;fluffypony&gt; yes ZMQ is in the new release
+&lt;moneromooo&gt; There's some of it in, but some of it's still missing.
+&lt;pigeons&gt; there is some support for zmq over rpc, and more is comming, like tx/block notify and some changes to the existing zmq rpc
+* cialu has quit (Ping timeout: 240 seconds)
+&lt;pigeons&gt; *rpc over zmq
+&lt;hotoatmeal&gt; moneromooo: yeah, mainly thinking about when I need to spend time to get those two memwipe patches (and the third I haven't written yet) reviewed/merged
+&lt;pigeons&gt; the notify is what the people i hear from are waiting for, and tewinget told me a few weeks ago he's got the basics worked out
+&lt;Slack_3&gt; &lt;rehrar&gt; Are we still waiting on him for stuff?
+&lt;moneromooo&gt; There's a patch waiting on changes IIRC.
+&lt;moneromooo&gt; (for 0mq)
+&lt;Slack_3&gt; &lt;rehrar&gt; *sigh* tewinget, can you please get this stuff done? Seriously.
+&lt;moneromooo&gt; Especially as I think some of the large pool speedups were lost.
+&lt;moneromooo&gt; (not 100% sure)
+&lt;hotoatmeal&gt; is there a way to detect that the network has forked, and your client hasn't gone with it?
+&lt;moneromooo&gt; Kinda.
+&lt;hotoatmeal&gt; my local daemon got left behind on the last one, because I forgot to update
+&lt;fluffypony&gt; you can make an educated guess
+&lt;hotoatmeal&gt; cue colorful headscratching
+&lt;moneromooo&gt; Current daemon should moan if it sees blocks with a higher version than what it knows about.
+&lt;fluffypony&gt; and there's auto-update records that notify
+&lt;moneromooo&gt; The block verison thing is a bit vulnerable to someone mining a bad block on purpose to make you think there's been a fork though.
+&lt;fluffypony&gt; yeah
+&lt;moneromooo&gt; Losing 10 monero in the process or whatever it is :)
+&lt;fluffypony&gt; ok let's move it along, then
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; are there any issues that could do with some input / resolution?
+&lt;moneromooo&gt; The handful of oldest ones.
+&lt;moneromooo&gt; The PRNG one.
+&lt;moneromooo&gt; ones.
+&lt;moneromooo&gt; For multisig, I think it's pretty much ready to go in, stoffu's done a lot of careful reviewing.
+&lt;fluffypony&gt; ok - what's the blocker on switching to the Bitcoin one?
+&lt;hotoatmeal&gt; moneromooo: what still needs doing / deciding on your part of the memwipe ones, and how can I help there?
+&lt;moneromooo&gt; Mainly deciding whether we want to, or not.
+&lt;moneromooo&gt; And bitcoin has two RNGs, the one I ported, and one that's closer to what we have. so there's the possibility of entropy attrition using only the "good" one.
+&lt;moneromooo&gt; hotoatmeal: the only thing left IIRC was switching from std::vector&lt;char&gt; to std::unique_ptr&lt;char[]&gt; and I feel more confident getting it right with vector.
+&lt;moneromooo&gt; Other than that, nothing I think.
+&lt;fluffypony&gt; moneromooo: by "good" one you mean the ported one?
+&lt;moneromooo&gt; That can be done later by someoine who's familiar with how the refcounting works with operators though.
+&lt;moneromooo&gt; Yes. The one that uses getrandom, etc.
+* Gdhhyfjjs467 has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;fluffypony&gt; ok so I think if they haven't hit entropy attrition problems over the past few years it's unlikely we will - thoughts?
+&lt;moneromooo&gt; Let me rephrase:
+&lt;moneromooo&gt; Bitcoin has two RNGs: a good one using HW, and a... hmmm, less good ? one similar to our keccak based one
+&lt;moneromooo&gt; Using the keccak based one does not deplete entropy nearly as fast as using the good one. Monero can use a lot of entropy (eg, range proofs).
+&lt;moneromooo&gt; Therefore, I'm wondering whether using the good one all the time is worse than not.
+&lt;hotoatmeal&gt; moneromooo: ok, I'll pick up the vector vs unique_ptr part of that later this month
+&lt;moneromooo&gt; Thanks
+&lt;fluffypony&gt; ok so what if we used the good one for critical stuff like privkey generation
+* Gdhhyfjjs467 (adf42c28@gateway/web/cgi-irc/kiwiirc.com/ip.173.244.44.40) has joined
+&lt;fluffypony&gt; and output selection
+&lt;hotoatmeal&gt; and if you give me some pointers, can look at whatever that refcounted operators thing is in Jan
+&lt;fluffypony&gt; and the stream one for range proofs
+&lt;moneromooo&gt; Well, if I knew that, I'd know the answer to my question, since they're opposites.
+&lt;moneromooo&gt; Anyway, to go back to multisig, I tihnk it's good to go now. If you haven't yet reviewed it, and want to do so, do so now.
+* hotoatmeal drops out
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; 4. Any additional meeting items
+&lt;moneromooo&gt; When do we want bulletproofs on testnet ?
+&lt;dEBRUYNE&gt; Tomorrow!
+&lt;fluffypony&gt; hah hah
+&lt;moneromooo&gt; A day may be a bit short to get people to update in time.
+&lt;fluffypony&gt; are we going to wait for the multi output stuff?
+&lt;sarang&gt; I think we should
+&lt;moneromooo&gt; Not sure. This is not quite finished (multiple of 2 requirement), and has a non trivial impact on fees.
+&lt;sarang&gt; Hrmm true, the fee thing
+&lt;sarang&gt; :/
+&lt;moneromooo&gt; And I'd really, really like to get smaller txes double plus quick.
+&lt;fluffypony&gt; ok so how would this work
+&lt;ArticMine&gt; A lot of people do
+&lt;sarang&gt; In case it's relevant, every single-output proof is still a valid multiproof
+&lt;moneromooo&gt; That's nice.
+&lt;sarang&gt; (provided we define the Gi and Hi in the same order)
+&lt;sarang&gt; (not sure if my extended code addressed that, will check)
+&lt;moneromooo&gt; So, no clear votes for or against. Except me ^_^ so that's 100% of expressed votes :P
+* sarang checks the math on that
+&lt;fluffypony&gt; moneromooo: I asked how it would work
+&lt;moneromooo&gt; The fork ? I imagine similar to rct. Allow bulletproofs at fork f, optionally disallow borromean at f+1.
+&lt;moneromooo&gt; (the code currently does not do that second part)
+&lt;moneromooo&gt; That might become a bit more complicated if we start allowing aggregated proofs at f+1.
+&lt;moneromooo&gt; But not very much.
+&lt;dEBRUYNE&gt; so moneromooo, you'd like to start with single output right? And then eventually switch to multioutput
+&lt;moneromooo&gt; Yes.
+&lt;Slack_3&gt; &lt;rehrar&gt; Sorry if this was answered, but is there an ETA on multioutput port from Java?
+* Huskar has quit (Quit: Konversation terminated!)
+&lt;moneromooo&gt; No. It doesn't appear to be a lot of work though.
+&lt;fluffypony&gt; so then txs with more than 1 output would use borromean?
+* blasty- (~blasty@shadowbroke.rs) has joined
+&lt;moneromooo&gt; No. They'd use two bulletproofs.
+&lt;sarang&gt; yup
+&lt;Slack_3&gt; &lt;rehrar&gt; Which is still a savings.
+&lt;sarang&gt; Still great space savings
+&lt;sarang&gt; And no DoS issues
+&lt;dEBRUYNE&gt; 2 bulletproofs is 1.3 kb give or take right?
+&lt;fluffypony&gt; ok
+&lt;dEBRUYNE&gt; And we can keep our current fee structure
+&lt;sarang&gt; dEBRUYNE: yes
+&lt;moneromooo&gt; Most of it, in fact. Txes are ~2.2 kB.
+&lt;Slack_3&gt; &lt;rehrar&gt; I think that's worth it. And then it can be enhanced even further with multioutput later. But the immediate savings would be appreciated.
+&lt;Slack_3&gt; &lt;rehrar&gt; And gives time for the fee dislogue
+&lt;fluffypony&gt; and what's our confidence level like in this? like is it March-fork-worthy?
+&lt;Slack_3&gt; &lt;rehrar&gt; Dialogue*
+&lt;moneromooo&gt; Well, we can know better if we fork in a couple days on testnet :)
+&lt;ArticMine&gt; I have an idea on the fee issue
+&lt;Slack_3&gt; &lt;rehrar&gt; It can be deployed to testnet asap no.
+&lt;Slack_3&gt; &lt;rehrar&gt; ?
+&lt;moneromooo&gt; That's what I'm asking about, yes.
+&lt;fluffypony&gt; could we fork testnet this coming weekend?
+&lt;moneromooo&gt; Works for me. Gives time for review.
+&lt;Slack_3&gt; &lt;rehrar&gt; Exciting!
+&lt;sarang&gt; Yes and the code should definitely be reviewed by others
+&lt;endogenic&gt; who?
+&lt;endogenic&gt; if you had your pick
+&lt;JollyMort[m]&gt; could someone do me a favor and send me the log of this channel from 2017-04-18?
+&lt;sarang&gt; Ideally andytoshi since he's a paper author
+&lt;moneromooo&gt; If I had my pick...
+&lt;sarang&gt; suraeNoether
+&lt;fluffypony&gt; Satoshi
+&lt;endogenic&gt; fluffypony: on it
+&lt;sarang&gt; Someone who digs the maths
+&lt;Gdhhyfjjs467&gt; So Evan duffield?
+&lt;dEBRUYNE&gt; luigi1111 I guess
+&lt;endogenic&gt; vtnerd hyc fyi
+&lt;moneromooo&gt; Oh yeah, luigi1111 is a good one.
+&lt;Slack_3&gt; &lt;rehrar&gt; Let's just get all hands on deck for this?
+&lt;endogenic&gt; ok that means you too rehrar
+&lt;Gdhhyfjjs467&gt; Lol jk. I like andytoshi idea
+&lt;sarang&gt; I'm sure we'll find additional optimizations... I know for a fact my implementation of scalar operations into vectors could be refactored
+&lt;Slack_3&gt; &lt;rehrar&gt; I will understand none of it, but I'll look at it and either nod approvingly or cringe based on a coin toss.
+&lt;sarang&gt; but I didn't in Java in order to keep it clean and understandable
+&lt;endogenic&gt; i move to instate rehrar as new RNG
+&lt;moneromooo&gt; The slice op ? Yes, but I don't think it takes much time compared to the muls.
+&lt;sarang&gt; Random Nod Generator?
+* cialu (~cialu@151.41.130.127) has joined
+&lt;sarang&gt; Well and operations involving many vector ops could run a single loop per element, instead of per operation
+&lt;sarang&gt; but they're generally fast and it makes things clean
+* nicksname has quit (Ping timeout: 260 seconds)
+&lt;sarang&gt; I'm not a huge fan of sacrificing clarity for a tiny speedup
+&lt;sarang&gt; I'd like to chat with moneromooo post-meeting about our basepoint selection, to ease the transition into multiproofs later
+&lt;sarang&gt; For those who want to compare code to paper, this is the paper: http://web.stanford.edu/~buenz/pubs/bulletproofs.pdf
+* nicksname (adf43028@gateway/web/freenode/ip.173.244.48.40) has joined
+&lt;moneromooo&gt; I pushed the patch as 2883 if people want to start reviewing ^_^
+&lt;Slack_3&gt; &lt;rehrar&gt; Can I make a Reddit post calling devs to review it?
+&lt;moneromooo&gt; Reddit.. devs ?
+&lt;dEBRUYNE&gt; ^ that lol
+&lt;Slack_3&gt; &lt;rehrar&gt; :P nvm then
+&lt;dEBRUYNE&gt; The people able to review it will be watching Github
+&lt;endogenic&gt; rehrar: answer is in the question :P
+&lt;fluffypony&gt; oh
+&lt;fluffypony&gt; I guess meeting ~done
+&lt;fluffypony&gt; 5. Confirm next meeting date/time
+&lt;fluffypony&gt; Sunday the 17th
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/10","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"10"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

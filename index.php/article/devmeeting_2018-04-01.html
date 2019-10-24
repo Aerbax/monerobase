@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-04-01 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-04-01.html" />
+<meta name="description" content="Highlights
+
+Lots and lots of discussion about a new request for funding to write a Monero compatible client in the Ruby programming language.
+	Which migrated to &quot;Why not Python?&quot;
+		Which obviously became &quot;Why not Rust?&quot;
+		Python again.
+		And you can bet NodeJS was mentioned.
+	
+	Nonsense befitting a dev meeting on April Fools Day  :)
+	Geopolitics and &quot;fake news&quot;
+		Why doesn&#039;t Monero have a music video?
+		ZCash FUD&#039;ing us again.
+		Childhood books and TV shows
+		Why not implement Kov" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-04-01.html" />
+
+    <title>DevMeeting 2018-04-01 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-04-01.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-04-01</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="4" role="article" about="/index.php/article/devmeeting_2018-04-01" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-04-01" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-04-01T17:14:55+00:00">Sun, 04/01/2018 - 13:14</span>
+          <span property="schema:dateCreated" content="2018-04-01T17:14:55+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4>Highlights</h4>
+
+<ul><li>Lots and lots of discussion about a new request for funding to write a Monero compatible client in the Ruby programming language.
+	<ul><li>Which migrated to "Why not Python?"</li>
+		<li>Which obviously became "Why not Rust?"</li>
+		<li>Python again.</li>
+		<li>And you can bet NodeJS was mentioned.</li>
+	</ul></li>
+	<li>Nonsense befitting a dev meeting on April Fools Day  :)
+	<ul><li>Geopolitics and "fake news"</li>
+		<li>Why doesn't Monero have a music video?</li>
+		<li>ZCash FUD'ing us again.</li>
+		<li>Childhood books and TV shows</li>
+		<li>Why not implement Kovri in Ruby?</li>
+	</ul></li>
+	<li>A last minute and valiant attempt by Mooo to discuss future Monero development (DNS and Blacklists).</li>
+</ul><p> </p>
+
+<h4>Full Log</h4>
+
+<pre>
+1:00 PM &lt;rehrar&gt; rbrunner vtnerd endogenic ArticMine hyc fluffypony moneromooo luigi1111 binaryFate luigi1111w
+1:00 PM → nobody1_ joined  ⇐ pjj quit  
+1:01 PM &lt;rbrunner&gt; Here! Hello all
+1:01 PM &lt;endogenic&gt; greetings
+1:01 PM &lt;@ArticMine&gt; hi
+1:01 PM &lt;rehrar&gt; dEBRUYNE Jaquee dsc_ medusa_
+1:02 PM &lt;rehrar&gt; knaccc, kenshi84 m2049r[m] MoroccanMalinois othe pigeons
+1:02 PM → pjj joined (~thebaddes@unaffiliated/plotplanexe)
+1:02 PM &lt;rehrar&gt; meh, give up
+1:02 PM &lt;nioc&gt; fp
+1:03 PM &lt;rehrar&gt; if we don't have a lot of people here, we might just cancel with extreme prejudice
+1:03 PM &lt;endogenic&gt; fluffy's traveling today
+1:03 PM ⇐ POJO quit (~quassel@unaffiliated/pojo) Ping timeout: 264 seconds
+1:04 PM &lt;rbrunner&gt; I see the GUI guys next door, maybe too busy :)
+1:04 PM ⇐ nobody1 quit (~nobody_el@93.190.143.86) Ping timeout: 240 seconds
+1:04 PM &lt;rehrar&gt; if GUI guys are doing GUI things, then we should let them GUI it up
+1:04 PM &lt;endogenic&gt; dev meeting topic: implementing monero in ruby
+1:04 PM &lt;rehrar&gt; ok endogenic
+1:04 PM &lt;rehrar&gt; thoughts rbrunner and nioc and ArticMine?
+1:05 PM &lt;@ArticMine&gt; We can postpone to next week due to low turnout.
+1:05 PM &lt;rehrar&gt; I meant thoughts on the ruby thing
+1:05 PM &lt;+moneromooo&gt; A new monerod in $randomlanguage is a lot of work, and a lot of *ongoing* work.
+1:05 PM &lt;rehrar&gt; we can discuss at least one thing :D
+1:05 PM &lt;rbrunner&gt; Well, why Ruby? Why not Rust
+1:05 PM &lt;nioc&gt; my only talent is to watch
+1:05 PM &lt;endogenic&gt; anything to talk about regarding the fork?
+1:05 PM &lt;rehrar&gt; rbrunner: cuz one guy wants to do it in Ruby
+1:05 PM &lt;+moneromooo&gt; I am half concerned it might even mean pulling on monerod for the sake of not adding too much work to it.
+1:06 PM &lt;rbrunner&gt; Yes, I saw it, and understood. But still ...
+1:06 PM &lt;endogenic&gt; Rust? why not C?
+1:06 PM &lt;rbrunner&gt; Anybody else thinking the time estimates are veryyyyy optimistic?
+1:06 PM &lt;rehrar&gt; C? Why not BASIC?
+1:06 PM &lt;endogenic&gt; lol
+1:07 PM &lt;rbrunner&gt; endogenic: Which on the many forks :)
+1:07 PM &lt;rbrunner&gt; *of
+1:07 PM &lt;rehrar&gt; moneromooo I agree with you: https://www.reddit.com/r/Monero/comments/88jlqc/other_discussions_on_monero_ruby_ffs_proposal/dwl2pyg/
+1:07 PM &lt;netg&gt; a rust implementation long term is a sure thing
+1:07 PM &lt;rehrar&gt; oops, not that comment
+1:07 PM &lt;netg&gt; as i understood
+1:08 PM &lt;rehrar&gt; but the one from me underneath it about the double edged sword
+1:08 PM &lt;rehrar&gt; netg as much a sure thing as there are people to do it, or to hire people to do it
+1:08 PM → qwebirc72203 joined (18da9e71@gateway/web/freenode/ip.24.218.158.113)
+1:09 PM &lt;+moneromooo&gt; If you want independent of the core team, contribute to monero.
+1:09 PM &lt;rbrunner&gt; I am also not convinced that a Ruby wallet is that much easier to read than simplewallet + wallet2
+1:09 PM &lt;+moneromooo&gt; Granted, pony merges, but you can maintain your own repo.
+1:10 PM &lt;rehrar&gt; moneromooo, once again I meant the comment underneath that one of mine
+1:10 PM &lt;rehrar&gt; talking about how it's a lot of work :P
+1:10 PM &lt;netg&gt; not alot crypto economic implementations are in ruby
+1:10 PM &lt;rehrar&gt; I don't have an issue with the current Core Team, but decentralization down the line is indeed a goal, at least for me.
+1:11 PM &lt;netg&gt; community is small, less libs, less expierence
+1:11 PM &lt;+moneromooo&gt; Does it help if you end up with a moenrod on one side, and some half done thing on the other ?
+1:12 PM &lt;endogenic&gt; wallet implementations are very thin, imo
+1:12 PM &lt;+moneromooo&gt; It'd help a lot more to merge our patches into your own monero repo, and build binaries for releases. No more core team.
+1:12 PM &lt;endogenic&gt; they are usually application specific too
+1:12 PM &lt;rehrar&gt; I'm honestly starting to be of the opinion that if someone wants to do something like this bad enough, they should start the project out of passion. Less likely to be abandoned in the long term.
+1:12 PM &lt;+moneromooo&gt; Especially release binaries. It takes pony ages. Help on that would be great.
+1:13 PM &lt;+moneromooo&gt; But of course can sonme random be trusted as much as pony ?
+1:13 PM &lt;endogenic&gt; but there is shared functionality which we functionally agree should be in a wallet which isnt application specific
+1:13 PM &lt;+moneromooo&gt; Decentralization does not mean shittifying.
+1:13 PM ← qwebirc72203 left (18da9e71@gateway/web/freenode/ip.24.218.158.113)
+1:13 PM &lt;+moneromooo&gt; So the day you get someone who can devote as much time/effort to a parallel impl + overhead, maybe that'll work.
+1:14 PM &lt;+moneromooo&gt; But I doubt that's going to be easy to find, especially when that effort can be added to monero instead.
+1:14 PM &lt;netg&gt; i dont understand, rehrar is suggesting independent implementations should be part of the core project?
+1:14 PM &lt;rehrar&gt; what? no.
+1:14 PM → POJO joined (~quassel@unaffiliated/pojo)
+1:14 PM &lt;rehrar&gt; A guy made a FFS proposal about reimplementing everything from scratch in ruby.
+1:14 PM &lt;rbrunner&gt; I also understood it that way ...
+1:15 PM &lt;+moneromooo&gt; I didn't :)
+1:15 PM &lt;rehrar&gt; Which lead to discussion about reimplementation in other languages in general, and the feasibility thereof.
+1:15 PM &lt;+moneromooo&gt; The vast majority of stuff that gets started will get abandoned anyway.
+1:16 PM &lt;rbrunner&gt; Anyway, somebody putting person-months into a Ruby wallet would get me tears into the eyes: Imagine how you could improve Monero proper with that
+1:16 PM &lt;rehrar&gt; and this is the primary concern with funding this, yes moneromooo
+1:16 PM &lt;@ArticMine&gt; Does this not open the possibility of incompatibilities and bugs?
+1:16 PM &lt;rbrunner&gt; Hah, Monero sometimes is not even compatible to itself
+1:17 PM &lt;rehrar&gt; even if the dev hypothetically did what the proposal said and implemented in Ruby to parity withe current Monero version
+1:17 PM &lt;rehrar&gt; what about continued updates? As Monero evolves.
+1:17 PM &lt;rehrar&gt; If there's no FFS money, they wouldn't update, and we'd have unusable stuff.
+1:18 PM &lt;rehrar&gt; just my opinion, but I think these types of things are better off (at least starting) as a passion project
+1:18 PM &lt;rbrunner&gt; Yes, and other practical problems. With 50% of time put into this, they will about 1 year to implement. In this time Monero is 2 HFs further along
+1:18 PM &lt;rehrar&gt; rather than a FFS proposal
+1:19 PM &lt;rbrunner&gt; So if the passion is lacking ...?
+1:19 PM &lt;@ArticMine&gt; Then no
+1:19 PM &lt;netg&gt; i thought it was consesus that rust is the future for crypto currency implementiations (because of stuff like:  zero-cost abstractions, minimal runtime, efficient C bindings and guaranteed memory safety)
+1:19 PM &lt;netg&gt; thats why its get used in projects like grin
+1:19 PM &lt;rehrar&gt; if it's about 'Hey, I have the skills, and we don't have an implementation in xyz, and you got some money, so let's do a thing.', then nah.
+1:19 PM &lt;netg&gt; or fluffy choosed it as desired language for an reimplementation
+1:19 PM &lt;rehrar&gt; so my opinion has indeed changed from when I posted that reddit comment, after further consideration
+1:20 PM &lt;TheCharlatan&gt; The next release should be a bit easier regarding building. Once implemented depends distributes release building. Especially if done deterministically, everybody can and should be encouraged to start building releases.
+1:20 PM &lt;+moneromooo&gt; ^_^
+1:21 PM &lt;+moneromooo&gt; You still need a trusted person to do so, or all the untrusted ones might be colluding.
+1:22 PM &lt;TheCharlatan&gt; Binaries are normally pgp signed, so any person with a good web of trust can do it.
+1:22 PM &lt;netg&gt; maybe this guys needs a suggestion, so he can code something useful in ruby for monero
+1:22 PM &lt;rbrunner&gt; One could probably prove mathematically that trust is needed *somewhere*
+1:22 PM &lt;netg&gt; something their is demand for
+1:23 PM &lt;rehrar&gt; I demand rubies!
+1:23 PM &lt;endogenic&gt; but why
+1:23 PM &lt;rehrar&gt; to raise as my own
+1:24 PM &lt;rbrunner&gt; Rewriting the Monero samples, or how they are called, in Ruby, perhaps?
+1:25 PM → Billy_B joined (183d9e9c@gateway/web/freenode/ip.24.61.158.156)
+1:25 PM &lt;endogenic&gt; well, yes, how they are called
+1:25 PM &lt;rehrar&gt; as it stands, I just don't think there is a big outcry from many developers about needing an implementation of Monero natively written in their language
+1:25 PM &lt;endogenic&gt; but i think that could basically be interfaces to libconsensus
+1:25 PM &lt;endogenic&gt; and integration examples thereof
+1:25 PM &lt;rehrar&gt; I think instead, the time would be better spent on better documenting the current stuff
+1:25 PM → bomb-on joined (~bomb-on@139-142-17-89.fiber.hringdu.is)
+1:26 PM &lt;endogenic&gt; rehrar: stuff is already documented
+1:26 PM &lt;endogenic&gt; pretty well, like in wallet2
+1:26 PM &lt;rbrunner&gt; Meh, programmers and documenting :)
+1:26 PM &lt;rehrar&gt; Are the website developer guides current?
+1:26 PM &lt;netg&gt; https://github.com/krtschmr/monero
+1:26 PM &lt;netg&gt; aka monero-ruby
+1:26 PM &lt;rbrunner&gt; So we have already a dead ruby corpse?
+1:26 PM &lt;netg&gt; yeah
+1:26 PM &lt;rehrar&gt; https://getmonero.org/resources/developer-guides/daemon-rpc.html
+1:27 PM &lt;+moneromooo&gt; I've added "document RPC" to my list.
+1:27 PM &lt;netg&gt; i saw it showcased at CCC conference
+1:27 PM &lt;rehrar&gt; https://getmonero.org/resources/developer-guides/wallet-rpc.html
+1:27 PM &lt;netg&gt; this text looks sketchy
+1:27 PM &lt;koe&gt; moneromooo https://www.reddit.com/r/Monero/comments/86hnoz/marketing_list_ways_you_can_help_increase_moneros/dw6zbh4/
+1:27 PM &lt;netg&gt; double major and looking for 30$/h
+1:28 PM &lt;netg&gt; something wrong
+1:28 PM &lt;netg&gt; thats call center pay
+1:28 PM &lt;netg&gt; for uneducated people from the street
+1:28 PM &lt;rbrunner&gt; Where?
+1:28 PM &lt;rehrar&gt; which text netg?
+1:28 PM &lt;netg&gt; https://forum.getmonero.org/6/ideas/89913/a-native-ruby-implementation-of-the-monero-wallet
+1:29 PM &lt;netg&gt; rbrunner: germany
+1:29 PM &lt;endogenic&gt; i mean what is there to implement in a wallet
+1:29 PM &lt;endogenic&gt; implementing the crypto is one thing
+1:29 PM → beffbernard joined (~textual@CPEac202e7694f3-CMac202e7694f0.cpe.net.cable.rogers.com)
+1:29 PM &lt;endogenic&gt; but why implement it over again?
+1:29 PM &lt;endogenic&gt; what else you have in a wallet generally pertains to integration with the application
+1:30 PM &lt;endogenic&gt; such as storage of keys
+1:30 PM &lt;endogenic&gt; to me, i'd rather not have to reimplement as much of the consensus and core / crypto stuff as i could
+1:30 PM &lt;rbrunner&gt; Importing existing wallets in pure Ruby must be quite hairy ...
+1:30 PM &lt;endogenic&gt; but then have flexibility at the application layer
+1:31 PM &lt;endogenic&gt; because bolted on application-layer solutions tend to be easier in the short term but replaced with a native implementation later
+1:31 PM &lt;endogenic&gt; s/native/custom/
+1:31 PM &lt;netg&gt; he needs another task, a native ruby implementation is not a super hit
+1:32 PM &lt;rehrar&gt; so, the general feeling I'm getting from the developers is "meh, not needed right now, time better spent on other things"?
+1:32 PM &lt;sneurlax&gt; rehrar: the dev docs are way outdated
+1:32 PM &lt;+moneromooo&gt; FWIW, two people before asked if they could write a wallet in...rust I think it was. Nothing came of it.
+1:32 PM &lt;sneurlax&gt; hey, hold on, let me get you a link to two updates:
+1:32 PM &lt;netg&gt; rehrar: but i expect devs to have &gt; 10 suggestions
+1:33 PM &lt;netg&gt; how he can help with his ruby skills
+1:33 PM &lt;+moneromooo&gt; (though in fairness the original was not about wallets in particular)
+1:33 PM &lt;rehrar&gt; is there a ruby wrapper?
+1:33 PM &lt;sneurlax&gt; the ruby proposal is to make a full client, not a wrapper, but here are links to updated docs:
+1:33 PM &lt;sneurlax&gt; https://github.com/sneurlax/monerophp/blob/master/docs/walletRPC.md
+1:33 PM &lt;sneurlax&gt; https://github.com/sneurlax/monerophp/blob/master/docs/daemonRPC.md
+1:33 PM &lt;koe&gt; it sounded like he didn't want to make a wrapper. suggesting that may deflate him
+1:33 PM &lt;sneurlax&gt; now those are mine for the PHP wrapper but they're very complete and fore the JSON RPC API in general
+1:34 PM &lt;sneurlax&gt; now there is also this: https://github.com/cosmic-swirl/monero-site
+1:34 PM &lt;sneurlax&gt; cosmic-swirl is opening a PR today or tomorrow, they are almost done
+1:34 PM &lt;rehrar&gt; sneurlax, do you think we can collaborate to get that on the site?
+1:34 PM &lt;rehrar&gt; oh, awesome!
+1:34 PM &lt;sneurlax&gt; yes I am collaborating with him already
+1:34 PM &lt;rehrar&gt; you guys are the bombest of bombs
+1:34 PM &lt;endogenic&gt; rehrar: how important is having an alternate implementation that another team controls merge permissions to?
+1:34 PM &lt;+moneromooo&gt; sneurlax: up to date as of...nowish ?
+1:35 PM &lt;rehrar&gt; endogenic: on a scale of 3 to 77?
+1:35 PM &lt;endogenic&gt; yeah
+1:35 PM &lt;rehrar&gt; At this point in time, not very, I think.
+1:35 PM &lt;rehrar&gt; my personal opinion
+1:35 PM &lt;sneurlax&gt; yes, as of 0.12
+1:35 PM &lt;rehrar&gt; down the road if Monero becomes the global currency, maybe more than that.
+1:35 PM &lt;sneurlax&gt; well, as of the 21st, when I built my 0.12
+1:35 PM &lt;+moneromooo&gt; Excellent, thank you :)
+1:35 PM &lt;endogenic&gt; when it becomes an issue, can a group still fork monero src at that time?
+1:36 PM &lt;rehrar&gt; I don't see why not.
+1:36 PM &lt;rbrunner&gt; When what becomes an issue?
+1:36 PM &lt;rehrar&gt; I'm also not sure why you're asking me these questions. :P
+1:36 PM &lt;netg&gt; there must be very hard reasons
+1:36 PM &lt;sneurlax&gt; well, it was a day after 0.12 was tagged, but commits have been made and merged in since then
+1:36 PM &lt;endogenic&gt; because i see people say it'll be nice to have an alternate implementation
+1:36 PM &lt;netg&gt; monero was always based on discussion, consensus, community and cooperation
+1:36 PM &lt;sneurlax&gt; why ruby? why not python?
+1:36 PM &lt;netg&gt; there must be big reasons to sploit
+1:36 PM &lt;netg&gt; -o
+1:36 PM &lt;endogenic&gt; just want to find out why
+1:37 PM &lt;sneurlax&gt; anyways, another implementation would take mooo levels of expertise
+1:37 PM → KnifeOfPi joined (49c1e473@gateway/web/cgi-irc/kiwiirc.com/ip.73.193.228.115)
+1:37 PM &lt;rehrar&gt; *shrug* one thing to consider is that some people might not know C++ and know their language, and rather than twiddle their thumbs, they might want to do something
+1:37 PM &lt;netg&gt; i mean the question "why ruby" is obsolete
+1:37 PM &lt;sneurlax&gt; but our current monoculture is worrying.
+1:37 PM &lt;KnifeOfPi&gt; hello
+1:37 PM &lt;netg&gt; the guy hows proposing it, is an ruby coder, so he chooses ruby
+1:37 PM ⇐ waheedi quit (~Waheedi@94.142.59.57) Quit: waheedi
+1:37 PM &lt;+moneromooo&gt; More than that. I have not much clue about the actual crypto for isntance.
+1:37 PM &lt;rehrar&gt; KnifeOfPi, brighten the mood with a rendering of block 1000034?
+1:37 PM &lt;rbrunner&gt; Programming-wise monoculture? Why should we worry about that?
+1:38 PM &lt;rbrunner&gt; Programm-lanugage-wise*
+1:38 PM &lt;netg&gt; like NodeJS-developers release "commandoline"-tools in node like https://github.com/sindresorhus/fkill-cli
+1:38 PM &lt;sneurlax&gt; because if there's a fatal flaw, god forbid, everyone is vulnerable.
+1:38 PM &lt;koe&gt; isn't it monoculture from bottom to top?
+1:38 PM &lt;endogenic&gt; well most of our stuff is already in C anyway
+1:38 PM &lt;endogenic&gt; the C++ stuff is mostly about abstractions (organizations)
+1:38 PM ⇐ TinusMars quit (51f70bc8@gateway/web/freenode/ip.81.247.11.200) Ping timeout: 260 seconds
+1:38 PM &lt;endogenic&gt; like structs
+1:38 PM &lt;KnifeOfPi&gt; rehrar: https://imgur.com/a/RmvVj
+1:38 PM &lt;KnifeOfPi&gt; lol
+1:39 PM &lt;rehrar&gt; thanks KnifeOfPi
+1:39 PM &lt;rehrar&gt; everyone, that link is the Monero block 10000034 in visual form
+1:39 PM &lt;rbrunner&gt; Still looks like Indepence day 3 or so :)
+1:40 PM &lt;rbrunner&gt; But fascinating stuff, alright
+1:40 PM &lt;rehrar&gt; alright, meeting adjourned?
+1:40 PM &lt;sneurlax&gt; ooh shit this was a meeting?
+1:40 PM &lt;sneurlax&gt; just woke up &gt;_M
+1:41 PM &lt;rehrar&gt; ArticMine, can you play all the national anthems to close?
+1:41 PM &lt;rbrunner&gt; Yeah, and it was in Ruby :)
+1:41 PM &lt;@binaryFate&gt; just getting here
+1:41 PM &lt;rehrar&gt; how come we don't have a Monero anthem like Dash has?
+1:41 PM &lt;rehrar&gt; https://www.youtube.com/watch?v=eVzggP7k3fo
+1:41 PM &lt;netg&gt; because monero has no boarders
+1:41 PM &lt;rbrunner&gt; We could KnifeOfPi to try to turn blocks into fractal music
+1:42 PM &lt;+moneromooo&gt; Nobody dares board the Monero Ship.
+1:42 PM &lt;KnifeOfPi&gt; lol
+1:42 PM &lt;rehrar&gt; don't watch that Dash video unless you want to hate humanit
+1:42 PM &lt;rehrar&gt; *humanity
+1:42 PM &lt;KnifeOfPi&gt; that would be severe scope creep for stellumo
+1:42 PM &lt;KnifeOfPi&gt; lol
+1:42 PM &lt;sneurlax&gt; rehrar: fully agree with the sentiment that passion should drive work. if no work is shown already, ie. no work without pay, why would it continue to be supported when/if pay stops later? also, ... ruby &lt; python, at least researchers/academics would be comfortable with it
+1:42 PM &lt;sneurlax&gt; breakfast time ciao all
+1:42 PM &lt;rbrunner&gt; A little like the zmq stuff ...
+1:42 PM &lt;netg&gt; gg
+1:43 PM &lt;+moneromooo&gt; sneurlax: btw, I'll have another addition to the scraper if you still want to work on it, whenever you have a moment free ^_^
+1:43 PM &lt;rehrar&gt; thanks for your insights everyone!
+1:44 PM &lt;rehrar&gt; thanks endogenic for bringing up the discussion
+1:44 PM &lt;sneurlax&gt; moneromooo: please shoot, I haven't stopped work, I just pivoted.  if you have a date it's needed by, I was just going to finish it off 2-3 weeks before whenever our chain gets forked
+1:44 PM &lt;endogenic&gt; rehrar: i brought it up cause it's april fools
+1:45 PM &lt;rehrar&gt; *floods
+1:45 PM &lt;rbrunner&gt; So next meeting will be picking up broken things post-fork?
+1:45 PM → bana_ joined (~akweykan@209.6.208.244)
+New messages since you tabbed out
+1:45 PM &lt;@ArticMine&gt; My that is pessimistic
+1:45 PM &lt;rbrunner&gt; :)
+1:45 PM &lt;rehrar&gt; we're a bunch of amateurs ArticMine
+1:46 PM &lt;+moneromooo&gt; Your... cat ?
+1:46 PM &lt;rehrar&gt; I wanted to do a Monero April Fool's joke of the Monero's partnership with one of the biggest global organizations: the NSA
+1:47 PM &lt;+moneromooo&gt; Ah, and then you found out it was not a joke...
+1:47 PM &lt;xmrmatterbridge&gt; &lt;cryptochangements&gt; endogenic beat you too it lol
+1:47 PM &lt;endogenic&gt; i can't believe these scandalous accusations
+1:47 PM ⇐ koe quit (4ba8ee3e@gateway/web/freenode/ip.75.168.238.62) Ping timeout: 260 seconds
+1:48 PM &lt;xmrmatterbridge&gt; &lt;cryptochangements&gt; More like MyMonero than MEA
+1:48 PM &lt;rehrar&gt; I was just worried that the crypto journalists would put it all over the web
+1:48 PM &lt;rehrar&gt; NSA: "We can neither confirm nor deny."
+1:49 PM &lt;xmrmatterbridge&gt; &lt;cryptochangements&gt; If they couldn't tell it was an April fools I would be much more worried...
+1:49 PM &lt;rehrar&gt; you overestimate journalism these days
+1:49 PM &lt;rehrar&gt; specially in 'Murica
+1:50 PM &lt;sneurlax&gt; MRL-0001 topics have been news again lately. for, what, the fourth time?
+1:50 PM ⇐ bana_ and POJO quit  
+1:51 PM &lt;netg&gt; its a controlled campaign against monero
+1:51 PM &lt;sneurlax&gt; Zcash devs: monero is broken! MRL: we know, we talked about these issues, here are how we can mitigate them... all other "privacy" coin pumpers: XMR is dead!!111one and then the zcash paper gets picked up every 3-4 months as if it's news again
+1:51 PM &lt;endogenic&gt; sneurlax: https://www.youtube.com/watch?v=9rkyKPBSKGk
+1:52 PM &lt;netg&gt; they want create a clima of antipathy against monero
+1:52 PM &lt;KnifeOfPi&gt; lol
+1:53 PM &lt;rehrar&gt; alright I gotta go
+1:53 PM &lt;sneurlax&gt; so that's the DEFCON keynote right?
+1:53 PM &lt;rehrar&gt; A Series of Unfortunate Events came out with a new season. I don't watch TV much at all, but that was my childhood, yo.
+1:54 PM &lt;netg&gt; yo
+1:54 PM &lt;+moneromooo&gt; Something which is not super greatly bad if pwned, and might help decentralise:
+1:55 PM &lt;+moneromooo&gt; Actually, scratch that, it has privacy implications.
+1:55 PM &lt;sneurlax&gt; don't scratch
+1:55 PM &lt;rbrunner&gt; Yeah, spit it out
+1:56 PM &lt;+moneromooo&gt; It was about running a DNS record + download server for output blacklists, as I've added an automated update for this.
+1:56 PM &lt;+moneromooo&gt; But it means all wallets with this enabled will connect to your server, which ain't good.
+1:56 PM &lt;netg&gt; http://hackingdistributed.com/2018/01/15/decentralization-bitcoin-ethereum/
+1:56 PM &lt;+moneromooo&gt; Something for which kovri would be nice. Again.
+1:57 PM &lt;rbrunner&gt; So Kovri in Rubyyyyy :)
+1:57 PM &lt;netg&gt; genial
+1:57 PM &lt;sneurlax&gt; yeah, the only way to decentralize that to package a tool that identifies outputs to blacklist itself, but that's a PITA and this is a time crunch
+1:58 PM ⇐ @ArticMine quit (~ArticMine@207.194.38.218) Read error: Connection reset by peer
+1:58 PM &lt;sneurlax&gt; I was going to use the tool you put me on making to make an opt-in service
+1:58 PM &lt;sneurlax&gt; i was at least going to use it myself
+1:58 PM &lt;+moneromooo&gt; There is, and you can :)
+1:58 PM &lt;+moneromooo&gt; It's monero-blockchain-blacklist. It's pretty slow though.
+1:58 PM &lt;sneurlax&gt; well, i mean, users would have to run the others coins' nodes themselves in order for it to be trustless, right?
+1:58 PM &lt;+moneromooo&gt; It'd use your script's output as input.
+1:59 PM &lt;+moneromooo&gt; Yes.
+1:59 PM &lt;+moneromooo&gt; Hence the auto update thing, because ain't nobody got time for that.
+1:59 PM &lt;sneurlax&gt; i can set up a Tor and an I2P service to feed those results as well if that'd help
+1:59 PM &lt;+moneromooo&gt; Running with just monero still gets you something fwiw.
+2:00 PM &lt;+moneromooo&gt; That is interesting. Can you do a DNSSEC TXT record?
+2:00 PM &lt;sneurlax&gt; over tor or i2p?  not sure, but over clearnet for sure
+2:00 PM &lt;+moneromooo&gt; No, unrelated.
+2:01 PM &lt;+moneromooo&gt; smooth: fluffypony: luigi1111: any opinion on this (getting someone else run the blacklist update server) ?
+2:01 PM &lt;sneurlax&gt; yes, though I've never run my own DNS server in production, I've used dynamic dns to change dns records, including txt records, and with dnssec
+2:01 PM &lt;+moneromooo&gt; It seems fairly dangerous, but also decentralizing.
+2:01 PM &lt;sneurlax&gt; but I haven't run a dns server because i haven't needed to
+2:02 PM &lt;sneurlax&gt; i usually just outsource that to my host, it just depends on what attack vector i need to protect against
+2:03 PM &lt;sneurlax&gt; i can also just package it up to run on "go" and have a trusted community member actually press the button. review would be simple, there isn't much to my script at this point, and i'm doing it multi-lang so each user can use their most comfortable lang
+2:03 PM &lt;sneurlax&gt; but just let me know, i'll be here.</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/4","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"4"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

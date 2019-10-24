@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-03-11 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-03-11.html" />
+<meta name="description" content="Highlights
+
+Bulletproofs audit funding is complete. Three disparate audits will take place.
+	Moneromooo has implemented into the GUI some of the mitigations against the key image reuse attacks
+	Ledger code was merged into the Monero codebase." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-03-11.html" />
+
+    <title>DevMeeting 2018-03-11 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-03-11.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-03-11</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="6" role="article" about="/index.php/article/devmeeting_2018-03-11" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-03-11" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-03-11T20:03:09+00:00">Sun, 03/11/2018 - 16:03</span>
+          <span property="schema:dateCreated" content="2018-03-11T20:03:09+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights</h1>
+
+<ul><li>Bulletproofs audit funding is complete. Three disparate audits will take place.</li>
+	<li>Moneromooo has implemented into the GUI <a class="external text" href="https://github.com/monero-project/monero/pull/3322/files" rel="nofollow">some of the mitigations against</a> the key image reuse attacks</li>
+	<li>Ledger code was merged into the Monero codebase. This doesn't mean Ledger is ready to go, as Ledger still has to implement things into their software.</li>
+	<li>Stagenet created.</li>
+	<li>surae will announce MAGIC soon. An educational non-profit focused on students studying cryptocurrencies and building schools.</li>
+	<li>MoneroMooo's Borromean Signature Speedup(~10+%) will either go into the release at the end of March...or a point release after that.</li>
+	<li>Some work is being done to deprecate Payment ID's. This isn't expected to go live until *at least* September - and it will not remove them altogether (for the foreseable future) for compatibility reasons.</li>
+	<li>Endogenic and vtnerd are working on "libMoneroConsensus"
+	<ul><li>A library that other programs/tools can use to get easier access to core crypto and consensus for transactions</li>
+		<li>Lessens the amount of things a new app would have to "import".</li>
+		<li>They need all the help they can get. <i>ATTN potential developers looking for something to help with</i></li>
+	</ul></li>
+	<li><b>Panic!</b> No release name has been identified!
+	<ul><li>It might be Lithium Luna</li>
+	</ul></li>
+</ul><h1>Full Log</h1>
+
+<pre>
+1:01 PM &lt;rehrar&gt; 1. Greetings
+1:01 PM &lt;rbrunner&gt; Hi
+1:01 PM &lt;msvb-lab&gt; Hello.
+1:01 PM &lt;sarang&gt; Hullo
+1:01 PM &lt;KnifeOfPi&gt; herro
+1:02 PM &lt;xmrscott[m]&gt; Salutations
+1:02 PM → flacko joined (~flacko@kupo.cloud)
+1:02 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:03 PM &lt;rehrar&gt; Any updates from you awesome people?
+1:03 PM &lt;sarang&gt; Audit fundraising has completed
+1:03 PM → Ushif46690 joined (b999b002@gateway/web/cgi-irc/kiwiirc.com/ip.185.153.176.2)
+1:03 PM &lt;KnifeOfPi&gt; :D
+1:03 PM &lt;sarang&gt; after which, naturally, the market took a massive dump
+1:03 PM &lt;sarang&gt; Depending on where it's at when it's time to pay, we may need supplemental funding
+1:03 PM &lt;ferretinjapan&gt; hi
+1:03 PM &lt;sarang&gt; Until then, I'm working with the groups to finalize contracts and herd the cats
+1:04 PM &lt;suraeNoether&gt; seems reasonable. when is each team beginning and when is payment due? :P
+1:04 PM &lt;+hyc&gt; not much relevant to report here. reviewed a few PRs but I was away at a conference last week so didn't get much else done
+1:04 PM &lt;sarang&gt; Benedikt and Kudelski are due on completion, QuarksLab is 50/50
+1:04 PM &lt;sarang&gt; Groups will be starting between April and May
+1:04 PM &lt;sarang&gt; Finishing June
+1:04 PM &lt;sarang&gt; Not my ideal timeline, but well in time for review and code freeze
+1:04 PM &lt;@ArticMine&gt; What is the USD total estimate
+1:05 PM &lt;sarang&gt; $82500 IIRC
+1:05 PM &lt;sarang&gt; Benedikt is technically in XMR and the others are USD
+1:05 PM &lt;sarang&gt; but we can adjust Benedikt's to maintain ~$10K USD
+1:06 PM &lt;KnifeOfPi&gt; if the markets don't recover, will the audits funding round be reopened?
+1:06 PM &lt;sarang&gt; Yes, or if the community is all dried up, we hire only Benedikt + QuarksLab
+1:06 PM &lt;sarang&gt; and keep the rest for another later audit someday
+1:06 PM &lt;sarang&gt; that was the plan anyway
+1:07 PM &lt;@binaryFate&gt; No completion possible from general fund?
+1:07 PM &lt;@binaryFate&gt; I mean addition
+1:07 PM flacko → makuuk
+1:07 PM &lt;sarang&gt; I'm considering using that funding to claim MoneroV, since we can have 10x the audits
+1:07 PM &lt;KnifeOfPi&gt; LOL
+1:07 PM &lt;xmrmatterbridge&gt; &lt;cryptochangements&gt; June is like a million years away from now in crypto market time though, so who knows what will really be necessary
+1:07 PM &lt;sarang&gt; will let you know how that goes
+1:08 PM &lt;rehrar&gt; Still might be good to have some reserve funding just in case?
+1:08 PM &lt;sarang&gt; Other than that, reading papers and doing reviews and curriculum development for me
+1:08 PM — sarang passes the baton
+1:08 PM &lt;rehrar&gt; Anyone else with an update for the last week?
+1:09 PM &lt;sarang&gt; suraeNoether: have you shared the MAGIC with -dev yet?
+1:09 PM &lt;sarang&gt; or just -mrl?
+1:09 PM &lt;rehrar&gt; moneromooo any fun stuff to share?
+1:10 PM &lt;+moneromooo&gt; stagenet from stoffu
+1:10 PM &lt;+moneromooo&gt; ledger stuff got merged from cslashm
+1:11 PM &lt;Ushif46690&gt; Will borream sign speedup be in March fork?
+1:11 PM &lt;+moneromooo&gt; GUI stuff for mitigations
+1:11 PM &lt;+moneromooo&gt; Maybe.
+1:11 PM &lt;iDunk&gt; v7 fork height has been set (not yet merged).
+1:11 PM &lt;@ArticMine&gt; Mitigations are cli only at this point?
+1:11 PM &lt;+hyc&gt; people should be reviewing these patches if you want to see them merged
+1:12 PM &lt;KnifeOfPi&gt; iDunk: for the record, what is that height?
+1:12 PM &lt;+hyc&gt; pull the code, build, run, give feedback.
+1:12 PM &lt;+moneromooo&gt; No, I added GUI stuff for this (not for the options though, I kinda forgot).
+1:12 PM &lt;iDunk&gt; 1539500
+1:12 PM &lt;@luigi1111&gt;  Should be binaryFate
+1:12 PM &lt;+moneromooo&gt; I also kinda stopped on the X% fake outs before fork, since I don't know whatX% would be best based on height,
+1:13 PM &lt;@binaryFate&gt; happy to test stagenet
+1:13 PM &lt;@luigi1111&gt; I mean general
+1:14 PM &lt;@binaryFate&gt; general what?
+1:14 PM &lt;iDunk&gt; fund
+1:14 PM &lt;@binaryFate&gt; lol
+1:14 PM &lt;+moneromooo&gt; fund what?
+1:14 PM &lt;iDunk&gt; general
+1:14 PM &lt;+hyc&gt; can you guys be more explicit
+1:15 PM &lt;KnifeOfPi&gt; hyc: no, this channel is PG-13
+1:15 PM &lt;+hyc&gt; 1-word answers to nobody-knows-which-question are useless
+1:15 PM &lt;+moneromooo&gt; Agreed.
+1:15 PM — +moneromooo hides
+1:15 PM — +hyc sighs
+1:15 PM &lt;iDunk&gt; You all need to learn to read luigi
+1:16 PM &lt;@binaryFate&gt; I think we was answering something way earlier about the fund. Maye he'll let us know in 10mn.
+1:16 PM &lt;@binaryFate&gt; *he
+1:16 PM &lt;iDunk&gt; &lt;@binaryFate&gt; No completion possible from general fund?
+1:17 PM &lt;medusa_&gt; the issue with the general fund is that basically no one knows how much is inside :)
+1:17 PM &lt;unknownids&gt; i think luigi said dont worry the general fund will make sure audits are funded
+1:17 PM &lt;suraeNoether&gt; in answer to your earlier question sarang, no i haven't announced MAGIC in here yet. I started an educational non-profit, y'all, we're going to send kids to college to study cryptocurrencies, and we're going to build elementary schools in ZA, Chile, and Rwanda. :P
+1:17 PM &lt;rehrar&gt; maybe there's 15 XMR left in the general fund :O
+1:17 PM &lt;suraeNoether&gt; medusa_: it's just a box of plush pony dolls
+1:17 PM &lt;rehrar&gt; Alright, any other updates or should we move on?
+1:18 PM &lt;sarang&gt; regarding general funding needed for BP audit, we can wait and see what the market does when it's closer to pay time
+1:18 PM &lt;rehrar&gt; Once again, would be nice to have the Core Team appointed point person for the releases to be present at this meeting &gt;__&gt;
+1:18 PM &lt;sarang&gt; Deciding anything now is a little premature
+1:18 PM &lt;iDunk&gt; He is on a plane.
+1:19 PM &lt;Ushif46690&gt; Planes have WiFi
+1:19 PM &lt;@ArticMine&gt; I would play the funding issue by ear
+1:19 PM &lt;rehrar&gt; 3. March hardfork items + code freeze
+1:19 PM &lt;rehrar&gt; So, as was stated earlier; in this meeting, block height set but not merged
+1:19 PM &lt;rehrar&gt; Anything else on this front?
+1:20 PM &lt;gingeropolous&gt; whens the code freeze?
+1:20 PM → [-mugatu-] joined (~shillosop@unaffiliated/shillosopher)
+1:20 PM &lt;+hyc&gt; other PRs should be tagged "RELEASE" if they're intended for this upcoming release
+1:20 PM &lt;xmrscott[m]&gt; Reminder to use [Release] Tags I believe, right?
+1:21 PM &lt;+hyc&gt; I kind of assumed we need to freeze already.
+1:21 PM &lt;gingeropolous&gt; moneromooo, do you think the speedup will make it into release? or does it need more testing? or .... ?
+1:21 PM &lt;+moneromooo&gt; The Borromean sig speedup ? Dunno, I want it in, but luigi1111 prefers not to. More opinions welcome.
+1:21 PM &lt;KnifeOfPi&gt; Throw it in.
+1:21 PM &lt;gingeropolous&gt; the safe bet would prolly be to have it in a point release after the main release
+1:22 PM &lt;KnifeOfPi&gt; actually, ginger is right
+1:22 PM &lt;KnifeOfPi&gt; let's keep it for a point release so we can have more rigorous testing
+1:22 PM &lt;suraeNoether&gt; that seems reasonable to me
+1:22 PM &lt;xmrscott[m]&gt; I prefer point release as well
+1:22 PM &lt;suraeNoether&gt; this is about a 10% verification speed boost in MLSAG yeah?
+1:22 PM &lt;gingeropolous&gt; but then we gotta commit to a point release relatively soon maybe
+1:22 PM [-mugatu-] → shillobear
+1:22 PM &lt;+moneromooo&gt; Doesn't change MLSAGs.
+1:22 PM &lt;KnifeOfPi&gt; i think he said 17% or something?
+1:22 PM &lt;suraeNoether&gt; er not MLSAG, borromean
+1:22 PM &lt;KnifeOfPi&gt; it was higher than 10% in the PR
+1:23 PM &lt;suraeNoether&gt; oh nice. point release seems smart
+1:23 PM &lt;gingeropolous&gt; well, last interval between main and point was 1 month.. thats not bad
+1:23 PM &lt;pigeons&gt; maybe we can get some review on #3350, it fixes the build from the ledger stuff being added
+1:24 PM &lt;Ushif46690&gt; If a pull request is made and marked release to depreciate payment IDs will it be merged?
+1:25 PM &lt;+hyc&gt; ^^ if the buildis broken, it obviously needs to be fixed
+1:25 PM &lt;@luigi1111&gt; Fine with that strategy for borro
+1:25 PM &lt;@luigi1111&gt; I nominate iDunk to translate
+1:25 PM &lt;iDunk&gt; :)
+1:25 PM &lt;xmrscott[m]&gt; Ushif46690: We shouldn't do that this release, it would probably break exchanges
+1:25 PM ⇐ TheoStorm quit (~dnaleor@host-im1adb.cbn1.zeelandnet.nl) Quit: Leaving
+1:25 PM &lt;rehrar&gt; this was discussed in the coffee chat yesterday. I think September is the best time for this, and it should be a priority
+1:25 PM &lt;gingeropolous&gt; it looks like the other release tags are evil fork related, and ledger, and subaddresses
+1:26 PM &lt;KnifeOfPi&gt; rehrar: agreed
+1:26 PM &lt;+moneromooo&gt; Ushif46690: depends how it's done. They MUST work.
+1:27 PM &lt;rbrunner&gt; Regarding testing: Please mine testnet, to produce blocks, bring difficulty down, make testing transactions work in reasonable times again - and a working block explorer would be nice to confirm right chain
+1:27 PM &lt;gingeropolous&gt; does master make the right chain? will it be reorged again?
+1:28 PM &lt;+moneromooo&gt; master should be on the right chain, and no known reason to reorg again soon.
+1:28 PM &lt;rbrunner&gt; Nice ...
+1:28 PM &lt;iDunk&gt; As ususal, pop to 1057026, compile and run master.
+1:28 PM ⇐ Ushif46690 quit (b999b002@gateway/web/cgi-irc/kiwiirc.com/ip.185.153.176.2) Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+1:28 PM &lt;gingeropolous&gt; ok. i'll work on what is apparently the only testnet explorer
+1:29 PM &lt;vtnerd&gt; sorry for the delay - the borromean speedup didn't look too complicated, luigi1111 what was the concern?
+1:29 PM → xulescu joined (~xulescu@5-14-20-33.residential.rdsnet.ro)
+1:29 PM &lt;rbrunner&gt; There are a lot of testnet daemons running on wrong chains which further complicate things
+1:29 PM &lt;vtnerd&gt; other than if it is wrong, bad things do happen (a reasonable concern)
+1:29 PM &lt;+moneromooo&gt; If it was wrong, it'd not pass unit tests. It passes unit tests.
+1:30 PM &lt;+moneromooo&gt; It's not like there are several cases.
+1:30 PM ⇐ atomicman quit (~bbhgf@c-98-237-104-21.hsd1.pa.comcast.net) Ping timeout: 260 seconds
+1:30 PM &lt;KnifeOfPi&gt; if there aren't any potential risks, maybe we can throw it in now
+1:30 PM &lt;+hyc&gt; and nothing like omitting wraparound/overflow checks or any other such nonsense?
+1:30 PM &lt;vtnerd&gt; thats a pretty bold claim ... but ok
+1:31 PM &lt;rehrar&gt; I kind of think we should play it safer instead of trying to jam in as much as we can. We're security software, no?
+1:31 PM → Ushif46690 joined (b999b002@gateway/web/cgi-irc/kiwiirc.com/ip.185.153.176.2)
+1:31 PM &lt;cryptochangement&gt; A point release should be out soon-ish after so I dont see the harm in playing it safe
+1:32 PM &lt;rbrunner&gt; Point release for this optimization sound good to me
+1:32 PM &lt;@luigi1111&gt; Nah it wasn't to do with correctness. Just didn't seem that significant and won't be used for much long longer. But I'm retracting my objection I think
+1:32 PM &lt;+moneromooo&gt; I don't think I removed overflow checks.
+1:32 PM &lt;@luigi1111&gt; -long
+1:33 PM &lt;+hyc&gt; borromean won't be used much longer?
+1:33 PM &lt;suraeNoether&gt; luigi1111: actually that was where my mind just started going... that we are replacing them soon. But with ring sizes going up, it seems like it'd be reasonable to exploit a speed-up if we can
+1:33 PM &lt;suraeNoether&gt; hyc borromean are for the range proofs, which are beign bulletproofed
+1:33 PM &lt;sarang&gt; Not with BPs hyc
+1:33 PM &lt;+hyc&gt; ok gotcha
+1:34 PM &lt;vtnerd&gt; ah ok, yeah forgot about the ring size increase
+1:34 PM &lt;OhGodAGirl&gt; https://twitter.com/baikalminer/status/972806441353453568?s=19 Cryptonight ASIC.
+1:34 PM &lt;KnifeOfPi&gt; OhGodAGirl: They amended their announcement to remove monero. we may be safe.
+1:34 PM &lt;Keniyal&gt; useless in approx 3 weeks
+1:35 PM &lt;+hyc&gt; OhGodAGirl: seems like their power rating is missing a decimal
+1:35 PM &lt;KnifeOfPi&gt; though I do worry that since it can hash both cryptonight and cryptolight we may be at risk
+1:35 PM → atomicman joined (~bbhgf@c-98-237-104-21.hsd1.pa.comcast.net)
+1:35 PM &lt;KnifeOfPi&gt; what stops them from hashing CNv2 if it can hash CN and CL?
+1:35 PM &lt;+hyc&gt; and yes, this followup https://twitter.com/astraleureka/status/972862947868291072
+1:36 PM &lt;+moneromooo&gt; I'm thinking we might need people-on-social-media to make it clear Monero is not using "vanilla Cryptonight" anymore.
+1:37 PM &lt;OhGodAGirl&gt; Yup.
+1:37 PM &lt;OhGodAGirl&gt; KnifeOfPi: My concerns because I don’t believe they have taped out.
+1:38 PM &lt;KnifeOfPi&gt; no, but the versatility is the problem
+1:38 PM &lt;KnifeOfPi&gt; it can hash two algorithms
+1:38 PM &lt;OhGodAGirl&gt; Nothing in the fabs at least. Maybe they’re hiding under a different name.
+1:38 PM &lt;OhGodAGirl&gt; Yes.
+1:38 PM &lt;rbrunner&gt; Well, we are set, too late to switch mining algo yet again before this hardfork, so why worry too much?
+1:38 PM &lt;+hyc&gt; cryptonight vs -lite isn't really a significant change
+1:38 PM &lt;rbrunner&gt; What has to happen will happen
+1:39 PM &lt;rbrunner&gt; Those machines cost USD 3600, by the way
+1:39 PM &lt;rbrunner&gt; You have to take 6, it seems
+1:39 PM &lt;rbrunner&gt; Quite a committment
+1:40 PM &lt;rehrar&gt; Is there anything under 4. Code + ticket discussion / Q &amp; A that can be done sans FP?
+1:40 PM &lt;+hyc&gt; considering how often AMD/Intel chips miss their clock/power targets, it's far too early for them to be advertising hashrate/watt figures
+1:41 PM &lt;d3xter&gt; hey rbrunner
+1:41 PM &lt;d3xter&gt; have you managed to get v8 coins yet
+1:41 PM &lt;KnifeOfPi&gt; rehrar: yes. pinkphloid wanted me to ask about what wallets need to do
+1:41 PM &lt;KnifeOfPi&gt; to comply with the fork
+1:41 PM &lt;+moneromooo&gt; Sort outs. Use 7 ring size or higher.
+1:41 PM &lt;+moneromooo&gt; Sorry, sort inputs.
+1:41 PM &lt;+moneromooo&gt; By key image.
+1:41 PM &lt;endogenic&gt; rehrar: i have a code item
+1:42 PM &lt;endogenic&gt; let me know when's a good time
+1:42 PM &lt;+hyc&gt; did we reach a conclusion on borromean speedup patch?
+1:42 PM &lt;KnifeOfPi&gt; moneromooo: and apart from that just rebase to master branch?
+1:42 PM &lt;+hyc&gt; sounds to me like we should just merge it, since ringsize is increasing
+1:42 PM &lt;rehrar&gt; hop in endogenic after current conversations finish
+1:43 PM &lt;+moneromooo&gt; If they're using the monero code, then sorting's already done.
+1:44 PM ⇐ momxmr quit (459fb704@gateway/web/freenode/ip.69.159.183.4) Ping timeout: 260 seconds
+1:44 PM &lt;+moneromooo&gt; hyc: the consensus seems to be "wait till after the release".
+1:44 PM &lt;@luigi1111&gt; Meh it's ok
+1:44 PM &lt;+moneromooo&gt; Though the next release is likely to be needed because we'll have screwed something up, so everyone would also run that, therefore no gain.
+1:45 PM &lt;+hyc&gt; indeed
+1:45 PM &lt;+moneromooo&gt; But hey, if people want to use it now, feel free, you get less electricity wasteage :)
+1:46 PM &lt;d3xter&gt; moneromooo: will there be a reset on the testnet height?
+1:46 PM &lt;+moneromooo&gt; If you mean another reorg, none planned atm.
+1:46 PM → athan joined  ↔ Ushif46690 nipped out  
+1:48 PM &lt;rehrar&gt; Alrighty, are there any other meeting items? endogenic?
+1:48 PM &lt;endogenic&gt; yes
+1:48 PM &lt;+moneromooo&gt; Ushif46690: for example, adding a "warning: deprecated, try subaddresses" when running "payment_id", that'd be fine.
+1:48 PM &lt;+moneromooo&gt; (assuming it also does what it does now and creates one)
+1:48 PM ↔ Ushif46690 nipped out  
+1:49 PM &lt;+hyc&gt; IMO that warning will just generate fear, needlessly. If a website asks you for a payment ID, you need to have one.
+1:49 PM &lt;+moneromooo&gt; Yes, but payment_id generates a random one because you're the recipient.
+1:49 PM &lt;+moneromooo&gt; Admittedly, probably very few people use that anyway.
+1:49 PM &lt;+hyc&gt; uh huh
+1:50 PM &lt;+moneromooo&gt; But yes, fair point I guess.
+1:51 PM &lt;+moneromooo&gt; endogenic: your turn ?
+1:51 PM &lt;endogenic&gt; yep thanks
+1:51 PM &lt;endogenic&gt; so over the past couple months I've been doing a lot of work on the wallet2 and simplewallet code to bring it to a place where the basic elements of its functionality can be used without having to instantiate a whole wallet2 object - the main reason for this on my side is because MyMonero wants to use the official C++ code for its apps rather than maintaining its own reimplementation
+1:51 PM &lt;endogenic&gt; the problem is that wallet2 is currently doing a lot of things that are specific to simplewallet and the GUI but which don't make sense for lightwallets - plus, there is so much lightwallet code in wallet2 now that is making it harder to maintain wallet2 because it branches large portions of code and we end up with duplicated implementations which don't get tested with the same rigor as the other portions
+1:51 PM &lt;endogenic&gt; basically, we've got a big mess that's probably going to cause a problem in the near future, and at present the wallet specific implementations - which we really want to be in agreement on - are all stuck inside of wallet2 and that means you must use wallet2's disk saving and serialization scheme and you must use its networking calls
+1:51 PM &lt;endogenic&gt; so i've factored out, for example, some methods like create_transactions_2 - and in order to factor them into a function in another namespace, rather than keeping them in the class itself, since create_transactions_2 references the member variable m_transfers, i made m_transfers an argument of the new function instead
+1:51 PM &lt;endogenic&gt; the problem here is that factoring things by myself in this way is not sustainable because the code constantly changes
+1:52 PM &lt;endogenic&gt; see the recent ledger work
+1:52 PM &lt;endogenic&gt; it means i can no longer carry this out
+1:52 PM &lt;endogenic&gt; so i spoke with vtnerd and fluffy at length about it
+1:52 PM &lt;endogenic&gt; and fluffy suggested that we create a libMoneroConsensus
+1:52 PM &lt;endogenic&gt; i'd like to ask anyone who is interested in working on this effort with me to contact me or vtnerd
+1:53 PM &lt;endogenic&gt; i see it as a place where we can put core crypto and consensus functionality that other programs and tools can access
+1:53 PM &lt;endogenic&gt; without having to import the world
+1:53 PM &lt;endogenic&gt; importantly it will make improving this code and providing a sensible rigorous interface to it possible in one location
+1:53 PM &lt;+moneromooo&gt; libMoneroConsensus and libMoneroWallet I guess ? Separate things ?
+1:53 PM &lt;endogenic&gt; and we will be able to maintain it more simply than in connection with all the other consumers of the code
+1:54 PM &lt;endogenic&gt; namely wallet2, at the moment
+1:54 PM &lt;endogenic&gt; moneromooo: it's up to everyone - i really see this as something that needs involvement
+1:54 PM → TinusMars_ joined  ⇐ TinusMars quit  
+1:55 PM &lt;+hyc&gt; I'm interested. (and I would argue for using C not C++...)
+1:55 PM &lt;+moneromooo&gt; Generally speaking, a well done change would be good, but would be a massive one time pita to review and weed out any bugs.
+1:55 PM &lt;endogenic&gt; hyc: interesting but then we need another layer to construct or translate data structures
+1:55 PM &lt;endogenic&gt; and that could be a huge task
+1:56 PM &lt;endogenic&gt; moneromooo: exactly, that's why i think i can't do anything w/o cooperation
+1:56 PM &lt;+hyc&gt; if you really want it to be widely usable, this work needs to be done anyway
+1:56 PM &lt;endogenic&gt; exactly hyc
+1:56 PM &lt;+hyc&gt; C++/boost serialization isn't going to help someone writing in rust, go, python, whatever
+1:56 PM &lt;endogenic&gt; and even though it's an upfront investment, it will make our lives so much better
+1:56 PM &lt;+moneromooo&gt; We'll be using LMDB anyway ^_^
+1:57 PM &lt;+hyc&gt; ;)
+1:57 PM &lt;endogenic&gt; ok hyc i'll follow up with you afterwards
+1:57 PM &lt;endogenic&gt; anyone else please contact me :)
+1:57 PM &lt;+hyc&gt; ok
+1:58 PM ZaiRoX-2 → ZaiRoX
+1:58 PM &lt;rehrar&gt; awesome
+1:58 PM &lt;rehrar&gt; any last minute things?
+1:59 PM &lt;rbrunner&gt; By the way: Does this release get a new name? Lithium something?
+2:00 PM &lt;KnifeOfPi&gt; does it have to be an element?
+2:00 PM &lt;rehrar&gt; D: has nobody discussed this?
+2:00 PM &lt;rehrar&gt; and here we are wasting time on Bulletproofs and stuff
+2:00 PM &lt;rbrunner&gt; As far as I know, no
+2:00 PM &lt;KnifeOfPi&gt; Marilyn Monastery
+2:00 PM &lt;KnifeOfPi&gt; lol
+2:00 PM &lt;+moneromooo&gt; We should not be encouraging everyone to churn needlessly. This spams the chain even in cases where it's not needed.
+2:00 PM → DaveyJones_ joined (~Dave@dslb-188-107-069-164.188.107.pools.vodafone-ip.de)
+2:00 PM &lt;+hyc&gt; Lithium wou;d be next, yeah
+2:00 PM &lt;rbrunner&gt; And then some astronomy-related stuff?
+2:00 PM &lt;medusa_&gt; KnifeOfPi: its always an element + a star/galaxy/whatever
+2:01 PM &lt;KnifeOfPi&gt; medusa_: ah i see
+2:01 PM &lt;rbrunner&gt; Ok, maybe I will bring it up on reddit
+2:02 PM &lt;KnifeOfPi&gt; Lithium Lynx?
+2:02 PM &lt;rbrunner&gt; So not to hold up any dev work :)
+2:02 PM &lt;rehrar&gt; Alright. Next meeting next week?
+2:02 PM &lt;rehrar&gt; 17 UTC?
+2:02 PM &lt;KnifeOfPi&gt; Same time, same channel.
+2:02 PM &lt;rbrunner&gt; Ok
+2:02 PM &lt;xmrscott[m]&gt; Lithium Luna?
+2:02 PM &lt;rehrar&gt; Code freeze should be decided soon though? Maybe sooner than that?
+2:02 PM &lt;KnifeOfPi&gt; Lithium Luna, I agree
+2:02 PM &lt;endogenic&gt; i was thinking that too
+2:02 PM &lt;rbrunner&gt; Yeah, Luna is good, why not
+2:03 PM &lt;ferretinjapan&gt; moneromooo, agreed, there really needs to be more education on churning, as much of it it done "to be safe" but noone really knows how justified it really is.
+New messages since you tabbed out
+2:03 PM &lt;endogenic&gt; rehrar: ^ how about that as something to write about re: privacy/security
+2:03 PM &lt;endogenic&gt; in the manner of tor
+2:03 PM &lt;rehrar&gt; oh yeah, I was discussing earlier that Monero needs to have a disclaimer on the website and other major channels
+2:04 PM &lt;rehrar&gt; that Monero is not a be-all end-all for privacy and security
+2:04 PM &lt;rehrar&gt; Tor has one, and it's a common criticism (and a valid one imo) that we don't
+2:04 PM &lt;rehrar&gt; Monero is a tool in the privacy/security toolbelt, and we need to temper our grandiose claims (like 'untraceable') with proper disclaimers and verbiage
+2:04 PM &lt;ferretinjapan&gt; rehrar, monero is meant to hide you in the noise, so if you're stomping around, not even monero can help you ;)
+2:04 PM &lt;+hyc&gt; makes sense. anyone volunteer to write an appropriate disclaimer?
+2:05 PM ⇐ Ushif46690 quit (b999b002@gateway/web/cgi-irc/kiwiirc.com/ip.185.153.176.2) Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+2:05 PM &lt;rbrunner&gt; Well, please not some stuff like "It's dangerous to open your car's door while cruising on the highway"
+2:05 PM &lt;+hyc&gt; PR it to the website repo
+2:05 PM &lt;rehrar&gt; I will hyc
+2:05 PM &lt;KnifeOfPi&gt; hyc: I can try
+2:05 PM &lt;KnifeOfPi&gt; I yield to rehrar :D
+2:05 PM &lt;rehrar&gt; I yield to KnifeOfPi
+2:05 PM &lt;rehrar&gt; we're at an impass
+2:05 PM &lt;KnifeOfPi&gt; lol
+2:05 PM &lt;rehrar&gt; nah, I'll write it and show you all
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"6"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

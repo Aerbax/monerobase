@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-04-22 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-04-22.html" />
+<meta name="description" content="Highlights
+
+v0.12.1
+	The GUI devs are working on a v0.12.1 build that fixes the (std::bad_cast) bug.
+		GUI OpenAlias support.
+		A Linux Wayland workaround(forcing XCB)
+		Windows GUI will have ANGLE and MESA graphics libraries as a fallback
+	
+	Monero Ecosystem/Projects: https://github.com/monero-ecosystem/meta
+	MyMonero for Apple iOS is in TestFlight" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-04-22.html" />
+
+    <title>DevMeeting 2018-04-22 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-04-22.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-04-22</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="3" role="article" about="/index.php/article/devmeeting_2018-04-22" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-04-22" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-04-23T03:26:02+00:00">Sun, 04/22/2018 - 23:26</span>
+          <span property="schema:dateCreated" content="2018-04-23T03:26:02+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4>Highlights</h4>
+
+<ul><li>v0.12.1
+	<ul><li>The GUI devs are working on a v0.12.1 build that fixes the (std::bad_cast) bug.</li>
+		<li>GUI <a href="https://monerobase.com/wiki/OpenAlias" title="OpenAlias">OpenAlias</a> support.</li>
+		<li>A Linux Wayland workaround(forcing XCB)</li>
+		<li>Windows GUI will have ANGLE and MESA graphics libraries as a fallback</li>
+	</ul></li>
+	<li>Monero Ecosystem/Projects: <a class="external free" href="https://github.com/monero-ecosystem/meta" rel="nofollow">https://github.com/monero-ecosystem/meta</a></li>
+	<li>MyMonero for Apple iOS is in TestFlight
+	<ul><li>If you're interested in joining the TestFlight, contact endogenic and get on the waitlist.</li>
+	</ul></li>
+	<li>hyc is working on a Proof of Concept for a different PoW(proof of work) algorithm for Monero.</li>
+	<li>MoneroMooo is working on wallet refresh performance.</li>
+	<li>Devs are looking into ways to adjust the wallet so that users are more <i>aware</i> of when they may be on a non-official fork/chain.</li>
+	<li>The Official Monero Hardware Wallet (developer's edition, "Breakneck") is currently being tested.</li>
+	<li>Next meeting is May 6th, 2018.</li>
+</ul><h4>Full Log</h4>
+
+<pre>
+1:01 PM &lt;rehrar&gt; meeting tiiime boiz
+1:01 PM &lt;rbrunner&gt; Ok
+1:01 PM &lt;rehrar&gt; and leedies
+1:01 PM &lt;rehrar&gt; I pinged everyone early this time, but nobody still came :(
+1:02 PM &lt;rehrar&gt; https://github.com/monero-project/meta/issues/204
+1:02 PM &lt;rehrar&gt; 1. Greetings
+1:02 PM &lt;rehrar&gt; who all's here?
+1:02 PM → cardboardoranges joined (~cardboard@65.112.8.200)
+1:02 PM &lt;cryptochangement&gt; hello
+1:02 PM &lt;rbrunner&gt; Hello
+1:02 PM → staticOrders joined (~staticOrd@unaffiliated/somewhatclueless)
+1:03 PM &lt;rehrar&gt; reping all the people
+1:03 PM &lt;ErCiccione&gt; Ahoj!
+1:03 PM &lt;+hyc&gt; yo
+1:03 PM → owowo joined (~ovovo@unaffiliated/ovovo)
+1:03 PM &lt;@ArticMine&gt; hi
+1:03 PM &lt;rehrar&gt; ArticMine binaryFate smooth luigi1111 luigi1111w fluffypony hyc moneromooo Jaquee medusa_ anonimal dsc_ vtnerd pigeons ErCiccione endogenic knaccc suraeNoether sarang stoffu NoodleDoodle Snipa gingeropolous dEBRUYNE
+1:04 PM ⇐ bitmoeda quit (~Thunderbi@213.228.163.94) Ping timeout: 240 seconds
+1:04 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:04 PM &lt;rehrar&gt; It's been a while Threeish or so weeks.
+1:04 PM &lt;rehrar&gt; what's everyone been up to?
+1:05 PM &lt;dsc_&gt; Should I start with some GUI updates?
+1:05 PM &lt;rehrar&gt; do eet
+1:05 PM → bitmoeda and opHSWQjrbsje joined  
+1:06 PM &lt;dsc_&gt; 12.0 introduced a critical error which rendered a broken GUI (std::bad_cast), we've fixed this and also revamped our build environments. Only a Windows build machine is left to-do, then we should be able to push 12.1 out of the door.
+1:07 PM &lt;dsc_&gt; besides solving this critical bug, 12.1 will feature a bunch of other improvements
+1:07 PM ⇐ cryptochangement quit (~ben@24.14.228.211) Read error: Connection reset by peer
+1:07 PM &lt;dsc_&gt; personally I'd like to release 12.1 ASAP so hopefully next week
+1:07 PM → cryptochangement joined (~ben@24.14.228.211)
+1:07 PM &lt;rehrar&gt; with OpenAlias!
+1:07 PM &lt;ErCiccione&gt; I just wanted to say the Monero Ecosystem is up and looking for awesome Monero Projects to add to the family: https://github.com/monero-ecosystem/meta
+1:08 PM &lt;dsc_&gt; With OpenAlias, indeed. ;)
+1:08 PM &lt;rbrunner&gt; Nice idea, that ecosystem
+1:09 PM &lt;cryptochangement&gt; haha
+1:09 PM &lt;ErCiccione&gt; thanks rbrunner, but sadly many maintainers of cools project prefer to keep their repo on their account..ego i guess :P
+1:10 PM &lt;rbrunner&gt; So the 12.1 GUI will have again all those graphics fallbacks?
+1:11 PM &lt;dsc_&gt; rbrunner: Yes, using ANGLE on Windows. Also hard-setting xcb on Linux (so wayland platforms are forced to use xcb instead, as our QT doesnt support wayland yet)
+1:11 PM → Alcapaca joined (~holoirc@173-12-204-46-Albuquerque.hfc.comcastbusiness.net)
+1:11 PM &lt;rehrar&gt; They just don't like ErCiccione as the their overlord
+1:12 PM &lt;rehrar&gt; does it fix the 'hang on Settings' issue?
+1:12 PM &lt;rehrar&gt; if so, then you guys are the heroes
+1:12 PM &lt;cryptochangement&gt; doesn't stoffu still have an open fix for that?
+1:12 PM &lt;dsc_&gt; rehrar: 'Hanging on settings' is due to how the GUI tries to communicate with the daemon, it waits for a response and in the process it freezes the UI.
+1:12 PM &lt;ErCiccione&gt; rehrar: pfff... peasant
+1:12 PM &lt;dsc_&gt; rehrar: it's being looked into.
+1:13 PM &lt;cryptochangement&gt; oh i was thinking of #1330
+1:13 PM &lt;dsc_&gt; cryptochangement: No, that's for 'hanging on receive page'
+1:13 PM &lt;dsc_&gt; Due to the tracking stuff.
+1:13 PM &lt;cryptochangement&gt; yea my bad
+1:14 PM &lt;dsc_&gt; cryptochangement: Ill be testing your OpenAlias fix later today, thanks btw :)
+1:14 PM &lt;cryptochangement&gt; ok cool :)
+1:14 PM &lt;rehrar&gt; anything else for GUI?
+1:14 PM &lt;dEBRUYNE&gt; &lt;dsc_&gt; rbrunner: Yes, using ANGLE on Windows &lt;= Angle and Mesa fwiw
+1:14 PM &lt;dEBRUYNE&gt; Mesa is another fallback
+1:14 PM &lt;dEBRUYNE&gt; In case Angle doesn't work
+1:15 PM &lt;rbrunner&gt; Nice. That will calm some nerves :)
+1:15 PM &lt;dsc_&gt; Gotcha. That's it for the GUI for now
+1:15 PM &lt;endogenic&gt; pleased to announce that vtnerd and i have been focusing on getting our open source lightwallet server ready
+1:15 PM &lt;endogenic&gt; we're looking at a few more weeks (actual weeks, not "soon" weeks) before we'll have the first cut ready for review
+1:16 PM &lt;endogenic&gt; i've also got the iOS MM app in a small testflight but i'm going to look to expand it over the next week or two before we release if you want to send me your email
+1:16 PM &lt;endogenic&gt; and i'll add to the waitlist :)
+1:16 PM &lt;rbrunner&gt; that's MyMonero, but for everyone, right?
+1:16 PM &lt;rbrunner&gt; so to say
+1:16 PM &lt;endogenic&gt; rbrunner: right - you can run it at home or for your friends etc
+1:17 PM &lt;endogenic&gt; and since you can specify your server instead of our server, it's a bit of a game changer
+1:17 PM &lt;endogenic&gt; in the apps io mean
+1:17 PM &lt;endogenic&gt; -o
+1:17 PM &lt;+moneromooo&gt; yay! :)
+1:17 PM &lt;opHSWQjrbsje&gt; its happening tm. bean eager for mymonero since Jan 2017
+1:17 PM &lt;rehrar&gt; any update on apple stuff that they're putting you through?
+1:17 PM &lt;cryptochangement&gt; yay decentralization
+1:17 PM &lt;ErCiccione&gt; that's very cool
+1:17 PM &lt;endogenic&gt; opHSWQjrbsje: :)
+1:18 PM &lt;endogenic&gt; rehrar: yeah so that's the testflight thing. we're all set
+1:18 PM &lt;rehrar&gt; oh, great. I don't know the jargon.
+1:18 PM &lt;rehrar&gt; dude, that's SO EXCITING!!
+1:18 PM &lt;endogenic&gt; the desktop app will get released at the same time - i just need to add something to it which i have just added to the ios app and then i think it's basically ready to wrap for distribution
+1:19 PM &lt;cryptochangement&gt; I remember building the desktop app to test in like september and it looked super slick. Glad to hear it is moving along well
+1:20 PM &lt;endogenic&gt; thanks :)
+1:20 PM &lt;+hyc&gt; I've posted a first test build of my PoW PoC. It's already run into issues, still needs a lot more work
+1:21 PM → msvb-lab joined (~michael@aftr-62-216-207-102.dynamic.mnet-online.de)
+1:21 PM &lt;rehrar&gt; noooo hyc. :(
+1:22 PM &lt;+hyc&gt; the average difficulty is easier than I wanted, the extremes are way the hell out there.
+1:22 PM &lt;Inge-&gt; hyc: do you still need more test results on the current version?
+1:22 PM &lt;+hyc&gt; Inge-: no thanks, I think with the current bugs I've got enough info for now
+1:22 PM &lt;rbrunner&gt; Interesting approach. But may be an uphill battle to get people taking it really seriously ... too new, too "exotic" maybe
+1:23 PM &lt;+hyc&gt; that's kinda what you need, to be ASIC-proof rbrunner
+1:23 PM &lt;endogenic&gt; hyc perhaps there's a way it can be formalized
+1:23 PM &lt;rbrunner&gt; Yeah, probably. Certainly not just "more of the same" :)
+1:23 PM &lt;+hyc&gt; exactly
+1:24 PM &lt;+hyc&gt; endogenic: sounds like you and psychocrypt are on the same page.
+1:24 PM &lt;rehrar&gt; any other updates from anyone?
+1:25 PM &lt;@binaryFate&gt; Kicking away GPU would be what bings more resistance from the space I think. Rightfully so, as the economical aspects of it should not be overlooked.
+1:26 PM &lt;+hyc&gt; nobody is explicitly kicking away GPU. Just that someone else will have to port that.
+1:27 PM &lt;+hyc&gt; Tho tbh I don't see GPUs being very capable for this
+1:28 PM &lt;+moneromooo&gt; I've done some work on wallet refresh performance. It'd be nice to get some people to test it and report gains. It's in the mswip branch, but WILL UPGRADE BLOCKCHAIN. That means once it's upgraded, you can't run pre-upgrade code. I've been running that upgrade patch since november so it's solid though.
+1:28 PM &lt;+moneromooo&gt; Basically, you delete a wallet cache, and refresh a wallet from block 0. It can be a dummy wallet with no transactions in it.
+1:29 PM &lt;rehrar&gt; but it should upgrade faster?
+1:29 PM &lt;rehrar&gt; *refresh
+1:29 PM &lt;+moneromooo&gt; That's the idea.
+1:30 PM &lt;+moneromooo&gt; If not, I want to know :) And also whether SSD/HDD.
+1:30 PM &lt;@binaryFate&gt; Does not matter if it is explicit. If it turns out there is no way to run something on GPUs, we should consider what it means from an economical standpoint.
+1:31 PM &lt;+hyc&gt; so this is changes in both daemon and wallet?
+1:31 PM &lt;rehrar&gt; botnets ftw
+1:32 PM &lt;+moneromooo&gt; Yes, both.
+1:32 PM &lt;cryptochangement&gt; rehrar: let the reddit complaints about botnets begin
+1:32 PM &lt;+hyc&gt; binaryFate: I suspect that current/new gpGPUs can handle it. older ones probably not. most smartphone GPUs probably not, they can't even run cryptonight.
+1:33 PM &lt;rehrar&gt; alright, we ready to move on?
+1:33 PM &lt;+hyc&gt; ok
+1:33 PM &lt;rehrar&gt; 3. April hardfork post discussion
+1:33 PM &lt;endogenic&gt; one of the issues people have brought up is whether certain changes increase certain server architectures' ability to calculate the pow
+1:33 PM &lt;rehrar&gt; so, how did everyone feel about this past hard fork? how it went? what to be done better?
+1:34 PM &lt;endogenic&gt; rehrar: i thought it was too hard
+1:34 PM &lt;endogenic&gt; can't we just sort-of-fork?
+1:34 PM &lt;rehrar&gt; slightly rigid fork
+1:35 PM &lt;endogenic&gt; lol
+1:35 PM &lt;gingeropolous&gt; somethings gotta be done about using a new client and running on an old chain and the daemons like "this is fine"
+1:35 PM &lt;rbrunner&gt; The messages from the nodes on the old chain ahead hundreds of blocks are super-confusing :) But probably easy to stop for the point release, right?
+1:35 PM &lt;gingeropolous&gt; but im just repeating what a lot have already said and its on the githubs
+1:36 PM &lt;rbrunner&gt; And the daemon even says: "Sync started". Lol
+1:37 PM &lt;Inge-&gt; If I may inject - probably quite obvious, but there have been an unending number of people having issues due to being on the wrong chain and the added uncertainty when funds do not appear (in addition to the general uncertainty due to the nature of blockchain currency we had from before)
+1:37 PM &lt;+moneromooo&gt; What is confusing ?
+1:37 PM &lt;dEBRUYNE&gt; gingeropolous: Things should be a lot smoother after this feature is implemented -&gt; https://github.com/monero-project/monero/issues/3661#issuecomment-382413665
+1:37 PM &lt;rbrunner&gt; People don't know how to interpret those messages, and get scared. Even more so because the "sync starts" messages ...
+1:38 PM &lt;rbrunner&gt; Nothing ever happens once you are on the right chain. Technically, all good. But still confusing for non-techies
+1:39 PM &lt;rehrar&gt; yes, the User Experience of Monero as a whole is very poor
+1:40 PM &lt;rehrar&gt; I mean, it's the whole crypto space tbh. But monero has added burden from added technology.
+1:41 PM &lt;endogenic&gt; i think part of the problem here is the tight coupling between monero the protocol / technology and our official apps that are on top of them
+1:41 PM &lt;+moneromooo&gt; Please don't shittify monero-wallet-cli for people who are confused by "sync starts". Let the GUI be that.
+1:41 PM &lt;rehrar&gt; yes, I agree wholeheartedly
+1:41 PM &lt;ErCiccione&gt; i don't know if this is the right time but i have a request about future releases
+1:41 PM &lt;rehrar&gt; right moneromooo, the goal is to have stuff for power users, and other stuff for noobs
+1:42 PM &lt;rehrar&gt; but realizing that it's not making things worse for everyone (maybe for you and other power users) is helpful
+1:42 PM &lt;endogenic&gt; suppose the core protocol/tech had the job of rigorously reporting state and results - then the burden to make it user friendly would be on the apps
+1:43 PM &lt;rbrunner&gt; moneromooo: Not to shittify anything. And I meant those "SYNCHRONIZATION started" messages in the *daemon* when of course it won't sync because wrong chain :)
+1:43 PM &lt;rehrar&gt; as well, the GUI is also for power users, not for noobs
+1:43 PM &lt;endogenic&gt; when i said friendly just now i really meant learner friendly
+1:43 PM &lt;endogenic&gt; git is user friendly but maybe not learner friendly
+1:44 PM &lt;@ArticMine&gt; Is that not a documentation issue?
+1:44 PM &lt;rehrar&gt; Documentation does not solve things for noobs
+1:44 PM &lt;dEBRUYNE&gt; &lt;moneromooo&gt; Please don't shittify monero-wallet-cli for people who are confused by "sync starts". Let the GUI be that. &lt;= The GUI doesn't show these messages fwiw
+1:44 PM &lt;endogenic&gt; nor does it improve code
+1:44 PM &lt;dEBRUYNE&gt; That is if you run the integrated daemon
+1:44 PM &lt;rehrar&gt; the apps must be self-evident
+1:44 PM ⇐ POJO quit (~quassel@unaffiliated/pojo) Ping timeout: 248 seconds
+1:45 PM &lt;endogenic&gt; rehrar self-evidence is probably not reachable though in all fairness
+1:45 PM &lt;gingeropolous&gt; i think we need a countdown for the next codefreeze
+1:45 PM &lt;endogenic&gt; at least not for such low level techs where peoplew ant to be able to work with payment ids and stuff
+1:45 PM &lt;endogenic&gt; or addresses
+1:45 PM &lt;endogenic&gt; or seeds
+1:45 PM &lt;rehrar&gt; ErCiccione, just throw in your thing :D
+1:45 PM &lt;endogenic&gt; gingeropolous: i would like that too
+1:45 PM &lt;rehrar&gt; gingeropolous: yes
+1:46 PM &lt;gingeropolous&gt; would be cool if it could actually be on the github repository
+1:46 PM &lt;gingeropolous&gt; i dunno if they have plugins for that or something
+1:47 PM &lt;rehrar&gt; monerofreeze.com
+1:47 PM &lt;ErCiccione&gt; sorry i was cooking some food
+1:47 PM &lt;rehrar&gt; can we get a .xmr top level domain?
+1:47 PM &lt;rbrunner&gt; So far we did not yet have that much success with code freezes, for tons of reasons ...
+1:48 PM &lt;ErCiccione&gt; i really need some cool down time between the code freeze and the actual release, it was a pain to sync the translations last time
+1:48 PM ⇐ cardboardoranges quit (~cardboard@65.112.8.200) Quit: cardboardoranges
+1:48 PM &lt;rbrunner&gt; Always easier said than done, much easier
+1:48 PM &lt;gingeropolous&gt; well, what are the targets for the next major release?
+1:49 PM &lt;gingeropolous&gt; its october, right? so we've got 5 months total, so about 2 months before freeze?
+1:49 PM &lt;rehrar&gt; Did we move to October over September?
+1:49 PM &lt;rehrar&gt; gingeropolous: this time around it will be impossible to freeze before bulletproofs are completely audited, and any necessary changes made
+1:49 PM &lt;ErCiccione&gt; yes i know, but still, let's try at least or we will never have the wallet fully translated, and that looks kinda weird
+1:50 PM &lt;rehrar&gt; ErCiccione, this was hairy because of the PoW thing that had to get done last minute and the bulletproof uncertainty
+1:50 PM &lt;rehrar&gt; the goal is definitely to not have another release like this one
+1:51 PM &lt;+moneromooo&gt; And all the ringdb stuff because jerks.
+1:51 PM &lt;rbrunner&gt; Hmmm.. but if ASICS should re-surface surprisingly early, things will get interesting
+1:52 PM &lt;gingeropolous&gt; "&lt;rehrar&gt; the goal is definitely to not have another release like this one " thats gonna end up on a shirt one day
+1:52 PM &lt;rbrunner&gt; :)
+1:52 PM &lt;rehrar&gt; alright, we can move to code discussion
+1:52 PM &lt;rehrar&gt; but without fp it might be tough, unless you guys have stuff to talk about amongst each other
+1:52 PM &lt;rehrar&gt; if not, we can move on to 5. Any additional meeting items
+1:53 PM &lt;ErCiccione&gt; rehrar: ok, if it's not i will blame you :P
+1:53 PM &lt;rehrar&gt; ErCiccione: perfect. That's how it's all set up.
+1:53 PM &lt;rehrar&gt; Just to get 6. Confirm next meeting date/time out of the way real quick, we're back on our schedule of ever two weeks.
+1:53 PM &lt;rehrar&gt; *every
+1:54 PM &lt;rehrar&gt; So May 6th
+1:54 PM &lt;rbrunner&gt; Next meeting, new, with MoneroV :)
+1:55 PM &lt;msvb-lab&gt; Any quick questions about developer activities at the DefCon village in August?
+1:55 PM &lt;msvb-lab&gt; Or Hardware development, like firmware coding?
+1:55 PM &lt;_Slack&gt; &lt;rehrar&gt; Status of hardware?
+1:55 PM &lt;ErCiccione&gt; one last thing, can the server who is hosting the website be updated? the polish side is still broken at the moment, but was fixed on githu
+1:55 PM &lt;ErCiccione&gt; b
+1:56 PM &lt;_Slack&gt; &lt;rehrar&gt; Been pinging fp about that. Please do so also.
+1:56 PM &lt;msvb-lab&gt; rehrar: A bit difficult to give a status report in a minute, but the Breakneck (developer edition) boards are being tested right now.
+1:56 PM &lt;gingeropolous&gt; doesn't luigi1111 do the site?
+1:56 PM &lt;msvb-lab&gt; One is already in mechanical engineering's hands.
+1:56 PM &lt;msvb-lab&gt; gingeropolous: pigeons may have access as well.
+1:56 PM &lt;_Slack&gt; &lt;rehrar&gt; He merges.
+1:57 PM &lt;_Slack&gt; &lt;rehrar&gt; Fluffypony controls server.
+1:57 PM &lt;opHSWQjrbsje&gt; yeah merging and website hosting by different parties
+1:57 PM &lt;msvb-lab&gt; Whoever would like to teach or preach Monero development, we need you to volunteer an hour for a workshop at DefCon village in Vegas (August 9-12.)
+1:58 PM &lt;msvb-lab&gt; Just write to Monero-defcon@getmonero.org.</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/3","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"3"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

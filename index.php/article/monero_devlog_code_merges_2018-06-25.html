@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Monero DevLog: Code merges for 2018-06-25 | Monerobase" />
+<link rel="canonical" href="monero_devlog_code_merges_2018-06-25.html" />
+<meta name="description" content="Along with standard bug fixes, we get some new commits involving bulletproofs and better support for wallet hardware." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="monero_devlog_code_merges_2018-06-25.html" />
+
+    <title>Monero DevLog: Code merges for 2018-06-25 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="monero_devlog_code_merges_2018-06-25.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">Monero DevLog: Code merges for 2018-06-25</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="48" role="article" about="/index.php/article/monero_devlog_code_merges_2018-06-25" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="Monero DevLog: Code merges for 2018-06-25" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-06-26T01:09:42+00:00">Mon, 06/25/2018 - 21:09</span>
+          <span property="schema:dateCreated" content="2018-06-26T01:09:42+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340598" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129760" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0f09" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="1" id="article_16298340598">
+<div class="article_header" dir="ltr" id="article_header_16298340598">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340598" onmouseup="return toggle_articleview('16298340598',false,event,false)">Along with standard bug fixes, we get some new commits involving bulletproofs and better support for wallet hardware.
+<div class="article_title_wrapper"> </div>
+
+<div class="article_title_wrapper"> </div>
+
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/31f47d72fe62310da083eab42071da6068308f3d" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340598">Merge pull request #3977</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340598">Merge pull request #3977 0309615 device_ledger: fix bad memory access on connect error (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340620" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129759" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ef3" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="2" id="article_16298340620">
+<div class="article_header" dir="ltr" id="article_header_16298340620">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340620" onmouseup="return toggle_articleview('16298340620',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/14372ca95ae977401f4069956a816fb4232f059b" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340620">Merge pull request #3975</span></a></div>
+
+<div class="article_title_wrapper">Merge pull request #3975 2d5921e blockchain: avoid duplicate db query for height (moneromooo-monero)</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340627" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129758" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0eec" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="3" id="article_16298340627">
+<div class="article_header" dir="ltr" id="article_header_16298340627">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340627" onmouseup="return toggle_articleview('16298340627',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ab7ab29fc051886e4af08e39dded11e3cdf92bda" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340627">Merge pull request #3974</span></a></div>
+
+<div class="article_title_wrapper">Merge pull request #3974 1789b76 cryptonote_protocol_handler: log when dropping a peer (moneromooo-monero)</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340634" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129757" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ee5" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="4" id="article_16298340634">
+<div class="article_header" dir="ltr" id="article_header_16298340634">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340634" onmouseup="return toggle_articleview('16298340634',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/c0c6102260a4f623218ee34286dd7bf4240c7609" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340634">Merge pull request #3972</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340634">Merge pull request #3972 8766528 epee: fallback to a counter if gmtime fails when rotating logs (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340641" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129756" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ede" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="5" id="article_16298340641">
+<div class="article_header" dir="ltr" id="article_header_16298340641">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340641" onmouseup="return toggle_articleview('16298340641',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/a2b08db9c9c0e2958a22577b9586454eab21d550" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340641">Merge pull request #3971</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340641">Merge pull request #3971 4ecf714 epee: fix include for ofstream (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340645" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129755" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0eda" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="6" id="article_16298340645">
+<div class="article_header" dir="ltr" id="article_header_16298340645">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340645" onmouseup="return toggle_articleview('16298340645',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/b1be364f087513df082c4aeb7dc6c858d936dc7e" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340645">Merge pull request #3966</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340645">Merge pull request #3966 948c482 simplewallet: grammar fix in warning message (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340649" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129754" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ed6" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="7" id="article_16298340649">
+<div class="article_header" dir="ltr" id="article_header_16298340649">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340649" onmouseup="return toggle_articleview('16298340649',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/3afaedf365c58acc7c00dbe631d2793149307418" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340649">Merge pull request #3964</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340649">Merge pull request #3964 9ddb07f update readme to include debian one liner for deps (Gingeropolous)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340653" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129753" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ed2" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="8" id="article_16298340653">
+<div class="article_header" dir="ltr" id="article_header_16298340653">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340653" onmouseup="return toggle_articleview('16298340653',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/89b99ef2d854d44b7df9c9e17f1e4b9f9e67982e" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340653">Merge pull request #3963</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340653">Merge pull request #3963 f61fe2e Update readme to include pcslite dependency (Gingeropolous)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340658" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129752" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ecd" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="9" id="article_16298340658">
+<div class="article_header" dir="ltr" id="article_header_16298340658">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340658" onmouseup="return toggle_articleview('16298340658',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/8fad35f8e2b21e90ee9f444861d2294a2f8a3e2e" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340658">Merge pull request #3962</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340658">Merge pull request #3962 55c7fb8 epee: adaptive connection timeout system (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340662" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129751" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ec9" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="10" id="article_16298340662">
+<div class="article_header" dir="ltr" id="article_header_16298340662">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340662" onmouseup="return toggle_articleview('16298340662',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/66212837ab43d1ff0b416f68357cb6092d0c4e8b" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340662">Merge pull request #3957</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340662">Merge pull request #3957 2bb2c1b password: flush cout when prompting for password without newline (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340666" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129750" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ec5" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="11" id="article_16298340666">
+<div class="article_header" dir="ltr" id="article_header_16298340666">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340666" onmouseup="return toggle_articleview('16298340666',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/506be80601d870b970e221d107a2a6d516ac2cfb" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340666">Merge pull request #3955</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340666">Merge pull request #3955 d7a6b72 wallet2: fix bulletproof cold signing (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340673" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129749" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ebe" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="12" id="article_16298340673">
+<div class="article_header" dir="ltr" id="article_header_16298340673">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340673" onmouseup="return toggle_articleview('16298340673',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/741a773025398cb41ca07014486083aca08cb1a6" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340673">Merge pull request #3948</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340673">Merge pull request #3948 c367609 blockchain_import: warn+delay about using --dangerous-unverified-import (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340695" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129748" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ea8" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="13" id="article_16298340695">
+<div class="article_header" dir="ltr" id="article_header_16298340695">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340695" onmouseup="return toggle_articleview('16298340695',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ea1d54aeb795638bb052a550781a992ecadffe03" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340695">Merge pull request #3947</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340695">Merge pull request #3947 8cc4606 snap: strip metadata from icon.png (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340702" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129747" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0ea1" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="14" id="article_16298340702">
+<div class="article_header" dir="ltr" id="article_header_16298340702">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340702" onmouseup="return toggle_articleview('16298340702',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/26562e9f3c1d03e739ada2909988acd3be65e8df" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340702">Merge pull request #3941</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340702">Merge pull request #3941 bf26920 wallet2: fix get_approximate_blockchain_height for stagenet (stoffu)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340708" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129746" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e9b" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="15" id="article_16298340708">
+<div class="article_header" dir="ltr" id="article_header_16298340708">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340708" onmouseup="return toggle_articleview('16298340708',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/c3ec5373b3c61c4bf0df126473cbcec528c6d393" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340708">Merge pull request #3936</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340708">Merge pull request #3936 d81e042 tx_pool: initialize bitflags padding since it gets written to storage (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340714" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129745" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e95" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="16" id="article_16298340714">
+<div class="article_header" dir="ltr" id="article_header_16298340714">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340714" onmouseup="return toggle_articleview('16298340714',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/473d984d88294fe6820c52094d96a0abcb8e9a90" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340714">Merge pull request #3921</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340714">Merge pull request #3921 8fc0cdb wallet2: lower default for subaddress lookahead when restoring with hardware (stoffu) 248310d Move parse_subaddress_lookahead() from simplewallet.cpp to util.cpp (stoffu) 46e90b7 Wallet API: add support for wallet creation from hardware device (stoffu)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340722" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129744" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e8d" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="17" id="article_16298340722">
+<div class="article_header" dir="ltr" id="article_header_16298340722">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340722" onmouseup="return toggle_articleview('16298340722',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/1eddabf0a49095121af3c40655b36b61746238dd" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340722">Merge pull request #3677</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340722">Merge pull request #3677 d45cd37 fix typos in language files and rpc_args.cpp (ordtrogen)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340726" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129743" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e89" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="18" id="article_16298340726">
+<div class="article_header" dir="ltr" id="article_header_16298340726">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340726" onmouseup="return toggle_articleview('16298340726',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ff7dc087ae5f7de162131cea9dbcf8eac7c126a1" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340726">Merge pull request #3407</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16298340726">Merge pull request #3407 7bf99a2 fix string handling for donation message (cryptochangements34)</div>
+
+<div class="article_short_contents">
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16298340731" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129742" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e84" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="19" id="article_16298340731">
+<div class="article_header" dir="ltr" id="article_header_16298340731">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340731" onmouseup="return toggle_articleview('16298340731',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/d45cd37c531b174ceefd4f1c2f66958430aebf05" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16298340731">fix typos in language files and rpc_args.cpp</span></a></div>
+
+<div class="ar article_subscribed article_no_thumbnail article ar_showed article_current article_expanded" data-aid="16298340734" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1529960646" data-date_usec="1529960646129741" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e707f0e81" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="20" id="article_16298340734">fix typos in language files and rpc_args.cpp
+<div class="article_header" dir="ltr" id="article_header_16298340734">
+<div class="article_header_text" dir="ltr" id="article_header_text_16298340734" onmouseup="return toggle_articleview('16298340734',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/46e90b7780459007b6bb74423c99f92791de77b4" onclick="return article_click_trap(event);" tabindex="-1"><span class="article_header_title" id="at_16298340734">Wallet API: add support for wallet creation from hardware device</span></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/2.html" property="schema:about" hreflang="en">DevLog</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/48","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"48"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

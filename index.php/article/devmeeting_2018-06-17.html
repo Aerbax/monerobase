@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-06-17 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-06-17.html" />
+<meta name="description" content="Highlights
+
+Unofficial GUI Release until Fluffy can finalize it: https://www.reddit.com/r/Monero/comments/8rkwyt/unofficial_release_of_gui_wallet_version_0122/
+	VTNerd has been working on some patches for ZeroMQ(0MQ)
+	Serhack continues work on the &quot;Mastering Monero&quot; book.
+	Bulletproofs audit
+	Quarkslab anticipates that their audit will be done soon(as early as the end of next week).
+		Early reports show" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-06-17.html" />
+
+    <title>DevMeeting 2018-06-17 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-06-17.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-06-17</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="46" role="article" about="/index.php/article/devmeeting_2018-06-17" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-06-17" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-06-17T18:16:19+00:00">Sun, 06/17/2018 - 14:16</span>
+          <span property="schema:dateCreated" content="2018-06-17T18:16:19+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4><u><strong>Highlights</strong></u></h4>
+
+<ul><li>Unofficial GUI Release until Fluffy can finalize it: <a href="https://www.reddit.com/r/Monero/comments/8rkwyt/unofficial_release_of_gui_wallet_version_0122/">https://www.reddit.com/r/Monero/comments/8rkwyt/unofficial_release_of_gui_wallet_version_0122/</a></li>
+	<li>VTNerd has been working on some patches for ZeroMQ(0MQ)</li>
+	<li>Serhack continues work on the "Mastering Monero" book.</li>
+	<li>Bulletproofs audit
+	<ul><li>Quarkslab anticipates that their audit will be done soon(as early as the end of next week).</li>
+		<li>Early reports show no vulnerabilities and they have a few suggested improvements</li>
+		<li>Kudelski report should be near the end of June.</li>
+	</ul></li>
+	<li>Discussion about reducing full node sync times</li>
+	<li>Discussion about GUI performance and improving user experience(UX)</li>
+	<li>Mooo could use some help testing some new SSL support in PR 4011: <a href="https://github.com/monero-project/monero/pull/4011">https://github.com/monero-project/monero/pull/4011</a></li>
+	<li>Next meeting July 1st, 2018</li>
+</ul><p> </p>
+
+<h4><u><strong>Full Log</strong></u></h4>
+
+<pre>
+1:00 PM &lt;rehrarthebrearar&gt; https://github.com/monero-project/meta/issues/244
+1:00 PM &lt;rehrarthebrearar&gt; 1. Greetings
+1:00 PM &lt;endogenic&gt; hi rehrar
+1:00 PM &lt;rehrarthebrearar&gt; Who all is out there?
+1:00 PM &lt;rbrunner&gt; Hoi zäme
+1:00 PM &lt;serhack&gt; Hello
+1:01 PM &lt;ErCiccione&gt; Hi!
+1:01 PM &lt;+moneromooo&gt; here
+1:01 PM &lt;rehrarthebrearar&gt; 2. Brief review of what's been completed since the previous meeting
+1:01 PM &lt;+hyc&gt; I'm definitely out there
+1:02 PM &lt;rehrarthebrearar&gt; Anyone have anything to report for the past couple weeks?
+1:02 PM &lt;endogenic&gt; rehrarthebrearar: anything to report?
+1:02 PM &lt;rehrarthebrearar&gt; I had a good vacation. That's my report.
+1:02 PM &lt;@ArticMine&gt; hi
+1:02 PM &lt;endogenic&gt; dev related
+1:02 PM &lt;vtnerd&gt; present
+1:02 PM &lt;+hyc&gt; nothing to report here
+1:02 PM &lt;ErCiccione&gt; the bastard unofficial release: https://www.reddit.com/r/Monero/comments/8rkwyt/unofficial_release_of_gui_wallet_version_0122/
+1:03 PM &lt;vtnerd&gt; got some patches for ZMQ JSON RPC stuff (missing data, etc). apparently no one using a few of the calls
+1:03 PM &lt;endogenic&gt; ^-- we're making progress on the lightwallet server, which is using lmdb and zmq
+1:03 PM &lt;endogenic&gt; or hosted wallet
+1:04 PM &lt;vtnerd&gt; the ZMQ is between daemon &lt;--&gt; mymonero-api-compatible-server
+1:04 PM &lt;vtnerd&gt; otherwise its still using http REST+JSON for better/worse
+1:04 PM &lt;serhack&gt; I'll take a look vtnerd and endogenic, any links?
+1:04 PM &lt;endogenic&gt; soon
+1:04 PM &lt;vtnerd&gt; although supporting ZMQ on that shouldn't be terrible should someone want it
+1:04 PM &lt;vtnerd&gt; good point, haven't published that yet will get on that
+1:06 PM &lt;@ArticMine&gt; I am working on the fee / scaling formula for Bulletproofs
+1:07 PM &lt;el00ruobuob_[m]&gt; how are the audits going?
+1:07 PM &lt;serhack&gt; Personally I am working on Mastering Monero. I know that isn't dev related but that will help new developers that would like to understand about Monero.
+1:07 PM &lt;@ArticMine&gt; Mainly to address the difference in scaling for size and verification time
+1:07 PM &lt;rehrarthebrearar&gt; any update on that ArticMine? How's it going?
+1:07 PM &lt;@ArticMine&gt; I am not dealing with the audits directly
+1:07 PM &lt;rehrarthebrearar&gt; I meant on the fee/scaling formula
+1:07 PM &lt;@ArticMine&gt; The concept is done it is mainly the details
+1:08 PM &lt;rehrarthebrearar&gt; sarang needs to report on the audits, but it doesn't seem he's around atm
+1:08 PM &lt;suraeNoether&gt; el00ruobuob_[m]: Quarkslab apparently says they will be done very soon
+1:08 PM &lt;suraeNoether&gt; end of next week
+1:08 PM &lt;@ArticMine&gt; replacement of blocksize with block weight
+1:08 PM &lt;suraeNoether&gt; sorry, hi, i'm here :D and helpful
+1:08 PM &lt;+hyc&gt; sarang left a note in -research-lab yesterday or so
+1:09 PM &lt;sarang&gt; Quarkslab will finish in about a week
+1:09 PM &lt;+hyc&gt; Quarkslab said they found a few opportunities to flag invalid stuff earlier, but no vulns.
+1:09 PM &lt;sarang&gt; Kudelski around end of month
+1:09 PM &lt;suraeNoether&gt; i'm literally emailing a musig author right now about a question koe and i both had about their set-up and replay protection
+1:09 PM &lt;sarang&gt; Benedikt begins now
+1:09 PM &lt;+hyc&gt; oh there he is
+1:09 PM &lt;sarang&gt; Yeah just for a minute tho
+1:10 PM ⇐ serhack quit (6d7014c4@gateway/web/cgi-irc/kiwiirc.com/ip.109.112.20.196) Remote host closed the connection
+1:11 PM &lt;el00ruobuob_[m]&gt; good to hear!
+1:11 PM → oneiric_ joined (~oneiric_@82.102.28.85)
+1:12 PM &lt;rehrarthebrearar&gt; yup, sounds promising. Anyone else?
+1:13 PM ⇐ _4matter quit (uid266128@gateway/web/irccloud.com/x-keqsjqopiwsrxfyw) Quit: Connection closed for inactivity
+1:13 PM &lt;rehrarthebrearar&gt; alright, let's move on
+1:13 PM &lt;rehrarthebrearar&gt; 3. Point release items (GUI)
+1:13 PM &lt;rehrarthebrearar&gt; I expect this to be short because all that's being waited on is fp, no?
+1:13 PM &lt;dEBRUYNE&gt; Yes
+1:14 PM &lt;rehrarthebrearar&gt; Ok. :P 4. Code + ticket discussion / Q &amp; A
+1:14 PM &lt;dEBRUYNE&gt; Oh for the GUI I suppose we could discuss this -&gt; https://github.com/monero-project/monero-gui/issues/1465
+1:16 PM &lt;dEBRUYNE&gt; ^ If anyone has remarks, throw them out :p
+1:16 PM &lt;rbrunner&gt; I thought that this "bootstrap mode" (remote daemon until local one is synced) is already worked on. Misunderstanding?
+1:16 PM &lt;rehrarthebrearar&gt; reading
+1:16 PM &lt;+hyc&gt; as I commented on reddit, I believe this will lead to local nodes never catching up
+1:17 PM &lt;+hyc&gt; users will fire up wallet, do a few things, then shut it all down
+1:17 PM &lt;+moneromooo&gt; Ugh. Good point.
+1:18 PM &lt;el00ruobuob_[m]&gt; are casual users supposed to run a full node? If gui is too heavy for them they'll use monerujo or cake wallet...
+1:18 PM &lt;ErCiccione&gt; yeah that's probably a deal breaker hyc didn't think about that
+1:18 PM &lt;@ArticMine&gt; Can we wait for bullet proofs? There are a lot of optimization that will impact this
+1:18 PM &lt;dEBRUYNE&gt; Bulletproofs doesn't reduce the sync time retrospectively
+1:18 PM &lt;dEBRUYNE&gt; rbrunner: The functionality is there, it just isn't default
+1:19 PM &lt;@ArticMine&gt; But has a major impact on the verification time
+1:19 PM &lt;+moneromooo&gt; They kinda do. Range proofs covered by hoh aren't checked.
+1:19 PM &lt;dEBRUYNE&gt; moneromooo: could you elaborate?
+1:19 PM &lt;iDunk&gt; The mysterious hoh :)
+1:20 PM — dEBRUYNE heads to github
+1:20 PM &lt;+moneromooo&gt; case 1: quick sync from 0 to 1.5e6, slow range proof sync from 1.5e6 to 1.6e6.
+1:20 PM &lt;+moneromooo&gt; case 2: quick sync from 0 to 1.6e6, medium speed bp sync from 1.6e6 to 1.7e6.
+1:21 PM &lt;+moneromooo&gt; You traded 100k slow for 100k quick + 100k medium, which is very likely faster.
+1:21 PM &lt;+moneromooo&gt; Won't last super long as the chain grows though.
+1:21 PM &lt;dEBRUYNE&gt; hyc: Good point. I'll have to put some thought into that. More full nodes is only one aspect of a greater user base though. Another would arguably be more transactions
+1:21 PM &lt;+moneromooo&gt; (100k is a placeholder, I don't know the actual number)
+1:22 PM &lt;dEBRUYNE&gt; I see, thanks for clarifying. Do you have an idea how much it saves relatively though?
+1:22 PM &lt;@ArticMine&gt; Another issue that we want to encourage more nodes to improve the new user performance
+1:22 PM &lt;iDunk&gt; Hours.
+1:22 PM &lt;@ArticMine&gt; Try syncing MoneroV and one see the impact of very few nodes
+1:23 PM &lt;+moneromooo&gt; They actually released somthing ?
+1:23 PM &lt;@ArticMine&gt; It took like 4 day on hard ware that would sync Monero in 5 hours
+1:23 PM &lt;dEBRUYNE&gt; ArticMine: I posit that eventually you end up with more full nodes though
+1:24 PM &lt;+hyc&gt; using bootstrap nodes is better than no local nodes at all
+1:24 PM &lt;+hyc&gt; but I think overall, not a lot better
+1:24 PM &lt;@ArticMine&gt; I am not disagreeing just saying that are changes in the pipeline that will impact this
+1:24 PM → Keniyal joined (~Keniyal@unaffiliated/keniyal)
+1:24 PM &lt;+hyc&gt; either way, you need to get in the user's face and make them read and click.
+1:25 PM &lt;+hyc&gt; don't leave it hidden/automatic/transparent.
+1:25 PM &lt;rehrarthebrearar&gt; do we stick then to the ideals, or do we make concessions for reality?
+1:25 PM &lt;endogenic&gt; *rolls his eyes*
+1:25 PM &lt;dEBRUYNE&gt; hyc: Yes, we'd rather have a user use a bootstrap node than a remote node indefinitely
+1:25 PM &lt;rbrunner&gt; I think most new users lack completely the conceptual understanding of the whole architecture to judge what to do
+1:25 PM &lt;+hyc&gt; and it might be as futile as expecting people to read EULAs before clicking OK
+1:25 PM &lt;@ArticMine&gt; Sometimes the ideal actually make the reality work
+1:25 PM &lt;endogenic&gt; &lt;3 ArticMine
+1:26 PM &lt;@smooth&gt; the reality really doesn't work if everyone is just trying o use free remote nodes
+1:26 PM &lt;+hyc&gt; but I think we should still put it in front of their face and force them to click.
+1:26 PM &lt;dEBRUYNE&gt; hyc: Are you proposing some kind of disclaimer page?
+1:26 PM &lt;dEBRUYNE&gt; Like ToS :-P
+1:26 PM &lt;rbrunner&gt; Maybe put nice animations in front of their face that help understanding of daemons and the network?
+1:26 PM &lt;endogenic&gt; how about an incentive system?
+1:26 PM &lt;rbrunner&gt; And the importance of all
+1:27 PM &lt;ErCiccione&gt; what kind of incentive endogenic?
+1:27 PM &lt;rbrunner&gt; A lottery among all the new full nodes of the current week? :)
+1:27 PM &lt;endogenic&gt; well to smooth's comment if people are just using free stuff..
+1:27 PM &lt;dEBRUYNE&gt; rbrunner: I think it would be more important to warn them about the trade-offs of (temporarily) using a remote node
+1:27 PM &lt;@smooth&gt; rbrunner: we can hire Kurzgesagt to do a nice animation for us
+1:27 PM &lt;dEBRUYNE&gt; and give them an option to opt-out and just start the blockchain sync from scratch without a bootstrap node
+1:28 PM &lt;+hyc&gt; dEBRUYNE: yes. explain "we're uding a remote node to get you started quickly" blah blah blah
+1:28 PM &lt;rbrunner&gt; Yeah, but first you have to get enough understanding to even see what is a remote node :)
+1:28 PM &lt;rbrunner&gt; Or a "node" at all
+1:28 PM &lt;rbrunner&gt; I think hiding all this exactly the wrong way
+1:28 PM &lt;rehrarthebrearar&gt; I think that the wallet stewarded by the core team should indeed stick to the ideals. If somebody else wants to make a GUI that goes remote node first or by default, then nobody is stopping them
+1:28 PM &lt;ErCiccione&gt; don't we have some PR people right now? they could help with is
+1:28 PM &lt;ErCiccione&gt; *this
+1:29 PM &lt;dEBRUYNE&gt; rehrarthebrearar: I'd agree for the CLI, but we should be a bit more lenient on the GUI
+1:29 PM &lt;endogenic&gt; rehrarthebrearar: i don't think we need to use the word ideals. there are principles of how things work
+1:29 PM &lt;@smooth&gt; actually the 'ideal' is maybe there is no core GUI at all
+1:29 PM &lt;@smooth&gt; obviously it serves a purpose now
+1:29 PM &lt;dEBRUYNE&gt; hyc: Yeah I envisioned something similar. Just a full page w/ trade-offs and an option to opt-out
+1:30 PM &lt;rehrarthebrearar&gt; dEBRUYNE: meh,, the GUI isn't exactly a stellar example of UX period.
+1:30 PM &lt;endogenic&gt; nor is the code itself
+1:30 PM &lt;dEBRUYNE&gt; How is that related?
+1:30 PM &lt;+hyc&gt; dEBRUYNE: sure. put a timer on the OK button, don't enable it for 10-20 seconds.
+1:30 PM &lt;rehrarthebrearar&gt; well, I mean that the concessions for the increased UX don't matter a huge amount imo.
+1:31 PM &lt;rehrarthebrearar&gt; It's still for power users.
+1:31 PM &lt;dEBRUYNE&gt; The GUI is fairly easy to use as long as you have a fully synced daemon and wallet
+1:31 PM &lt;dEBRUYNE&gt; Most issues are stemming from the daemon not being fully synced or the GUI lagging
+1:31 PM &lt;dEBRUYNE&gt; My proposal addresses both of those
+1:31 PM &lt;rbrunner&gt; The GUI is fairly easy to use as long as you understand what you do
+1:31 PM &lt;rehrarthebrearar&gt; ^
+1:31 PM &lt;rbrunner&gt; If you don't even a magic GUI and UX won't help you
+1:32 PM &lt;rehrarthebrearar&gt; it's not necessarily intuitive, which is not the fault of the GUI per se, but a fault of cryptocurrencies in general, and Monero has added complexity.
+1:32 PM &lt;rbrunner&gt; Exactly my opinion
+1:32 PM &lt;+hyc&gt; lagging sounds like improper division of labor btween graphics threads and worker threads
+1:32 PM &lt;rbrunner&gt; But we are not helpless against this fact, are we?
+1:32 PM &lt;rehrarthebrearar&gt; If someone has done the research to get into Monero at all right now, they might as well do the research to run a full node or not? :D
+1:32 PM &lt;rehrarthebrearar&gt; rbrunner, of course not
+1:32 PM &lt;endogenic&gt; yes hyc
+1:33 PM &lt;dEBRUYNE&gt; rehrarthebrearar: you're significantly diverging from the original discussion now though
+1:33 PM &lt;@smooth&gt; what does 'GUI lagging' mean exactly
+1:33 PM &lt;rbrunner&gt; See that people still completely freak out about change, for example
+1:33 PM &lt;+hyc&gt; OK then - who is the target audience of the GUI?
+1:33 PM &lt;endogenic&gt; hyc: that is the problem
+1:34 PM &lt;dEBRUYNE&gt; smooth: I should've clarified that I meant that the system "lags", i.e., users are unable to use other processes properly
+1:34 PM &lt;rehrarthebrearar&gt; with only one real desktop GUI in existence, doesn't the answer default to 'everyone'?
+1:34 PM &lt;@smooth&gt; dEBRUYNE: okay, that is a matter of resource usage i guess
+1:34 PM &lt;dEBRUYNE&gt; it mostly happens on Windows fwiw
+1:34 PM &lt;+hyc&gt; rehrarthebrearar: maybe but I think that's unrealistic at this stage
+1:35 PM &lt;rehrarthebrearar&gt; hyc exactly
+1:35 PM &lt;dEBRUYNE&gt; smooth: It's probably related to hyc's observation, i.e., the GUI and monerod running concurrently
+1:35 PM &lt;@ArticMine&gt; For many if not most people running a full node makes sense; however there are cases where it is not appropriate and this has nothing to do with how tech savvy the person is
+1:35 PM &lt;@smooth&gt; dEBRUYNE: have you confirmed that reduced max-concurrency actually helps. maybe propose to change that default on windows?
+1:35 PM &lt;endogenic&gt; how about a core GUI that actually mirrors simplewallet functionality
+1:36 PM &lt;endogenic&gt; in its UI. then you can build it in a modular pluggable way so others can expand it in different ways
+1:36 PM &lt;endogenic&gt; users are already familiar with spreadsheets for example
+1:36 PM &lt;endogenic&gt; keep it simple
+1:36 PM &lt;endogenic&gt; try not to abstract
+1:36 PM &lt;@ArticMine&gt; I really like this idea. A GUI for power users
+1:36 PM &lt;+hyc&gt; not sure this is a good time to design a brand new GUI
+1:36 PM &lt;dEBRUYNE&gt; smooth: Yes, anecdotally though
+1:36 PM &lt;endogenic&gt; it's not about designing a new GUI
+1:36 PM &lt;endogenic&gt; it's about using the existing simplewallet design
+1:36 PM &lt;endogenic&gt; and just plopping the same access into a GUI kit
+1:37 PM &lt;@smooth&gt; dEBRUYNE: it seems like a reasonable change that could help things independent of the remote node issue
+1:37 PM &lt;endogenic&gt; the whole point is, anytime something is added to simplewallet, even a dev should be able to design how to add it to the GUI
+1:37 PM &lt;dEBRUYNE&gt; smooth: It also occurs on mac os x, but I've seen it happen less often
+1:37 PM &lt;+hyc&gt; lowering max-concurrency to something like cores/2 is not a bad idea
+1:37 PM &lt;dEBRUYNE&gt; Of course this could be explained by there simply being less mac os x GUI users
+1:37 PM &lt;+hyc&gt; unfortunately, "max-concurrency" is a lie. monerod spawns tons of threads completely independent of this setting
+1:37 PM &lt;endogenic&gt; yup..
+1:38 PM &lt;rbrunner&gt; Hmm, that may be more difficult than you anticipate. I was thinking about how to add my own MMS to the GUI and really did not get very far
+1:38 PM &lt;dEBRUYNE&gt; smooth: Yeah I'd agree
+1:38 PM &lt;dEBRUYNE&gt; hyc: Only for the GUI or?
+1:38 PM &lt;dEBRUYNE&gt; Because running monerod separately usually doesn't produce any issues
+1:38 PM → +monero (voiced) joined  
+1:38 PM &lt;+monero&gt; [monero] moneromooo-monero opened pull request #4011: [DO NOT MERGE] Ssl on top of random unmerged stuff (master...ssl-on-top-of-random-unmerged-stuff) https://git.io/vhMDD
+1:38 PM ← +monero left (fluffypony@coreteam.getmonero.org)
+1:38 PM &lt;+hyc&gt; dEBRUYNE: in that case I have no idea what's up
+1:38 PM &lt;+moneromooo&gt; It's *worker* threads. Other threads are typically mostly idle.
+1:39 PM &lt;dEBRUYNE&gt; hyc: With monerod separately I meant monerod with the GUI closed
+1:39 PM &lt;+hyc&gt; right
+1:39 PM &lt;dEBRUYNE&gt; So this probably still applies -&gt; &lt;hyc&gt; lagging sounds like improper division of labor btween graphics threads and worker threads
+1:41 PM &lt;rehrarthebrearar&gt; Alright, any further discussion on what dEBRUYNE has brought up?
+1:41 PM &lt;endogenic&gt; apparently not :P
+1:41 PM &lt;dEBRUYNE&gt; hyc: Btw, the GUI allows the user to run the daemon in the background upon closing the GUI
+1:41 PM &lt;dEBRUYNE&gt; Perhaps we could add some more information there on how it would benefit the network etc.
+1:41 PM &lt;+hyc&gt; that's helpful. as long as it also makes users aware of that
+1:41 PM &lt;+hyc&gt; right
+1:42 PM &lt;rehrarthebrearar&gt; 4. Code + ticket discussion / Q &amp; A
+1:42 PM &lt;rehrarthebrearar&gt; anything for this? moneromooo around to field questions?
+1:43 PM &lt;iDunk&gt; &lt; rehrarthebrearar&gt; Ok. :P 4. Code + ticket discussion / Q &amp; A
+1:43 PM &lt;+hyc&gt; is there going to be a 0.12.3?
+1:43 PM &lt;+hyc&gt; I mean, we've merged quite a few bug fixes into master recently
+1:43 PM &lt;endogenic&gt; lol dEBRUYNE
+1:43 PM &lt;+moneromooo&gt; That depends on whether the pony can find the strength.
+1:43 PM &lt;rehrarthebrearar&gt; right iDunk, but then we peddled backward a bit I thought
+1:43 PM &lt;dEBRUYNE&gt; endogenic: ?
+1:43 PM &lt;endogenic&gt; oops sorry that was iDunk
+1:43 PM &lt;dEBRUYNE&gt; :-P
+1:44 PM &lt;rehrarthebrearar&gt; but ok, if we feel that's been done we can move on
+1:44 PM &lt;rehrarthebrearar&gt; 5. Any additional meeting items
+1:44 PM &lt;+moneromooo&gt; I have one thing about 4011: if anyone doesn't mind switching their db to v3 (that is, not being able to use a master/v2 branch after that), testing all of 4011's SSL cases would be nice ^_^
+1:45 PM &lt;+moneromooo&gt; Also, I don't know alot about SSL, so someone who does feel free to tell me what config problems need fixing.
+1:45 PM &lt;+hyc&gt; that PR has a ton of other commits in it.
+1:45 PM &lt;+hyc&gt; no way to trim that down?
+1:46 PM &lt;+moneromooo&gt; Yes, because it doesn't apply to master until the previous ones are merged.
+1:46 PM &lt;+hyc&gt; ok
+1:46 PM &lt;@ArticMine&gt; I have to leave now.
+1:46 PM &lt;+moneromooo&gt; But luigi's working on that (thanks)
+1:46 PM &lt;selsta&gt; I got a suggestion: changing the db-sync-mode once a node is fully synced up so people don’t corrupt their db when they do something bad
+1:46 PM &lt;endogenic&gt; ttyl ArticMine
+1:46 PM &lt;+moneromooo&gt; It is done.
+1:46 PM &lt;+hyc&gt; selsta: current code already does that
+1:47 PM &lt;selsta&gt; oh okay lol seen people still complaining about this, maybe they are talking about past experiences
+1:47 PM ⇐ TheoStorm quit (~dnaleor@host-lzquwqj.cbn1.zeelandnet.nl) Quit: Leaving
+1:47 PM &lt;+moneromooo&gt; It was buggy till recently. And not yet merged either I think.
+1:47 PM &lt;endogenic&gt; does anyone ever think about how cool it would be if we had library builds of monero that we could link to?
+1:48 PM &lt;endogenic&gt; or that we could transpile or bind to from other languages?
+1:48 PM &lt;endogenic&gt; anyone else..
+1:48 PM &lt;+hyc&gt; if everything were in C, you could already bind to it from any other language
+1:48 PM &lt;+hyc&gt; ... my usual anti-C++ rant ...
+1:48 PM &lt;endogenic&gt; yeah well for that we need an actual C dev to do some work on it
+1:49 PM ⇐ rbrunner quit (~rbrunner@dyn-cable-customer.158.38.138.91.yetnet.ch) Read error: Connection reset by peer
+1:49 PM &lt;endogenic&gt; i'm just trying to figure out if anyone actually thinks it's important
+1:49 PM → rbrunner joined (~rbrunner@dyn-cable-customer.158.38.138.91.yetnet.ch)
+1:50 PM &lt;oneiric_&gt; think it's important, not enough C experience to do it right
+1:50 PM &lt;endogenic&gt; well we don't need C++
+1:50 PM &lt;endogenic&gt; we can just start with what we have now if it's teased apart
+1:50 PM &lt;endogenic&gt; people don't build it in a teased-apart way right now
+1:50 PM &lt;endogenic&gt; so they must not think it's important
+1:50 PM &lt;endogenic&gt; GUI dev shouldn't require another API layer on top of wallet2 for ex
+1:50 PM &lt;+hyc&gt; GUI should have just been built on top of wallet-rpc
+1:50 PM &lt;endogenic&gt; lots of things go into making GUI dev complicated
+1:50 PM &lt;endogenic&gt; it's not that complicated for me though
+1:50 PM ⇐ @ArticMine quit (~ArticMine@207.194.38.218) Ping timeout: 265 seconds
+1:50 PM &lt;+hyc&gt; but that's already a lost cause
+1:51 PM &lt;+hyc&gt; are we wrapping up?
+1:51 PM &lt;rehrarthebrearar&gt; alright, winding down now
+1:51 PM &lt;rehrarthebrearar&gt; yes
+1:51 PM &lt;rehrarthebrearar&gt; 6. Confirm next meeting date/time
+1:51 PM &lt;rehrarthebrearar&gt; July 1st, 17:00 UTC</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/46","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"46"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

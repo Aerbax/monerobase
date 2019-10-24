@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-09-17 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-09-17.html" />
+<meta name="description" content="Highlights
+
+The release this week had more issues than normal due to testing being so close to release." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-09-17.html" />
+
+    <title>DevMeeting 2017-09-17 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-09-17.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-09-17</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="14" role="article" about="/index.php/article/devmeeting_2017-09-17" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-09-17" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-09-17T20:13:44+00:00">Sun, 09/17/2017 - 16:13</span>
+          <span property="schema:dateCreated" content="2017-09-17T20:13:44+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights</h1>
+
+<ul><li>The release this week had more issues than normal due to testing being so close to release. Going forward, the team is going to try to lock down a more rigid schedule for testing and release:
+	<ul><li>Hard forks in March and September</li>
+		<li>Code freezes in Mid-June and Mid-December</li>
+		<li>This gives more opportunity for beta testing and bug fixes prior to the scheduled release.</li>
+		<li>Also opens the window for more "point releases"</li>
+	</ul></li>
+	<li>With regards to the more structured pace mentioned above, larger patches should start to find their way into the main codebase. None of these should require a fork.
+	<ul><li>Sub-Addresses</li>
+		<li>MultiSig (after signoff from the MRL crew - which says that it tentatively looks good, but requires some proofs. ~End of Nov 2017)</li>
+		<li>ZeroMQ</li>
+	</ul></li>
+	<li>More Unit Testing is needed - and is a great place for new developers to start.</li>
+	<li>Luigi1111 is moving from "backup maintainer" to "Lead Maintainer" on both the GUI and the Site. FluffyPony will move to backup maintainer on both.</li>
+	<li>MyMonero GUI
+	<ul><li>The MyMonero Apple D-U-N-S number has still not been received.</li>
+		<li>The MyMonero Google account is ready for their AppStore (but also needs a DUNS #).</li>
+		<li>Both are still being worked on to add some additional stuff (porting iOS code into the JavaScript App)</li>
+	</ul></li>
+	<li>The 2nd MRL roadmap is ready to be proofread: <a class="external free" href="https://drive.google.com/open?id=0ByPYdEm6O54rZGpTbkcwdWMwcW8" rel="nofollow">https://drive.google.com/open?id=0ByPYdEm6O54rZGpTbkcwdWMwcW8</a></li>
+</ul><h1>Full Log</h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. Release timeline: moving releases to 3-months-before-forks or similar
+&lt;fluffypony&gt; 5. Maintainer: migrating luigi1111 from backup maintainer to lead maintainer on GUI and site
+&lt;fluffypony&gt; 5. Any additional meeting items
+&lt;fluffypony&gt; 6. Confirm next meeting date/time
+&lt;fluffypony&gt; let's start with 1
+&lt;_Slack&gt; &lt;serhack&gt; Hi
+&lt;_Slack&gt; &lt;hrumag&gt; Hi
+&lt;shillosopher&gt; o/
+&lt;rbrunner7&gt; Grüezi
+&lt;_Slack&gt; &lt;rehrar&gt; Yo
+&lt;i2p-relay&gt; {-lightfighter} hola
+&lt;imheretolearn&gt; hola
+&lt;msvb-lab&gt; hello
+&lt;sarang&gt; yo
+&lt;surae&gt; guten tag
+&lt;luigi1111&gt; Oh hai
+&lt;imheretolearn&gt; ni hao
+* foobar__ has quit (Ping timeout: 260 seconds)
+&lt;hyc&gt; hi
+&lt;fluffypony&gt; ArticMine / othe / smooth / moneromooo / tewinget / anonimal / endogenic / gingeropolous / iDunk / JacobJeweler / kenshi84 / knaccc / MoroccanMalinoi- / NoodleDoodle / papa_lazzarou / wallet42 / vtnerd_ / anyone I forgot
+&lt;ArticMine&gt; Greetings
+&lt;iDunk&gt; o/
+&lt;moneromooo&gt; You forgot fluffypony in that list.
+&lt;fluffypony&gt; lol
+&lt;surae&gt; 22nd century historians are going to have a hell of a time writing books on the birth of cryptocurrency.
+&lt;_Slack&gt; &lt;moroccanmalinois&gt; Hi
+&lt;fluffypony&gt; pigeons sends his apologies, he let me know yesterday that he wouldn't make today's meeting
+* foobar_ (d5e127ca@gateway/web/freenode/ip.213.225.39.202) has joined
+&lt;fluffypony&gt; so anything that is wrong we can comfortably blame on him
+&lt;fluffypony&gt; since he isn't here to defend himself :-P
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; let's move on to 2
+&lt;fluffypony&gt; so not much has happened since the last meeting
+&lt;fluffypony&gt; a release or something
+&lt;fluffypony&gt; nothing major
+&lt;surae&gt; heh
+&lt;hyc&gt; I heard we spawned XMRclassic
+&lt;fluffypony&gt; Monero ABC
+&lt;surae&gt; i used XMRcash at a coffee shop, but my card was declined :(
+&lt;fluffypony&gt; inb4 XCash
+&lt;fluffypony&gt; on the topic of the release, and now is as good a time to talk about it as any
+&lt;hyc&gt; oooo, I like that one
+&lt;fluffypony&gt; as you may (or may not) have noticed this release was a little rockier than we'd hoped
+&lt;rbrunner7&gt; Yeah
+* TinusMars has quit (Ping timeout: 260 seconds)
+&lt;fluffypony&gt; we've known for a while that our testing horizons are too close
+* TinusMars (54c0d41e@gateway/web/freenode/ip.84.192.212.30) has joined
+&lt;fluffypony&gt; a little while ago smooth suggested having MUCH further horizons and sunsets, which I tend to agree with
+&lt;surae&gt; what are the thoughts on modifying that, then?
+&lt;fluffypony&gt; so what we'd like to do moving forward is work our horizons of a 6 month schedule, offset from the hard forks by 3 months
+&lt;fluffypony&gt; in other words
+&lt;fluffypony&gt; hard forks happen March and September
+&lt;fluffypony&gt; and code freezes happen mid-June and mid-December
+&lt;fluffypony&gt; so practically let's look at the next year as an example
+&lt;ArticMine&gt; ... but will we follow the code freezes?
+&lt;fluffypony&gt; we have 3 months from now to put stuff in the code, and then we code-freeze in mid-December
+&lt;imheretolearn&gt; will a 3 month code freeze have a side effect of slowing development?
+&lt;fluffypony&gt; that means we branch in mid-December
+&lt;_Slack&gt; &lt;serhack&gt; Okay and then a new release?
+&lt;_Slack&gt; &lt;hrumag&gt; You could follow the timeline used bu ubuntu
+&lt;_Slack&gt; &lt;hrumag&gt; by*
+&lt;fluffypony&gt; from mid-December we have some time to test, fix bugs, get the branch stable
+&lt;fluffypony&gt; (and port fixes to and from master)
+&lt;fluffypony&gt; with a view to tagging a release as soon as we think there's some stability
+&lt;moneromooo&gt; 3 months seems maybe a bit large, but let's try it. I'm curious to see how much of a pita it'll be to have to branches.
+&lt;moneromooo&gt; to have 2
+&lt;fluffypony&gt; the nice thing is that the release CAN have bugs, because not everyone will upgrade until closer to the hard fork
+&lt;fluffypony&gt; and so subsequent releases can patch bugs
+&lt;_Slack&gt; &lt;serhack&gt; Seems good idea fluffypony
+* floam412 (~floam412@gateway/vpn/privateinternetaccess/floam412) has joined
+&lt;sarang&gt; agreed
+&lt;moneromooo&gt; The only thing is that it only leaves 3 months to get range proof changes in... :/
+&lt;fluffypony&gt; it also means we can have loads of small point releases up to the hard fork, because there isn't much that changes except bug fixes
+&lt;moneromooo&gt; or 9. or 12.
+&lt;_Slack&gt; &lt;hrumag&gt; I totally agree with fluffy
+&lt;fluffypony&gt; moneromooo: if we don't hit the mid-December target then leave it for the next one, we have 6 months thereafter
+&lt;luigi1111&gt; 3 months seems fine to me. The release can be out a while before the fork with no negatives really
+&lt;fluffypony&gt; yeah exactly
+&lt;luigi1111&gt; Besides maybe some delay in new features
+&lt;fluffypony&gt; and it means that for 3-ish months the network is running both stable and newer versions
+&lt;ArticMine&gt; It is a way safer approach
+&lt;_Slack&gt; &lt;hrumag&gt; https://wiki.ubuntu.com/ArtfulAardvark/ReleaseSchedule if it can help
+&lt;fluffypony&gt; most exchanges / pools will stick to the previous stable release
+&lt;luigi1111&gt; Mooo we'll just have to get it done by December then:)
+&lt;fluffypony&gt; some brave ones will upgrade early
+&lt;moneromooo&gt; ^_^
+&lt;luigi1111&gt; Since like, ms is working and such
+&lt;moneromooo&gt; -_-
+&lt;_Slack&gt; Command sent from Slack by serhack:
+&lt;_Slack&gt; .-.
+&lt;fluffypony&gt; the real issue is that we have to decide on a new release name within the next 3 months
+&lt;fluffypony&gt; :-P
+&lt;knaccc&gt; Iridium Iris
+&lt;hyc&gt; Lithim lizard
+* braveh4rt has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;hyc&gt; lithium
+&lt;fluffypony&gt; also as pointed out this will mean that some features take a lot longer to go live in the mainnet codebase than we might hope (emergency patches / forks aside)
+&lt;surae&gt; hypothetical helicopter?
+&lt;fluffypony&gt; so it means we're going to have to be patient when things don't progress as rapidly as we'd like
+&lt;fluffypony&gt; we *can* happily deploy stuff on testnet, we've had to do massive reorgs on testnet before and it handled it just fine
+* dEBRUYNE grabs torches and pitchforks
+&lt;fluffypony&gt; and iirc Snipa had some experience setting up a mini closed testnet
+&lt;luigi1111&gt; I don't really think 2 ish months is "a lotc
+&lt;msvb-lab&gt; Dumb question, what's the name of the current 0.11 release?
+&lt;luigi1111&gt; "lot"
+&lt;fluffypony&gt; msvb-lab: Helium Hydra
+&lt;surae&gt; oh so hypothetical helicotper is right out.  :( too bad we missed the possibility for Gluttonous Ganesh?
+&lt;fluffypony&gt; aka Hail Hydra
+&lt;msvb-lab&gt; hyc: Then lithium wouldn't work would it? It doesn't start with 'I'.
+&lt;sarang&gt; Irritable Ibex
+&lt;imheretolearn&gt; i agrree knaccc iridium iris
+&lt;hyc&gt; private testnets are easy, just takes 2 nodes pointed at each other --add-exclusive-node
+&lt;fluffypony&gt; yarp
+* ErCiccione has quit (Quit: Leaving)
+&lt;hyc&gt; release names aren't alphabetical, they're elements. periodic table.
+&lt;fluffypony&gt; ^^
+* amiuhle| has quit (Ping timeout: 264 seconds)
+&lt;fluffypony&gt; there's a release naming doc in the meta repo
+&lt;imheretolearn&gt; iridium iris will have range proofs improvements, larger ring size multi sig and encrypted payment ids. major release
+&lt;luigi1111&gt; Ugh stop talking about release names
+&lt;moneromooo&gt; ^
+&lt;moneromooo&gt; Get on with it :D
+&lt;fluffypony&gt; let's move on
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; I'd like to start merging in the big PRs that have been hanging around
+&lt;hyc&gt; there's still a good number of PRs that could be merged soon. should we be planning a point release in the next month or two?
+&lt;fluffypony&gt; sub-addresses, multisig, 0MQ, etc.
+&lt;fluffypony&gt; hyc: yes - I had to first merge the PRs that were already merged in the branch, which I finished a couple of days ago
+&lt;moneromooo&gt; For the record: multisig is not ready yet. It's got a DO NOT MERGE sign.
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; moneromooo: is it waiting on code or MRL stuff?
+&lt;luigi1111&gt; yes
+&lt;knaccc&gt; I just wanted to point out, in case it had slipped through the cracks, that kenshi84 has partially implemented subaddresses in the GUI but there are wireframe mockups he wasn't able to implement because he's not used Qt much before. The mockups suggested to be implemented are here https://github.com/monero-project/monero-core/pull/793#issuecomment-314477091
+&lt;moneromooo&gt; It's waiting on me making core tests for it, and cleaning up.
+&lt;moneromooo&gt; And the core tests are a massive pita.
+&lt;fluffypony&gt; moneromooo: ok cool
+&lt;fluffypony&gt; moneromooo: is it worth looking at a different test framework?
+&lt;luigi1111&gt; all of these things are not forking, so could be added whenever
+&lt;moneromooo&gt; Not really, core tests are great, powerful, and I love them. I also hate them.
+&lt;moneromooo&gt; Once they work, they're really great.
+&lt;fluffypony&gt; knaccc: ok cool, hopefully someone can pick that work up
+&lt;luigi1111&gt; n-1 only recently started working, so I assume it needs some testing etc
+&lt;surae&gt; sarang and i are nearing completion on both the multisig paper, which requires new security definitions, and the sub-address paper (and that scheme looks pretty good!). the multisig stuff, if you held a gun to my head, i would say is secure, but until the proofs are written up, i don't want to say anything about it definitively
+&lt;fluffypony&gt; knaccc: else if we need to find a QtQuick developer and pay them we can afford to do so
+&lt;hyc&gt; so should we continue to PR to the release branch in addition to master?
+* ErCiccione (~erciccion@37-252-190-165.rev.ipax.at) has joined
+&lt;surae&gt; we anticipate both of those papers to be done as MRL bulletins by end of November.
+&lt;moneromooo&gt; I hope not.
+&lt;fluffypony&gt; hyc: no
+&lt;fluffypony&gt; release branch is for bug fixes only
+&lt;fluffypony&gt; surae: ok great
+&lt;hyc&gt; ok
+* _operative (~ops@51.37.211.181) has joined
+&lt;i2p-relay&gt; {-lightfighter} is there a README for writing new tests? if not could one be added?
+&lt;moneromooo&gt; No. Sure.
+&lt;fluffypony&gt; @lightfighter no there isn't, but it's something you could tackle if you're up for it
+&lt;fluffypony&gt; on the topic of tests
+&lt;moneromooo&gt; But really, I start from an existing one.
+&lt;fluffypony&gt; if anyone is unfamiliar with the codebase and wants to learn, adding tests is literally the best way
+&lt;fluffypony&gt; there are tons of things that lack unit tests
+&lt;moneromooo&gt; Unit tests are very easy to add.
+&lt;fluffypony&gt; need moar test coverage plx
+&lt;surae&gt; unit tests are. so. freaking. helpful.
+&lt;moneromooo&gt; Though they might need API changes to expose bits and bobs.
+&lt;hyc&gt; in that regard, might be nice to appoint a release/test manager, responsible to either run tests or collect test results from the community
+&lt;fluffypony&gt; hyc: good idea
+&lt;parasew&gt; will definitely start implementing tests, its in a way comforting :)
+&lt;fluffypony&gt; I wonder if we couldn't build a little web API that people could submit test results to
+* Guest66881 is now known as expez
+&lt;i2p-relay&gt; {-lightfighter} fluffypony: i'd be happy to start working on test docs. is the GTest primer a good place to start?
+&lt;moneromooo&gt; https://github.com/monero-project/monero/issues ?
+&lt;vtnerd_&gt; boost has some such framework, but I dont know much about it
+&lt;parasew&gt; on another note: in the current gui-release, the mining has issues -- other people also reported at monero meetup.
+&lt;vtnerd_&gt; various members run machines on various processors / platforms
+* amiuhle| (~amiuhle@dyn-98-124-30-168.nexicom.net) has joined
+&lt;i2p-relay&gt; {-lightfighter} also agree that writing tests is best way to learn codebase (my main motivation for doing so)
+&lt;fluffypony&gt; parasew: then they must open an issue on GitHub
+&lt;dEBRUYNE&gt; parasew: Already reported on monero-core github repository
+&lt;parasew&gt; fluffypony ofc, will pass that on.
+&lt;parasew&gt; dEBRUYNE which issue?
+&lt;dEBRUYNE&gt; https://github.com/monero-project/monero-core/issues/877
+&lt;parasew&gt; dEBRUYNE ty, will also have a look!
+&lt;fluffypony&gt; let's give some thought to a reportable web API that can collate test results, we'll figure out a nice way of doing it
+&lt;hyc&gt; a web tool sounds like a great idea. I don't know of one at the moment.
+&lt;dEBRUYNE&gt; hyc: for the GUI release I created a reddit thread with buildbot bins and compiling instructions
+&lt;dEBRUYNE&gt; Subsequently I put up all reports on Github
+&lt;dEBRUYNE&gt; But it'd be preferable if we have a more streamlined process
+&lt;hyc&gt; indeed
+&lt;dEBRUYNE&gt; (to report issues that is)
+&lt;fluffypony&gt; agreed
+&lt;_Slack&gt; &lt;rehrar&gt; Will look into it
+&lt;fluffypony&gt; we'd probably have to roll our own tool for this, let's see
+&lt;moneromooo&gt; Anyone who knows about DNS/DNSSEC btw ? We need to fix how we do that apparently, but I know nothing aobut DNS :/
+&lt;moneromooo&gt; Thoise are the failing unit tests.
+&lt;dEBRUYNE&gt; I suppose though that if we'd create something like that someone still has to create issues on github
+&lt;surae&gt; sarang? know anything about DNS?
+&lt;hyc&gt; DNSSEC in particular
+&lt;sarang&gt; Protocol? Some. Implementations? Negatory
+&lt;hyc&gt; we need to find out why libunbound is complaining now
+&lt;moneromooo&gt; The complaint's likely unrelated, and due to the openssl config.
+&lt;moneromooo&gt; (assuming you mean the "invalid algorithm" or so)
+* rbrunner7 has quit (Read error: Connection reset by peer)
+&lt;fluffypony&gt; could be openssl related
+* IRC-Source_14236 (d4bab3bb@gateway/web/cgi-irc/kiwiirc.com/ip.212.186.179.187) has joined
+&lt;hyc&gt; yes. I've only hit that in the past with a crippled Android libssl
+&lt;hyc&gt; so I'm surprised to see it on an up-to-date desktop build
+&lt;fluffypony&gt; I'm also open to dumping unbound in favour of another library
+&lt;fluffypony&gt; we literally only use it for DNS / DNSSEC
+* rbrunner7 (~androirc@static-customer.31.12.138.91.yetnet.ch) has joined
+&lt;moneromooo&gt; Guess I'll have a look to see what libraries there are for this.
+&lt;parasew&gt; is there an irc log online somewhere? (i came a bit late)
+&lt;fluffypony&gt; ok let's do that, Unbound has been a PITA for a while
+&lt;moneromooo&gt; Or... leave it till someone who knows about DNS pops in...
+&lt;fluffypony&gt; parasew: it'll be posted up after
+&lt;surae&gt; parasew the minutes will be posted after the meeting
+&lt;fluffypony&gt; ok let's move on
+&lt;_Slack&gt; &lt;serhack&gt; ;)
+* rbrunner (~rbrunner@176.10.116.233) has joined
+&lt;parasew&gt; thanka fluffypony, surae i just wanted to catch up now, but its ok :(
+* fabian has quit (Remote host closed the connection)
+&lt;fluffypony&gt; 4. Release timeline: moving releases to 3-months-before-forks or similar
+&lt;fluffypony&gt; we already covered that
+&lt;fluffypony&gt; so moving on
+&lt;fluffypony&gt; 5. Maintainer: migrating luigi1111 from backup maintainer to lead maintainer on GUI and site
+&lt;moneromooo&gt; Does he agree to ? :)
+&lt;fluffypony&gt; well, moneromooo, luigi1111 has gone full-time crypto since he's made millions from the Monero ICO
+&lt;dEBRUYNE&gt; No we forced him :P
+&lt;hyc&gt; lol
+&lt;fluffypony&gt; so he can merge from atop the mountain in his Lambo
+&lt;surae&gt; i hear Lambos work real great on mountains
+&lt;_Slack&gt; &lt;rehrar&gt; Congrats Luigi. An example to us all.
+&lt;fluffypony&gt; does anyone have an objection to me moving to backup maintainer on the GUI and the site, and luigi1111 moving to lead maintainer? I'd probably still do GUI releases since they're done in conjunction with the CLI
+* rbrunner7 has quit (Client Quit)
+&lt;_Slack&gt; &lt;serhack&gt; A little fun fact
+&lt;_Slack&gt; &lt;serhack&gt; Oh great Luigi
+&lt;hyc&gt; Sounds like a good move
+&lt;fluffypony&gt; or we'll do it together or something
+&lt;_Slack&gt; &lt;rehrar&gt; Will Luigi just merge the site repo, or also put it on the server?
+&lt;_Slack&gt; &lt;serhack&gt; Congratulations
+&lt;hyc&gt; but that reminds me we need to move forward on deterministic builds
+&lt;fluffypony&gt; rehrar: pulling on the site is still manual in case the repo gets compromised
+&lt;_Slack&gt; &lt;rehrar&gt; Right.
+&lt;surae&gt; is this marking a fundamental shift in the power dynamics of Monero?
+&lt;_Slack&gt; &lt;rehrar&gt; So will he do that manual task too, or is that still you?
+&lt;fluffypony&gt; which would be embarrassing, but not as embarrassing as the site being compromised via the repo
+&lt;fluffypony&gt; rehrar: still me, but it takes me ten seconds
+&lt;fluffypony&gt; so he'll ping me
+&lt;_Slack&gt; &lt;rehrar&gt; K.
+&lt;fluffypony&gt; surae: yes, we're appointing luigi1111 as CTO (Chief Trolling Officer), whilst I focus on my role as CEO (Chief Entertainment Officer)
+&lt;fluffypony&gt; I can't do both any more, it's too much for one troll
+&lt;surae&gt; oh man, can luigi make fancy videos of people wistfully walking through the wheat? i'm not sure if anyone can do that like you. :( (moving on...)
+&lt;fluffypony&gt; lol
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; 5. Any additional meeting items
+&lt;imheretolearn&gt; globee or mymonero updates?
+&lt;scoobybejesus&gt; Mooo and other FFS to fund, perhaps
+&lt;hyc&gt; app store progress?
+&lt;_Slack&gt; &lt;serhack&gt; Ffs?
+&lt;fluffypony&gt; MyMonero Google account is ready
+&lt;fluffypony&gt; waiting on our D-U-N-S number for Apple
+&lt;fluffypony&gt; or as endogenic joked, we're waiting on our DUNCE number
+* Olufunmilayo raises hand 
+&lt;_Slack&gt; &lt;serhack&gt; How many monero have we collected for ffs?
+* anonimobile (~anonimobi@gateway/tor-sasl/anonimobile) has joined
+&lt;fluffypony&gt; scoobybejesus: huh?
+&lt;dEBRUYNE&gt; I think scoobybejesus suggests to discuss the FFS proposals (if we want to)
+&lt;fluffypony&gt; serhack: open them and check
+&lt;fluffypony&gt; Olufunmilayo: don't ask to ask, just ask :)
+&lt;scoobybejesus&gt; Really just bringing them to light.  Yes.
+&lt;_Slack&gt; &lt;serhack&gt; :+1::skin-tone-2:
+&lt;surae&gt; MRL is about to put out our second roadmap (which includes an update to the first one). hyc already provided some copy-editing comments. we are currently looking for 1) typos and copy-editing stuff, but more importantly 2) any projects the developers feel should be included that are not being included, and 3) any inaccuracies in the statements we've made already.
+&lt;surae&gt; https://drive.google.com/open?id=0ByPYdEm6O54rZGpTbkcwdWMwcW8
+&lt;sarang&gt; We'll wait while everyone reads all 12 pages
+&lt;surae&gt; PM us with edits and comments. sarang and i both have edit access
+&lt;fluffypony&gt; surae: only thing I'd like to add there in section 7 is a note about zk-STARKs being preferable since no trustless setup, but memory / CPU requirements are too high atm, so maybe we just stick to zk-SNARKs in the interim
+&lt;moneromooo&gt; We'll have to decide on an ordering for merging stuff, because there's a glut again, and that means conflicts.
+&lt;moneromooo&gt; How about 0MQ first ?
+&lt;Olufunmilayo&gt; fluffypony, nvm, now that I typed it up and re read scroll back it has already been addressed
+&lt;surae&gt; fluffypony: zk-starks aren't published yet and afaik only the creators have even pseudocode. currently, unless i'm wrong, zk-starks are a myth, and until i see some proofs otherwise, i'm going to pretend like they aren't available yet. but i can mention them as a "next step" under section 7
+&lt;hyc&gt; yeah, let's go with older PRs first
+&lt;hyc&gt; although for gdb sanity I would like threadpool to go in soon.
+&lt;Jaquee&gt; shouldnt threadpool be added to release branch?
+&lt;sarang&gt; On a meta-MRL note, I'd like to offer my thanks to everyone who supported the FFS to bring me aboard
+* foobar_ has quit (Quit: Page closed)
+&lt;msvb-lab&gt; moneromooo: I think it's pretty great we're integrating 0MQ, but I'm not that qualified to vote on PR arangement.
+&lt;fluffypony&gt; surae: sounds good
+&lt;fluffypony&gt; moneromooo: I agree - 0MQ and DRY PRs, and then threadpool?
+&lt;moneromooo&gt; OK
+&lt;hyc&gt; Jaquee: not sure threadpool counts as a bugfix
+&lt;dEBRUYNE&gt; moneromooo: Did you manage to provide feedback to tewinget?
+&lt;moneromooo&gt; Many times.
+&lt;dEBRUYNE&gt; I think he asked for that, but you were busy with the release
+&lt;surae&gt; also, the section on untraceability in monero... i need some opinions on that, too, but i want people's fresh impressions of that section. i had a certain intention when i was writing it and i want to see how well it came across
+&lt;tewinget&gt; sorry, was slightly afk
+&lt;moneromooo&gt; Is there a list of things he wanted feedback on ?
+&lt;dEBRUYNE&gt; tewinget ^
+&lt;tewinget&gt; saw my screen blink
+&lt;fluffypony&gt; Jaquee: I agree with hyc - let's avoid merging anything that could be wonky if we can, release seems to be reasonably stable
+&lt;Jaquee&gt; all right
+&lt;Jaquee&gt; we can live with a little unresponsiveness i guess
+&lt;Jaquee&gt; in gui ^^
+&lt;moneromooo&gt; er... did you check it fixed your problenm in the first place ?
+* PuebloZag has quit (Ping timeout: 260 seconds)
+&lt;moneromooo&gt; I'm pretty sure it won't.
+&lt;Jaquee&gt; no i havent
+&lt;hyc&gt; it's worth checking. I also see responsiveness issues in current 0.11, monerod spawns too many threads during verification
+&lt;aerbax&gt; With regards to the MyMonero AppStore deployments.  If Google/Android is ready, are there any ongoing issues that would prevent a release?
+&lt;dEBRUYNE&gt; I think they want to release all platforms in conjunction
+&lt;Jaquee&gt; are we using the same DUNS/account for monero apps?
+&lt;fluffypony&gt; Jaquee: no, completely separate one
+&lt;fluffypony&gt; have to have that distinction
+* cardboardoranges has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;parasew&gt; are there plans of putting the GUI into apple appstore?
+&lt;fluffypony&gt; both are waiting on D-U-N-S numbers
+&lt;Jaquee&gt; ok
+&lt;fluffypony&gt; parasew: yes, check previous meeting logs
+&lt;parasew&gt; fluffypony ok, will do :)
+&lt;msvb-lab&gt; What's the main reason for one mobile platform release to wait until others are ready?
+&lt;fluffypony&gt; Jaquee: we registered "Monero Distribution Company" as the name
+* xpto (cee14816@gateway/web/freenode/ip.206.225.72.22) has joined
+&lt;_Slack&gt; &lt;serhack&gt; Fluffypony: I have an android phone, can I test mymonero ? Can you send me an apk?
+&lt;fluffypony&gt; msvb-lab: on the Monero GUI side, nothing, we can push it into the Google Play store whenever
+&lt;moneromooo&gt; Are we done with the dev stuff ?
+&lt;fluffypony&gt; on the MyMonero side we're still busy adding some stuff
+&lt;msvb-lab&gt; Additional meeting items: Might be worth mentioning that both mattermost.getmonero.org and taiga.getmonero.org are quite bad ans.
+&lt;fluffypony&gt; mostly porting stuff from the iOS app to the JS app
+&lt;hyc&gt; coming up to top of the hour
+&lt;fluffypony&gt; thanks hyc
+&lt;fluffypony&gt; msvb-lab: we can discuss that after
+&lt;fluffypony&gt; ok so next meeting in 2 weeks
+&lt;fluffypony&gt; 1st October
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/14","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"14"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

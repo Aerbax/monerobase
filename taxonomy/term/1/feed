@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="https://monerobase.com/taxonomy/term/1">
+  <channel>
+    <title>DevMeeting</title>
+    <link>https://monerobase.com/taxonomy/term/1</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>Monero DevMeeting 2018-12-16</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-12-16</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-12-16&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-12-16T18:13:23+00:00"&gt;Sun, 12/16/2018 - 13:13&lt;/span&gt;
+</description>
+  <pubDate>Sun, 16 Dec 2018 18:13:23 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">60 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>Monero DevMeeting 2018-10-14</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-10-14</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-10-14&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-10-14T18:11:23+00:00"&gt;Sun, 10/14/2018 - 14:11&lt;/span&gt;
+</description>
+  <pubDate>Sun, 14 Oct 2018 18:11:23 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">59 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>Monero DevMeeting 2018-10-07</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-10-07</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-10-07&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-10-07T20:51:06+00:00"&gt;Sun, 10/07/2018 - 16:51&lt;/span&gt;
+</description>
+  <pubDate>Sun, 07 Oct 2018 20:51:06 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">57 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>Monero DevMeeting 2018-09-09</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-09-09</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-09-09&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-09-10T16:18:48+00:00"&gt;Mon, 09/10/2018 - 12:18&lt;/span&gt;
+</description>
+  <pubDate>Mon, 10 Sep 2018 16:18:48 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">56 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>Monero DevMeeting 2018-08-26</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-08-26</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-08-26&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-08-26T17:42:01+00:00"&gt;Sun, 08/26/2018 - 13:42&lt;/span&gt;
+</description>
+  <pubDate>Sun, 26 Aug 2018 17:42:01 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">55 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>Monero DevMeeting 2018-07-29</title>
+  <link>https://monerobase.com/article/monero_devmeeting_2018-07-29</link>
+  <description>&lt;span property="schema:name"&gt;Monero DevMeeting 2018-07-29&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-07-29T23:40:32+00:00"&gt;Sun, 07/29/2018 - 19:40&lt;/span&gt;
+</description>
+  <pubDate>Sun, 29 Jul 2018 23:40:32 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">54 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>DevMeeting 2018-07-15</title>
+  <link>https://monerobase.com/article/devmeeting_2018-07-15</link>
+  <description>&lt;span property="schema:name"&gt;DevMeeting 2018-07-15&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-07-18T01:13:02+00:00"&gt;Tue, 07/17/2018 - 21:13&lt;/span&gt;
+</description>
+  <pubDate>Wed, 18 Jul 2018 01:13:02 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">52 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>DevMeeting 2018-07-01</title>
+  <link>https://monerobase.com/article/devmeeting_2018-07-01</link>
+  <description>&lt;span property="schema:name"&gt;DevMeeting 2018-07-01&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-07-01T17:57:11+00:00"&gt;Sun, 07/01/2018 - 13:57&lt;/span&gt;
+</description>
+  <pubDate>Sun, 01 Jul 2018 17:57:11 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">51 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>DevMeeting 2018-06-17</title>
+  <link>https://monerobase.com/article/devmeeting_2018-06-17</link>
+  <description>&lt;span property="schema:name"&gt;DevMeeting 2018-06-17&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-06-17T18:16:19+00:00"&gt;Sun, 06/17/2018 - 14:16&lt;/span&gt;
+</description>
+  <pubDate>Sun, 17 Jun 2018 18:16:19 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">46 at https://monerobase.com</guid>
+    </item>
+<item>
+  <title>DevMeeting 2018-06-03</title>
+  <link>https://monerobase.com/article/devmeeting_2018-06-03</link>
+  <description>&lt;span property="schema:name"&gt;DevMeeting 2018-06-03&lt;/span&gt;
+&lt;span rel="schema:author"&gt;&lt;span lang="" about="https://monerobase.com/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;aerbax&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2018-06-03T17:59:50+00:00"&gt;Sun, 06/03/2018 - 13:59&lt;/span&gt;
+</description>
+  <pubDate>Sun, 03 Jun 2018 17:59:50 +0000</pubDate>
+    <dc:creator>aerbax</dc:creator>
+    <guid isPermaLink="false">45 at https://monerobase.com</guid>
+    </item>
+
+  </channel>
+</rss>

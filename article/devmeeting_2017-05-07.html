@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-05-07 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-05-07.html" />
+<meta name="description" content="Highlights[ ]
+
+Several Github Pull Requests(PR) have been merged.
+	&quot;sweep_below&quot; function in" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-05-07.html" />
+
+    <title>DevMeeting 2017-05-07 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-05-07.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-05-07</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="22" role="article" about="/article/devmeeting_2017-05-07" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-05-07" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-05-07T20:21:47+00:00">Sun, 05/07/2017 - 16:21</span>
+          <span property="schema:dateCreated" content="2017-05-07T20:21:47+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-05-07&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>Several Github Pull Requests(PR) have been merged.
+	<ul><li>"sweep_below" function in the CLI</li>
+		<li>Heavier bias in output selection towards newer inputs.</li>
+		<li><a href="https://monerobase.com/wiki/Smart_Mining" title="Smart Mining">Smart Mining</a> is enabled in the GUI</li>
+		<li>Jaquee fixed up an iOS GUI visual issue.</li>
+		<li>New translations added to GUI.</li>
+	</ul></li>
+	<li>Renewed focus on ZeroMQ(0MQ)</li>
+	<li>Disposable addresses is pending review.</li>
+	<li><a class="external text" href="https://github.com/monero-project/monero/pull/1998" rel="nofollow">"Removed --confirm-external-bind from monerod and monero-wallet-rpc"</a>
+	<ul><li>Motion moved to close this PR.</li>
+	</ul></li>
+	<li><a class="external text" href="https://github.com/monero-project/monero/pull/2011" rel="nofollow">"Remove the 1.25 multiplier for max transaction size"</a>
+	<ul><li>Mooo originally had some objections, but upon closer inspection, it's fine to merge.</li>
+		<li>hyc... ... ...agrees</li>
+	</ul></li>
+	<li><a class="external text" href="https://github.com/monero-project/monero-core/pull/688" rel="nofollow">Add tip text to labels</a>
+	<ul><li>Fluffy suggests an overlay on first use that can provide help. And re-shows itself on a "?" click. <a class="external text" href="https://s-media-cache-ak0.pinimg.com/originals/c1/e1/bf/c1e1bfd7fb2770f6745d95af8bf89865.jpg" rel="nofollow">Similar to this</a></li>
+	</ul></li>
+	<li>MyMonero-in-tree - Is it appropriate for the new MyMonero supporting code to be included in the main Monero source?
+	<ul><li>Fluffy views it as a working API for lightwallets. This could help fast-track development of new wallets.</li>
+		<li>It uses a <a class="external text" href="https://opensource.org/licenses/BSD-3-Clause" rel="nofollow">BSD "3 Clause"</a></li>
+		<li>Everyone seems to agree that it's fine - as long as it doesn't require any proprietary dependencies.</li>
+		<li>Will switch from MySQL to LMDB as the backend.</li>
+		<li>It does *not* supercede the existing wallet-rpc application.</li>
+		<li>Jaquee has started integrations with the GUI and this proposed MyMonero open backend.</li>
+		<li>This may also allow for the MyMonero 13 word seed to be supported natively.</li>
+	</ul></li>
+	<li>Next meeting is scheduled for May 21st, 2017.</li>
+</ul><h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-05-07&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. MyMonero-in-tree discussion
+&lt;fluffypony&gt; 5. Any additional meeting items
+&lt;fluffypony&gt; 6. Confirm next meeting date/time
+&lt;fluffypony&gt; so let's start with 1. Greetings (aka roll call)
+&lt;fluffypony&gt; hi
+&lt;_Slack&gt; &lt;johnalan&gt; hi
+&lt;vtnerd_&gt; present
+&lt;_Slack&gt; &lt;sgp_&gt; hello!
+&lt;fluffypony&gt; tewinget apologises, he'll be late
+&lt;_Slack&gt; &lt;ajs&gt; Sup
+&lt;endogenic&gt; o/
+&lt;_Slack&gt; &lt;rehrar&gt; Yo
+&lt;fluffypony&gt; hyc / luigi1111 / ArticMine / othe / smooth / anonimal / binaryFate / dEBRUYNE / dnaleor / gingeropolous / iDunk / IPGlider / Jaquee / jwinterm / kenshi84 / knaccc / luigi1112 / luigi1115 / NoodleDoodle / papa_lazzarou / pigeons / RedLion[m] / redlion_
+&lt;Jaquee&gt; hhelo
+&lt;pigeons&gt; :)
+&lt;vtnerd_&gt; also me
+&lt;Jaquee&gt; medusa_
+&lt;fluffypony&gt; anyone I forgot
+&lt;iDunk&gt; o/
+&lt;vtnerd_&gt; oh those are not present whoops
+&lt;fluffypony&gt; lol vtnerd_
+&lt;fluffypony&gt; ok so
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; merged a bunch PRs
+&lt;fluffypony&gt; kenshi84's GPG key changed
+&lt;fluffypony&gt; I've confirmed it via sidechannel
+&lt;fluffypony&gt; we have a new sweep_below function in the CLI, which you may find useful
+&lt;fluffypony&gt; we also have a new heavier bias in output selection towards newer outputs
+&lt;fluffypony&gt; moneromooo can fill us in on that
+&lt;ArticMine&gt; Hi
+&lt;othe&gt; oi
+&lt;fluffypony&gt; smart mining is enabled in the GUI
+&lt;fluffypony&gt; as in the selection box
+&lt;moneromooo&gt; Hmm, I just twiddled the settings for the recent output selection, really. To match some data in the Miller et al paper.
+&lt;fluffypony&gt; which is pretty cool
+* Biilly_ (adefe1c4@gateway/web/freenode/ip.redacted) has joined
+&lt;_Slack&gt; &lt;sgp_&gt; indeed
+* lalu_ has quit (Remote host closed the connection)
+&lt;fluffypony&gt; also Jaquee has done some work on getting iOS back on track after it borked (visually)
+&lt;fluffypony&gt; well iOS / mobile
+&lt;fluffypony&gt; which brings us to
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;Jaquee&gt; yes. and there's some new translations added to gui
+&lt;fluffypony&gt; we have a number of open PRs
+&lt;fluffypony&gt; when tewinget is off his bus he can update us on 0MQ
+&lt;fluffypony&gt; which I'd REALLY like to move forward with ASAP
+&lt;fluffypony&gt; it's been sitting in a holding pattern for ages
+&lt;fluffypony&gt; Snipa: also if you're around maybe you can update us on the testing on that ?
+&lt;moneromooo&gt; I'd like it to be optional, so it can be merged (and thus tested), without causing massive breakage if it does break.
+&lt;fluffypony&gt; afaik that was the case
+&lt;Jaquee&gt; sounds like a good idea
+&lt;fluffypony&gt; also disposable addresses is still hanging around - I think that's pending a review from one of the luigis?
+&lt;moneromooo&gt; AFAIK yes. Also RandomRun had an idea to make it better.
+&lt;fluffypony&gt; I don't think there's a problem with that hanging around and being improved
+&lt;fluffypony&gt; as long as the parallel MRL write-up is there
+&lt;fluffypony&gt; I'd like to discuss 1998
+&lt;fluffypony&gt; the PR, not the year
+&lt;fluffypony&gt; https://github.com/monero-project/monero/pull/1998
+&lt;fluffypony&gt; at this point in time I'm still swaying towards prevent-user-stupidity-by-default
+&lt;fluffypony&gt; at the slight inconvenience for a power user / sysadmin who might go "omg really" and then add the flag
+* barry95 has quit (Remote host closed the connection)
+&lt;fluffypony&gt; I know vtnerd_ feels the same way, which is why he added it in the first place
+&lt;fluffypony&gt; I'd be interested in strong arguments for removing the flag
+&lt;Jaquee&gt; wouldnt a text disclaimer be enough?
+&lt;Jaquee&gt; i don't have a strong opinion
+&lt;fluffypony&gt; Jaquee: if you try bind externally and start it without the --confirm-external-bind flag then it refuses to start
+&lt;fluffypony&gt; and it tells you why
+&lt;Jaquee&gt; ok. apparently hyc started the discussion. Are you around?
+&lt;fluffypony&gt; I know hyc doesn't like it
+&lt;fluffypony&gt; vtnerd_: has anyone else expressed disdain for it?
+&lt;vtnerd_&gt; AFAIK, just the people on that PR and the one referenced
+&lt;vtnerd_&gt; and _possibly_ one person in IRC, but they seemed to be questioning why it was necessary (I think)
+&lt;vtnerd_&gt; its somewhat low effort to get around it, so most people just add the flag I thnk
+&lt;vtnerd_&gt; no one has privately contacted me about it for any reason if that was the question
+&lt;fluffypony&gt; ok
+&lt;fluffypony&gt; unless hyc comes in I move to close the PR, we can always re-open it later
+* lalu_ (~lalu_@redacted.rev.sfr.net) has joined
+* peteyb (~chatzilla@p4FC0D4AF.dip0.t-ipconnect.de) has joined
+&lt;Jaquee&gt; ok with me
+&lt;fluffypony&gt; ok next PR for discussion is 2011
+&lt;fluffypony&gt; moneromooo had concerns that it was touching consensus critical issues
+&lt;fluffypony&gt; so/issues/part of the code
+&lt;moneromooo&gt; Yes, but it turns out it's actually bypassed when a tx comes from a block. The patch is fine.
+&lt;moneromooo&gt; I OK'd it since.
+&lt;fluffypony&gt; ah ok'
+&lt;moneromooo&gt; Well, wait.
+* fluffypony stops...hammer time
+&lt;moneromooo&gt; It's really uneeded (only the wallet bit was wanted). But it's not forkworthy. That said...
+* xyxyxyxyxyx (415e17d3@gateway/web/freenode/ip.redacted) has joined
+&lt;moneromooo&gt; Older wallets *might* create txes which aren't relayed by newer daemons.
+&lt;moneromooo&gt; That's fairly unlikely, since my code targets 2/3 of max size, but the size approximation is not very precise.
+&lt;moneromooo&gt; That said, I think it's fine to merge.
+* maitscha (d5e107de@gateway/web/freenode/ip.redacted) has joined
+&lt;hyc&gt; hey. just popped in. reading history
+&lt;fluffypony&gt; hi hyc !
+&lt;dEBRUYNE&gt; Re: 2011, perhaps it also should be dependent on the fee priority level used
+* fluffypony plays elevator hold music
+* maitscha has quit (Ping timeout: 260 seconds)
+* monero (~monero@redacted) has joined
+&lt;monero&gt; [monero] moneromooo-monero opened pull request #2017: wallet2: fix sweep_unmixable assuming wrong minimum mixin at v5 (master...suv5) https://git.io/v9wdD
+* monero (~monero@redacted) has left
+&lt;hyc&gt; ok, if n0b0dy else cares about that external bind thing then whatever. to me it's redundant
+&lt;fluffypony&gt; ok
+&lt;hyc&gt; since you had to explicitly request a non-localhost address already
+&lt;fluffypony&gt; sure, but you'd be surprised how few people know that 0.0.0.0 exposes everything :-P
+&lt;endogenic&gt; ^
+&lt;hyc&gt; it d0esn't protect against typos/accidents. it only pisses off people who expect the computer to do as it's told
+&lt;fluffypony&gt; hyc: view it like a weak password warning
+&lt;fluffypony&gt; you can't just expect the computer to accept 1234 as a password
+&lt;hyc&gt; yeah, ok...
+&lt;moneromooo&gt; Well, I would...
+&lt;fluffypony&gt; lol
+&lt;fluffypony&gt; moneromooo is the exception to every rule :-P
+&lt;fluffypony&gt; now on the GUI side, the only thing I wanted to bounce around is 688
+&lt;fluffypony&gt; tooltips are fine, but if we're going to do some sort of unified help then I would veer towards an overlay that shows once the first time you enter a screen, and can be re-called by clicking the [?] button on the taskbar
+&lt;fluffypony&gt; https://s-media-cache-ak0.pinimg.com/originals/c1/e1/bf/c1e1bfd7fb2770f6745d95af8bf89865.jpg
+&lt;_Slack&gt; &lt;johnalan&gt; like that style
+&lt;fluffypony&gt; https://s-media-cache-ak0.pinimg.com/originals/43/6e/74/436e746b35142f41d5f9bb8e765963e4.jpg
+&lt;fluffypony&gt; http://eyeviewportal.com/_filecache/b38/73d/85-cropped-w545-h409-of-1-FFFFFF-ev_appguiguide_contentimage_002.jpg
+&lt;fluffypony&gt; like that
+&lt;hyc&gt; sounds good
+&lt;_Slack&gt; &lt;johnalan&gt; :+1:
+&lt;Jaquee&gt; problem is [?] is not around if you use native title bar
+&lt;fluffypony&gt; Jaquee: where else could we add a help button? bottom left?
+&lt;endogenic&gt; one suggestion i'd make for that is to make it c lear to the user they can recall it easily by doing "X" so that they don't fret about having to memorize everything before it's closed
+&lt;endogenic&gt; recall it -&gt; the help screen
+&lt;Jaquee&gt; i think ^ is good as a start
+&lt;moneromooo&gt; Where is it on the title bar then, since it's not a WM thing ?
+&lt;fluffypony&gt; endogenic: agreed
+&lt;moneromooo&gt; s/Where/Why/
+&lt;Jaquee&gt; but some buttons could need longer desriptions
+&lt;Jaquee&gt; like sweep_unmixable and payment_id for example
+&lt;fluffypony&gt; Jaquee: there's enough space in the help overlay, we can use a smaller font to explain them
+&lt;redlion_&gt; how breadwallet on ios handles it when setting up is quite good
+&lt;fluffypony&gt; or move the help to somewhere where there's space
+&lt;fluffypony&gt; and use an arrow
+&lt;Jaquee&gt; yeah. we could find a place for that help button
+* bigreddmachine has quit (Quit: Leaving.)
+&lt;fluffypony&gt; ok - any other PRs that need discussion or can we move on? there's general Q&amp;A shortly
+&lt;_Slack&gt; &lt;sgp_&gt; I'd like to merge 261 on monero-site
+&lt;fluffypony&gt; sgp_: there's a website meeting after the Kovri one
+&lt;fluffypony&gt; so we can discuss it then
+&lt;_Slack&gt; &lt;sgp_&gt; ok
+&lt;fluffypony&gt; ok so
+&lt;fluffypony&gt; 4. MyMonero-in-tree discussion
+&lt;fluffypony&gt; so basically this is about nose-covering and making sure I'm not abusing my position as a maintainer and member of the Monero Core Team
+&lt;fluffypony&gt; currently MyMonero has a working API (largely unspecced to be sure), two client implementations (website and app), two server implementations (the live backend and OpenMonero), with a third one coming
+&lt;fluffypony&gt; I'd like to make sure there is general acceptance and buy-in that the API can be implemented as the general API for lightweight wallets (ie. wallet that use remote viewkey scanning)
+&lt;hyc&gt; is it carved in stone now
+&lt;hyc&gt; if we need to tweak it we can still do that?
+&lt;redlion_&gt; is the license unrestricted?
+&lt;fluffypony&gt; and that MyMonero-written or MyMonero-derived code is generally acceptable to be merged into the source tree (ie. the open-source backend implementation that vtnerd_ is working on)
+&lt;fluffypony&gt; redlion_: BSD 3-clause
+&lt;fluffypony&gt; hyc: as long as mWo12 changes it, and we match the changes in the live backend and the new backend then yse
+&lt;fluffypony&gt; yes
+&lt;fluffypony&gt; we can make any changes, and we WILL make changes to make it smarter
+&lt;moneromooo&gt; If it's beneficial to monero and it works fully by itself without needing proprietary gunk, then I'm OK with it.
+&lt;fluffypony&gt; eg. tx history comes in raw, instead of paginated
+&lt;fluffypony&gt; so that needs to change
+&lt;hyc&gt; +1 moneromooo
+&lt;fluffypony&gt; moneromooo: yeah the new backend will use LMDB instead of mysql
+&lt;fluffypony&gt; so it will be unencumbered in the source
+&lt;ArticMine&gt; As long as there are no proprietary dependencies I am fine
+&lt;hyc&gt; I like it even more now ;)
+&lt;_Slack&gt; &lt;johnalan&gt; I think it beneficial too
+&lt;moneromooo&gt; Maybe a separate repo (similar to monero-core) might be best, but that's details.
+&lt;_Slack&gt; &lt;johnalan&gt; *its
+&lt;moneromooo&gt; it's
+&lt;iDunk&gt; it's
+&lt;_Slack&gt; &lt;jollymort&gt; can't wait to run a mymonero node myself!
+&lt;vtnerd_&gt; also the current "primary" wrapper around the DB is actually C, so theres that for you guys
+&lt;fluffypony&gt; moneromooo: I thought about that, but it's a single daemon that *should* exist in the repo alongside the wallet RPC etc.
+&lt;hyc&gt; doesn't it supersede wallet-rpc?
+&lt;fluffypony&gt; now
+&lt;fluffypony&gt; hyc: no
+&lt;fluffypony&gt; wallet-rpc is good for integration, this isn't
+&lt;_Slack&gt; &lt;johnalan&gt; there is obviously an element of centralisation, but it’s nearly impossible to avoid
+&lt;fluffypony&gt; also on this topic
+&lt;fluffypony&gt; Jaquee has begun working on client integration in the CLI and GUI
+&lt;moneromooo&gt; "client integration" ?
+&lt;vtnerd_&gt; you mean for light-wallets?
+&lt;fluffypony&gt; that will mean that both CLI and GUI will be able to run in lightweight / remote-scanner / MyMonero mode
+&lt;fluffypony&gt; moneromooo: as opposed to implementing the server protocol
+&lt;hyc&gt; sounds good
+&lt;moneromooo&gt; Oh, mymonero client integration ?
+&lt;fluffypony&gt; moneromooo: let's call it something else
+&lt;moneromooo&gt; That went pretty damn fast :D
+&lt;fluffypony&gt; "lightweight wallet"
+&lt;_Slack&gt; &lt;jollymort&gt; it's not really centralization if any `monerod` acts as a server
+&lt;hyc&gt; but I'm still missing why we need old wallet-rpc if this mymonero api exists
+&lt;_Slack&gt; &lt;jollymort&gt; it's literally my monero :)
+&lt;fluffypony&gt; hyc: wallet-rpc is completely different
+&lt;_Slack&gt; &lt;johnalan&gt; so the core GUI will be able to interact with MyMonero backend too?
+&lt;vtnerd_&gt; for people that want to run VPS node but keep their viewkey ?
+&lt;moneromooo&gt; Yes, would be nice to see what bits are needed where, and the actual API (even if roughly).
+&lt;fluffypony&gt; it provides an API for integrators
+&lt;fluffypony&gt; @johnalan yes
+&lt;fluffypony&gt; so basically
+&lt;_Slack&gt; &lt;johnalan&gt; is this needed with the MyMonero Desktop wallet?
+&lt;ArticMine&gt; With what as the backed / server
+&lt;moneromooo&gt; That can be posted later though, :49 now.
+&lt;ArticMine&gt; monerod?
+&lt;fluffypony&gt; lightweight wallets will have 3 server options:
+&lt;fluffypony&gt; 1. OpenMonero
+&lt;fluffypony&gt; 2. the new in-source backend that vtnerd_ is working on
+&lt;fluffypony&gt; 3. the live MyMonero backend
+&lt;fluffypony&gt; it will also have multiple client options:
+&lt;hyc&gt; afaik the main difference btw an ordinary wallet and mymomero is you tell mymonero your viewkey
+&lt;fluffypony&gt; 1. OpenMonero's web wallet (clone of the current MyMonero web wallet)
+* PuebloZag (506d1957@gateway/web/freenode/ip.redacted) has joined
+&lt;hyc&gt; and the ordinary wallet has all your keys
+&lt;fluffypony&gt; 2. the MyMonero applications
+&lt;fluffypony&gt; 3. monero-wallet-cli
+&lt;fluffypony&gt; 4. monero-wallet-rpc
+&lt;fluffypony&gt; 5. the Monero GUI
+&lt;fluffypony&gt; hyc: monero-wallet-rpc can still use this on the backend
+&lt;fluffypony&gt; so it's unrelated
+* DrOlmer has quit (Ping timeout: 260 seconds)
+&lt;hyc&gt; ok
+&lt;ArticMine&gt; ok
+&lt;_Slack&gt; &lt;jollymort&gt; about #2011 - you could modify it to (median)+0.6% for it to be mine-worthy, or even have the wallet check for fee setting and then it would be matched like 1: +0.6%, 2: +2.4%, 3: +12%, 4:+100%
+&lt;fluffypony&gt; also this will mean that the GUI / CLI may end up supporting the MyMonero 13-word seed derivation by virtue of the integration effort
+&lt;fluffypony&gt; does anyone have a fundamental issue with that ?
+&lt;ArticMine&gt; no
+&lt;fluffypony&gt; I mean, I do, because I don't want to be abusing my position, but it is what it is :-P
+&lt;_Slack&gt; &lt;jollymort&gt; didn't you deprecate 13-word?
+&lt;moneromooo&gt; Did you not say the 13 word seed was going to be obsoleted ?
+* DrOlmer (~DrOlmer@unaffiliated/drolmer) has joined
+&lt;endogenic&gt; jollymort: working on it
+&lt;_Slack&gt; &lt;johnalan&gt; no
+&lt;endogenic&gt; but client still needs to be able to read 'em
+&lt;redlion_&gt; electrum/mycelium support a few different seed lengths iirc
+&lt;redlion_&gt; works well
+&lt;_Slack&gt; &lt;jollymort&gt; also luigi was playing around with an idea for 17-word, integrating creation height in it etc
+&lt;fluffypony&gt; moneromooo: it's import only
+&lt;fluffypony&gt; not create
+&lt;endogenic&gt; https://github.com/mymonero/mymonero-app-js/issues/77
+&lt;knaccc&gt; doesn't it put a huge load on mymonero when someone asks it to scan the blockchain from zero with their view key? How long does mymonero take to scan the entire blockchain?
+&lt;moneromooo&gt; Anyway, I'm fine with that as presented.
+&lt;hyc&gt; that all sounds like a win to me. people have been whining about not being able to import their 13-word seed into regular CLI wallet
+&lt;shuan_nelson_&gt; so monero-wallet-cli/monero GUI will not be able to create light-wallets?
+&lt;fluffypony&gt; knaccc: yes it does - about 10 minutes
+&lt;_Slack&gt; &lt;jollymort&gt; yeah import only sounds lovely
+&lt;ArticMine&gt; If we are setting the stage for a competitive market based upon FLOSS then I am fine with it
+&lt;vtnerd_&gt; I do have the ASM code working, so hopefully that will tighten up some too (altough there is something else blocking that)
+&lt;fluffypony&gt; shuan_nelson_: yes they will
+&lt;fluffypony&gt; but with 25 word seed, not 13
+&lt;fluffypony&gt; we have 7 minutes left - so I'd like to move on to the last item
+&lt;shuan_nelson_&gt; awesome!
+&lt;fluffypony&gt; we can discuss MyMonero more after the meeting
+&lt;redlion_&gt; @shaun_nelson, I think it's just that the CLI/GUI won't create 13-word seeds, but will accept already created ones
+&lt;hyc&gt; yeah sounds fine
+&lt;fluffypony&gt; 5. Any additional meeting items
+&lt;knaccc&gt; 10 mins is quite a speedup vs downloading the entire blockchain, so sounds awesome.
+&lt;_Slack&gt; &lt;jollymort&gt; any thoughts on future of penalty/blocksize? i kind of left the research open-ended
+&lt;hyc&gt; ^^ get a faster CPU and it'll be quicker ')
+&lt;redlion_&gt; Does anyone have a _working_ monero-core or mymonero build on ios currently? I've been fiddling around and I can't seem to get either properly functional on the sim/device, though I may be missing something
+&lt;fluffypony&gt; lol hyc
+&lt;endogenic&gt; redlion_: pls come join #mymonero but yes i do :)
+&lt;Jaquee&gt; redlion_: i have. it has some nasty bugs but it's running
+&lt;redlion_&gt; ok thanks, I'll talk to you after this
+&lt;hyc&gt; btw iOS still limits process VM size to 4GB so we won't be running monerod native on iOS any time soon
+&lt;fluffypony&gt; @jollymort let's discuss it after the meeting, or maybe next week - there are 2 more meetings to go tonight :)
+&lt;fluffypony&gt; and that's a large topic
+&lt;_Slack&gt; &lt;jollymort&gt; sure, another time
+&lt;redlion_&gt; thanks jaquee, are there any build instructions or a (sort of) working build posted somewhere?
+&lt;fluffypony&gt; 6. Confirm next meeting date/time
+&lt;fluffypony&gt; May 21
+&lt;fluffypony&gt; day before Consensus
+&lt;hyc&gt; cool
+&lt;endogenic&gt; 👍
+&lt;hyc&gt; oh. this week I expect to have wolf miner fully ported to Android, with GPU support too
+&lt;fluffypony&gt; endogenic can come to my hotel and we can do the meeting together :-P
+&lt;endogenic&gt; oooh
+&lt;fluffypony&gt; and with that
+&lt;fluffypony&gt; we end the meeting on time
+&lt;hyc&gt; (whether the hashrate is enough to bother is still an open question)
+&lt;fluffypony&gt; with 2 minutes to spare
+&lt;fluffypony&gt; because we're that cool
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/22","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"22"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-06-03 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-06-03.html" />
+<meta name="description" content="Highlights
+
+Mooo and Sarang have found a way to speed up Bulletproof verification times: https://github.com/moneromooo-monero/bitmonero/tree/bp-multi-aggregation-pippenger
+	v0.12.2.0 has been tagged for release.  Binaries will be built soon.
+	Code freeze for the Aug/Sept update is expected to happen in Mid July.
+	Bulletproofs and Cryptonight v2 are exempt from that schedule and will continue to be worked on during the freeze.
+	Arcticmine and Sarang are working on an updated fee structure
+ " />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-06-03.html" />
+
+    <title>DevMeeting 2018-06-03 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-06-03.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-06-03</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="45" role="article" about="/index.php/article/devmeeting_2018-06-03" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-06-03" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-06-03T17:59:50+00:00">Sun, 06/03/2018 - 13:59</span>
+          <span property="schema:dateCreated" content="2018-06-03T17:59:50+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4><u><strong>Highlights</strong></u></h4>
+
+<ul><li>Mooo and Sarang have found a way to speed up Bulletproof verification times: https://github.com/moneromooo-monero/bitmonero/tree/bp-multi-aggregation-pippenger</li>
+	<li>v0.12.2.0 has been tagged for release.  Binaries will be built soon.</li>
+	<li>Code freeze for the Aug/Sept update is expected to happen in Mid July.</li>
+	<li>Bulletproofs and Cryptonight v2 are exempt from that schedule and will continue to be worked on during the freeze.</li>
+	<li>Arcticmine and Sarang are working on an updated fee structure</li>
+</ul><p> </p>
+
+<h4><u><strong>Full Log</strong></u></h4>
+
+<pre>
+1:00 PM &lt;rehrar&gt; https://github.com/monero-project/meta/issues/230
+1:00 PM &lt;rehrar&gt; 1. Greetings
+1:01 PM → Dje4obdvgd37 joined (67d0dc8d@gateway/web/freenode/ip.103.208.220.141)
+1:01 PM &lt;rehrar&gt; anyone here? say hi.
+1:01 PM &lt;rbrunner&gt; Hello
+1:01 PM &lt;vtnerd&gt; hi
+1:01 PM &lt;Dje4obdvgd37&gt; Hello
+1:01 PM &lt;sarang&gt; yo
+1:01 PM &lt;oneiric_&gt; hi
+1:01 PM &lt;suraeNoether&gt; hi
+1:02 PM &lt;@fluffypony&gt; hi
+1:02 PM &lt;erciccione_[m]&gt; Hallo
+1:02 PM &lt;rehrar&gt; if I missed anyone in the preping, please feel free to ping them at any time
+1:02 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:03 PM &lt;rehrar&gt; Anyone have anything fun to report?
+1:03 PM &lt;@binaryFate&gt; bonsoir
+1:03 PM &lt;iDunk&gt; Those who have already pulled the 0.12.2.0 tag will have to git pull --tags after pulling to force v0.12.2.0 tag update.
+1:03 PM &lt;rbrunner&gt; Fun with tags :)
+1:03 PM &lt;sarang&gt; moneromooo and I sped up BP verification using a new multiexponentiation algorithm
+1:04 PM &lt;rehrar&gt; bp just look better and better?
+1:04 PM &lt;Dje4obdvgd37&gt; Faster verification
+1:04 PM &lt;sarang&gt; aye
+1:04 PM → vegasbaby joined (~vegasbaby@cpe-174-109-234-150.nc.res.rr.com)
+1:04 PM &lt;sarang&gt; Repo: https://github.com/moneromooo-monero/bitmonero/tree/bp-multi-aggregation-pippenger
+1:05 PM &lt;sarang&gt; The large multiexp operation in BPs is now up to twice as fast as before
+1:05 PM &lt;sarang&gt; (for single proofs)
+1:05 PM &lt;erciccione_[m]&gt; very cool
+1:05 PM &lt;sarang&gt; Yeah, that was kinda the "last big thing" to add to them
+1:06 PM &lt;sarang&gt; It had been on the back burner for a while
+1:06 PM &lt;rehrar&gt; well that's awesome. Thanks for the update. :)
+1:06 PM &lt;sarang&gt; np
+1:06 PM &lt;rehrar&gt; Anyone else got anything fun?
+1:06 PM &lt;rbrunner&gt; Doesn't that desturb the code reviews a little bit?
+1:06 PM &lt;sarang&gt; rbrunner: no, the multiexp is technically outside the scope
+1:06 PM &lt;rbrunner&gt; Ah, good
+1:07 PM &lt;endogenic&gt; sarang: did the auditor indicate any possible changes to be made to the implementation?
+1:07 PM &lt;sarang&gt; One reviewer asked about it. I said they should feel free to add it if it doesn't affect the time/cost substantially
+1:07 PM &lt;sarang&gt; No word back yet since they're still in the weeds. Have been getting a few questions here and there, as expected
+1:07 PM → arcticursine joined (uid302602@gateway/web/irccloud.com/x-ksqioavmzmpbttkz)
+1:08 PM &lt;sarang&gt; I'll be working with them while I'm away teaching
+1:08 PM &lt;sarang&gt; no worries there
+1:08 PM &lt;sarang&gt; Speaking of which, I leave for that on Tuesday
+1:08 PM &lt;rehrar&gt; ok. So we should expect limited availability from you during that time?
+1:08 PM &lt;sarang&gt; Correct
+1:08 PM &lt;sarang&gt; suraeNoether will keep me apprised of any big happenings
+1:08 PM &lt;sarang&gt; PM me for urgent matters
+1:08 PM &lt;sarang&gt; Don't fire me while I'm away :/
+1:09 PM &lt;rehrar&gt; alrighty. If nobody else has any updates we can go ahead and continue.
+1:09 PM &lt;rehrar&gt; 3. Point release items / Looking forward
+1:09 PM &lt;rehrar&gt; fluffypony: you got anything for us regarding 0.12.2.0?
+1:09 PM &lt;erciccione_[m]&gt; just a quick update on the localization platform. I managed to start the tests and everything looks fine for now, can i expect to use a .getmonero.org server when it will be ready?
+1:09 PM &lt;@fluffypony&gt; it's tagged
+1:10 PM &lt;erciccione_[m]&gt; (the platform is pootle)
+1:10 PM &lt;@fluffypony&gt; anyone who pulled the old tag may have to git tag -d v0.12.2.0
+1:10 PM &lt;@fluffypony&gt; erciccione_[m]: sure, just speak to pigeons
+1:10 PM &lt;rehrar&gt; any ETA on binaries?
+1:10 PM &lt;erciccione_[m]&gt; ok, thanks fluffypony
+1:11 PM &lt;@fluffypony&gt; rehrar: it was tagged like 10 minutes ago, so soon™
+1:11 PM &lt;rehrar&gt; noice
+1:11 PM &lt;Dje4obdvgd37&gt; Ty fluffy. Will gpg SIG's be added to getmonero site this time?
+1:11 PM &lt;@fluffypony&gt; no
+1:12 PM &lt;@fluffypony&gt; we're using the Zooko "just trust me" method of software distribution now
+1:12 PM &lt;@fluffypony&gt; anyone who is concerned can just arrange to meet me and look into my eyes and then they will automatically trust it
+1:12 PM ⇐ @ArticMine quit (~ArticMine@206.123.191.246) Ping timeout: 265 seconds
+1:12 PM &lt;sarang&gt; lol
+1:12 PM &lt;endogenic&gt; or ask nioc, he's a trusted party
+1:12 PM &lt;+moneromooo&gt; The git commits are still signed.
+1:12 PM &lt;suraeNoether&gt; lulz, like pgp but with more discomfort
+1:12 PM &lt;erciccione_[m]&gt; badum tsk
+1:12 PM &lt;rehrar&gt; So I figured we could have a brief discussion about the next release. It's a pretty big one with bulletproofs. Do we have a tentative code freeze date? Is there anything else besides BPs that will be in the pipeline that we want to get in before that date?
+1:13 PM &lt;vtnerd&gt; ... still working on the light-wallet-server ... the total PR is going to be somewhat big, so it will be broken into chunks for reviewability
+1:13 PM &lt;@fluffypony&gt; context for anyone who thinks I'm nuts: https://forum.z.cash/t/so-i-had-a-videochat-with-jihan-wu/29379
+1:13 PM &lt;vtnerd&gt; this isn't required for the next release, and theres minimal changes to the existing code
+1:13 PM &lt;rehrar&gt; I realize we can't decide anything before the BP audits, but an initial discussion would be beneficial so we can all start being on the same page since the beginning
+1:13 PM &lt;endogenic&gt; fluffypony: so weird, i have video chats with Jihan all the time and never felt a thing
+1:14 PM &lt;@fluffypony&gt; rehrar: if we're going by our schedule then the aim is to code freeze 3 months before the network upgrade
+1:14 PM &lt;rehrar&gt; Right. That was the plan for this time too, but didn't quite happen. :D
+1:14 PM &lt;sarang&gt; rehrar: I think we should have a plan under the assumption that BPs are a-ok, and then accommodate a week or two of changes as another plan
+1:14 PM &lt;sarang&gt; at most
+1:15 PM &lt;Dje4obdvgd37&gt; https://github.com/ZcashFoundation/GrantProposals-2018Q2/issues/17
+1:15 PM &lt;@fluffypony&gt; yeah we had the PoW thing that threw us
+1:15 PM &lt;+moneromooo&gt; 3 months doesn't play with the final form for Cryptonight variant 2.
+1:15 PM &lt;Dje4obdvgd37&gt; That is monero FFS status
+1:16 PM &lt;rehrar&gt; moneromooo: is the next one already ready to go?
+1:16 PM &lt;@fluffypony&gt; moneromooo: true
+1:16 PM &lt;Dje4obdvgd37&gt; We could update that more bulletproof work (since they seem to want specifics not general ffs)
+1:16 PM &lt;+moneromooo&gt; No.
+1:16 PM &lt;@fluffypony&gt; we should come up with a concrete time frame
+1:16 PM &lt;@fluffypony&gt; maybe 3 months code freeze except PoW
+1:16 PM &lt;@fluffypony&gt; and then final code freeze 6 weeks later?
+1:16 PM &lt;+moneromooo&gt; That'd be OK, depending on when that hits.
+1:17 PM &lt;rehrar&gt; *why we have these discussions*
+1:17 PM &lt;+moneromooo&gt; Early...
+1:17 PM &lt;+moneromooo&gt; The earlier it is, the more likely it is to be ignored :)
+1:17 PM &lt;@fluffypony&gt; so if we're doing April / October as the upgrade points, then initial code freeze in July
+1:18 PM &lt;@fluffypony&gt; like mid-July
+1:18 PM &lt;rehrar&gt; That's a month and a half away.
+1:18 PM &lt;@fluffypony&gt; yes - but I think we can code freeze and mention specific things that are in flux
+1:18 PM &lt;rehrar&gt; Just for people that can't believe it's June already.
+1:18 PM &lt;@fluffypony&gt; eg. code freeze except for BP and CNv2
+1:19 PM &lt;@fluffypony&gt; and bug fixes obvs
+1:19 PM &lt;rehrar&gt; Alrighty. Will there be anything major after this point release besides those two things to put in?
+1:19 PM &lt;+moneromooo&gt; I vote against that. Too early.
+1:19 PM &lt;rehrar&gt; What would be ideal in your opinion moneromooo?
+1:20 PM &lt;vtnerd&gt; too early for what? to determine whether something critical most go into the release?
+1:20 PM &lt;+moneromooo&gt; It was a royal pita to work the last month or two just because of that.
+1:20 PM &lt;vtnerd&gt; *must go
+1:20 PM &lt;@fluffypony&gt; moneromooo: that's because we kept shoving features into the branch
+1:20 PM &lt;@fluffypony&gt; but in this case the branch would be bug fixes only
+1:20 PM &lt;+moneromooo&gt; Mod july is too early to freeze if it's a mid october release.
+1:20 PM &lt;+moneromooo&gt; Oh, still push stuff to master in the meantime ?
+1:20 PM &lt;vtnerd&gt; I disagree
+1:20 PM &lt;vtnerd&gt; yes
+1:21 PM &lt;vtnerd&gt; you branch and then only add bug fixes to that branch
+1:21 PM &lt;@fluffypony&gt; moneromooo: no release would be long before then
+1:21 PM &lt;@fluffypony&gt; freeze mid-July, tag and release end of August / beginning of September
+1:21 PM &lt;+moneromooo&gt; And we still push to master in the meantime (different from lsat time) ?
+1:21 PM &lt;@fluffypony&gt; and yes new features can still go into Master
+1:21 PM &lt;@fluffypony&gt; yes
+1:21 PM &lt;+moneromooo&gt; OK, sounds fine then.
+1:21 PM ⇐ vegasbaby quit (~vegasbaby@cpe-174-109-234-150.nc.res.rr.com) Quit: My MacBook has gone to sleep. ZZZzzz…
+1:21 PM &lt;rehrar&gt; Great! Same page.
+1:22 PM &lt;vtnerd&gt; the master branch would be frozen too? or just the release branch (i.e. no new features to that branch) ?
+1:22 PM &lt;vtnerd&gt; ah yes, ok, thats the most sane way in my experience
+1:22 PM &lt;sarang&gt; Lights a fire under our asses about fee structure, which is nice
+1:22 PM &lt;rehrar&gt; Has there been good discussion on that sarang?
+1:23 PM &lt;@fluffypony&gt; vtnerd: just the branch, not master
+1:23 PM &lt;sarang&gt; Yes, ArticMine was heading a proposal he had in mind
+1:23 PM &lt;@fluffypony&gt; master is unencumbered
+1:23 PM &lt;oneiric_&gt; do new tests fall under the "new feature" or "bugfix" category?
+1:23 PM &lt;sarang&gt; rehrar: now that we have timing numbers
+1:23 PM &lt;+moneromooo&gt; Do they fix anything ? :)
+1:24 PM &lt;@fluffypony&gt; oneiric_: if it's a test for something that exists in both master and the branch then I personally wouldn't be averse to it
+1:24 PM &lt;@fluffypony&gt; could be good to make sure that Master and the branch match in behaviour
+1:24 PM &lt;vtnerd&gt; yeah adding tests is a weird one, I would say only if they reveal a bug should it go into release branch
+1:24 PM &lt;oneiric_&gt; moneromooo: :) not directly, but I get your point
+1:25 PM &lt;rehrar&gt; Alrighty. We ready to move on?
+1:25 PM &lt;rehrar&gt; 4. Code + ticket discussion / Q &amp; A
+1:25 PM &lt;rehrar&gt; moneromooo, fluffypony. You guys wanna co-host this part?
+1:25 PM &lt;@fluffypony&gt; I'll let moneromooo take it
+1:25 PM &lt;oneiric_&gt; fluffypony + vtnerd: ok that make sense
+1:25 PM &lt;@fluffypony&gt; so I can get back to building
+1:25 PM — +moneromooo waits for questions
+1:26 PM &lt;sarang&gt; sooooo moneromooo how is the code going......
+1:26 PM &lt;+moneromooo&gt; Faster.
+1:26 PM &lt;sarang&gt; also the tickets
+1:27 PM — iDunk confirms
+1:27 PM &lt;rehrar&gt; Alright, well if there are no questions we can finish up here with 5. Any additional meeting items
+1:27 PM &lt;rehrar&gt; Anybody have anything else to discuss here?
+1:28 PM &lt;sarang&gt; I shall miss you all
+1:28 PM &lt;suraeNoether&gt; &lt;3
+1:28 PM &lt;Dje4obdvgd37&gt; How many languages failed to update for point release deadline?
+1:28 PM &lt;sarang&gt; I'll trick my students into solving our big issues as homework problems
+1:28 PM &lt;Dje4obdvgd37&gt; For GUI
+1:29 PM &lt;endogenic&gt; i'll use this moment to mention someone recently told me they thought i was trolling when i invited someone else to come join #monero-newlibs. definitely not a troll. everyone has agreed it's important, but the effort has not gathered much momentum yet. actually been losing people. meanwhile i'm just trying to use a custom stripped down monero src as i dont have alternatives in the short term despite successfully
+1:29 PM &lt;endogenic&gt; factoring in the past (it's not tenable for me to refactor all of monero wallet code while rebasing with upstream unless that's to be my fulltime job). so at some point i may suggest we do a ffs proposal for someone to have the job of purely maintaining and improving the code quality.
+1:29 PM &lt;erciccione_[m]&gt; Dje4obdvgd37: 7 aren't updated
+1:29 PM &lt;erciccione_[m]&gt; out of 29
+1:30 PM &lt;+moneromooo&gt; Does that mean "rewrite random stuff so it looks more like someone's idea of how code should look" ?
+1:30 PM &lt;Dje4obdvgd37&gt; Tu erciccione
+1:30 PM &lt;endogenic&gt; thanks mooo, love you too
+1:30 PM &lt;Dje4obdvgd37&gt; Ty
+1:32 PM &lt;rehrar&gt; alrighty, we can go ahead and finish up the meeting
+1:32 PM ⇐ bomb-on quit (~bomb-on@139-142-17-89.fiber.hringdu.is) Quit: SO LONG, SUCKERS!
+1:32 PM &lt;rehrar&gt; 6. Confirm next meeting date/time
+1:32 PM &lt;gingeropolous&gt; moneromooo, is your pruning stuff in a testable state?
+1:33 PM → @ArticMine (opped) joined  
+1:33 PM &lt;+moneromooo&gt; Yes. crash7.
+1:33 PM &lt;gingeropolous&gt; thats the branch name?
+1:33 PM &lt;+moneromooo&gt; Yes.
+1:33 PM &lt;rehrar&gt; June 17, 2018, same time. 17 UTC.</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/45","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"45"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

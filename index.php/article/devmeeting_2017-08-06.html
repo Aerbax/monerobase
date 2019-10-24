@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-08-06 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-08-06.html" />
+<meta name="description" content="Highlights[ ]
+
+New default ringsize.
+	5 has consensus, but 8 and 10 are being discussed." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-08-06.html" />
+
+    <title>DevMeeting 2017-08-06 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-08-06.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-08-06</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="17" role="article" about="/index.php/article/devmeeting_2017-08-06" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-08-06" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-08-06T20:16:48+00:00">Sun, 08/06/2017 - 16:16</span>
+          <span property="schema:dateCreated" content="2017-08-06T20:16:48+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-08-06&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>New default ringsize.
+	<ul><li>5 has consensus, but 8 and 10 are being discussed.</li>
+		<li>Probably best if we can get input from our mathmeticians, Surae and/or Sarang</li>
+	</ul></li>
+	<li>The *testnet* hard fork is scheduled for Monday, August 7th 2017</li>
+	<li>GUI News
+	<ul><li>The official GUI's Android and iOS are ready for alpha/beta testing. The holdup is app store accounts(at least within iOS).</li>
+		<li>Official Android builds are also held up by disk space on the build machine. 1.5 month old test build at: <a class="external free" href="https://github.com/monero-project/monero-core/pull/780" rel="nofollow">https://github.com/monero-project/monero-core/pull/780</a></li>
+		<li>Investigating iOS Testflight</li>
+		<li>For the MyMonero app, Endogenic "just wants to launch the damn thing"  ;)</li>
+	</ul></li>
+	<li>Work is ongoing to fix a memory leak in monerod</li>
+</ul><p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-08-06&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;_Slack&gt; &lt;rehrar&gt; The usual: https://github.com/monero-project/meta/issues/99
+&lt;_Slack&gt; &lt;rehrar&gt; Btw, pony has asked me to make the meeting issues from now on cuz he forget. :)
+&lt;hyc&gt; ok cool
+&lt;Fymiywtfbtcxmr&gt; 1st Issue should be min ring size
+&lt;Fymiywtfbtcxmr&gt; Time to decide before code freeze
+&lt;gingeropolous&gt; From my viewpoint, the issue stands at this: there's consensus to move it to ringsize 5, and there's some support to make it more than that. But I don't think there's any scientific reason for any particular number greater than 5
+* scoobybejesus (~ircident@pool-108-31-237-175.washdc.fios.verizon.net) has joined
+&lt;hyc&gt; right.
+&lt;_Slack&gt; &lt;johnalan&gt; yes 5 is optimal
+&lt;hyc&gt; I expressed a preference for 8 because I like powers of 2.
+&lt;_Slack&gt; &lt;johnalan&gt; lol
+&lt;gingeropolous&gt; so the question is whether we should go greater than 5 just based on a gut feeling that more is better
+&lt;gingeropolous&gt; or wait until we have some valid reason with some maths backing it
+* rehrar (ad0ccc2e@gateway/web/freenode/ip.173.12.204.46) has joined
+* rehrar has quit (Client Quit)
+&lt;ArticMine&gt; The case for more than 5 is two mix sets  of 5 recent and random
+&lt;hyc&gt; I think the question is what does it do to min tx size
+&lt;hyc&gt; and min tx fee
+&lt;ArticMine&gt; Yes that is very important
+&lt;endogenic&gt; so, more research?
+&lt;_Slack&gt; &lt;rehrar&gt; ^
+&lt;dEBRUYNE&gt; hyc: increasing mixin from 2 to 10 increases the tx size with ~ 1 kB
+&lt;dEBRUYNE&gt; assuming 2 in 2 out transactions
+&lt;hyc&gt; yeah, 5 for now. more research for additional changes.
+&lt;gingeropolous&gt; should we bump the wallet default?
+&lt;dEBRUYNE&gt; Perhaps leave it at 4 for uniformity?
+&lt;dEBRUYNE&gt; 5*
+&lt;endogenic&gt; fwiw we use 9 in new mymonero apps currently (ringsize of 10)
+&lt;endogenic&gt; but we also turned off our tx fees due to ringct tx size et al
+&lt;endogenic&gt; temporarily…
+&lt;hyc&gt; endogenic: have you also changed output selection algo?
+&lt;endogenic&gt; in what way?
+&lt;ArticMine&gt; We have to raise min blocksize if we go over 15k tx size
+&lt;Fymiywtfbtcxmr&gt; Ring size 10 for uniformity
+&lt;Fymiywtfbtcxmr&gt; All apps and wallets just like mymonero
+&lt;endogenic&gt; personally i would love to hear Surae's input on this as well regarding whether we should do this now before making confirmations
+&lt;Fymiywtfbtcxmr&gt; Tx size not that much larger
+* scoobybejesus has quit (Quit: ZNC 1.7.x-git-735-879c813 - http://znc.in)
+&lt;endogenic&gt; heck it would be nice to hear from Sarang as well :P
+&lt;_Slack&gt; &lt;rehrar&gt; Well friends, in the interest of the meeting, can we go to item 2? :) Brief review of what's been completed since the previous meeting.
+&lt;Fymiywtfbtcxmr&gt; Range proof reductions coming
+&lt;_Slack&gt; &lt;rehrar&gt; Oops. After this discussion is done.
+&lt;endogenic&gt; hyc feel free to ping me later
+* Olufunmilayo (~Olufunmil@unaffiliated/olufunmilayo) has joined
+&lt;vtnerd&gt; hyc endogenic : mymonero does not use the wallet selection algo currently
+* moneuser555_ has quit (Quit: Page closed)
+&lt;vtnerd&gt; its just random selection over the set of possible outputs
+&lt;endogenic&gt; yes i can confirm that
+&lt;ArticMine&gt; JollyMort[m] did the simulations but as I recall we are ok if the 2/2 tx size is below 15K
+&lt;ArticMine&gt; for min blocksize
+&lt;ArticMine&gt; So ring 10 may work
+&lt;moneromooo&gt; mixin 14 would still be ok, 19 not. I have no data for 15-18.
+&lt;gingeropolous&gt; so r we increasing it or waiting for more research?
+* scoobybejesus (~ircident@pool-108-31-237-175.washdc.fios.verizon.net) has joined
+&lt;ArticMine&gt; I am ok up to 10
+&lt;moneromooo&gt; I'm keeping it to 5 unless a number of people like smooth, ArticMine, luigi1111, surae, knaccc think it's best to increase now.
+&lt;ArticMine&gt; Sounds good to me
+&lt;hyc&gt; cool
+&lt;moneromooo&gt; Maybe we make a vote with those people :)
+&lt;gingeropolous&gt; yeah. i propose we push this to core team for final decision. seems to fit the bill of that scenario in the governance structure thingy
+&lt;endogenic&gt; vtnerd: any thoughts?
+&lt;Jaquee&gt; sounds good. when is testnet HF?
+&lt;moneromooo&gt; Tomorrow. If pony merges in time ^_^
+&lt;Jaquee&gt; :D
+&lt;vtnerd&gt; on mandatory ring size ? not really
+&lt;endogenic&gt; kk
+&lt;knaccc&gt; moneromooo I'm fine with 5 until further research is done
+&lt;vtnerd&gt; other than I recall at least 4 being useful, based on the way research paper I saw
+&lt;Fymiywtfbtcxmr&gt; Pony drinking wine
+&lt;luigi1111&gt; I vote 5 because reasons
+&lt;moneromooo&gt; And that guy has 1111 votes ^
+&lt;hyc&gt; I vote 8 because we need drama and dissent.
+&lt;moneromooo&gt; And because winning a vote with 100% would feel a bit too dictatorship.
+&lt;moneromooo&gt; I vote for someone to summon the pony.
+&lt;ArticMine&gt; At the point 5 and continue the research
+&lt;ArticMine&gt; this
+&lt;hyc&gt; yeah
+* herch (1b076780@gateway/web/freenode/ip.27.7.103.128) has joined
+&lt;endogenic&gt; rehrar?
+&lt;_Slack&gt; &lt;rehrar&gt; Ye?
+&lt;endogenic&gt; may be time for next item
+&lt;vtnerd&gt; also moving mymonero to the standard wallet output selection needs a todo somewhere
+&lt;_Slack&gt; &lt;rehrar&gt; K. Well I say we jump to 2 as I said above. :) Brief review of what's been completed since the previous meeting. I'd love to hear from Jaquee and even you regarding mymonero
+&lt;endogenic&gt; issue exists on mymonero-app-js
+&lt;endogenic&gt; at least in terms of using the official lib
+&lt;vtnerd&gt; the mymonero front is probably a crappy but decent place to mark that
+&lt;vtnerd&gt; endogenic : ok good
+&lt;endogenic&gt; def important to me
+&lt;pigeons&gt; maybe moneromooo repeat the list of PRs you've asked fluffypony to merge?
+* Fymiywtfbtcxmr has quit (Ping timeout: 260 seconds)
+&lt;Jaquee&gt; i'm currently rebasing the huge GUI lightwallets/mobile PR to exclude the lightwallets parts
+&lt;moneromooo&gt; I don't have a backlog.
+&lt;Jaquee&gt; because #2109 (the wallet2 parts of the lightwallet support) wont make it to the release.
+&lt;Jaquee&gt; but i still want to have the mobile and remote node parts from that PR in next release.
+&lt;Jaquee&gt; I'd say both ios and android version is ready for alpha/beta testing. But it's being blocked by lack of app store accounts.
+&lt;Jaquee&gt; At least the ios version.
+&lt;Jaquee&gt; For android we could just build apk on buildbot, but unfortunately there's not enough space on the linux box for that. Pigeons is working on that afaik.
+&lt;moneromooo&gt; I'm wary of the changes that affect the normal wallet tx making operations. The rest could be merged if needed.
+&lt;Jaquee&gt; yeah. i'm totally ok with that.
+&lt;Jaquee&gt; but hopefully we don't need to wait another 6 months for next release after hf
+&lt;_Slack&gt; &lt;rehrar&gt; We can launch a little campaign for Android testers? Get the Community workgroup to front that, no?
+&lt;moneromooo&gt; If it's like last time, we'll have to wait just a few days ^_^
+&lt;Jaquee&gt; Fluffy said a couple of months back that he was working on app store accounts for us, but i don't know what the status is. Anyone from core team have more info on that?
+&lt;pigeons&gt; android versions. you need one for each architecture
+&lt;endogenic&gt; Jaquee he was traveling and needed info which was at home in SA
+&lt;endogenic&gt; got back a day ago i think
+&lt;Jaquee&gt; endogenic: that was for mymonero accounts afaui. are we using the same for monero apps+
+&lt;Jaquee&gt; ?
+&lt;endogenic&gt; nah
+&lt;endogenic&gt; separate, as i suggested
+&lt;_Slack&gt; &lt;johnalan&gt; I have an accoutn and can add 100 team members
+&lt;_Slack&gt; &lt;rehrar&gt; Endogenic, you wanna give an update on your fun things?
+&lt;_Slack&gt; &lt;johnalan&gt; you’re welcome to use it
+&lt;endogenic&gt; unless you guys really want to hop on the MEA bandwagon
+&lt;hyc&gt; for android, you can get by with just 32bit binaries
+&lt;_Slack&gt; &lt;johnalan&gt; but for prod, better to have MEA account
+&lt;endogenic&gt; everyone should be using MEAT tokens
+* Ggjffg47844 (adfeff8c@gateway/web/freenode/ip.173.254.255.140) has joined
+* TinusMars has quit (Ping timeout: 260 seconds)
+&lt;endogenic&gt; lol johnalan MEA was just a joke :P
+&lt;_Slack&gt; &lt;johnalan&gt; oh I know
+&lt;endogenic&gt; oh hehe
+&lt;_Slack&gt; &lt;johnalan&gt; :)
+&lt;Jaquee&gt; johnalan: biggest issue is trust. core team need to build and distribute
+* scoobybejesus has quit (Remote host closed the connection)
+&lt;_Slack&gt; &lt;johnalan&gt; yes with Apple code signing
+&lt;hyc&gt; not sure if we care to support android x86. that userbase is tiny.
+&lt;_Slack&gt; &lt;johnalan&gt; you need an account
+&lt;Jaquee&gt; otherwise noone will download =)
+&lt;Jaquee&gt; hopefully ...
+&lt;_Slack&gt; &lt;johnalan&gt; look at how Signal etc do it
+&lt;_Slack&gt; &lt;johnalan&gt; they have the code online open src
+&lt;pigeons&gt; so mainly armv8?
+&lt;_Slack&gt; &lt;johnalan&gt; but you have to trust the binary on the store
+&lt;_Slack&gt; &lt;johnalan&gt; not much you can do
+&lt;endogenic&gt; johnalan: Apple's acting as the authority there
+&lt;_Slack&gt; &lt;johnalan&gt; @endogenic on the my Monero iOS app, are you close to beta test?
+&lt;endogenic&gt; certainly are
+&lt;luigi1111&gt; fluffypony fluffypony fluffypony
+&lt;_Slack&gt; &lt;johnalan&gt; great!
+&lt;endogenic&gt; fluffypony fluffypony fluffypony
+&lt;luigi1111&gt; *fingers crossed*
+&lt;moneromooo&gt; `fluffupoony `fluffupoony `fluffupoony
+&lt;endogenic&gt; lol
+&lt;ArticMine&gt; The pony is in the "land of the free temporarily"
+* scoobybejesus (~ircident@pool-108-31-237-175.washdc.fios.verizon.net) has joined
+&lt;endogenic&gt; snoozetown, south africa
+&lt;ArticMine&gt; He is back
+* scoobybejesus has quit (Remote host closed the connection)
+* fzerosum has quit (Quit: Leaving)
+* duil (b84bd762@gateway/web/freenode/ip.184.75.215.98) has joined
+&lt;hyc&gt; we we can still release iOS without waiting for apple account https://inojb.net/
+&lt;ArticMine&gt; On jailbreak?
+&lt;_Slack&gt; &lt;johnalan&gt; yuck
+&lt;_Slack&gt; &lt;johnalan&gt; not keen
+&lt;hyc&gt; no jailbreak required
+&lt;ArticMine&gt; html5?
+* scoobybejesus (~ircident@pool-108-31-237-175.washdc.fios.verizon.net) has joined
+&lt;_Slack&gt; &lt;johnalan&gt; I think it’s OTA for their ‘store’/repo
+&lt;_Slack&gt; &lt;johnalan&gt; and then you install thru that
+&lt;Jaquee&gt; lol. that page doesn't look serious
+&lt;Jaquee&gt; have you tried it hyc?
+&lt;_Slack&gt; &lt;johnalan&gt; but after all the work for iOS, it’s paramount to have it on the store natively
+&lt;hyc&gt; there are many other alternatives http://www.iphonetopics.com/how-to-install-cydia-without-jailbreak-iphone-ipad/
+&lt;hyc&gt; and no, I haven't tried it, I own no Apple crap.
+&lt;_Slack&gt; &lt;johnalan&gt; but we’d still need to distrubute a binary through Cydia
+&lt;_Slack&gt; &lt;johnalan&gt; it wouldn’t be on the ‘App Store’
+&lt;_Slack&gt; &lt;johnalan&gt; so that’s where it would be suboptimal
+&lt;endogenic&gt; anything else completed since last mtg?
+&lt;_Slack&gt; &lt;johnalan&gt; people need to be able to take a new iphone, open the store and type ‘Monero’
+&lt;hyc&gt; that can come later. if we want people to beta test now, this is the fast route.
+&lt;_Slack&gt; &lt;johnalan&gt; fair enough I guess
+&lt;_Slack&gt; &lt;johnalan&gt; we can just use test flight
+&lt;endogenic&gt; hockeyapp is good too
+&lt;endogenic&gt; but then it's a certs question again
+&lt;_Slack&gt; &lt;johnalan&gt; you can invite 1K testers
+&lt;_Slack&gt; &lt;johnalan&gt; 10K
+&lt;_Slack&gt; &lt;johnalan&gt; https://developer.apple.com/testflight/
+&lt;Jaquee&gt; yeah. hockey/testflight would be nice
+&lt;endogenic&gt; 1 million testers *puts pinky to mouth*
+&lt;_Slack&gt; &lt;johnalan&gt; lol
+&lt;_Slack&gt; &lt;johnalan&gt; anyway we need to stay tight to the iOS ecosphere on this
+&lt;_Slack&gt; &lt;johnalan&gt; native native native
+&lt;moneromooo&gt; You have a limit to the number of testers when you code an apple program ?
+&lt;_Slack&gt; &lt;johnalan&gt; Yes, but it’s very elegant
+&lt;endogenic&gt; moneromooo: not exactly
+&lt;_Slack&gt; &lt;johnalan&gt; and when your app is on the store
+&lt;_Slack&gt; &lt;serhack&gt; Hello
+* Febo (Febo@89-212-2-13.dynamic.t-2.net) has joined
+&lt;endogenic&gt; anyone can install the app on their device
+&lt;_Slack&gt; &lt;serhack&gt; Is meeting finished?
+&lt;Jaquee&gt; no
+&lt;hyc&gt; stil; requires a corporate registration first
+&lt;_Slack&gt; &lt;serhack&gt; Nice
+&lt;_Slack&gt; &lt;johnalan&gt; you can move through betas simultaneosly
+&lt;endogenic&gt; serhack: nah we need to go over code/ticktets/Q&amp;A
+&lt;_Slack&gt; &lt;johnalan&gt; @hyc yup thats true
+&lt;endogenic&gt; and confirm next mtg
+&lt;_Slack&gt; &lt;serhack&gt; Okay
+&lt;endogenic&gt; moneromooo: https://developer.apple.com/testflight/
+&lt;endogenic&gt; it used to be 100 lol
+&lt;endogenic&gt; and they didn't used to have testflight
+&lt;moneromooo&gt; Sorry, I was not really interested, just dumbfounded.
+&lt;_Slack&gt; &lt;johnalan&gt; its very cool
+* moneromooo shuts up
+&lt;_Slack&gt; &lt;johnalan&gt; @endogenic  would you use testflight or hock for the mymonero ios app?
+&lt;endogenic&gt; either. honestly want to just launch the damn thing
+&lt;Jaquee&gt; ^^
+&lt;Jaquee&gt; so, fluffy is back, and hopefully we can have app store accounts soon^rm?
+&lt;hyc&gt; PRs (17:53:15) moneromooo: 2132 2141 2147 2148 2151 2153 2182 2188 2189 2191 2195 2196 2197 2198 2200 2201 2203 2206 2210 2211 2214 2215 2216 2219 2220 2222 2223 2226 2230 2231 2232 2234 2236 2239 2242 2243 2244
+&lt;Jaquee&gt; to merge?
+&lt;endogenic&gt; soon™
+&lt;moneromooo&gt; Those were the easy merges.
+&lt;herch&gt; for what it's worth, I have doubt if apple will ever approve the app. I wish I am wrong here.
+&lt;endogenic&gt; herch: i'm not worried about that
+&lt;_Slack&gt; &lt;serhack&gt; Hyc: a lot
+&lt;endogenic&gt; pretty sure they would rather have official apps than scam apps
+&lt;endogenic&gt; after all their priority is user experience
+&lt;endogenic&gt; plus we heard through Jaxx that they contacted an apple rep who said it would be ok
+&lt;_Slack&gt; &lt;serhack&gt; +1 endogenic, scam users will try to scam us with their fucking apps
+&lt;endogenic&gt; but then again do we listen to them? :P
+&lt;Jaquee&gt; these are also "easy" merges #2254 #2247 #2233 #2138
+&lt;_Slack&gt; &lt;rehrar&gt; Post #25 this week: Hey so I downloaded freewallet and put all my XMR on there. It's gone. Help?
+&lt;Jaquee&gt; endogenic: lol. i wouldn't trust jaxx on that information
+&lt;endogenic&gt; Jaquee: well /you/ know that… :)
+&lt;Jaquee&gt; :D
+&lt;Jaquee&gt; anyway. let's move on
+&lt;hyc&gt; I missed a question back there - on Android we could release ARMv7 (32bit) wallet. it would work fine on ARMv8 (64bit).
+&lt;pigeons&gt; sounds good
+&lt;hyc&gt; majority of ARMv8 devices on the market today are still running 32bit OS.
+&lt;_Slack&gt; &lt;serhack&gt; Amazing
+&lt;_Slack&gt; &lt;serhack&gt; Is there any apk that I can test? I have an android smartphone
+&lt;hyc&gt; I think you have to compile for yourself for now
+&lt;endogenic&gt; i actually sent a self signed apk to nm90 a long time ago. ppl could still test like that i bet
+&lt;endogenic&gt; if you trust them… :P
+&lt;Jaquee&gt; i also have one
+&lt;_Slack&gt; &lt;serhack&gt; :0
+&lt;Jaquee&gt; https://github.com/monero-project/monero-core/pull/780
+&lt;_Slack&gt; &lt;serhack&gt; Thanks jaquee
+&lt;Jaquee&gt; 5 minutes left... i'm wondering about that memory leak in monerod. do we have any clue yet?
+&lt;moneromooo&gt; I don't think there's really one.
+&lt;moneromooo&gt; (modulo small bits and bobs I already fixed)
+&lt;hyc&gt; schrodingers leak
+&lt;Jaquee&gt; really? my daemon keeps on OOM crashing
+&lt;Jaquee&gt; on a 2GB vps
+&lt;moneromooo&gt; Well, run it with mleak, and kill it with SIGPROF from time to time, and send me those logs.
+&lt;moneromooo&gt; mleak is on hyc's github repo.
+&lt;Jaquee&gt; ah. i'll do that
+&lt;moneromooo&gt; But for me, memory usage was constant modulo short term noise.
+&lt;hyc&gt; https://github.com/hyc/mleak
+&lt;Jaquee&gt; thanks
+&lt;moneromooo&gt; hyc: the RSS differences are from the OS deciding when to swap in/out the mmapped pages, right ?
+&lt;moneromooo&gt; (for lmdb, I mean)
+&lt;hyc&gt; yeah
+&lt;hyc&gt; the SHARED number should be relatively constant, growing when the map is resized
+&lt;hyc&gt; RSS should fluctuate with other memory pressure
+&lt;hyc&gt; s/SHARED/SHM/
+&lt;moneromooo&gt; Jaquee: sorry, missing a step: a couple seconds after SIGPROF, do: mdump ml.{data,info} &gt; "monerod.log-`date`"
+&lt;moneromooo&gt; Jaquee: sorry, missing a step: a couple seconds after SIGPROF, do: mdump /path/to/monerod ml.{data,info} &gt; "monerod.log-`date`"
+&lt;_Slack&gt; &lt;serhack&gt; The app is nice but I noticied a lot of graphical glitch
+&lt;_Slack&gt; &lt;serhack&gt; UX must be a prority
+&lt;hyc&gt; probably OpenGL crap
+&lt;_Slack&gt; &lt;rehrar&gt; Jaquee, did you see that UX guys' thing?
+&lt;Jaquee&gt; no?
+&lt;_Slack&gt; &lt;rehrar&gt; Sec
+&lt;_Slack&gt; &lt;serhack&gt; @krokbaltsar is a UX designer
+&lt;_Slack&gt; &lt;rehrar&gt; Monero UX - Persona and Mobile Wallet Concept  https://www.reddit.com/r/Monero/comments/6qkw8e/monero_ux_persona_and_mobile_wallet_concept/
+&lt;_Slack&gt; &lt;rehrar&gt; This one.
+&lt;_Slack&gt; &lt;serhack&gt; https://www.gustafgarnow.com/monerowallet/
+* ajsantos (~manjaro@unaffiliated/ajsantos) has joined
+&lt;_Slack&gt; &lt;serhack&gt; ^^ best design
+&lt;_Slack&gt; &lt;serhack&gt; Oh, maybe same person @rehrar ;)
+&lt;_Slack&gt; &lt;rehrar&gt; Anyways, it's past time.
+* Ggjffg47844 has quit (Ping timeout: 260 seconds)
+&lt;_Slack&gt; &lt;rehrar&gt; Confirm next meeting time?
+&lt;_Slack&gt; &lt;rehrar&gt; Hopefully FP will come to that one.
+&lt;hyc&gt; 2 weeks
+&lt;hyc&gt; (TM)
+&lt;_Slack&gt; &lt;rehrar&gt; Boom. Done.
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/17","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"17"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

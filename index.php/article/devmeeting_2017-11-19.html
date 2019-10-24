@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-11-19 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-11-19.html" />
+<meta name="description" content="Highlights[ ]
+
+The MRL team has thoroughly investigated BulletProofs
+	Roughly a drop-in repl" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-11-19.html" />
+
+    <title>DevMeeting 2017-11-19 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-11-19.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-11-19</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="11" role="article" about="/index.php/article/devmeeting_2017-11-19" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-11-19" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-11-19T21:09:50+00:00">Sun, 11/19/2017 - 16:09</span>
+          <span property="schema:dateCreated" content="2017-11-19T21:09:50+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-11-19&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>The MRL team has thoroughly investigated BulletProofs
+	<ul><li>Roughly a drop-in replacement with 10% the size of original proofs</li>
+		<li>Roughly the same speed.. perhaps a teensy bit faster</li>
+		<li>Work will begin shortly to convert the Java test code to C/C++</li>
+	</ul></li>
+	<li>MultiSig is progressing.</li>
+	<li>A variety of bugfixes were merged (hyc counts 72 merged pull requests)
+	<ul><li>Disguising password lengths during user input</li>
+		<li>Database locking updates</li>
+		<li>BSD fixes</li>
+		<li>A fix for show_transfers missing an incoming input</li>
+	</ul></li>
+	<li>Hardware
+	<ul><li>Team has grown to 20 people</li>
+		<li>Milestone #1 complete</li>
+		<li>A prototype will be shown at this weeks Monero Munich Meeting</li>
+	</ul></li>
+	<li>monero-core has been renamed to monero-gui
+	<ul><li>Theming is being worked on: <a class="external free" href="https://i.imgur.com/89YFUj7.png" rel="nofollow">https://i.imgur.com/89YFUj7.png</a></li>
+		<li>Work is being down to make the GUI more responsive.</li>
+	</ul></li>
+	<li>The Monero Integrations team is ready to release a Magento plugin. Work is ongoing for OpenCart</li>
+</ul><h1>Full log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-11-19&amp;action=edit&amp;section=2" title="Edit section: Full log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Hey everyone! I don't know if fluffypony will be here today, but let's see about getting this thing started.
+&lt;unknownids&gt; fyi msvb-lab jwinterm controls monerobux, or vice versa we never figured it out
+&lt;hyc&gt; ok, it can be a quick meeting if not
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; luigi1111 ArticMine othe smooth moneromooo Jaquee hyc sgp
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; tag all the people!
+&lt;msvb-lab&gt; nioc: I mean with the letters U-T-C to make it obvious.
+&lt;Jaquee&gt; hey
+&lt;rbrunner&gt; Hoi zäme
+&lt;suraeNoether&gt; howdy
+&lt;[-mugatu-]&gt; o/
+&lt;endogenic&gt; o/
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; sarang, knaccc
+&lt;sgp_[m]&gt; Hi
+&lt;gingeropolous&gt; \o
+&lt;sarang&gt; hello
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; https://github.com/monero-project/meta/issues/138 we can be quick today
+&lt;knaccc&gt; 'lo
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Kinda already did 'Greetings'
+&lt;vtnerd&gt; hello
+&lt;ArticMine&gt; Hi
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Hello to everyone idling in the peanut gallery
+&lt;msvb-lab&gt; Hello.
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Can we get a mini-update from dev, gui, hardware, and mrl?
+&lt;sarang&gt; I can speak for MRL
+&lt;sarang&gt; We've been thoroughly investigated bulletproofs, a new form of CT range proofs
+&lt;hyc&gt; is moneromooo here?
+&lt;moneromooo&gt; Yes
+&lt;endogenic&gt; have one thing to bring up
+&lt;endogenic&gt; when there's time
+&lt;sarang&gt; They should function as essentially a drop-in replacement that is 10% the size of the original proofs (for one output; even smaller for multiple outputs)
+&lt;sarang&gt; with about the same verification time; possibly a teensy bit faster
+* dxdr (~dxdr@cm-81-9-164-97.telecable.es) has joined
+&lt;sarang&gt; Kudos to andytoshi for a lot of great help on those, and others
+&lt;hyc&gt; it's like a TARDIS! the bigger the input the smaller the output!  /s
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; So it's looking really promising that it'd be good for us?
+&lt;sarang&gt; yes
+&lt;sarang&gt; We'll start translating the Java test code over to C/C++ for more detailed work
+&lt;suraeNoether&gt; it's a win-win: smaller-spaced range-proofs, with the same verification time
+&lt;sarang&gt; There were some doubts about ver time, but we literally just had a convo over in MRL that pointed out a simple caching that helps us
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; MRL, folks. Let's give 'em a hand.
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; o/
+&lt;sarang&gt; It was pointed out, though, that there's very little randomness hanging around, which could affect storing stuff "in the randomness"
+&lt;sarang&gt; That may be a deepe discussion for later
+&lt;suraeNoether&gt; yeah, using these range proofs makes encrypting messages with range proofs far less do-able
+&lt;sarang&gt; *deeper
+&lt;gingeropolous&gt; eh who cares
+&lt;msvb-lab&gt; MRL is excellent, nice.
+&lt;suraeNoether&gt; andytoshi is really the one who nailed it, btw
+&lt;sarang&gt; aye
+&lt;suraeNoether&gt; aaaaand all his co-authors
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Can we send them a fruit basket?
+&lt;endogenic&gt; +1
+&lt;suraeNoether&gt; which has included, for a second time, Jonathan Bootle
+&lt;sarang&gt; rehrar set up an FFS for it
+&lt;sarang&gt; 0.2 XMR
+&lt;suraeNoether&gt; and for the N^th time, greg maxwell
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; 100 XMR requested
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; biggest fruit basket ever
+&lt;sarang&gt; Anyhoo, that's the big news from MRL right now, I suppose
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; awesome. Thanks so much.
+&lt;suraeNoether&gt; multisig is looking like i will be ready to hand it off to sarang by the end of the month, as hoped.
+&lt;suraeNoether&gt; and thats it for now
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Anyone else have an update since the last meeting two weeks ago?
+&lt;ArticMine&gt; This is huge from a scaling perspective
+&lt;hyc&gt; absolutely
+&lt;hyc&gt; dev has done a tone of PR merges latelt
+&lt;hyc&gt; lately
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; can you summarize them?
+&lt;hyc&gt; there's still been build issues with readline dependencies but I think they're pretty much sorted by now
+* dnaleor has quit (Quit: Leaving)
+&lt;hyc&gt; we've isolated readline from GUI dependencies, etc.
+&lt;hyc&gt; mooo can probably summarize better
+&lt;endogenic&gt; vtnerd says "oh good"
+&lt;endogenic&gt; "woo"
+&lt;moneromooo&gt; Hmm. I can go look at github:
+&lt;moneromooo&gt; (mostly small things anyway)
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; FP confirmed he can't make it today. He sends his apologies.
+&lt;moneromooo&gt; disguising password length in prompt I guess is still a small thing, but user visible
+* buddd (~buddd@ppp-110-168-82-168.revip5.asianet.co.th) has joined
+&lt;moneromooo&gt; less unnecessary locking in some DB readers, which should speed up some RPC
+&lt;moneromooo&gt; Fixes for BSD build
+* Keniyal has quit (Ping timeout: 240 seconds)
+&lt;moneromooo&gt; The wallet does not fetch unneeded hashes anymore (ie, starts direct from 1.4e6)
+&lt;moneromooo&gt; CORS (for those who know what it is)
+&lt;moneromooo&gt; A fix for show_transfers missing more than one incoming input in a tx
+&lt;moneromooo&gt; And I think the rest is either prior to last meeting, or small/internal stuff.
+&lt;hyc&gt; yeah but it comprises a couple dozen PRs between then and now
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; Alright, awesome. Thanks moneromooo.
+* rehrar (~Critical@173-12-204-46-Albuquerque.hfc.comcastbusiness.net) has joined
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; hardware, I know you give updates in community, but I think most of us that know are excited about the rapid progress you're making
+&lt;xmrmatterbridge&gt; &lt;rehrar&gt; care to share something small about what's been going down?
+&lt;msvb-lab&gt; Hardware; we've settled our initial workflows and have built a twenty strong team. Journals are taking notice (see press) and the project is moving along.
+&lt;msvb-lab&gt; https://taiga.getmonero.org/project/michael-rfc-hwallet-1-implementation/wiki/press/
+&lt;msvb-lab&gt; I'll mark our forum proposal milestone 1 as concluded today probably.
+&lt;msvb-lab&gt; We now have an open call to any interested in a hardware wallet, become part of the project and possibly test a prototype. See:
+&lt;msvb-lab&gt; https://taiga.getmonero.org/project/michael-rfc-hwallet-1-implementation/wiki/preview/
+* buddd has quit (Read error: Connection reset by peer)
+&lt;msvb-lab&gt; I'll demonstrate our two current working protoypes at this week's first ever Monero Munich meeting.
+* buddd_ (~buddd@ppp-110-168-82-168.revip5.asianet.co.th) has joined
+&lt;msvb-lab&gt; That's all, any questions?
+&lt;sgp_[m]&gt; What do you expect those who receive the prototypes to test?
+&lt;msvb-lab&gt; Very weak expectations, hopefully each finds their own way to contribute and strengthen the project.
+&lt;msvb-lab&gt; There's a test plan page, where people can make comments while testing.
+&lt;msvb-lab&gt; But that is just one of many choices, each individual can make on their own.
+&lt;msvb-lab&gt; Pretty lame answer no?
+&lt;rehrar&gt; Alright, thanks msvb-lab!
+&lt;msvb-lab&gt; Thanks for the opportunity.
+&lt;moneromooo&gt; Sounds like pretty nice stuff is going on there, congrats :)
+&lt;hyc&gt; (I counted 72 PRs merged since last dev meeting)
+&lt;msvb-lab&gt; hyc: Who make most of the merges, fluffy?
+&lt;rehrar&gt; So, we've got Code + ticket discussion / Q &amp; A time available for the devs to discuss dev-y things. But all the mergy stuff may have to wait because of FP absence, but if there's other business to take care of, devs you have the floor
+&lt;hyc&gt; yes he does all the merges
+&lt;hyc&gt; we didn't get a report from GUI
+&lt;rehrar&gt; oh, right! so sorry.
+&lt;rehrar&gt; Anybody working on GUI have stuff to talk about.
+&lt;unknownids&gt; ping Jaquee ?
+&lt;endogenic&gt; so i've been chatting with mooo, Jaquee, and vtnerd recently about integrating MyMonero with the native mainline libwallet
+&lt;Jaquee&gt; sorry. i'm on the run
+&lt;endogenic&gt; signs point to integrating with wallet_api
+&lt;endogenic&gt; I may end up tackling a small portion of factoring wallet2
+&lt;rehrar&gt; ok, no worries Jaquee.
+&lt;moneromooo&gt; As long as not too many gratuitous changes ^_^
+&lt;endogenic&gt; 100% mooo
+&lt;hyc&gt; all variable and class names being filtered thru pig-latin
+&lt;gingeropolous&gt; dsc_, in here :)
+&lt;dsc_&gt; :)
+&lt;msvb-lab&gt; Is our GUI crew considered only monero-gui, or are mymonero.com and Moneruj (Android) included as well?
+&lt;dsc_&gt; has it started?
+&lt;endogenic&gt; lol hyc
+&lt;rehrar&gt; I think GUI crew is people who work on the monero-gui repo
+&lt;rehrar&gt; mymonero and Monerujo are their own thing
+&lt;rehrar&gt; dsc_ has what started?
+&lt;dsc_&gt; the meeting :D
+&lt;rehrar&gt; oh, yeah. We're about half hour in. :)
+&lt;hyc&gt; oh - that's worth mentioning too - the repo is now properly named monero-gui, no longer monero-core
+&lt;msvb-lab&gt; rehrar: So Monerujo communicate on a different channel, right?
+&lt;rbrunner&gt; That rename is a milestone :)
+&lt;rehrar&gt; Monerujo utilizes the Mattermost where they have a private channel for the devs and core team, and a public channel for questions. They've also got a Taiga to track progress.
+&lt;dsc_&gt; aight, so I'm working on a black theme for `monero-gui` (qt5) .. learning QML in the process. Trying to get some more UX developers involved and generally just trying to document things as I go
+&lt;rehrar&gt; I can rep Monerujo though, as I'm heavily involved with them
+&lt;rehrar&gt; they've got some exciting stuff coming
+&lt;rehrar&gt; yes, can you link your thread dsc_?
+&lt;dsc_&gt; sure
+&lt;rehrar&gt; The one you made a few days ago.
+&lt;dsc_&gt; https://www.reddit.com/r/Monero/comments/7dvwq0/contributing_to_monero_as_an_ux_developer_short/
+&lt;rehrar&gt; in the comments there are the various proposals for redesigning the GUI. Are there any thoughts on any of those?
+&lt;rehrar&gt; well, first dsc_ you wanted to say something, go ahead. :)
+&lt;dsc_&gt; No I was finished :P
+&lt;dsc_&gt; but to answer your question: There are 3 UI proposals of which I picked the one that was most trivial to implement
+&lt;dsc_&gt; seeing as I'm just one guy with zero QML experience, hehe.
+&lt;dEBRUYNE&gt; rehrar: Basically we're first kind of going for the dark theme, which will have a light mode as well
+&lt;dEBRUYNE&gt; Because it's most trivial to implement
+&lt;dEBRUYNE&gt; (only requires minor changes to the current design)
+&lt;rehrar&gt; https://github.com/monero-project/monero-core/issues/419
+&lt;rehrar&gt; https://github.com/monero-project/monero-core/issues/869
+&lt;rehrar&gt; https://github.com/monero-project/monero-core/issues/949
+&lt;dEBRUYNE&gt; Some screenshots -&gt; https://i.imgur.com/89YFUj7.png
+&lt;rehrar&gt; for those interested
+&lt;rehrar&gt; Ok. Cool deal!
+&lt;dEBRUYNE&gt; To clarify, the dark theme is #949
+&lt;hyc&gt; cool
+&lt;dEBRUYNE&gt; dsc_ also made a PR which should make the GUI more responsive
+&lt;dsc_&gt; cant make any predictions as to when I have some tangible, taking quite some time...!
+&lt;dsc_&gt; s/some/something/
+&lt;dEBRUYNE&gt; Also, we're aiming to include subaddresses and multisig somewhere in the future^tm
+* Keniyal (~Keniyal@unaffiliated/keniyal) has joined
+&lt;dEBRUYNE&gt; And, once there is a core appstore account, we'll start testing the ios port of the GUI
+* amiuhle (~amiuhle@206.223.178.27) has joined
+&lt;dEBRUYNE&gt; There'll be an android port as well, fwiw
+&lt;msvb-lab&gt; dEBRUYNE: Is Qt5 easy to port to mobile?
+&lt;sgp_[m]&gt; Is there a new android APK to test? I last saw one months ago
+&lt;dEBRUYNE&gt; sgp_[m]: Buildbot produces APKs iirc
+&lt;dEBRUYNE&gt; Let me check
+&lt;pigeons&gt; No that isn't setup now
+&lt;dEBRUYNE&gt; msvb-lab: Jaquee did it, so better to ask him :P
+&lt;pigeons&gt; I can't promise next week even, very busy
+&lt;dsc_&gt; rehrar: To give you an idea, right now I have this: https://i.imgur.com/iLwupdB.png
+&lt;dsc_&gt; or to give anyone an idea for that matter :)
+&lt;Slack_3&gt; &lt;serhack&gt; Hello
+&lt;rehrar&gt; looks pretty chill imo :D
+&lt;dsc_&gt; aye aye
+&lt;dsc_&gt; WIP ofc :)
+* amiuhle has quit (Read error: Connection reset by peer)
+&lt;rehrar&gt; I personally think there needs to be a bit of a restructuring of some info, but this is a good meantime
+&lt;dsc_&gt; agreed
+&lt;hyc&gt; good stuff
+&lt;hyc&gt; would be nice to get a more recent android build up for people to test
+&lt;rehrar&gt; Alright. That's it from GUI? No other opinions on dEBRUYNE and dsc_ stuff either?
+&lt;hyc&gt; looks like we can move on to ticket Q/A
+&lt;rehrar&gt; ok Code + ticket discussion / Q &amp; A
+&lt;rehrar&gt; hyc moneromooo can you two take the lead for this?
+* valentinbuza (~valentinb@unaffiliated/valentinbuza) has joined
+&lt;moneromooo&gt; Well, if anyone has questions about them, please ask.
+&lt;hyc&gt; I'd leave it to mooo. I'm not aware of any open questions
+&lt;hyc&gt; ^^
+&lt;dEBRUYNE&gt; &lt;rehrar&gt; Alright. That's it from GUI? &lt;= Yep
+&lt;dsc_&gt; ticket Q/A != discussing open PR's, right?
+&lt;hyc&gt; sure
+&lt;hyc&gt; ask away
+&lt;dsc_&gt; low hanging fruit PRs (that can probably be merged): #919, #954, #963 on monero-gui
+&lt;dsc_&gt; not so much a question ^_^
+&lt;hyc&gt; probably ask luigi to merge them if fluffy is unavailable
+&lt;iDunk&gt; luigi merges GUI PRs anyway :)
+&lt;dsc_&gt; alright
+&lt;rehrar&gt; I think luigi is out for a few days, so be patient. (:
+&lt;rehrar&gt; Alrighty, shall we move on?
+&lt;rehrar&gt; FFS Formalization: https://github.com/monero-project/meta/pull/87
+&lt;Slack_3&gt; &lt;serhack&gt; Is there meeting?
+&lt;hyc&gt; serhack started 40 minutes ago
+&lt;rehrar&gt; we probably don't have time for a large discussion (if at all), but I just wanted to encourage the devs to take a look at the PR
+&lt;Slack_3&gt; &lt;serhack&gt; Oh
+&lt;Slack_3&gt; &lt;serhack&gt; I forgot it
+&lt;rehrar&gt; The idea of having a set of formalized guidelines for FFS proposals going forward has been thrown around a lot. It'd be good to get some opinions on how this is laid out and any concerns that may arise from it.
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; I didn't understand well: is the project funded by ffs an Official project?
+&lt;ArticMine&gt; Does the current system work?
+&lt;rehrar&gt; There's been hiccups ArticMine. fireice and guzzi come to mind.
+&lt;endogenic&gt; those seem like complete outliers :P
+&lt;endogenic&gt; not exactly legit claims to issues imo
+&lt;rehrar&gt; Largely based on de facto expectations that are not actually formalized.
+&lt;msvb-lab&gt; How do we learn about the hickups mentioned (in order to understand context?)
+&lt;endogenic&gt; but proposals could stand to be more concrete, specific, detailed,
+&lt;endogenic&gt; rehrar: formalization can be a bit of a rabbit hole as well
+&lt;endogenic&gt; sometimes humans need to be involved
+&lt;endogenic&gt; ppl need to recognize the situation before a formal plan can be applied
+&lt;hyc&gt; indeed. current US political situation reflects this - institutions are designed assuming good faith in all participants
+&lt;endogenic&gt; but if the situation is not able to be recognized by ppl then how can it be applied for the desired result?
+&lt;hyc&gt; nobody can take all the time needed to identify every possible abusable loophole
+&lt;rehrar&gt; What we have currently is a Core Team centered way of resolving disputes that, to my knowledge, hasn't really been utilized since I've been here
+&lt;rehrar&gt; since we've got that right now, maybe we stick with it?
+&lt;endogenic&gt; but identifying loopholes and plugging them is not a bad thing
+&lt;endogenic&gt; it's just that they need to be done by humans imo
+&lt;ArticMine&gt; We may need some tweaking to deal with the hiccups; but as afar as I can see at a fundamental level the system is working
+&lt;rehrar&gt; don't know where else the graphic is, so I'll just link it here: https://getkovri.org/contributing.html
+&lt;rehrar&gt; bottom of the page
+* defterade_ (~AndChat54@84.241.211.240) has joined
+&lt;rehrar&gt; This has not been formally replaced, so it is currently active. We can discuss that at a later time though. Let's move on.
+* defterade has quit (Ping timeout: 268 seconds)
+&lt;rehrar&gt; 5. Any additional meeting items
+&lt;rehrar&gt; If anyone has anything, speak up. :)
+&lt;moneromooo&gt; If anyone wants to test multisig, feel free. PR 2134.
+&lt;gingeropolous&gt; is there a set date for the next code freeze?
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; A little update by me about Monero Integrations
+&lt;rehrar&gt; go for it serhack
+* ferretinjapan has quit (Ping timeout: 240 seconds)
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; So we (I and cryptochangements) are going to release Magento Plugin, In the past few weeks, we worked on a new cool payment box for Monero Integrations.
+&lt;xmrmatterbridge&gt; &lt;serhack&gt;
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; I am currently working on OpenCart too so I think we can release Magento payment box the next week..
+&lt;xmrmatterbridge&gt; &lt;serhack&gt;
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; I have talked to OpenBazaar too and they have told me that Monero + Openbazaar would be nice.. it will be a difficult task but I think I can do it
+&lt;xmrmatterbridge&gt; &lt;serhack&gt; you can go on, rehrar
+&lt;moneromooo&gt; Everytime I read OpenBazaar, it makes me want to punch that scammer from a few years back...
+&lt;rehrar&gt; alright, thanks man :)
+&lt;rehrar&gt; atrides?
+&lt;moneromooo&gt; That's the one.
+&lt;rehrar&gt; doesn't he still run Dwarfpool?
+&lt;gingeropolous&gt; yeah, and ppl still mine on it
+&lt;rehrar&gt; We should encourage them not to
+* potyt_ (~potyt@cpc93784-hari17-2-0-cust3963.20-2.cable.virginm.net) has joined
+&lt;rehrar&gt; Either way: 6. Confirm next meeting date/time
+&lt;rehrar&gt; December 3rd? Same time?
+&lt;gingeropolous&gt; so no freeze date, eh?
+* TinusMars has quit (Ping timeout: 260 seconds)
+&lt;rehrar&gt; Should we move time because daylight savings?
+&lt;moneromooo&gt; About mid december
+&lt;gingeropolous&gt; word.
+&lt;ArticMine&gt; Please do not move the time
+&lt;moneromooo&gt; Or january. Unclear.
+&lt;rehrar&gt; ok, time not moved
+* dxdr has quit (Ping timeout: 240 seconds)
+&lt;rehrar&gt; FP would have a better answer?
+&lt;hyc&gt; isn't a release due in January?
+&lt;hyc&gt; and we're supposed to freeze a month before
+&lt;iDunk&gt; March
+&lt;gingeropolous&gt; well dec or jan gives us 3 months
+&lt;hyc&gt; ok
+&lt;rehrar&gt; There's a new freeze/release schedule isn't there?
+&lt;hyc&gt; mebbe someone can open a meta issue and set some dates into it
+&lt;gingeropolous&gt; i thought we had 3 months of freeze for more testing / fixing than before ....
+* potyt has quit (Ping timeout: 248 seconds)
+&lt;moneromooo&gt; 3 months of freeze is gonna make me punch someone else :P
+&lt;moneromooo&gt; It's branch, then release from the brnch aftrer 2-3 months.
+&lt;moneromooo&gt; It's already painful when stuff doens't get merged after a month.
+&lt;ArticMine&gt; The big one is the bullet proofs
+* potyt_ has quit (Ping timeout: 258 seconds)
+&lt;gingeropolous&gt; right. i thought branch is a freeze... i.e., feature freeze.... i.e., freeze on adding wacky new stuff that requires bandaloots and warples
+&lt;moneromooo&gt; That's not likely to be ready by then.
+* defterade (~AndChat54@ip565ee97d.direct-adsl.nl) has joined
+* defterade_ has quit (Read error: Connection reset by peer)
+&lt;gingeropolous&gt; but yeah... perhaps that should be documented somewhere
+&lt;rehrar&gt; (Not to interrupt, but meeting is over for those who need to go, discussion can of course continue)
+* potyt (~potyt@88.202.224.92.adsl.inet-telecom.org) has joined
+* jtgrassie (~jtgrassie@2607:fb90:789:8ce6:54e8:2254:1068:8d49) has joined
+&lt;rehrar&gt; Alright. You guys are the best! thanks for being a part of this community, and developing the software we all know and love as Morono
+&lt;msvb-lab&gt; rehrar: Thanks, good flow of topics, great moderation.
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"11"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

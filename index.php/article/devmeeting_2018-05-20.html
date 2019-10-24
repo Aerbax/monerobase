@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-05-20 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-05-20.html" />
+<meta name="description" content="Highlights
+
+Monero Integrations Team has released a payment gate way for OpenCart
+	https://github.com/monero-integrations/monerocart
+	
+	Stoffu has added automatic popping of bad version blocks
+	rbrunner is working on an easier MultiSig implementation
+	sarang is analyzing an implementation of non-interactive refunds
+	https://www.sharela" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-05-20.html" />
+
+    <title>DevMeeting 2018-05-20 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-05-20.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-05-20</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="1" role="article" about="/index.php/article/devmeeting_2018-05-20" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-05-20" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-05-20T18:38:22+00:00">Sun, 05/20/2018 - 14:38</span>
+          <span property="schema:dateCreated" content="2018-05-20T18:38:22+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4>Highlights</h4>
+
+<ul><li>Monero Integrations Team has released a payment gate way for OpenCart
+	<ul><li><a class="external free" href="https://github.com/monero-integrations/monerocart" rel="nofollow">https://github.com/monero-integrations/monerocart</a></li>
+	</ul></li>
+	<li>Stoffu has added automatic popping of bad version blocks</li>
+	<li>rbrunner is working on an easier MultiSig implementation</li>
+	<li>sarang is analyzing an implementation of non-interactive refunds
+	<ul><li><a class="external free" href="https://www.sharelatex.com/read/vcyxgpntfsgz" rel="nofollow">https://www.sharelatex.com/read/vcyxgpntfsgz</a></li>
+	</ul></li>
+	<li>BulletProof audits are still underway</li>
+	<li>Serhack is working on a Mastering Monero book
+	<ul><li>Preview: <a class="external free" href="https://masteringmonero.com/book/preview.pdf" rel="nofollow">https://masteringmonero.com/book/preview.pdf</a></li>
+	</ul></li>
+	<li>MyMonero desktop app is ready for testing.
+	<ul><li><a class="external free" href="https://github.com/mymonero/mymonero-app-js/releases/tag/v1.0.0-rc3" rel="nofollow">https://github.com/mymonero/mymonero-app-js/releases/tag/v1.0.0-rc3</a></li>
+		<li><a class="external free" href="https://www.reddit.com/r/Monero/comments/8kumc0/mymonero_desktop_app_release_candidate_available/" rel="nofollow">https://www.reddit.com/r/Monero/comments/8kumc0/mymonero_desktop_app_release_candidate_available/</a></li>
+	</ul></li>
+	<li>Next meeting June 3rd, 2018</li>
+</ul><p> </p>
+
+<h4>Full Log</h4>
+
+<pre>
+1:00 PM &lt;rehrar&gt; alright, meeting time!
+1:01 PM &lt;rehrar&gt; https://github.com/monero-project/meta/issues/222
+1:01 PM &lt;rehrar&gt; 1. Greetings
+1:01 PM &lt;rehrar&gt; Who's ready to Monerooooo? Let me see you raise those hands and raise those voices!!!
+1:02 PM &lt;rbrunner&gt; I don't know how to mooo
+1:02 PM → serhack joined (1f9d7c0b@gateway/web/cgi-irc/kiwiirc.com/ip.31.157.124.11)
+1:02 PM &lt;erciccione_[m]&gt; whoop whoop
+1:02 PM &lt;serhack&gt; Hi!
+1:02 PM &lt;serhack&gt; Hi
+1:02 PM &lt;cryptochangement&gt; rbrunner: only mooo can moo of course
+1:02 PM &lt;rbrunner&gt; :)
+1:02 PM &lt;rehrar&gt; Weak response. I said who's readaaaaay?
+1:02 PM — +moneromooo looks on suspiciously
+1:02 PM &lt;@ArticMine&gt; hi
+1:02 PM &lt;rehrar&gt; *sigh* Monero isn't a rock concert, I guess.
+1:02 PM &lt;shortfinal&gt; x
+1:03 PM &lt;endogenic&gt; sort of here
+1:03 PM &lt;rehrar&gt; moneromooo is a confusing name. It implies cow, but he's obviously the GOAT ;)
+1:03 PM &lt;vp11&gt; lol
+1:03 PM &lt;rehrar&gt; (just learned what that meant recently)
+1:04 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:04 PM &lt;rehrar&gt; Tell me, people. Watcha been up to? Increase our morale in the market of blood.
+1:05 PM &lt;serhack&gt; Monero Integrations Team released the Monero Payment Gateway for Opencart, a popular e-shop platform. https://github.com/monero-integrations/monerocart
+1:05 PM &lt;+moneromooo&gt; More sync bug fixing.
+1:05 PM → glv joined (~glv@2a01:e34:ed03:c7d0:b8d2:10a6:1568:afb8)
+1:05 PM &lt;rehrar&gt; woohoo!
+1:06 PM &lt;+moneromooo&gt; automatic popping of bad version blocks by stoffu (when the user doesn't update in time despite monerod moaning about it)
+1:06 PM &lt;rehrar&gt; where are we at with 0.12.1? Mr. Potatohead said he'd be working on that this weekend, right?
+1:07 PM ⇐ sneurlax quit (~r@173.254.233.2) Ping timeout: 260 seconds
+1:07 PM ⇐ lithiumpt quit (~lithiumpt@185.156.175.108) Ping timeout: 248 seconds
+1:07 PM &lt;+moneromooo&gt; fluffypony said monday last time. Whether this is the last delay or not, who knows.
+1:07 PM &lt;rehrar&gt; 0.12.1 will eventually just become 0.13
+1:07 PM &lt;cryptochangement&gt; iirc he said there's some git stuff to be done with reverting something and such
+1:08 PM &lt;iDunk&gt; Hmm, he made an Asylum4You type thing for one of the PRs.
+1:09 PM ⇐ NonaSuomy quit (~NonaSuomy@kodi/staff/TeknoJuce) Ping timeout: 250 seconds
+1:10 PM &lt;rehrar&gt; anyone do anything recently? We been a bit slow?
+1:10 PM &lt;rbrunner&gt; I started to program my MMS design for easy multisig. Progress is good so far, and I already know that the raw number of lines of code will be quite reasonable
+1:10 PM ⇐ amiuhle quit (~amiuhle@S010664777da98893.cg.shawcable.net) Ping timeout: 276 seconds
+1:10 PM &lt;rbrunner&gt; I even found a partner, or better said they found me: asymptotically (u/asymptotically508 on reddit) started to implement a first messaging daemon based on Bitmessage
+1:11 PM &lt;sarang&gt; I finished up an analysis of noninteractive refunds and am finalizing coursework for my upcoming crypto outreach class
+1:11 PM &lt;rehrar&gt; you guys are doing something really awesome!
+1:12 PM &lt;rbrunner&gt; Is there an ELI5 for those refunds somewhere?
+1:13 PM &lt;sarang&gt; Yes, let me pull up the link rbrunner
+1:13 PM &lt;sarang&gt; Here's the link to the tech note: https://www.sharelatex.com/read/vcyxgpntfsgz
+1:14 PM &lt;serhack&gt; The Mastering Monero Resource needs some feedbacks on the content. If you want to help, please check out on https://github.com/monerobook/monerobook/pulls
+1:14 PM &lt;rbrunner&gt; Thanks, sarang, will check that!
+1:14 PM &lt;sarang&gt; I'll put it in the MRL repo soon for further review
+1:14 PM &lt;sarang&gt; I'll be working with some Purdue researchers on a more formal version for journal submission at some point
+1:14 PM &lt;sarang&gt; it's a good collaboration
+1:15 PM &lt;sarang&gt; Also, BP audits are underway still, nothing new to report
+1:15 PM &lt;sarang&gt; funding is fully complete thanks to rehrar and the many generous contributors
+1:15 PM &lt;rehrar&gt; still looking like completing on time?
+1:16 PM &lt;sarang&gt; I don't foresee any delays
+1:16 PM &lt;rehrar&gt; yay
+1:17 PM &lt;rehrar&gt; also, thanks serhack for the Mastering Monero update
+1:17 PM &lt;rehrar&gt; anything else fun to report?
+1:18 PM &lt;erciccione_[m]&gt; the guide for the GUI is erady, we only need to implement it
+1:18 PM &lt;erciccione_[m]&gt; rehrar: could you add a link for downloading the guide on the website as soon as 0.12.1 is out?
+1:19 PM &lt;rehrar&gt; sure
+1:19 PM ⇐ iDunk quit (~iDunk@unaffiliated/idunk) Ping timeout: 260 seconds
+1:19 PM &lt;erciccione_[m]&gt; great, thanks.
+1:19 PM &lt;rehrar&gt; alrighty
+1:19 PM &lt;rehrar&gt; I think serhack has one more thing, and then we'll move on
+1:20 PM &lt;serhack&gt; https://masteringmonero.com/book/preview.pdf &lt;- Mastering Monero Preview with some illustrations
+1:20 PM &lt;rehrar&gt; thanks serhack
+1:20 PM &lt;rehrar&gt; 3. Code + ticket discussion / Q &amp; A
+1:21 PM &lt;rehrar&gt; moneromooo, you wanna take over here? It'd be best if fluffypony was here to help out with 0.12.1 release stuff
+1:21 PM → iDunk joined (~iDunk@unaffiliated/idunk)
+1:21 PM &lt;+moneromooo&gt; I just wait for pony to have some time to merge, really.
+1:21 PM → NonaSuomy joined (~NonaSuomy@kodi/staff/TeknoJuce)
+1:21 PM &lt;+moneromooo&gt; I can answer if there are quetions about code.
+1:22 PM &lt;rehrar&gt; Hopefully he can have the time. He does have a watch after all (as we were all reminded this week)
+1:22 PM &lt;rbrunner&gt; lol
+1:22 PM &lt;vp11&gt; ba-dum-tss
+1:22 PM &lt;gingeropolous&gt; aw jeesh
+1:23 PM &lt;+moneromooo&gt; No code question ?
+1:23 PM &lt;rehrar&gt; Any questions for our emperor moneromooo?
+1:23 PM &lt;gingeropolous&gt; uhhmmm... what needs the most testing?
+1:23 PM &lt;+moneromooo&gt; atm, some private code. I might contact you later if you want to test stuff ^_^
+1:23 PM &lt;gingeropolous&gt; ok
+1:24 PM &lt;gingeropolous&gt; and, when are we gonna torture ourselves with another database reformat?
+1:24 PM &lt;+moneromooo&gt; Also last two meetings, I said I had a wallet refresh speedup patchset, and asked if people could time the difference. AFAICT nobody did, so I guess performance is a non issue for people in general.
+1:24 PM &lt;gingeropolous&gt; i timed the diff!
+1:24 PM → ifntifb93 joined (c4342706@gateway/web/cgi-irc/kiwiirc.com/ip.196.52.39.6)
+1:24 PM &lt;+moneromooo&gt; The v2 db stuff is just waiting for pony to release so we can merge to master.
+1:24 PM &lt;endogenic&gt; moneromooo: private code? monero is so centralized
+1:24 PM &lt;+moneromooo&gt; You did, but then I asked you specifically :)
+1:24 PM &lt;shortfinal&gt; do we have a rough idea as to the next fork? month wise? I know that's sort of a joke considering we're still waiting on a point release. but this past fork I remember some discussion about moving the next fork further out, towards october
+1:24 PM &lt;rehrar&gt; no no endogenic. We're supposed to be the most private cryptocurrency
+1:25 PM &lt;gingeropolous&gt; no no rehrar , we're the most fungible
+1:25 PM &lt;endogenic&gt; hey we should make the pow algo private too, that way no asics
+1:25 PM &lt;rehrar&gt; oh I hope note shortfinal. Bulletproofs are coming in next fork.
+1:25 PM &lt;gingeropolous&gt; hrm, so database reformat and bulletproofs for 0.13?
+1:25 PM &lt;endogenic&gt; i heard a rumor bulletproofs impl has to be redone
+1:25 PM &lt;gingeropolous&gt; lucky 13.
+1:25 PM &lt;endogenic&gt; any truth?
+1:25 PM &lt;+moneromooo&gt; Yay, I'm totally coding in a pub, with my laptop screen plugged into the sports screen. No privacy.
+1:25 PM &lt;sarang&gt; endogenic: ?
+1:25 PM &lt;rehrar&gt; can't we just have a 'NO ASICS ALLOWED' clause in the code of the PoW algo?
+1:26 PM &lt;endogenic&gt; wow mooo that really narrows it down for us
+1:26 PM — +moneromooo thinks again and does not feed
+1:26 PM &lt;endogenic&gt; sarang: someone told me they heard that was a result of an audit
+1:26 PM &lt;sarang&gt; oh lol
+1:26 PM &lt;sarang&gt; that
+1:27 PM → Lloydimiller4_ joined (~Lloydimil@unaffiliated/lloydimiller4)
+1:27 PM &lt;dEBRUYNE&gt; I think sarang joked about that in the MRL channel
+1:27 PM &lt;dEBRUYNE&gt; I can see someone taking it seriously though lol
+1:27 PM &lt;gingeropolous&gt; re: timing, moneromooo  - i'll make a post on reddit to try and get some more testers. its on your fork called some branch something something
+1:27 PM &lt;sarang&gt; BREAKING: no BPs
+1:27 PM &lt;dEBRUYNE&gt; mswip gingeropolous
+1:27 PM &lt;dEBRUYNE&gt; Also PRed I think (not sure if merged)
+1:27 PM &lt;rehrar&gt; bullet proofs aren't bullet proof
+1:28 PM &lt;+moneromooo&gt; Yes, that one, thanks. It does switch the db to v2 btw.
+1:28 PM &lt;@ArticMine&gt; Someone fell for the joke
+1:28 PM &lt;gingeropolous&gt; or is it mswipe2 dEBRUYNE moneromooo ?
+1:28 PM &lt;shortfinal&gt; I'm falling for it right now, help. can't get up.
+1:28 PM &lt;shortfinal&gt; lifealert
+1:28 PM &lt;+moneromooo&gt; That one doesn't exist AFAIK. Joke again ?
+1:28 PM &lt;endogenic&gt; dEBRUYNE: oh ok they were busy at the time so that could have been the case
+1:29 PM → lithiumpt joined (~lithiumpt@185.156.175.108)
+1:29 PM &lt;cryptochangement&gt; I opened up #3839 earlier for mining to subaddresses but stoffu said there isn't any demand for it so we shouldn't do it. do you have an opinion on that or should I just close it?
+1:29 PM &lt;dEBRUYNE&gt; mswip2 gingeropolous
+1:29 PM &lt;gingeropolous&gt; https://github.com/moneromooo-monero/bitmonero/tree/mswip2
+1:29 PM &lt;+moneromooo&gt; It's whatever is in PR #3716
+1:30 PM &lt;rehrar&gt; mining to subaddress is kind of cool, honestly
+1:30 PM &lt;rehrar&gt; if I post my XMR address on the internet (for donations or whatever)
+1:30 PM &lt;+moneromooo&gt; OMG, 19 files changed to allow mining to a subaddress :S
+1:31 PM &lt;rehrar&gt; and then somebody goes to a pool and puts that XMR address in the pool software, if I mined on that site, then they see how much Monero I mined.
+1:31 PM &lt;cryptochangement&gt; yea... that was also his problem
+1:31 PM &lt;endogenic&gt; moneromooo that's just it
+1:31 PM &lt;vp11&gt; rehrar, to be honest most people are mining in pools, and pool support to subaddresses is trivial (I think at least a few pools are already doing it)
+1:31 PM &lt;endogenic&gt; multiply that by rebase work
+1:31 PM &lt;endogenic&gt; afk
+1:32 PM &lt;rehrar&gt; bai
+1:32 PM &lt;cryptochangement&gt; it is basically that we shouldn't parse the mining address until we get to actually constructing the transaction so it slightly touches a bunch of files
+1:32 PM &lt;endogenic&gt; see you
+1:32 PM &lt;+moneromooo&gt; I'll read it later.
+1:32 PM &lt;rehrar&gt; alright, move in?
+1:32 PM &lt;cryptochangement&gt; ok thnx
+1:33 PM &lt;rehrar&gt; *on
+1:33 PM &lt;rehrar&gt; 4. Any additional meeting items
+1:33 PM &lt;rehrar&gt; msvb-lab: wanted to ask something if I remember
+1:34 PM &lt;sarang&gt; Oh, there was a recent proposal for time-limited outputs
+1:35 PM &lt;rbrunner&gt; Saw it on reddit. Is that new, or has any other coin already tried something like that?
+1:36 PM &lt;rehrar&gt; he doesn't seem to be around so I'll just paste what he said for people's information
+1:36 PM &lt;msvb-lab&gt; Ups.
+1:36 PM &lt;rehrar&gt; oh yay!
+1:36 PM &lt;gingeropolous&gt; i doubt any coin has tried it. most coins can just prune spent outs.
+1:36 PM &lt;msvb-lab&gt; Indeed, firmware development for the hardware badges has begun.
+1:36 PM &lt;msvb-lab&gt; And so if any software developers here would like to learn to program embedded systems, they can make our badges light up.
+1:37 PM &lt;msvb-lab&gt; So my question/request is for those who are interested in charlieplexed LED badge circuits to contact me if they want to create firmware.
+1:37 PM &lt;+moneromooo&gt; Relatedly, back when there was talk about daughter chains, I was toying with the idea of having temporary daughter chains, which would live for, N months, a new one starting every N months, offset slightly. Move monero to it for daily use, then anything left moves back before it dies (possibly to the new temp chain, since offset).
+1:37 PM &lt;msvb-lab&gt; I'll have a set of sneak preview badges in about a month to send out.
+1:37 PM &lt;msvb-lab&gt; That's all, thanks rehrar.
+1:37 PM &lt;+moneromooo&gt; and then nobody talked about daughter chains ever again for a long time :D
+1:38 PM &lt;sarang&gt; lol
+1:38 PM &lt;sarang&gt; I hadn't heard that idea
+1:39 PM &lt;rbrunner&gt; As if syncing *one* chain wasn't hard enough already :)
+1:39 PM &lt;@ArticMine&gt; Daughter chains that also use demurrage and are merged mined are something that is worth looking at
+1:39 PM &lt;rehrar&gt; is dandelion tx stuff something that can be useful for Moruno?
+1:39 PM &lt;@ArticMine&gt; For pr unable / expiring tx for example
+1:40 PM &lt;+moneromooo&gt; harhar: you mean for monero ?
+1:40 PM &lt;rehrar&gt; mrunooomo: ye
+1:41 PM &lt;rehrar&gt; do people know what I mean when I say dandelion thingies?
+1:41 PM &lt;_Slack&gt; &lt;nanoakron&gt; mooo - which PR is the wallet refresh timing one? I’m happy to test
+1:41 PM &lt;vp11&gt; John Alan recently published in r/Monero about the core team GPG keys, mentioning that Riccardo's key (https://github.com/monero-project/monero/tree/master/utils/gpg_keys) isn't signed by anyone.
+1:41 PM &lt;vp11&gt; As far as I'm concerned it's not a big deal, but since a lot of people this week are finding multiple reasons to defecate over our CEO (/s), I thought at least an explanation of why it's not a big deal could be provided by you, important people :D
+1:41 PM &lt;rehrar&gt; sign via signal is the way to be
+1:41 PM &lt;gingeropolous&gt; nanoakron: moneromooo&gt; It's whatever is in PR #3716
+1:42 PM &lt;_Slack&gt; &lt;nanoakron&gt; Thanks
+1:42 PM &lt;+moneromooo&gt; 3716, and it does upgrade your db to v2, which means you always have to use the v2 patch with that db till it's merged.
+1:43 PM &lt;rehrar&gt; just google Dandelion Protocol
+1:43 PM &lt;_Slack&gt; &lt;nanoakron&gt; Hrm…
+1:43 PM &lt;rehrar&gt; maybe for MRL to look at
+1:43 PM &lt;rehrar&gt; but I think good amount of overlap with kovri
+1:43 PM &lt;rehrar&gt; in terms of what trying to accomplish
+1:43 PM &lt;sarang&gt; The Dandelion Protocol sounds like the title of a PG-rated crime novel
+1:44 PM &lt;rehrar&gt; Baby's first crime thriller
+1:44 PM &lt;rbrunner&gt; Hm, the links that come up on Google are a year old?
+1:44 PM &lt;rehrar&gt; PIVX implemented it for a reason or other
+1:44 PM &lt;rehrar&gt; basically to make it harder for malicious nodes to tell where tx are coming from
+1:45 PM &lt;sarang&gt; Link to original paper: https://arxiv.org/pdf/1701.04439.pdf
+1:46 PM &lt;sarang&gt; Looks like a fun exercise in sparse graph theory
+1:46 PM &lt;rehrar&gt; just a thought
+1:47 PM &lt;rehrar&gt; alright, nothing else?
+1:47 PM &lt;rehrar&gt; confirm next meeting time?
+1:47 PM &lt;rehrar&gt; #twoweeks
+1:48 PM &lt;rehrar&gt; March 3rd. Any objections?
+1:48 PM &lt;dEBRUYNE&gt; Perhaps endogenic could give us an update on MyMonero
+1:48 PM &lt;rehrar&gt; he left
+1:48 PM &lt;dEBRUYNE&gt; If he's not afk :P
+1:48 PM &lt;endogenic&gt; back now
+1:48 PM &lt;iDunk&gt; Why not January 3rd ?
+1:48 PM &lt;rehrar&gt; hai
+1:48 PM &lt;endogenic&gt; so the desktop apps are out
+1:48 PM &lt;endogenic&gt; go download them on github?
+1:48 PM &lt;endogenic&gt; !*
+1:49 PM &lt;ifntifb93&gt; will mymonero be in fdroid?
+1:49 PM &lt;endogenic&gt; the ios app is being reviewed by apple. they need extra time
+1:49 PM &lt;endogenic&gt; ifntifb93: yes
+1:49 PM &lt;endogenic&gt; definitely
+1:49 PM &lt;dEBRUYNE&gt; Where's the announcement haha
+1:49 PM &lt;rehrar&gt; they don't give you a timeline for that eh endogenic?
+1:49 PM &lt;endogenic&gt; dEBRUYNE: we not launched yet :)
+1:49 PM &lt;dEBRUYNE&gt; Also, I am saddened by the absence of a pre-announcement
+1:49 PM &lt;endogenic&gt; well
+1:49 PM &lt;endogenic&gt; this is it
+1:50 PM &lt;ifntifb93&gt; great! is android apk available already too?
+1:50 PM &lt;dEBRUYNE&gt; Oh perhaps you got me confused
+1:50 PM &lt;endogenic&gt; the mymonero initial release offering
+1:50 PM &lt;dEBRUYNE&gt; I thought the desktop apps were live already :p
+1:50 PM &lt;unknownids&gt; woooo
+1:50 PM &lt;endogenic&gt; ifntifb93: no i'm building the native app
+1:50 PM &lt;unknownids&gt; mymonero ico buy buy buy
+1:50 PM &lt;endogenic&gt; i'll make the android source repo public so someone can help
+1:50 PM &lt;cryptochangement&gt; is it backed by the MEA tho?
+1:50 PM &lt;endogenic&gt; yes
+1:50 PM &lt;endogenic&gt; naturally
+1:50 PM &lt;cryptochangement&gt; alright I'll go all in then
+1:50 PM &lt;endogenic&gt; good
+1:51 PM &lt;endogenic&gt; we'll do a secondary and tertiary offering
+1:51 PM &lt;ifntifb93&gt; mea is great
+1:51 PM &lt;+moneromooo&gt; The amount of bullshit *in a dev meeting* is wasting everyone's time.
+1:51 PM &lt;endogenic&gt; said mooo
+1:51 PM &lt;iDunk&gt; That's why I basically stopped reading them.
+1:51 PM &lt;rehrar&gt; link to Github desktop apps?
+1:51 PM ⇐ PuebloZag quit (506d1957@gateway/web/freenode/ip.80.109.25.87) Quit: Page closed
+1:51 PM &lt;dEBRUYNE&gt; This I guess -&gt; https://github.com/mymonero/mymonero-app-js/releases/tag/v1.0.0-rc3
+1:52 PM &lt;rehrar&gt; great, thanks
+1:52 PM &lt;endogenic&gt; well it seems this isnt the venue
+1:52 PM &lt;cryptochangement&gt; looks like there are binaries and everything so it's official!
+1:52 PM &lt;endogenic&gt; we may be spamming
+1:52 PM &lt;rehrar&gt; and thanks endogenic :)
+1:52 PM &lt;rehrar&gt; next meeting on the third
+1:52 PM &lt;rehrar&gt; thanks for coming. Meeting over.
+</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"1"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

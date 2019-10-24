@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-12-17 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-12-17.html" />
+<meta name="description" content="Highlights[ ]
+
+An option to disable DNS lookups has been added (to assist with offline mode)" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-12-17.html" />
+
+    <title>DevMeeting 2017-12-17 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-12-17.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-12-17</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="9" role="article" about="/index.php/article/devmeeting_2017-12-17" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-12-17" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-12-17T21:07:52+00:00">Sun, 12/17/2017 - 16:07</span>
+          <span property="schema:dateCreated" content="2017-12-17T21:07:52+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-12-17&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>An option to disable DNS lookups has been added (to assist with offline mode)</li>
+	<li>Bulletproofs are live on TestNet
+	<ul><li>The math has been reviewed and looks good. Now it's time to really test it.</li>
+		<li>"The best test for crpyto is time" --Surae</li>
+		<li>A huge discussion(which took up most of the meeting time) on when to implement in production. The 2018 March or September hardfork...</li>
+		<li>Should BP's not make it into the March hardfork, a reduction in fees will be implemented.</li>
+	</ul></li>
+	<li>The Monero Hardware team had a breakthrough today that allows for easier firmware upgrades.</li>
+	<li>Next meeting Jan 14, 2018</li>
+</ul><p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-12-17&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. March hardfork items + code freeze
+&lt;fluffypony&gt; 4. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 5. Any additional meeting items
+&lt;fluffypony&gt; 6. Confirm next meeting date/time
+&lt;fluffypony&gt; I think we've done 1. so we'll skip it
+* msvb-mob (~michael@2a02:b18:f5ee:f21a:d520:6c76:9203:95c4) has joined
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; well Bulletproofs went live on testnet
+&lt;fluffypony&gt; so there's that
+&lt;fluffypony&gt; and we merged some stuff
+&lt;fluffypony&gt; moneromooo: anything in particular you want to highlight?
+&lt;moneromooo&gt; Ah, whether to enable them for v7 or v8 on mainnet.
+&lt;fluffypony&gt; that's the next point
+&lt;fluffypony&gt; I meant anything in 2. you want to highlight :)
+&lt;moneromooo&gt; Not in particular,  no.
+&lt;HUCK45&gt; Hey all, I just saw that awesome project recently and a question came to my mind- why there isn’t any option for GPU mining instead of CPU? Browsers these days allow that, by webgl for example (depending on the user settings, but on default it uses gpu)
+&lt;fluffypony&gt; HUCK45: we're in a meeting - feel free to take that to #monero
+&lt;rehrar&gt; HUCK45 we're in a dev meeting right now. :) This'll have to wait.
+* andrewdo (~andrew@cpe-45-48-53-231.socal.res.rr.com) has joined
+&lt;suraeNoether&gt; as far as MRL is concerned: the math on bulletproofs seems tight, but the best test for cryptography is time
+&lt;fluffypony&gt; ok so I'll highlight a few PRs
+&lt;fluffypony&gt; suraeNoether: not there yet
+&lt;suraeNoether&gt; oh woops
+&lt;fluffypony&gt; #2878 tightens up --offline mode by disabling DNS lookups
+* m2049r[m] (m2049rmatr@gateway/shell/matrix.org/x-vhvwtftntqyrrsxo) has joined
+&lt;fluffypony&gt; #2877 refactors a bunch of p2p stuff
+&lt;fluffypony&gt; and then the obvious bug fixes and improvements
+&lt;fluffypony&gt; Bulletproofs on testnet is in #2883
+&lt;fluffypony&gt; which brings us to 3. March hardfork items + code freeze
+&lt;fluffypony&gt; so v7 already has sorted inputs
+* TinusMars_ (51f0265c@gateway/web/freenode/ip.81.240.38.92) has joined
+&lt;fluffypony&gt; moneromooo: do you want to explain that?
+* TinusMars has quit (Ping timeout: 260 seconds)
+* andrewdo has quit (Ping timeout: 240 seconds)
+* TinusMars_ has quit (Client Quit)
+&lt;moneromooo&gt; Sorted inputs? Or bp ?
+&lt;moneromooo&gt; I assume bp. They're just a smaller sized range proof system.
+&lt;fluffypony&gt; sorted inputs
+&lt;fluffypony&gt; I assume everyone knows what BP is
+&lt;moneromooo&gt; Well, just... sort inputs by their key image. Nothing more.
+&lt;iDunk&gt; Is it like unsorted inputs, but sorted ?
+&lt;fluffypony&gt; iDunk: kinda
+&lt;gingeropolous&gt; and why sort?
+&lt;moneromooo&gt; Kinda :)
+&lt;fluffypony&gt; gingeropolous: that's the big question
+&lt;iDunk&gt; Cool :)
+&lt;gingeropolous&gt; :)
+&lt;fluffypony&gt; it's to prevent metadata leaking
+&lt;fluffypony&gt; eg. the specific wallet used for a tx
+&lt;moneromooo&gt; To avoid broken implementations leak stuff. It'd be better for outputs (ie, always put change last, etc), but unfortunately it doesn't work for outputs as the keys depend on their index.
+&lt;moneromooo&gt; It has become hairy after subaddresses unfortunately, at least for the small benefit.
+&lt;luigi1111w&gt; which?
+&lt;moneromooo&gt; What is the question ?
+&lt;luigi1111w&gt; what is "it"
+&lt;fluffypony&gt; ordering outputs
+&lt;moneromooo&gt; inputs.
+&lt;luigi1111w&gt; subaddress or multisig?
+&lt;moneromooo&gt; I'll rephrase:
+&lt;moneromooo&gt; The input sorting code has become hairy after subaddresses unfortunately, at least for the small benefit.
+&lt;luigi1111w&gt; yes that was clear, just not why
+&lt;luigi1111w&gt; well was clear after &lt;moneromooo&gt; inputs.
+&lt;moneromooo&gt; Because the sorting was internal to construct_tx before, now it's changed in the caller as well.
+&lt;luigi1111w&gt; ok
+&lt;moneromooo&gt; So that means you have to order selected_transfers too, and possible something else, can't recall exactly.
+&lt;moneromooo&gt; Anyway, it's just minutiae particular to our wallet code.
+&lt;luigi1111w&gt; btw, change being last doesn't leak metadata
+&lt;moneromooo&gt; It doesn't leak that change is that ?
+&lt;moneromooo&gt; It doesn't leak that change is last ?
+&lt;luigi1111w&gt; right
+&lt;luigi1111w&gt; or what wallet was used
+&lt;moneromooo&gt; OK, it leaks that change is more likely to be last than otherwise.
+* serhack has quit (Remote host closed the connection)
+&lt;luigi1111w&gt; is it?
+&lt;luigi1111w&gt; what if a popular wallet puts it first
+&lt;moneromooo&gt; x+epsilon &gt; x, even if epsilon is very small.
+&lt;moneromooo&gt; (assuming epsilon is positive)
+&lt;fluffypony&gt; luigi1111w: the onus is on wallets to follow the pattern
+&lt;luigi1111w&gt; what pattern
+&lt;luigi1111w&gt; why is there a pattern
+&lt;moneromooo&gt; I'm lost here, I'll wait.
+&lt;luigi1111w&gt; me too :)
+&lt;moneromooo&gt; Maybe ask your question again, rephrased :)
+&lt;pigeons&gt; I guess if there is an intentional pattern, there won't be several accidental identifying ones
+&lt;rbrunner&gt; Fingerprinting wallets?
+* MineCoins (~MineCoins@gateway/tor-sasl/minecoins) has joined
+* dnaleor has quit (Quit: Leaving)
+&lt;luigi1111w&gt; my point is chnage isn't a fingerprinting pattern for wallets
+&lt;luigi1111w&gt; well my new point, whatever
+&lt;luigi1111w&gt; anyway it doesn't really matter as we're not doing it anyway
+&lt;fluffypony&gt; ok let's talk about Bulletproofs then
+&lt;fluffypony&gt; suraeNoether: your turn :)
+&lt;suraeNoether&gt; whelp, i pretty much had my piece in terms of bulletproofs: there isn't a research-oriented approach to answer if they are ready for implementation.
+&lt;suraeNoether&gt; the best test for crypto is use and time.
+&lt;suraeNoether&gt; the math has been reviewed, looks tight. it may feel like it's being put into production too soon, but...
+&lt;suraeNoether&gt; any time we implement something new, we take some risks in that regard
+&lt;suraeNoether&gt; it looks to me like a no-brainer drop-in replacement for our current range proofs, and to sarang it seems fine. the coding is done.
+&lt;msvb-mob&gt; suraeNoether: Is there a way to merge new features on testnet only?
+&lt;msvb-mob&gt; Maybe a risk reduction strategy I mean?
+&lt;suraeNoether&gt; afaik BP is already on testnet as of ... today?
+&lt;moneromooo&gt; As of a week back or so.
+&lt;suraeNoether&gt; ah there you go
+&lt;msvb-mob&gt; So we have at least that granularity, okay.
+&lt;luigi1111w&gt; I'm going through the code and have some questions
+&lt;suraeNoether&gt; yeah, i mean
+&lt;suraeNoether&gt; luigi1111w: sarang will be able to answer them tomorrow afaik.
+&lt;rehrar&gt; Is the chance of finding meaningful vulnerabilities that much greater if we extend it out to September hard fork? Like, would the extra six months be an adequate amount of time if it was determined that the three months between now and March hardfork wasn't sufficient?
+&lt;suraeNoether&gt; ^ this is actually sort of the tough spot we find ourselves in
+&lt;suraeNoether&gt; thing is, there isn't a real monetary incentive to attack something like BP while its on testnet
+&lt;luigi1111w&gt; attacking it on mainnet is catastrophic, however
+&lt;suraeNoether&gt; yep
+&lt;suraeNoether&gt; its like designing a new parachute
+&lt;rbrunner&gt; Well, we could put bounties for Testnet attacks, no?
+&lt;luigi1111w&gt; meh
+&lt;rehrar&gt; It's simple. We make testnetcoin a 3B dollar project.
+&lt;fluffypony&gt; sure, but then we shouldn't ever deploy anything
+&lt;fluffypony&gt; :-P
+&lt;fluffypony&gt; LOL rehrar
+&lt;suraeNoether&gt; lol
+&lt;suraeNoether&gt; eventually someone has to strap it onto their own backs and jump
+&lt;suraeNoether&gt; is what i mean
+&lt;fluffypony&gt; yes
+&lt;fluffypony&gt; so here's my thinking
+&lt;luigi1111w&gt; the people that could review and attack are pretty small in number
+* StopAndDecrypt has quit (Ping timeout: 248 seconds)
+&lt;fluffypony&gt; we code freeze via a 0.12 branch in the next 2-ish weeks
+* StopAndDecrypt (~StopAndDe@c-73-248-248-9.hsd1.nj.comcast.net) has joined
+* StopAndDecrypt has quit (Changing host)
+* StopAndDecrypt (~StopAndDe@unaffiliated/stopanddecrypt) has joined
+&lt;fluffypony&gt; we include BP for the March HF
+&lt;fluffypony&gt; we release test bins in Jan
+&lt;fluffypony&gt; we re-measure our confidence towards the end of Jan / beginning of Feb
+&lt;fluffypony&gt; if we're not happy with it we change it to v8
+&lt;fluffypony&gt; or the opposite - put it in v8 and move it to v7 towards the end of Jan if we're confident
+* UrsPolar (~SmeN@94.23.45.193) has joined
+* monero (monero@gateway/service/github.com/x-zoqpxfprdnqxyzlm) has joined
+&lt;monero&gt; [monero] xmr-eric opened pull request #2949: Better use of definite article (master...patch-2) https://git.io/vb6It
+* monero (monero@gateway/service/github.com/x-zoqpxfprdnqxyzlm) has left
+&lt;luigi1111w&gt; much more comfortable with the latter
+&lt;luigi1111w&gt; though there's plenty of support for delaying v7 as well
+&lt;rehrar&gt; I think delaying v7 by a couple months would be well worth it?
+&lt;rehrar&gt; and even if the next fork is still held to September, we will still have the multi-input BP to merge, which is exciting, no?
+&lt;fluffypony&gt; I don't think we should move fork dates
+&lt;rehrar&gt; or were both single and multi output BPs being discussed right now?
+&lt;moneromooo&gt; Single only.
+&lt;fluffypony&gt; it's becoming increasingly difficult, and sticking to the predictable fork schedule is advantageous for exchanges, merchants, and pools
+&lt;fluffypony&gt; (emergency hard forks aside)
+&lt;moneromooo&gt; I'm reasonably sure most don't know in advance when the fork is supposed to be anyway.
+&lt;luigi1111w&gt; ^^
+&lt;rehrar&gt; other loser coins: "oh btw mister exchange, we're forking in like two weeks, please update software"
+&lt;fluffypony&gt; moneromooo: they're starting to know
+&lt;dEBRUYNE&gt; As long as they are notified well in advance I don't see a problem with pushing it back 1-2 months
+&lt;dEBRUYNE&gt; Like moneromooo says, most probably don't even know we have one scheduled for march
+&lt;fluffypony&gt; pushing it back by 1-2 months isn't enough time
+&lt;luigi1111w&gt; it might be
+&lt;luigi1111w&gt; although
+&lt;fluffypony&gt; imho we're either happy with March or we need 6 additional months of testing
+&lt;moneromooo&gt; How about 12 ?
+&lt;rehrar&gt; It may be that in the future FP you might be right, but I think we're still small enough that we can pull a stunt like this without too many consequences
+&lt;fluffypony&gt; moneromooo: we might need that, if our confidence level is low
+&lt;moneromooo&gt; The confidence will stay low until 3 months before the fork, when people will start looking.
+&lt;moneromooo&gt; Before 3 months, (almost) nobody will look.
+&lt;suraeNoether&gt; if we give ourselves 6 months of testing for BPs
+&lt;suraeNoether&gt; i'll tell you what'll happen
+&lt;fluffypony&gt; lol
+&lt;suraeNoether&gt; 5 months an 2 weeks will go by
+&lt;fluffypony&gt; so then March it is?
+&lt;moneromooo&gt; Now, if people did look for 6 months... then yes.
+&lt;suraeNoether&gt; and then testing will begin
+&lt;dEBRUYNE&gt; Pushing it back 6 months might perhaps result in it going down the priority list
+&lt;moneromooo&gt; I'm ready to go for september if there is a good reason (ie, someone says they need the 6 months).
+&lt;dEBRUYNE&gt; And then we just get the same # of months of review
+&lt;fluffypony&gt; I'm happy with March, but I'm also open to having my mind changed
+&lt;fluffypony&gt; I'm also reaching out to the paper authors to see if any of them are able to do an implementation review
+&lt;moneromooo&gt; smooth thinks it's too early, for the record.
+&lt;rbrunner&gt; Main argument?
+&lt;moneromooo&gt; At 9 txes per block (monthly average now), I think BPs save ~ 2 GB per month.
+&lt;dEBRUYNE&gt; I think you'll see more transactions once fees drop to an acceptable level though
+&lt;dEBRUYNE&gt; So savings might be even more
+&lt;WWW-XMRTalk-Org|&gt; March with aggressive promotion of testnet usage starting now. We can highlight the need on reddit and provide clear stack exchange instructions and .bins to attract more users
+&lt;luigi1111w&gt; I don't think that helps
+&lt;luigi1111w&gt; you need math and code people
+&lt;luigi1111w&gt; we may have enough (not now, I mean within the next 3 months)
+&lt;rehrar&gt; Ok, just so the discussion doesn't go on forever, and to summarize for anyone reading logs afterwards, there's three main camps here: 1. Launch BPs in March HF, 2. Launch BP's in September HF, 3. Delay March HF to something like a May HF and launch BPs then.
+&lt;rehrar&gt; Of those three, I'd say 3 is reasonable
+&lt;luigi1111w&gt; there are two other non-forking changes that people would like to see in a release too, subaddresses and multisig
+&lt;luigi1111w&gt; former is in already
+&lt;dEBRUYNE&gt; As the fork height isn't set yet, can't we reasses in 2 months?
+&lt;luigi1111w&gt; latter "should" be (IMO) in the next release
+&lt;dEBRUYNE&gt; And see if there has been adequate review
+&lt;fluffypony&gt; luigi1111w: agreed
+&lt;luigi1111w&gt; dEBRUYNE no we are trying to get releases out in reasonable time
+&lt;luigi1111w&gt; ie, not the week before
+&lt;moneromooo&gt; MS is going in soon. Just after I fix the core tests after last rebase :)
+&lt;dEBRUYNE&gt; No I meant whether BP go in or not
+&lt;dEBRUYNE&gt; ^ luigi1111w
+&lt;WWW-XMRTalk-Org|&gt; Is GUI ready for multisig and subaaddresses?
+&lt;dEBRUYNE&gt; Or is two months to late for that to decide?
+&lt;luigi1111w&gt; yes
+&lt;dEBRUYNE&gt; too*
+&lt;dEBRUYNE&gt; Ok
+&lt;fluffypony&gt; dEBRUYNE: basically-final bins need to be out by Feb
+&lt;fluffypony&gt; beginning-ish of Feb
+&lt;luigi1111w&gt; by the time you decide and build the release you're at like one week
+&lt;luigi1111w&gt; agree
+&lt;dEBRUYNE&gt; But also, if we push back the fork 1-2 months, we have more time to release basically-final bins
+&lt;luigi1111w&gt; well 2 months imo
+&lt;luigi1111w&gt; so whenever in march
+&lt;suraeNoether&gt; i think MRL's opinion is 2 1 3, to vote for a september hard fork. because if we are wrong, the cost is large. if we are correct, we save 12 G
+&lt;suraeNoether&gt; grand scheme of things
+&lt;luigi1111w&gt; in grand scheme you don't really save anything
+&lt;dEBRUYNE&gt; If we don't include BP in March 2018, I suppose we can at least fix the fees :-P
+&lt;luigi1111w&gt; since we "might as well" prune that data
+&lt;luigi1111w&gt; later
+&lt;suraeNoether&gt; luigi1111w: yeah, on a long enough time horizon
+&lt;vtnerd&gt; prune the range proofs?
+&lt;luigi1111w&gt; yes
+&lt;fluffypony&gt; if we did 2, any opinions on reducing the base fee in the March HF? we can increase it again later if we need
+* MineCoins has quit (Excess Flood)
+&lt;vtnerd&gt; how would some future user verify inflation?
+&lt;luigi1111w&gt; vtnerd if you desire to do that for your trust model, of course you don't prune
+&lt;dEBRUYNE&gt; fluffypony: we need to tweak the penalty
+&lt;vtnerd&gt; oh so this is like the bitcoin prune old blocks option
+&lt;luigi1111w&gt; well you don't lose the hashability
+&lt;suraeNoether&gt; fluffypony: I think dEBRUYNE may have thought about fee structures more than anyone else
+&lt;fluffypony&gt; yes
+&lt;luigi1111w&gt; JollyMort[m] :)
+&lt;dEBRUYNE&gt; ^ would certainly beat me :P
+&lt;suraeNoether&gt; fair
+&lt;endogenic&gt; is it worth writing a paper on fee structure modeling etc?
+&lt;luigi1111w&gt; longer term I think yes
+&lt;luigi1111w&gt; but we certainly don't have time for march
+&lt;dEBRUYNE&gt; Perhaps we could change the penalty exponent to ^3 instead of ^2
+&lt;fluffypony&gt; suraeNoether: what would your comfort level change to if one or more of the paper's authors reviewed the implementation?
+&lt;suraeNoether&gt; fluffypony: no, the implementation isn't the concern at all, in my mind at least
+&lt;suraeNoether&gt; assuming it's passing unit tests
+&lt;suraeNoether&gt; (which i think it is, iirc)
+* iDunk has quit (Ping timeout: 265 seconds)
+&lt;moneromooo&gt; It is.
+&lt;dEBRUYNE&gt; What if the paper itself is "broken"? Only time will tell that I guess
+&lt;suraeNoether&gt; there ya go. the question is whether or not someone clever can divide by zero and cause a big monero bang with bullet proofs .
+&lt;suraeNoether&gt; dEBRUYNE:  ^ exactly
+&lt;suraeNoether&gt; the best test for crypto is time
+&lt;rehrar&gt; will an aggressive 'test bps on testnet' campaign do anything?
+&lt;luigi1111w&gt; no
+&lt;suraeNoether&gt; i don't think so
+&lt;suraeNoether&gt; if someone found something
+&lt;rehrar&gt; so then that's points for March HF isn't it?
+&lt;suraeNoether&gt; it would be worht more for them to wait until it was implemented than to report it
+&lt;rbrunner&gt; I think with no high-value target to attack nobody will aim at BP
+&lt;luigi1111w&gt; I disagree with suraeNoether and would like the implementation reviewed
+* iDunk (~iDunk@unaffiliated/idunk) has joined
+&lt;rehrar&gt; if we gain little value for waiting, then we shouldn't wait
+&lt;suraeNoether&gt; luigi1111w: I dind't say i dind't want the implementation reviewed. fluffypony asked me if such a review would make me more comfortable with a March HF
+&lt;luigi1111w&gt; then we still disagree
+&lt;luigi1111w&gt; so it's fine :)
+&lt;suraeNoether&gt; heh, okay. well at least we can agree that we both want the implementation reviewed one way or another
+&lt;moneromooo&gt; (thanks stoffu btw, who did review it well)
+&lt;suraeNoether&gt; stoffu is a silent hero
+&lt;rehrar&gt; Meeting is coming to a close. Not necessarily to decide right now, but just to see where everyone is, can we have everyone that was in this conversation verbally state whether they prefer March or September for BPs?
+&lt;fluffypony&gt; in terms of someone finding an issue in the math itself, I don't think that 6 months is a macro-enough timescale for that
+&lt;fluffypony&gt; my preference would be March, pending peer review, or September + fee reduction failing that
+&lt;rbrunner&gt; March: Only with BP live on mainnet you would ever get bright and bad people interested to break something
+&lt;suraeNoether&gt; i have the reversed preference as fluffypony, plus i would like the authors to review the implementation in either case
+&lt;suraeNoether&gt; i think sarang has the same preference as fluffypony though
+&lt;vtnerd&gt; uh, so before meeting adjourns I'd like to prod https://github.com/monero-project/supercop/pull/1
+&lt;moneromooo&gt; What we'd need is for people who may review it to tell is now when they would, and how much time they'd need... Not gonna happen most likely.
+&lt;vtnerd&gt; unedited supercop code is all that is now
+* eoyiytohy (~user@193.138.219.50) has joined
+&lt;luigi1111w&gt; cool
+&lt;pigeons&gt; pre-borromean ringct signature issue was found by 3rd party (and/after the monero team), so people do look at non-mainnet code. and also that incident shows how short timelines are scary
+* MineCoins (~MineCoins@gateway/tor-sasl/minecoins) has joined
+&lt;endogenic&gt; ^
+&lt;fluffypony&gt; also msvb-mob wanted to say a couple of things about the HW wallet
+&lt;suraeNoether&gt; pigeons: that's an extremely good point
+&lt;msvb-mob&gt; Hardware team achieved a breakthrough today in manipulating the MCU factory bootloader without programming.
+&lt;msvb-mob&gt; That means that future firmware developers can flash boards using DFU over USB.
+&lt;msvb-mob&gt; DFU == Device Firmware Upgrade
+&lt;fluffypony&gt; pigeons: good point
+&lt;fluffypony&gt; msvb-mob: nice one!
+&lt;msvb-mob&gt; In the near future we will ask for in depth advice from core development and MRL to confirm our design is on track.
+&lt;msvb-mob&gt; Any questions? You can ask about 34C3 assembly as well.
+&lt;moneromooo&gt; There is a factory bootloader ? As in, code you did not write ?
+&lt;msvb-mob&gt; moneromooo: Yes, most hardware manufacturers (Nordic, STM, Maxim, TI) supply a default bootloader you can't get rid of.
+&lt;msvb-mob&gt; And when they're nice, it's full of USB and DFU.
+&lt;luigi1111w&gt; pigeons thanks, and that memory pushes me towards the wait camp
+&lt;moneromooo&gt; That sounds like a great idea :/
+&lt;msvb-mob&gt; Next topic.
+&lt;luigi1111w&gt; meeting is basically over afaik
+&lt;rbrunner&gt; Please don't forget the GUI wallet Windows installer and put it into service sometime after busy Christmas. I have a PR waiting that gives the last polish to the installer script, and after that it's really, really ready
+&lt;fluffypony&gt; yep that's it
+&lt;fluffypony&gt; one last thing
+&lt;fluffypony&gt; next meeting would be Dec 31
+&lt;fluffypony&gt; but I don't think anyone wants that
+&lt;fluffypony&gt; so push out to Jan 14?
+&lt;rehrar&gt; Monero New Year party?
+&lt;msvb-mob&gt; If we do one week later, we synced again with community meetings.
+&lt;luigi1111w&gt; is that what we want?
+&lt;luigi1111w&gt; ok with both
+&lt;rehrar&gt; you guys don't go anyways :P
+&lt;luigi1111w&gt; and by ok I mean as not ok as normal
+&lt;fluffypony&gt; msvb-mob: I'd prefer us unsynced, otherwise it's just too much on a weekend
+&lt;fluffypony&gt; wife will murder me :-P
+&lt;moneromooo&gt; Technically, that's still synced, but out of phase...
+* moneromooo steps back
+&lt;msvb-mob&gt; Nobody is protesting 14 Jan. I'm not opinionated, just wanted to mention the sync aspect.
+&lt;fluffypony&gt; lol moneromooo
+&lt;endogenic&gt; 👏mooo
+&lt;rehrar&gt; Ok 14 Jan it is
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/9","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"9"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

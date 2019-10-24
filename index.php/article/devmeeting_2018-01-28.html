@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-01-28 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-01-28.html" />
+<meta name="description" content="Highlights[ ]
+
+Bulletproofs can use &quot;batch verification&quot; which can greatly speed things up" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-01-28.html" />
+
+    <title>DevMeeting 2018-01-28 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-01-28.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-01-28</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="8" role="article" about="/index.php/article/devmeeting_2018-01-28" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-01-28" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-01-28T21:06:14+00:00">Sun, 01/28/2018 - 16:06</span>
+          <span property="schema:dateCreated" content="2018-01-28T21:06:14+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2018-01-28&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>Bulletproofs can use "batch verification" which can greatly speed things up
+	<ul><li>Perhaps a reduction to just ~15% of the normal time complexity</li>
+	</ul></li>
+	<li>If you're interested in Monero Debian packages, please join the discussion at <a class="external free" href="https://github.com/monero-project/monero/issues/2395" rel="nofollow">https://github.com/monero-project/monero/issues/2395</a></li>
+	<li>Monero GUI
+	<ul><li>Merged in sub-addresses.</li>
+		<li>Removed the ability for a user to generate payment id's and integrated addresses</li>
+		<li>There is a new "--bootstrap-daemon-address" flag that hopes to speed up syncs</li>
+	</ul></li>
+	<li>March 2018 Hardfork
+	<ul><li>As previously noted, Bulletproofs need additional study before a full public implementation. As such, they will not be included in the March 2018 HF.</li>
+		<li>There are plans to lower the fee model. How it will impact the network is being studied.</li>
+	</ul></li>
+</ul><p> </p>
+
+<p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2018-01-28&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+12:00 PM &lt;rehrar&gt; agenda: https://github.com/monero-project/meta/issues/166
+12:00 PM &lt;rehrar&gt; as always, start with 1. Greetings
+12:00 PM &lt;sarang&gt; yo
+12:00 PM &lt;msvb-lab&gt; Hi there.
+12:00 PM &lt;+hyc&gt; hey
+12:00 PM &lt;rbrunner&gt; Hoi zämme
+12:01 PM &lt;iDunk&gt; Hi
+12:01 PM &lt;pebx&gt; hi
+12:01 PM &lt;rehrar&gt; ArticMine fluffypony luigi1111 luigi1111w smooth NoodleDoodle anonimal anonimobile endogenic gingeropolous vtnerd pigeons
+12:01 PM &lt;pigeons&gt; hi
+12:01 PM &lt;vtnerd&gt; hi
+12:01 PM → bmeynell joined (~bmeynell@142.197.108.175)
+12:02 PM &lt;rehrar&gt; dEBRUYNE Jaquee dsc_ dsc2 ?
+12:02 PM &lt;gingeropolous&gt; oh theres a meeting?
+12:02 PM &lt;rehrar&gt; anyone else?
+12:02 PM &lt;endogenic&gt; no ginger
+12:02 PM &lt;iDunk&gt; moneromooo
+12:02 PM &lt;dEBRUYNE&gt; I am her
+12:02 PM &lt;dEBRUYNE&gt; e
+12:02 PM &lt;rehrar&gt; medusa_ moneromooo othe
+12:02 PM &lt;@smooth&gt; 1
+12:03 PM &lt;rehrar&gt; Well, welcome everyone! :)
+12:03 PM &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+12:03 PM ⇐ dnaleor quit (~dnaleor@host-im1adb.cbn1.zeelandnet.nl) Quit: Leaving
+12:03 PM &lt;rehrar&gt; Anyone have any exciting stuff to report for development?
+12:03 PM &lt;medusa_&gt; hi
+12:03 PM &lt;sarang&gt; MRL Goes To Stanford
+12:04 PM &lt;sarang&gt; It was observed that bulletproofs can have batch verification, which will be great time savings even between separate transaction
+12:05 PM &lt;@ArticMine&gt; hi
+12:05 PM &lt;bearretinjapan&gt; hi
+12:05 PM bearretinjapan → ferretinjapan
+12:05 PM &lt;+hyc&gt; batching is always interesting. have to balance batch size vs latency, waiting for enough txs to arrive to fill a batch
+12:06 PM &lt;sarang&gt; This can be useful for new nodes
+12:06 PM &lt;@smooth&gt; currently the code waits for all the txs before doing anythign with them anyway, although that could change
+12:07 PM &lt;sarang&gt; Initial testing by andytoshi indicated that subsequent proofs were only ~15% of the time complexity of a separate verification
+12:07 PM &lt;+hyc&gt; nice
+12:07 PM &lt;sarang&gt; Yeah, it merges all the multiexp operations into one
+12:07 PM &lt;sarang&gt; effectively replacing group operations with scalar operations
+12:08 PM &lt;sarang&gt; So the time savings really depend on the relative timing between those ops
+12:08 PM → BoldErea joined (~BoldErea@unaffiliated/bolderea)
+12:08 PM &lt;sarang&gt; Anyway, mostly excellent talks at the conference, and good lessons learned
+12:09 PM — sarang will be quiet now
+12:10 PM &lt;rehrar&gt; Anyone else? :) GUI have anything?
+12:11 PM &lt;medusa_&gt; the GUI project has merged sub addresses. also we removed the ability for the user to generate payment ids and integrated addresses
+12:11 PM — xmrscott[m] sent a long message: xmrscott[m]_2018-01-28_17:11:27.txt &lt;https://matrix.org/_matrix/media/v1/download/matrix.org/RqFKwypdZwaYrPPAWeCCziLo&gt;
+12:11 PM &lt;medusa_&gt; in addition, there is a new monerod start up flag, called --boostrap daemon 8https://github.com/monero-project/monero/pull/3165)
+12:12 PM &lt;+hyc&gt; ^^ this looks very good. I wonder if the GUI should use that by default
+12:12 PM &lt;medusa_&gt; the GUi will make use of this too, so there dont exist several implementations of the same thing
+12:12 PM &lt;gingeropolous&gt; is that supplanting Jaquee 's thing?
+12:12 PM → scl joined (~scl@unaffiliated/scl)
+12:12 PM &lt;medusa_&gt; PR is allready here hyc https://github.com/monero-project/monero-gui/pull/1091
+12:13 PM &lt;medusa_&gt; gingeropolous:as far as i understand it, yes
+12:13 PM &lt;rehrar&gt; I'll repaste xmrscott[m]'s message so people who don't want to click don't have to
+12:13 PM &lt;rehrar&gt; David Mirza Ahmad, president of Subgraph OS, has put together a byte-for-byte matching Debian package and is requesting comment on some final pieces: "There some decisions to make for us, like: where does the blockchain data go? Do we start the daemon with systemd by default (feeling like no, as it can be started in GUI)? Appreciate thoughts on this." No one has provided comments on these matters so if anyone here could do so it woul
+12:13 PM &lt;rehrar&gt; d be appreciated. https://github.com/monero-project/monero/issues/2395
+12:14 PM &lt;rehrar&gt; ^
+12:14 PM &lt;pebx&gt; thanks for the update medusa_! this looks very good. we shouldn't forget that GUI is the interface to the rest of the world...
+12:14 PM &lt;msvb-lab&gt; rehrar: Byte for byte matching, you mean as in reproducible build? Gitian?
+12:15 PM — rehrar applauds the GUI people for their consistent quality work
+12:15 PM &lt;pigeons&gt; I looked at his repo and i didnt see the debian control files to reproduce
+12:15 PM &lt;rehrar&gt; xmrscott[m] ^ msvb-lab's question
+12:16 PM &lt;@ArticMine&gt; Any idea on timeline from an update at out end to the repo?
+12:16 PM &lt;xmrscott[m]&gt; I believe so. I'm not familliar with build terminoogy,
+12:17 PM ⇐ scl quit (~scl@unaffiliated/scl) Ping timeout: 265 seconds
+12:18 PM &lt;xmrscott[m]&gt; The sha256 sums match: d5b0295d55f9951a6995e2ecc1516898799b22686ed81ca07b05b493175f2f66
+12:18 PM &lt;xmrscott[m]&gt; (THis is shown on the comments in the GitHub issue)
+12:20 PM &lt;rehrar&gt; Any answer for ArticMine's question?
+12:20 PM &lt;+hyc&gt; unknowable
+12:20 PM &lt;rehrar&gt; bam
+12:20 PM &lt;+hyc&gt; distro release schedules are seldom anywhere near upstream release cycles
+12:21 PM &lt;@ArticMine&gt; My concern is stale Monero in the distro
+12:21 PM &lt;+hyc&gt; yes
+12:21 PM &lt;+hyc&gt; it's a frequent occurrence in distro packages
+12:21 PM &lt;@ArticMine&gt; With a six month hard for cycle
+12:21 PM &lt;@ArticMine&gt; fork
+12:22 PM &lt;+hyc&gt; which is why I've never put much priority on distrok packaging. reproducible builds are a good thing in and of themself though.
+12:23 PM &lt;rehrar&gt; Alright, if nothing else, we can move on to 3. March hardfork items + code freeze
+12:24 PM &lt;rehrar&gt; Anything to be discussed about the upcoming hard fork? Is there a code freeze date yet?
+12:25 PM &lt;dEBRUYNE&gt; Preferably very soon. Then we don't have to rush stuff
+12:25 PM &lt;@ArticMine&gt; ... and bulletproofs
+12:25 PM &lt;sarang&gt; What about BPs?
+12:26 PM &lt;+hyc&gt; seems they're off the table for March, since audits haven't been completed
+12:26 PM &lt;+hyc&gt; 3rd party audits
+12:26 PM &lt;sarang&gt; Correct
+12:26 PM &lt;rehrar&gt; missed the meeting last week ArticMine
+12:26 PM &lt;rbrunner&gt; Have any been *started* in the meantime?
+12:26 PM &lt;sarang&gt; I'm waiting on a formal SoW from one of the groups
+12:27 PM &lt;sarang&gt; Then I'll present my recommendations among all groups
+12:27 PM &lt;medusa_&gt; since BP seems to be off the table, is the new wallet option the only planned change to address current high fee situation ?
+12:27 PM &lt;sarang&gt; We're looking at ~40K per professional audit
+12:27 PM &lt;sarang&gt; and hopefully get benedikt to do a review of at least the Java since he wrote the damn thing
+12:27 PM &lt;sarang&gt; for $
+12:28 PM &lt;rehrar&gt; medusa_: we should crash the price in the meantime
+12:28 PM ⇐ BoldErea quit (~BoldErea@unaffiliated/bolderea) Quit: Leaving
+12:28 PM &lt;sarang&gt; Should we include batch BP verification in the audited code?
+12:28 PM &lt;sarang&gt; Or put that aside
+12:28 PM &lt;endogenic&gt; rehrar: was that a preannouncement? :)
+12:28 PM &lt;endogenic&gt; sarang: perhaps as optional extra credit?
+12:28 PM → atezerotwo joined (~Mutter@cpc73668-dals20-2-0-cust632.20-2.cable.virginm.net)
+12:29 PM &lt;+hyc&gt; we should audit whatever we hope to release in Sept.
+12:29 PM &lt;+hyc&gt; otherwise we'll just need to do all this again for each incremental improvement. ??
+12:30 PM → Mutter joined (~CryptoCom@197.210.227.38)
+12:30 PM &lt;sarang&gt; It'll be included in an updated whitepaper in Feb
+12:30 PM &lt;sarang&gt; by benedikt et al., not by me
+12:30 PM → BoldErea joined (~BoldErea@unaffiliated/bolderea)
+12:31 PM &lt;rbrunner&gt; Well, maybe plan in a way that makes pretty damn sure we will be ready in September :)
+12:31 PM &lt;pebx&gt; what about the fees medusa_ mentioned? it's also something the average user sees first and complains about... if we don't release BPs there should be some lowering of fees beside the low to standard thing
+12:32 PM &lt;dEBRUYNE&gt; I suppose we can discuss lowering the low priority level since it's arbitrary anyway, but we can't lower the default because we'd have to tweak the penalty as well
+12:32 PM &lt;ferretinjapan&gt; BPs being released in March was also cited as a reason for onot loweiring fees.
+12:32 PM &lt;@smooth&gt; we can lower the default a little i think, but no one has taken the time to study it
+12:32 PM &lt;@smooth&gt; so actually no, we can't
+12:33 PM &lt;sarang&gt; As to BP funding, I plan to open an FFS with "checkpoints" for an amount covering at least one pro audit and another for a review by one of the paper authors
+12:33 PM ⇐ user111 quit (~user23432@99.150.228.240) Ping timeout: 240 seconds
+12:33 PM &lt;endogenic&gt; i was just going to ask about that, smooth
+12:33 PM &lt;@smooth&gt; 'default' isn't really the right term though. the pending PR changes the 'default' to be dynamic
+12:33 PM &lt;dEBRUYNE&gt; old default then? :P
+12:33 PM &lt;@smooth&gt; yeah "medium" whatever you want to call it
+12:33 PM &lt;@smooth&gt; "normal"
+12:33 PM &lt;rbrunner&gt; base fee?
+12:33 PM &lt;dEBRUYNE&gt; smooth: any opinion about lowering the lowest level?
+12:33 PM &lt;@smooth&gt; etc.
+12:34 PM &lt;rehrar&gt; Base fee sounds good
+12:34 PM &lt;@smooth&gt; base fee doesn't seem like the best term to me
+12:34 PM ⇐ mulu quit (~mulu@c-76-111-202-31.hsd1.fl.comcast.net) Remote host closed the connection
+12:34 PM &lt;@smooth&gt; implies that is actually the fee you pay
+12:34 PM → scl joined (~scl@unaffiliated/scl)
+12:34 PM &lt;@smooth&gt; it is more like a 'fee reference value' or something
+12:34 PM &lt;rehrar&gt; I think it should be more than 'medium' though, because it's the one that will increase the block size. Something a little more souped up than 'medium'?
+12:35 PM &lt;ferretinjapan&gt; floating reference fee?
+12:35 PM → mulu joined  ⇐ BoldErea quit  
+12:35 PM &lt;rehrar&gt; Either way, thoughts on lowering the arbitrary 'Low Fee'?
+12:35 PM &lt;@ArticMine&gt; We have to be careful with the low fee level relative to the 1 tx at penalty (default)
+12:36 PM &lt;@ArticMine&gt; Spam attacks becomes possible if the probability of mining becomes too low
+12:36 PM &lt;pebx&gt; the crypto "market" might crash in the meantime, but it also might not and what if monero's market price until september rises like within the last 8 months?
+12:36 PM &lt;@smooth&gt; ArticMine: but doesn't the probability of mining just depend on how many of each there are and not the fee amount?
+12:37 PM &lt;pebx&gt; the minimum fee is a good protection but also a pain...
+12:38 PM &lt;@smooth&gt; the issue i see with too much of a gap between levels is the incentive to circumvent (just bump up your own fee a little so you are above all the others in the same level but not all the way to the next level)
+12:38 PM &lt;dEBRUYNE&gt; pebx: I'd leave any price predictions out of this discussion. Tomorrow's price is most likely today's price
+12:38 PM &lt;@smooth&gt; the more gap the greater the incentive to do that
+12:38 PM &lt;pebx&gt; dEBU
+12:39 PM ⇐ scl quit (~scl@unaffiliated/scl) Ping timeout: 252 seconds
+12:39 PM &lt;pebx&gt; is it not about price when it comes to fees?
+12:39 PM &lt;@smooth&gt; other than that the low level seems aalmost comletely arbitrary to me
+12:39 PM ⇐ Mutter quit (~CryptoCom@197.210.227.38) Quit: Mutter: www.mutterirc.com
+12:39 PM &lt;dEBRUYNE&gt; Price surely influence fees (as they are denominated in XMR). I was just saying that we should leave *price* prediction out of it
+12:39 PM &lt;rehrar&gt; Well if we want a code freeze "soon", we should try to decide this "soon" too, no? Or would this not be affected really by the freeze?
+12:39 PM &lt;dEBRUYNE&gt; *prediction*
+12:40 PM → Mutter joined (~CryptoCom@197.210.226.182)
+12:40 PM &lt;@ArticMine&gt; I mean how low on the min fee do people want to go?
+12:40 PM &lt;endogenic&gt; can we put together a study on fees and spam? having a shared model (and simulated results) we can reference and improve collectively would be great… certainly would ease the knowledge gap
+12:40 PM &lt;pebx&gt; i didn't want to include any prediction, so i told it might continue or not
+12:40 PM ⇐ Mutter quit (~CryptoCom@197.210.226.182) Client Quit
+12:40 PM &lt;dEBRUYNE&gt; smooth: I guess if we had 1/5th or 1/6th (current is 1/4th) the gap would be still sufficiently small? Also people would have to tweak the code and compile it themselves to make use of the gap
+12:40 PM &lt;@smooth&gt; endogenic: it has been done. we can do another one but until it is done we can't rely on it
+12:41 PM ⇐ mulu quit (~mulu@c-76-111-202-31.hsd1.fl.comcast.net) Read error: Connection reset by peer
+12:41 PM &lt;endogenic&gt; smooth: do you mean the recent writeup?
+12:41 PM &lt;@smooth&gt; endogenic: that one, the older one. whatever is done we can rely on. we can't rely on something that is 'can we do' especially with an imminent freeze
+12:42 PM &lt;@smooth&gt; of course we can do more studies
+12:42 PM &lt;endogenic&gt; smooth: i would only suggest inaction until after study/ confirmation
+12:42 PM ⇐ atezerotwo quit (~Mutter@cpc73668-dals20-2-0-cust632.20-2.cable.virginm.net) Remote host closed the connection
+12:42 PM &lt;@ArticMine&gt; and then nothing for March, after which we will have BP
+12:43 PM &lt;rehrar&gt; Which brings us full circle :P
+12:43 PM &lt;+moneromooo&gt; Can we finish the meeting first, and go back to the fee stuff ?
+12:43 PM &lt;endogenic&gt; lol mooo
+12:43 PM &lt;rehrar&gt; Alright. Moving on then! 4. Code + ticket discussion / Q &amp; A
+12:43 PM &lt;pebx&gt; nice to see you, mooo
+12:43 PM &lt;dEBRUYNE&gt; pebx: Your sentence sounded like that, hence my statement. I could've misinterpreted you though.
+12:43 PM &lt;@ArticMine&gt; I sugest we leave fees aslon for March or at most introduce the wallet side adaptive fee between default and min
+12:44 PM &lt;@ArticMine&gt; alone
+12:44 PM &lt;medusa_&gt; thats allready merged afaik ArticMine
+12:44 PM &lt;@smooth&gt; the adaptive should go in if at all possible from a stability perspective imo
+12:44 PM &lt;@smooth&gt; oh i didn't know it was merged. great
+12:44 PM &lt;pebx&gt; dEBRUYNE my point is, that at some point fees can get insane like they have been / are in bitcoin
+12:44 PM &lt;@ArticMine&gt; Then if it is merged that is all
+12:44 PM &lt;gingeropolous&gt; ^^
+12:45 PM &lt;medusa_&gt; this one no ? https://github.com/monero-project/monero/pull/3123
+12:45 PM &lt;@smooth&gt; yes. lets move on: rehrar&gt; Alright. Moving on then! 4. Code + ticket discussion / Q &amp; A
+12:45 PM &lt;rbrunner&gt; I have a little thing: The Windows installer missed the Fall releases. But surely the March release is a perfect opportunity to finally put it into service ...?
+12:45 PM &lt;+hyc&gt; yeah sounds like we're fine for now on fee
+12:46 PM &lt;gingeropolous&gt; all this code and ticket discussion
+12:47 PM &lt;iDunk&gt; 3186 and 3198 need merging to fix some builds.
+12:47 PM &lt;rbrunner&gt; I hope it's not itself controversial that having a Windows installer would be nice
+12:47 PM &lt;medusa_&gt; absolutely rbrunner, the worlk load regarding that is mostly on the shoulder of the binary builder (pony). we cant really do anything to speed it up i fear
+12:48 PM &lt;rbrunner&gt; Ah well, March is early enough :)
+12:48 PM → Mutter joined (~CryptoCom@197.210.227.149)
+12:48 PM &lt;rbrunner&gt; Just do not forget it :)
+12:48 PM &lt;@luigi1111&gt; I personally prefer portable exe but both are fine with me
+12:49 PM → mulu joined (~mulu@c-76-111-202-31.hsd1.fl.comcast.net)
+12:49 PM &lt;+moneromooo&gt; "portable" and "exe", hmmm :)
+12:49 PM &lt;+hyc&gt; lol
+12:49 PM &lt;dEBRUYNE&gt; pebx: I surely hope the dynamic fee algo has kicked in by then. Anyway, I'll refrain from commenting on fees now.
+12:49 PM → scl and spedex joined  
+12:50 PM &lt;@luigi1111&gt; :)
+12:50 PM &lt;pebx&gt; dEBRUYNE hope is good... but i'll also not comment fees in this meeting any more.
+12:50 PM ⇐ Mutter quit (~CryptoCom@197.210.227.149) Client Quit
+12:51 PM &lt;rehrar&gt; Anything else for code and ticket discussion?
+12:51 PM → Mutter joined (~CryptoCom@197.210.227.223)
+12:51 PM &lt;rehrar&gt; 5. Any additional meeting items (besides fees)?
+12:52 PM &lt;msvb-lab&gt; Or hardware questions.
+12:52 PM → defestdude joined (~Mutter@41.190.14.48)
+12:52 PM &lt;rehrar&gt; did you want to share something msvb-lab?
+12:53 PM &lt;msvb-lab&gt; Nothing to share. We're working on the next gen prototype.
+12:53 PM &lt;msvb-lab&gt; Questions are welcome in any case.
+12:53 PM &lt;rehrar&gt; Alright then.
+12:54 PM &lt;rehrar&gt; 6. Confirm next meeting date/time
+12:54 PM &lt;rehrar&gt; Feb 11th?
+12:54 PM ⇐ scl quit (~scl@unaffiliated/scl) Ping timeout: 276 seconds
+12:54 PM &lt;+hyc&gt; sounds right
+12:54 PM &lt;rehrar&gt; luigi has mentioned a couple times about switching the time
+12:54 PM &lt;+hyc&gt; btw, I'll be at FOSDEM next week. anyone else going?
+12:54 PM &lt;medusa_&gt; i want to thank everyone that is working on making the build envs green. you guys are heros  &lt;3
+12:54 PM &lt;rehrar&gt; don't know if he was serious, but does anyone else agree?
+12:54 PM &lt;+hyc&gt; switch to what time?
+12:54 PM &lt;msvb-lab&gt; hyc: I'll be there too, at FOSDEM in Bruxelles.
+12:55 PM &lt;rehrar&gt; luigi1111 luigi1111w?
+12:55 PM &lt;rehrar&gt; I guess just as a general question, is this time inconvenient for other people?
+12:55 PM &lt;+hyc&gt; seems ok to me
+12:55 PM &lt;rehrar&gt; hyc has spoken
+12:55 PM &lt;+moneromooo&gt; IIRC ArticMine objected.
+12:56 PM &lt;rehrar&gt; I'll probably open a meta issue and ask for opinions.
+12:56 PM &lt;@ArticMine&gt; I would prefer an hour earlier
+12:56 PM &lt;+hyc&gt; good idea
+12:56 PM &lt;rehrar&gt; For now we can have next dev meeting same time, and see about moving others.
+12:56 PM &lt;endogenic&gt; i'm fine with an hour earlier
+12:56 PM &lt;rehrar&gt; Sound ok for everyone?
+12:56 PM &lt;pebx&gt; hyc can't wait for your talk to see it at least online!
+12:57 PM &lt;rbrunner&gt; Yes, one hour earlier is ok as well
+12:57 PM &lt;rehrar&gt; Hmmm...ok, tentative next meeting time Feb 11 at 16:00 UTC
+12:57 PM &lt;rehrar&gt; The time will be open for discussion on the meeting issue
+12:58 PM &lt;rehrar&gt; Meeting over. Thanks for coming everyone. You're all the best, and don't let anyone tell you otherwise.
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/8","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"8"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

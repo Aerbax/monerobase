@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Monero DevLog: Code merges for 2018-06-28 | Monerobase" />
+<link rel="canonical" href="monero_devlog_code_merges_2018-06-28.html" />
+<meta name="description" content="Overview:
+
+Nothing of major note today.  A lot of general bug fixes.
+ 
+
+Code merges/updates:
+
+Merge pull request #40672018-06-28T02:28:34Z (GMT)" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="monero_devlog_code_merges_2018-06-28.html" />
+
+    <title>Monero DevLog: Code merges for 2018-06-28 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="monero_devlog_code_merges_2018-06-28.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">Monero DevLog: Code merges for 2018-06-28</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="50" role="article" about="/article/monero_devlog_code_merges_2018-06-28" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="Monero DevLog: Code merges for 2018-06-28" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-06-28T21:40:16+00:00">Thu, 06/28/2018 - 17:40</span>
+          <span property="schema:dateCreated" content="2018-06-28T21:40:16+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h2>Overview:</h2>
+
+<ul><li>Nothing of major note today.  A lot of general bug fixes.</li>
+</ul><p> </p>
+
+<h3>Code merges/updates:</h3>
+
+<p><br /><a href="https://github.com/monero-project/monero/commit/a9b83f5a6e0bdd493f4283627fc15be5e25c82f0">Merge pull request #4067</a><br /><small>2018-06-28T02:28:34Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4067
+
+9a39b7d wallet2: fix build for windows (std::max again) (moneromooo-monero)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/65c09beaf75c43d57993a317f6448cb42b88c2bb">Merge pull request #4069</a><br /><small>2018-06-28T02:25:00Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4069
+
+49dc78d util: fix mistakes made in #3994 (stoffu)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/8b18401ea05b3ce2db537ca82c624a3044729c7b">Merge pull request #4068</a><br /><small>2018-06-28T02:23:50Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4068
+
+29254fc api/wallet: add missing arg to wallet2::refresh() (stoffu)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/49dc78d99b35c80784e772542485431ba3ceb655">util: fix mistakes made in #3994</a><br /><small>2018-06-28T01:39:04Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+util: fix mistakes made in #3994</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/29254fc06eca6a1696aca2bd02bc5cb69803f01f">api/wallet: add missing arg to wallet2::refresh()</a><br /><small>2018-06-28T01:24:05Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+api/wallet: add missing arg to wallet2::refresh()</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/ba0a7294d054c48723834138c605473c64f12ff4">Merge pull request #4000</a><br /><small>2018-06-28T01:18:41Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4000
+
+4510f41 Wallet API: add some missing override keyword (stoffu)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/4c6de54ee2f820df2d406e4c9e99a4f66591db6c">Merge pull request #3994</a><br /><small>2018-06-28T01:17:25Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #3994
+
+1d17647 epee.string_tools: add conversion between UTF-8 and UTF-16 (stoffu)
+59de6f8 util: add file_locker class (stoffu)
+3d623a8 wallet: prevent the same wallet file from being opened by multiple processes (stoffu)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/008b9036a3d3e6a3419fa7de677f8de878f1bd6a">Merge pull request #4066</a><br /><small>2018-06-28T01:15:10Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4066
+
+84d9e7f blockchain: fix build after waiter::wait prototype change (moneromooo-monero)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/0c76dbdd00ae142a55c4dac49f0fa4361a204aee">Merge pull request #4065</a><br /><small>2018-06-28T01:13:38Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #4065
+
+9b38551 wallet_rpc_server: fix build - forgot to build rpc version (moneromooo-monero)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/4510f417f9726f0043859055408a99ad62f91383">Wallet API: add some missing override keyword</a><br /><small>2018-06-28T00:59:09Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Wallet API: add some missing override keyword
+
+Also remove dust() from UnsignedTransactionImpl (already in PendingTransactionImpl)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/3d623a86d17d4f9884b766fc8e07fc1799ae0a9f">wallet: prevent the same wallet file from being opened by multiple pr</a><br /><small>2018-06-28T00:41:43Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+wallet: prevent the same wallet file from being opened by multiple processes</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/59de6f8d99f07888c199b466dff9ff020e60dab6">util: add file_locker class</a><br /><small>2018-06-28T00:40:31Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+util: add file_locker class</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/1d176473e90d0e75588ac97f32feb354f4b5da37">epee.string_tools: add conversion between UTF-8 and UTF-16</a><br /><small>2018-06-28T00:40:26Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+epee.string_tools: add conversion between UTF-8 and UTF-16</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/9a39b7dd7ff032620278f5636b7fd84c477d7695">wallet2: fix build for windows (std::max again)</a><br /><small>2018-06-27T23:47:48Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+wallet2: fix build for windows (std::max again)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/84d9e7faec030b02406ddce09b4899d5887595e2">blockchain: fix build after waiter::wait prototype change</a><br /><small>2018-06-27T23:24:39Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+blockchain: fix build after waiter::wait prototype change</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/9b38551c3cb696c410790c278df3910eb1786fb1">wallet_rpc_server: fix build - forgot to build rpc version</a><br /><small>2018-06-27T22:34:02Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+wallet_rpc_server: fix build - forgot to build rpc version</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/2329d2f4c818bd4dbb32d74e092440b9ce4be6a7">Merge pull request #3907</a><br /><small>2018-06-27T21:32:33Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #3907
+
+dcbc17e wallet: include a suggested number of confirmations based on amount (moneromooo-monero)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/8a27caeb22a05149a55d29842c07dcce552ad60e">Merge pull request #3998</a><br /><small>2018-06-27T21:30:38Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #3998
+
+8db23df wallet: on first refresh, start off with a quantized height (moneromooo-monero)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/94535735810bfa57d47e91843cc414f904b27612">Merge pull request #3995</a><br /><small>2018-06-27T21:28:57Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #3995
+
+0a5292c wallet2: use decoded amount when reporting repeated output key (stoffu)</pre>
+	</li>
+</ul><p><a href="https://github.com/monero-project/monero/commit/c28a2b0d7d9a15f228af16a439bbcc0fa4a5c122">Merge pull request #3992</a><br /><small>2018-06-27T21:26:23Z (GMT)</small></p>
+
+<ul><li>
+	<pre style="white-space: pre-wrap; width: 81ex;">
+Merge pull request #3992
+
+25c15dc wallet2: use correct fee for split txes (stoffu)</pre>
+	</li>
+</ul></div>
+      
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/50","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"50"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

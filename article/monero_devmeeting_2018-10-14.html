@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Monero DevMeeting 2018-10-14 | Monerobase" />
+<link rel="canonical" href="monero_devmeeting_2018-10-14.html" />
+<meta name="description" content="Highlights
+
+The Monero GUI has been tagged for release, but a couple of patches came in at the last minute that need to be applied (one of them involving Ledger integration)
+	Due to the late GUI release, discussions in today&#039;s dev meeting are mostly focused on how to better get pre-releases into the hands of testers sooner.
+	Reproducible builds are expected to help with this dramatically.
+	
+	Work is ongoing to upgrade the Monero FFS (Forum Funding System): https://" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="monero_devmeeting_2018-10-14.html" />
+
+    <title>Monero DevMeeting 2018-10-14 | Monerobase</title>
+    <link rel="stylesheet" href="../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="monero_devmeeting_2018-10-14.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../index.html" title="Home" rel="home">
+      <img src="../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">Monero DevMeeting 2018-10-14</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="59" role="article" about="/article/monero_devmeeting_2018-10-14" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="Monero DevMeeting 2018-10-14" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-10-14T18:11:23+00:00">Sun, 10/14/2018 - 14:11</span>
+          <span property="schema:dateCreated" content="2018-10-14T18:11:23+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4><u>Highlights</u></h4>
+
+<ul><li>The Monero GUI has been tagged for release, but a couple of patches came in at the last minute that need to be applied (one of them involving Ledger integration)</li>
+	<li>Due to the late GUI release, discussions in today's dev meeting are mostly focused on how to better get pre-releases into the hands of testers sooner.
+	<ul><li>Reproducible builds are expected to help with this dramatically.</li>
+	</ul></li>
+	<li>Work is ongoing to upgrade the Monero FFS (Forum Funding System): <a href="https://repo.getmonero.org/beardedwarrior/ffs/commits/master">https://repo.getmonero.org/beardedwarrior/ffs/commits/master</a></li>
+</ul><h4><u>Full Log</u></h4>
+
+<pre>
+1:01 PM &lt;rehrar&gt; Anything of note to report for this past week? You know....besides getting the CLI out?
+1:02 PM &lt;rehrar&gt; I know GUI was tagged yesterday, correct? medusa_ dEBRUYNE dsc luigi1111?
+1:05 PM &lt;rehrar&gt; speaking of dev activity :P
+1:05 PM &lt;rehrar&gt; 12. Anything of note on releases? fluffypony luigi1111w moneromooo?
+1:06 PM → MrAntrax joined (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+1:06 PM &lt;+hyc&gt; sounds like everyone's asleep
+1:06 PM &lt;rehrar&gt; I got kicked by freenode last time I tried to do a mass ping
+1:06 PM &lt;medusa_&gt; the GUi is tagged yes...but if there are other issues and if it builds like this i dont know really, sorry
+1:06 PM &lt;medusa_&gt; i only see that the build envs are all red ^^
+1:06 PM → rbrunner joined (~rbrunner@31-12-138-91-cust-static.fcom.ch)
+1:07 PM &lt;rehrar&gt; oy, medusa_.
+1:07 PM &lt;rbrunner&gt; Hi people, a little late
+1:07 PM &lt;rehrar&gt; That's...a bit scary?
+1:07 PM ← MrAntrax left (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+1:07 PM &lt;rehrar&gt; Fork is like really soon
+1:07 PM → MrAntrax joined (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+1:08 PM &lt;rbrunner&gt; Events surrounding the GUI are a bit hectic ...
+1:08 PM &lt;rbrunner&gt; It was tagged, but then 2 more PR surfaced that must go in
+1:08 PM &lt;rbrunner&gt; One to do with Ledger, I think
+1:08 PM &lt;pigeons&gt; looks like PR 1650 builds
+1:09 PM &lt;rehrar&gt; well, anything else then?
+1:10 PM &lt;iDunk&gt; -- Found OpenSSL: C:/Windows/System32/libcrypto.dll (found version "1.0.2o")
+1:10 PM &lt;iDunk&gt; ^ Win32 GUI buildbot
+1:10 PM &lt;pigeons&gt; ok we can update that
+1:10 PM &lt;iDunk&gt; It shouldn't be there in the first place.
+1:11 PM &lt;+hyc&gt; right ^
+1:11 PM &lt;pigeons&gt; ok explain after the meeting and i'll try to fix
+1:11 PM &lt;MrAntrax&gt; Is there a list on GitHub with small easy issues to contribute too?
+1:11 PM &lt;pigeons&gt; MrAntrax: look for Hacktoberfest tag
+1:12 PM &lt;MrAntrax&gt; Thanks, six open issues.
+1:14 PM ← MrAntrax left (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+1:15 PM &lt;rehrar&gt; well, it's been good.
+1:15 PM &lt;+hyc&gt; is that a wrap?
+1:16 PM &lt;+hyc&gt; just a quick note - #monero-pow channel opened this week for more focused discussion of randomJS, PoW in general
+1:16 PM &lt;rehrar&gt; lel, is anything happening?
+1:16 PM &lt;rehrar&gt; unless anyone has other topics
+1:17 PM &lt;rehrar&gt; I guess I have a topic
+1:18 PM &lt;rehrar&gt; how can we do better for next time?
+1:18 PM &lt;rehrar&gt; I hate to be that guy, but this is not a good look for Monero.
+1:18 PM &lt;+hyc&gt; channel log is in http://highlandsun.com/hyc/monero-pow.txt
+1:18 PM &lt;+hyc&gt; rehrar: do what better?
+1:18 PM &lt;iDunk&gt; Get more people to build on different platforms and test.
+1:18 PM &lt;rbrunner&gt; You mean things like that, perhaps: https://old.reddit.com/r/Monero/comments/9o28zi/new_version_gui_not_available_3_days_before_fork/
+1:18 PM &lt;rehrar&gt; four days until fork, tag and binaries for CLI happened very very recently, tag for GUI happened yesterday
+1:18 PM &lt;rehrar&gt; iDunk: is that what's needed?
+1:19 PM &lt;+hyc&gt; it would certainly help, find issues earlier
+1:19 PM &lt;rehrar&gt; If so, I'll make a huge effort to try to market that next time
+1:19 PM &lt;iDunk&gt; Well, looks like a lot of issues were found right before tagging.
+1:19 PM &lt;+hyc&gt; the reason we've got issues and PRs coming in right at the last minute, people are pulling the release candidates. they should be testing before this point
+1:20 PM &lt;iDunk&gt; Exactly.
+1:20 PM &lt;rehrar&gt; I understand limited resources, limited developers, and limited testers. I'm not trying to throw shade.
+1:20 PM &lt;+hyc&gt; there's also been a lot of build env churn.
+1:20 PM &lt;rbrunner&gt; Well, for mere mortals like me it was next to impossible to even build the GUI on Windows until yesterday evening
+1:20 PM &lt;+hyc&gt; it looks like a lot of conflicting cmake changes, fix a build on one platform, break it for someone else
+1:21 PM &lt;ErCiccione&gt; would help a pre-release tag? since people start to test only when they see the tag, and that's late
+1:21 PM &lt;endogenic&gt; rehrar you wanted extreme decentralization... ;)
+1:21 PM &lt;medusa_&gt; not focusing on build env is one of the main factors in my view
+1:21 PM &lt;medusa_&gt; Prs that break the env shouldnt be allowed to go in in the first place..i know thats painfull
+1:21 PM &lt;medusa_&gt; but red envs for days and weeks dont help anyone either
+1:21 PM &lt;+hyc&gt; those problems should be going away, as reproducible builds get going
+1:22 PM &lt;rbrunner&gt; ... but not yet on Windows, right?
+1:22 PM &lt;+hyc&gt; cross-compiled from linux, so should cover windows too
+1:22 PM &lt;iDunk&gt; Works fine on Windows (built on Linux).
+1:22 PM &lt;rbrunner&gt; Ok, I believe it when I see it :)
+1:22 PM &lt;endogenic&gt; ^
+1:22 PM &lt;iDunk&gt; ...
+1:23 PM &lt;+hyc&gt; I've done lots of windows builds cross-compiled from linux, it's not a problem
+1:23 PM &lt;rbrunner&gt; Ok, I think nobody will shed tears for MSYS2
+1:23 PM &lt;pigeons&gt; you can test it now rbrunner pull from TheCharlatan's gitian branch
+1:23 PM &lt;iDunk&gt; I've crosscompiled Monero for six platforms through depends.
+1:23 PM → TheCharlatan joined (~TheCharla@109.236.87.57)
+1:23 PM &lt;rbrunner&gt; Sounds interesting.
+1:23 PM &lt;rehrar&gt; Yay TheCharlatan is here
+1:24 PM &lt;iDunk&gt; Haven't had time for gitian yet.
+1:24 PM &lt;sarang&gt; I'm with rehrar... I don't do codebase development per se, but any changes in common practice that lead to earlier reliable builds should be a priority
+1:25 PM &lt;+hyc&gt; we could perhaps do a public call for testing when the freeze date approaches. we're well past that now, obviously
+1:25 PM &lt;endogenic&gt; yup
+1:25 PM &lt;rehrar&gt; we could also perhaps enforce a freeze date
+1:25 PM &lt;medusa_&gt; for this we need green env, which we often dont have
+1:25 PM &lt;rbrunner&gt; Well, good luck with that code freeze ...
+1:25 PM &lt;medusa_&gt; esp on windows
+1:26 PM &lt;rbrunner&gt; I think the result would simply be no release out of the door
+1:26 PM &lt;rbrunner&gt; At least this time it would have played out that way :)
+1:26 PM &lt;rehrar&gt; It's a shame that core team people aren't at these meetings more (hint hint)
+1:26 PM &lt;endogenic&gt; rehrar what do you need them for?
+1:27 PM ⇐ Osiris1 quit (~Osiris@unaffiliated/osiris1) Ping timeout: 268 seconds
+1:27 PM &lt;endogenic&gt; if you point it out..
+1:27 PM &lt;rehrar&gt; love and support
+1:27 PM &lt;endogenic&gt; but you have that
+1:27 PM &lt;rehrar&gt; They're the ones that do the tagging. It'd be valuable to get some of their perspective
+1:27 PM → Osiris1 joined (~Osiris@unaffiliated/osiris1)
+1:28 PM &lt;endogenic&gt; well imo it's also a community task to provide them guidance on whether to yank a feature bc it's not ready by code freeze
+1:28 PM &lt;rehrar&gt; this is also true. And you're correct that it's not valuable to offload responsibility.
+1:28 PM &lt;TheCharlatan&gt; When I add a source file to the CMakeLists in common/, will it be linked in all executables? I am trying to ensure that our code has abi compatibility with older glibc versions than what bionic currently provides and would like to define some external glibc functions there.
+1:28 PM &lt;rehrar&gt; The sad truth is there is much work to be done, and very few volunteers.
+1:28 PM &lt;rehrar&gt; On all fronts.
+1:28 PM &lt;endogenic&gt; er i dont believe i quite said that lol
+1:29 PM &lt;rbrunner&gt; I think we got it almost right with the features per se: Nobody worked on some bigger things in the GUI up to the last minute this time
+1:29 PM &lt;rbrunner&gt; For example
+1:30 PM → MrAntrax joined (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+New messages since you tabbed out
+1:31 PM &lt;+hyc&gt; TheCharlatan: not sure I understand who you're trying to support
+1:31 PM &lt;+hyc&gt; and bionic presumably only affects android builds
+1:34 PM &lt;rehrar&gt; can we have a brief discussion about the actionable suggestions that have been made by medusa_ and ErCiccione?
+1:34 PM &lt;TheCharlatan&gt; so gitian uses the debian debian build tools shipped in a bionic vm image. These tools currently link glibc v27 . This is problematic, because when you compile there and release binaries meant to be run on another system that does not have that specific version, it will not run on the target. This only affects released binaries.
+1:35 PM &lt;rehrar&gt; What would it look like from a practical perspective to have priority on keeping env green, even at the cost of merging PRs?
+1:35 PM &lt;+hyc&gt; rehrar: C4 says all PRs get merged. it means someone has to watch for breakages and submit reverts.
+1:35 PM &lt;+hyc&gt; TheCharlatan: is there anyway we can repackage the gitian env to use older glibc?
+1:36 PM &lt;rbrunner&gt; What is C4?
+1:36 PM &lt;medusa_&gt; we merge them all yes, but c4 doesnt say really when we have to merge them
+1:37 PM &lt;medusa_&gt; code community conribution contract or so ^^
+1:37 PM &lt;endogenic&gt; collective code construction contract
+1:37 PM &lt;rbrunner&gt; Ok, thanks
+1:37 PM &lt;TheCharlatan&gt; r.e. envs, I already discussed with dan miller, that it makes sense to have two different ci envs. One that just ensures compilation, and which should be checked religiously, and one that runs a whole bunch of tests on top of just compiling.
+1:37 PM ← MrAntrax left (~MrAntrax@dhcp-077-250-154-153.chello.nl)
+1:38 PM &lt;iDunk&gt; Green env achieved, stop all further PRs!
+1:38 PM &lt;+moneromooo&gt; I still don't agree with that C4 nonsene.
+1:39 PM &lt;ErCiccione&gt; about the code freeze, enforcing that would be very helpful. It's really a mess for me to work on translations while the code is still in development. This time i had to resync all languages twice, and i have the feeling that they would need a third round
+1:39 PM &lt;+moneromooo&gt; And the way we've been doing so far is good.
+1:39 PM &lt;endogenic&gt; C4 qualifies that they should be correct patches
+1:39 PM &lt;rehrar&gt; moneromooo I'm with you. There should (at some point) be a discussion about C4 usage in this project
+1:39 PM &lt;+moneromooo&gt; There were, several times.
+1:39 PM &lt;rehrar&gt; as it is, it's used and enforced in a scattered manner
+1:39 PM &lt;endogenic&gt; which are defined to include not breaking the build
+1:39 PM &lt;medusa_&gt; ^
+1:39 PM &lt;medusa_&gt; we do c4 but we dont follow its rules
+1:40 PM &lt;rbrunner&gt; You don't note breaking Windows builds now while sitting on Windows
+1:40 PM &lt;rbrunner&gt; *Linux
+1:40 PM &lt;endogenic&gt; code freezes are possible but it simply has to happen by agreement.. and so it's up to you all
+1:40 PM &lt;endogenic&gt; rehrar is it ever used inconsistently ?
+1:40 PM &lt;TheCharlatan&gt; hyc possible, yes sure. At the same time, I like the newer tools that are available in Bionic, like gcc 7 and 8 . Bitcoin has shown, that is possible to redefine some non compatible libc functions to their older versions.
+1:41 PM &lt;rehrar&gt; endogenic: you said it yourself. It's got "keep envs green" and that doesn't happen :D
+1:41 PM &lt;rbrunner&gt; There were many such cases: Do something that the Linux compilers likes, but the compiler in MSYS2 does not
+1:41 PM &lt;endogenic&gt; it doesn't say keep envs green
+1:41 PM &lt;+hyc&gt; TheCharlatan: yes, playing games with header files and linker scripts. would be nice if we can avoid that
+1:41 PM &lt;ErCiccione&gt; endogenic: c4 is not enforced at all imho
+1:41 PM &lt;endogenic&gt; it's not on maintainers to merge their own patches to keep the env green
+1:41 PM &lt;endogenic&gt; ErCiccione: i don't know if the word enforce is even appropriate
+1:41 PM &lt;pigeons&gt; Consensus seems to be the depends build system is an important improvement. Let's get fully moved to that, then we can look at things like restricting merges if builds fail
+1:41 PM &lt;endogenic&gt; or necessary
+1:42 PM &lt;rehrar&gt; this is good pigeons
+1:42 PM &lt;+hyc&gt; +1 pigeons
+1:42 PM &lt;rehrar&gt; it's actionable and concise
+1:42 PM &lt;pigeons&gt; also we are moving to a different repo host probably, so lots of things to complete before enforcing this
+1:42 PM &lt;rbrunner&gt; It would be too easy otherwise
+1:42 PM &lt;endogenic&gt; ok to move onto something else?
+1:42 PM &lt;rehrar&gt; as long as we have one actionable thing, I feel this has been a productive conversation :)
+1:42 PM &lt;+moneromooo&gt; Keeping track of build bots would be nice if it weren't completely spammy. That's why I stopped long ago.
+1:42 PM &lt;ErCiccione&gt; endogenic: well, it's a set of rules all contributors should follow. If they are not followed, the community/developers should enforce that, or what do we have it for?
+1:43 PM &lt;medusa_&gt; maybe we should just do nightlies and watch does moneromooo
+1:43 PM &lt;+moneromooo&gt; I do not understand that.
+1:43 PM &lt;medusa_&gt; not each pr, thats insane yes
+1:43 PM → orph- joined (~orph@136.25.187.29)
+1:43 PM &lt;rehrar&gt; I would like to pause here for a moment and acknowledge that even though not everything is going how many would like, this is the work of volunteers and passionate people, and I would like to extend gratitude (at least from myself) to those who work on this.
+1:44 PM &lt;+moneromooo&gt; Ah. Each PR is the point of it, so they can be fixed before merging.
+1:44 PM &lt;endogenic&gt; thanks rehrar
+1:44 PM &lt;rbrunner&gt; Right, rehrar
+1:44 PM &lt;rehrar&gt; We're a big, dorky family with quirks and friction aplenty, but we're in this together.
+1:45 PM &lt;rehrar&gt; Anyways, enough sappy talk.
+1:45 PM &lt;rehrar&gt; Any other topics of discussion?
+1:45 PM &lt;+hyc&gt; maybe we can setup a schedule to poll for merges 6x/day or something. checking each PR is good, but doesn't detect merge conflicts
+1:45 PM &lt;endogenic&gt; rehrar hmm
+1:45 PM &lt;i2p-relay&gt; {-oneiric_} yeah, much love to all the devs and community for making monero awesome
+1:45 PM &lt;ErCiccione&gt; it's like a family with only grumpy uncles /s
+1:47 PM &lt;endogenic&gt; so the ffs backend repo is public. so anyone can contribute to it and test it and we can start adding our own feature ideas. https://repo.getmonero.org/beardedwarrior/ffs/commits/master
+1:47 PM &lt;rehrar&gt; yes! Devin is doing good work on that.
+1:47 PM &lt;endogenic&gt; now maybe we'll have less vague accusations that the core team is blocking progress on the ffs or whatever it was
+1:48 PM &lt;endogenic&gt; s/less/fewer/
+1:48 PM &lt;rehrar&gt; We'll have things like QR codes by default, a feed so anyone can access the different proposals in the different stages
+1:48 PM &lt;rehrar&gt; A lot of exciting stuff coming along there.
+1:49 PM &lt;rehrar&gt; Alright, anything else?
+1:50 PM &lt;rehrar&gt; We'll go ahead and wrap there then. Discussion on any topic can, of course, continue outside of the meeting. Thanks all!</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/59","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"59"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Monero DevLog: Code merges for 2018-06-27 | Monerobase" />
+<link rel="canonical" href="monero_devlog_code_merges_2018-06-27.html" />
+<meta name="description" content="We have another big batch of development code merges.  Continue on to read a quick summary and the full list of changes." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="monero_devlog_code_merges_2018-06-27.html" />
+
+    <title>Monero DevLog: Code merges for 2018-06-27 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="monero_devlog_code_merges_2018-06-27.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">Monero DevLog: Code merges for 2018-06-27</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="49" role="article" about="/index.php/article/monero_devlog_code_merges_2018-06-27" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="Monero DevLog: Code merges for 2018-06-27" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-06-27T21:49:25+00:00">Wed, 06/27/2018 - 17:49</span>
+          <span property="schema:dateCreated" content="2018-06-27T21:49:25+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947936" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353792" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0525f" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="1" id="article_16323947936">
+<div class="article_header" dir="ltr" id="article_header_16323947936">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947936" onmouseup="return toggle_articleview('16323947936',false,event,false)">
+<ul><li class="article_title_wrapper">Improvements to the Payment ID experience when using subaddresses</li>
+	<li class="article_title_wrapper">Performance improvements in syncing speed and RPC calls</li>
+	<li class="article_title_wrapper">As always, general bug fixes</li>
+</ul><div class="article_title_wrapper"> </div>
+
+<div class="article_title_wrapper"> </div>
+
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/3ad4ecd4ff52f011ee94e0e80754b965b82f072b" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947936">Merge pull request #3982</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947936">Merge pull request #3982 08b85a8 cryptonote_config: add get_config to refactor x = testnet ? config::testnet::X : stagenet ? config::stagenet::X : config::X (stoffu) 0cf80ba net_node: resolve host for node addresses given via command line flags (stoffu)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947943" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353791" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05258" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="2" id="article_16323947943">
+<div class="article_header" dir="ltr" id="article_header_16323947943">
+<div class="arrow_div" id="ad_16323947943">
+<div style="clear:both"> </div>
+</div>
+
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947943" onmouseup="return toggle_articleview('16323947943',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/2d92fa5d696c927f1dfb0b2c0a519288c62ecb06" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947943">Merge pull request #3979</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947943">Merge pull request #3979 362f5e6 simplewallet: don't confirm missing payment ID when sending to only subaddresses (stoffu)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947948" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353790" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05253" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="3" id="article_16323947948">
+<div class="article_stripe" id="article_stripe_16323947948" onclick="mark_read('16323947948');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947948">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947948" onmouseup="return toggle_articleview('16323947948',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/a844844cda9a0beb62d95015f92327366d73b3a1" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947948">Merge pull request #3716</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947948">Merge pull request #3716 a2b557f 6795bd0 209ec96 ed2c81e a830db2 57ea902 31a895e ba8331c f7f1917 41be339 f025ae9 ef2cb63 dcfd299 5d3e702 2704624 2771a18 0e4c7d0 (moneromooo-monero)</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947957" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353789" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0524a" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="4" id="article_16323947957">
+<div class="article_stripe" id="article_stripe_16323947957" onclick="mark_read('16323947957');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947957">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947957" onmouseup="return toggle_articleview('16323947957',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/0e4c7d0fae398a46cdc223fc6186821b56e5a8e9" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947957">wallet2: cache ringdb key while refreshing</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947957">wallet2: cache ringdb key while refreshing Speeds up syncing with a lot of outgoing outputs as key generation runs Cryptonight.</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947970" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353788" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0523d" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="5" id="article_16323947970">
+<div class="article_stripe" id="article_stripe_16323947970" onclick="mark_read('16323947970');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947970">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947970" onmouseup="return toggle_articleview('16323947970',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/2771a18e85bd91dd881f89f6c14d26cba35a1844" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947970">threadpool: allow leaf functions to run concurrently</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947970">threadpool: allow leaf functions to run concurrently Decrease the number of worker threads by one to account for the fact the calling thread acts as a worker thread now</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947976" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353787" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05237" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="6" id="article_16323947976">
+<div class="article_stripe" id="article_stripe_16323947976" onclick="mark_read('16323947976');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947976">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947976" onmouseup="return toggle_articleview('16323947976',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/2704624eae34016642c940811e9bcfc18aa58a82" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947976">wallet2: remove unneeded divisions</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947976">wallet2: remove unneeded divisions</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947981" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353786" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05232" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="7" id="article_16323947981">
+<div class="article_stripe" id="article_stripe_16323947981" onclick="mark_read('16323947981');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947981">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947981" onmouseup="return toggle_articleview('16323947981',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/5d3e70229e0f12891817b81705652ecf5d49919a" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947981">wallet2: remove old blockchain size cache hack</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947981">wallet2: remove old blockchain size cache hack</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947986" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353785" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0522d" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="8" id="article_16323947986">
+<div class="article_stripe" id="article_stripe_16323947986" onclick="mark_read('16323947986');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947986">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947986" onmouseup="return toggle_articleview('16323947986',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/dcfd299239cae50caad7a2f115489f86014b5114" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947986">wallet2: speedup refresh</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947986">wallet2: speedup refresh key derivation and checking for incoming outputs are threaded in batch before adding blocks to the local blockchain. Other minor bits and bobs are also cached.</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947993" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353784" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05226" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="9" id="article_16323947993">
+<div class="article_stripe" id="article_stripe_16323947993" onclick="mark_read('16323947993');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947993">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947993" onmouseup="return toggle_articleview('16323947993',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ef2cb6328788e14e8d593593ea9b2b716d72d6bd" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947993">blockchain: simplify/speedup handle_get_objects</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947993">blockchain: simplify/speedup handle_get_objects</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323947998" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353783" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05221" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="10" id="article_16323947998">
+<div class="article_stripe" id="article_stripe_16323947998" onclick="mark_read('16323947998');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323947998">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323947998" onmouseup="return toggle_articleview('16323947998',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/f025ae9760c4cc5c9438a6884b07975e9e3014b1" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323947998">wallet2: avoid re-parsing blocks when refreshing in a loop</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323947998">wallet2: avoid re-parsing blocks when refreshing in a loop</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948004" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353782" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0521b" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="11" id="article_16323948004">
+<div class="article_stripe" id="article_stripe_16323948004" onclick="mark_read('16323948004');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948004">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948004" onmouseup="return toggle_articleview('16323948004',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/41be339655018d17c3169d3add8d5ca81f960c6a" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948004">wallet2: avoid duplicate parsing of tx extra</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948004">wallet2: avoid duplicate parsing of tx extra</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948010" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353781" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05215" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="12" id="article_16323948010">
+<div class="article_stripe" id="article_stripe_16323948010" onclick="mark_read('16323948010');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948010">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948010" onmouseup="return toggle_articleview('16323948010',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/f7f1917ed4708a73e54d9f983e6919df764beb06" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948010">wallet2: remove useless device locking</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948010">wallet2: remove useless device locking</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948016" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353780" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0520f" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="13" id="article_16323948016">
+<div class="article_header" dir="ltr" id="article_header_16323948016">
+<div class="arrow_div" id="ad_16323948016">
+<div style="clear:both"> </div>
+</div>
+
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948016" onmouseup="return toggle_articleview('16323948016',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ba8331ce417a6b6e49a54712d1e627452d6e7e4b" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948016">wallet2: parse blocks in the RPC thread, not the processing thread</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948016">wallet2: parse blocks in the RPC thread, not the processing thread Processing typically is the bottleneck</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948021" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353779" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f0520a" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="14" id="article_16323948021">
+<div class="article_stripe" id="article_stripe_16323948021" onclick="mark_read('16323948021');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948021">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948021" onmouseup="return toggle_articleview('16323948021',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/31a895e876bca91be52247f79b0e34b42d0d0ddc" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948021">wallet2: simplify/speedup process_blocks</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948021">wallet2: simplify/speedup process_blocks</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948027" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353778" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05204" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="15" id="article_16323948027">
+<div class="article_stripe" id="article_stripe_16323948027" onclick="mark_read('16323948027');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948027">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948027" onmouseup="return toggle_articleview('16323948027',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/57ea90285cb403416b9b59d0b62393fb2b6998a0" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948027">wallet: don't process miner tx if we're refreshing with no-coinbase</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948027">wallet: don't process miner tx if we're refreshing with no-coinbase</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948031" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353777" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f05200" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="16" id="article_16323948031">
+<div class="article_stripe" id="article_stripe_16323948031" onclick="mark_read('16323948031');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948031">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948031" onmouseup="return toggle_articleview('16323948031',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/a830db25775f7b708210e736154caf147ddf0ef3" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948031">rpc: rework to avoid repeated calculations in get_blocks.bin</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948031">rpc: rework to avoid repeated calculations in get_blocks.bin</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948037" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353776" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f051fa" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="17" id="article_16323948037">
+<div class="article_stripe" id="article_stripe_16323948037" onclick="mark_read('16323948037');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948037">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948037" onmouseup="return toggle_articleview('16323948037',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/ed2c81ed95be71bace897e62a0c241068cfde7be" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948037">replace std::list with std::vector on some hot paths</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948037">replace std::list with std::vector on some hot paths also use reserve where appropriate</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_unreaded article_subscribed article_no_thumbnail" data-aid="16323948043" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353775" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f051f4" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="18" id="article_16323948043">
+<div class="article_stripe" id="article_stripe_16323948043" onclick="mark_read('16323948043');l('Article header','Stripe');" title="Unread article. Click to mark it as read"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948043">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948043" onmouseup="return toggle_articleview('16323948043',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/209ec963b5ed0a3ad98f159b9f500c28bb3e7d78" onclick="return article_click_trap(event);"><span class="article_header_title" id="at_16323948043">rpc: sanity check on number of txes in a block</span></a></div>
+
+<div class="article_short_contents" id="article_short_contents_16323948043">rpc: sanity check on number of txes in a block</div>
+</div>
+</div>
+</div>
+
+<div class="ar article_subscribed article_no_thumbnail ar_showed article article_current article_expanded" data-aid="16323948050" data-ar="0" data-blanked="0" data-brd="0" data-comments="" data-d="0" data-date_rel="1530132394" data-date_usec="1530132394353774" data-dropbox="-1" data-evernote="-1" data-explicitly-collapsed="0" data-fav="0" data-fid="11691510" data-ft="Atom" data-gdrive="-1" data-liked="0" data-oid="3a9c6e7e77f051ed" data-onenote="-1" data-pocket="-1" data-read="0" data-score="" data-suid="53117937" data-sunk="0" data-tags="null" data-tm="null" data-topiccount="19" id="article_16323948050">
+<div class="article_stripe article_stripe_read" id="article_stripe_16323948050" onclick="mark_read('16323948050');l('Article header','Stripe');" title="Read article. Click to mark it as unread"> </div>
+
+<div class="article_header" dir="ltr" id="article_header_16323948050">
+<div class="article_header_text" dir="ltr" id="article_header_text_16323948050" onmouseup="return toggle_articleview('16323948050',false,event,false)">
+<div class="article_title_wrapper"><a href="https://github.com/monero-project/monero/commit/6795bd0d4eb680f378ea779a130cefad618e11d2" onclick="return article_click_trap(event);" tabindex="-1"><span class="article_header_title" id="at_16323948050">rpc: add option to skip coinbase info in get_blocks.bin</span></a></div>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/2.html" property="schema:about" hreflang="en">DevLog</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/49","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"49"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

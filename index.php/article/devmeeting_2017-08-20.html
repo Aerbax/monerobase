@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2017-08-20 | Monerobase" />
+<link rel="canonical" href="devmeeting_2017-08-20.html" />
+<meta name="description" content="Highlights[ ]
+
+We&#039;ve had contact from the RingCT 2.0 group
+	This appears to be a non-starter" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2017-08-20.html" />
+
+    <title>DevMeeting 2017-08-20 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2017-08-20.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2017-08-20</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="16" role="article" about="/index.php/article/devmeeting_2017-08-20" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2017-08-20" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2017-08-20T20:15:58+00:00">Sun, 08/20/2017 - 16:15</span>
+          <span property="schema:dateCreated" content="2017-08-20T20:15:58+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main">
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h1>Highlights<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-08-20&amp;action=edit&amp;section=1" title="Edit section: Highlights"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<ul><li>We've had contact from the RingCT 2.0 group
+	<ul><li>This appears to be a non-starter due to requiring a trusted setup.</li>
+	</ul></li>
+	<li>Tim Ruffing has offered suggestions on improving Monero by using sublinear ring signatures + CT.
+	<ul><li>The authors on the paper are Tim Ruffing, Sri Aravinda Krishnan Thyagarajan, Viktoria Ronge and Dominique Schröder.</li>
+		<li>Knacc is going through the information and writing a Java implementation.</li>
+		<li>RuffCT GREATLY expands the ring signature sizes (100k+). "with a set-up like this, there should be no good reason to not simply sign every transaction with the top half of the blockchain every time"</li>
+		<li>&lt;surae&gt; "in a certain sense, this is like an alien came down and gifted us faster than light travel."</li>
+		<li>In a followup Reddit post, Tim explains that the 100k+ note may not be feasable - but still greatly expands current ring sizes. <a class="external free" href="https://www.reddit.com/r/Monero/comments/6uxx90/20170820_monero_dev_meeting_summary_and_logs/dlwbky9/" rel="nofollow">https://www.reddit.com/r/Monero/comments/6uxx90/20170820_monero_dev_meeting_summary_and_logs/dlwbky9/</a></li>
+		<li>This will likely affect MultiSig. Requiring a rewrite of the existing MultiSig work. MultiSig will likely be deployed as-is and then re-implemented when RuffCT is in place.</li>
+	</ul></li>
+	<li>Mobile Wallets:
+	<ul><li>"app store accounts are waiting on the D-U-N-S number to be sent to Apple, I've sent scans of docs to Google and M$"</li>
+	</ul></li>
+	<li>Monero has branched in preparation for the upcoming code release and scheduled fork (among other things).</li>
+	<li>Discussion about releasing more often, but there's a concern about taxing the devs. And we already have a few releases per year.
+	<ul><li>This may be solved by the branching noted above.</li>
+	</ul></li>
+	<li>DefCon party chats have yielded concrete proposals for a hardware wallet
+	<ul><li>FFS RFC-HWALLET-1 (dedicated hardware) seems to appeal to most</li>
+		<li>FFS RFC-HWALLET-2 (nondedicated firmware) does not appeal as well</li>
+		<li>Several just don't like the idea of either FFS proposals, for various reasons</li>
+	</ul></li>
+</ul><p> </p>
+
+<h1>Full Log<span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="tw-editsection-onhover" href="https://monerobase.com/w/index.php?title=DevMeeting_2017-08-20&amp;action=edit&amp;section=2" title="Edit section: Full Log"> </a><span class="mw-editsection-bracket">]</span></span></h1>
+
+<pre>
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;fluffypony&gt; 4. Any additional meeting items
+&lt;fluffypony&gt; 5. Confirm next meeting date/time
+&lt;fluffypony&gt; rehrar can do it next time :)
+&lt;_Slack&gt; &lt;rehrar&gt; I can, sorry for the confusion
+&lt;fluffypony&gt; 1. Greetings
+&lt;fluffypony&gt; can all the people who aren't here just say nay
+&lt;fluffypony&gt; :-P
+&lt;hyc&gt; neigh
+&lt;surae&gt; we never get past this part :
+* athan (~athan@c-24-8-115-79.hsd1.co.comcast.net) has joined
+&lt;fluffypony&gt; it's a fun part
+&lt;fluffypony&gt; we can move on to 2
+&lt;fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+&lt;fluffypony&gt; I guess the big thing is that we've branched
+* rehrar (~Critical@173-12-204-46-Albuquerque.hfc.comcastbusiness.net) has joined
+&lt;surae&gt; well
+&lt;surae&gt; from MRL
+&lt;surae&gt; we got contacted by RingCT2.0 people, and we got contacted by a rsearcher named Tim Ruffing, each of them presenting improved set-ups for our current implementations
+* Diffusive (~Diffusive@200.8.144.192) has joined
+&lt;surae&gt; not sure if I should just jump in or what..
+&lt;dEBRUYNE&gt; Yeah go ahead
+&lt;hyc&gt; sure, go
+&lt;surae&gt; ok so
+* fzerosum has quit (Quit: Leaving)
+&lt;surae&gt; I have a .txt file describing the pseudocode of Ruffing's sublinear ring sig + CT set-up
+&lt;surae&gt; knaccc has been going through it and implementing it in Java
+&lt;surae&gt; we have a surprising amount of it debugged
+&lt;hyc&gt; ^ note, we're walking away from the RingCT2.0 stuff because it requires a trusted setup
+.
+&lt;surae&gt; Ah, I didn't look into it because Ruffing's doesn't have a trusted set-up or any "new" crytpo. it just doubles all our key lengths
+&lt;iDunk&gt; surae: fpaste.org or pastebin.mozilla.org
+&lt;sn0wmonster&gt; has the meeting started?
+&lt;endogenic&gt; yes
+* atomicman has quit (Ping timeout: 248 seconds)
+&lt;sn0wmonster&gt; where does it say it started? jesus
+&lt;surae&gt; iDunk is 0bin not good enough? :P
+&lt;iDunk&gt; It requires java.
+&lt;iDunk&gt; js actually
+&lt;moneromooo&gt; I think it needs to be encrypted due to agreement with Tim Ruffing.
+&lt;surae&gt; oh i didn't realize that
+&lt;DaveyJones&gt; surae ... the mooo wants javaless paste
+&lt;surae&gt; moneromooo no, just habit
+&lt;surae&gt; ok one sec
+&lt;moneromooo&gt; Oh, ok. I'm dying to see it then :D
+&lt;dEBRUYNE&gt; You can put a password on fedoraproject, fwiw
+.
+&lt;moneromooo&gt; ty
+&lt;surae&gt; we are in the midst of debugging knaccc's java code
+&lt;dEBRUYNE&gt; surae: Could you perhaps give an ELI5 (for anyone that reads the logs later) how RuffCT will improve our protocol?
+&lt;surae&gt; well, roughly, (ruffly)
+&lt;knaccc&gt; lol
+&lt;surae&gt; signature sizes are O(N) right now. So signature sizes take up "as much space" as the number of public keys implicated in the signature
+&lt;surae&gt; Ruffing's set-up, for N=n^m, has signature sizes O(n*m). Verification and computation *it appears* to be on the same order. so, for example, to sign a ring signature with N=10^17 signers, which is freaking absurd, you would need "as much space" as 10*17 = 170  public keys
+&lt;surae&gt; there are constants and stuff, so it's not exact, but at the very least, Ruffing's set-up is looking at really absurdly large ring signatures
+&lt;hyc&gt; ... without taking absurdly large amount of space
+&lt;surae&gt; with a set-up like this, there should be no good reason to not simply sign every transaction with the top half of the blockchain every time
+&lt;surae&gt; or taking absurdly large amounts of time to verify or compute
+&lt;dEBRUYNE&gt; So we can easily use ring size 100k for instance?
+&lt;dEBRUYNE&gt; Or even higher
+&lt;hyc&gt; even higher
+&lt;fluffypony&gt; EVEN HIGHER
+&lt;surae&gt; assuming his set-up actually works (the math seems tight) and assuming his security proofs hold up (I am going to try to make independent security proofs and then later compare them), and after six months to a year of testing, etc etc
+&lt;surae&gt; i mean
+&lt;JollyMort[m]&gt; UNLIMITED RINGSIZE
+&lt;endogenic&gt; fluffypony: what does the scouter say about monero's ringsize level?
+&lt;moneromooo&gt; log(infinity) is infinity...
+&lt;surae&gt; in a certain sense, this is like an alien came down and gifted us faster than light travel. yeah, we can go out there and start traveling around, but we have to consider consequences for the timeline. :P haha
+&lt;fluffypony&gt; endogenic: I give up?
+&lt;endogenic&gt; it's over 9000
+* endogenic sees himself out
+&lt;fluffypony&gt; lol
+&lt;DaveyJones&gt; the puns are ruff today
+&lt;fluffypony&gt; also to add to what surae's said
+&lt;moneromooo&gt; Would be need (pretty much) all pubkeys/commitments in RAM all the time, in order to verify such sigs ?
+&lt;moneromooo&gt; Or can some precomp be done ?
+&lt;fluffypony&gt; multisig isn't baked in right now, it would need to be re-done from scratch
+&lt;rehrar&gt; the room fell silent
+&lt;hyc&gt; I'll precompute it all for ya. trust me.
+&lt;dEBRUYNE&gt; fluffypony: Are we certain it has to be re-done from scratch or would it possible to just tweak the current implementation?
+&lt;surae&gt; moneromooo the signature itself only uses the commitments from the column of the signer
+&lt;fluffypony&gt; dEBRUYNE: we're certain
+* dnaleor has quit (Quit: Leaving)
+&lt;dEBRUYNE&gt; k
+&lt;DaveyJones&gt; fluffypony - can it be dual run like pre-ct and ring-ct till the fork?
+&lt;dEBRUYNE&gt; I think we shouldn't forego the current implementation, because we're already quite far in
+&lt;surae&gt; debruyne the shen-luigi multisig set-up which is a version of the schnorr multisig, might lead us to a similar set-up for RuffCT, but it's not a simple gluing like one would hope
+&lt;dEBRUYNE&gt; In addition, it may take a year before RuffCT is actually implemented
+&lt;DaveyJones&gt; so that we could keep luigi ms till ruff ms is done ?
+&lt;dEBRUYNE&gt; And even longer before we have a multisig that is compatible with ruffct
+&lt;JollyMort[m]&gt; you can always convert later
+&lt;fluffypony&gt; DaveyJones: I don't think so, at least not trivially
+&lt;JollyMort[m]&gt; i mean if we have to do RCT-&gt;RuffCT
+&lt;surae&gt; dEBRUYNE I'm actually with you on that. chances are good RuffCT is about 1 year out from being live, and I wouldn't be *shocked* if we could make a threshold scheme out of it before that year is up
+&lt;JollyMort[m]&gt; same can be done for wallets
+&lt;JollyMort[m]&gt; RCT multisig -&gt; RuffCT multisig
+&lt;fluffypony&gt; well, basically this isn't going in to a hardfork until we have multisig
+&lt;msvb-lab&gt; JollyMort[m]: hardware or software wallets?
+* Diffusive has quit (Remote host closed the connection)
+&lt;tyrionmcmmaster&gt; i agree with the majority, that multisig pre-ruffct should be implemented for the time being
+&lt;JollyMort[m]&gt; and shen/luigi multisig can work regardless of consensus rules
+&lt;dEBRUYNE&gt; &lt;msvb-lab&gt; JollyMort[m]: hardware or software wallets? &lt;= Doesn't matter
+&lt;JollyMort[m]&gt; by means of one-time multisig wallets
+&lt;surae&gt; so i'm happy finsihing up the shen-luigi multisig scheme, letting wallets use it until RuffCT goes live, they'll still be able to use it for whatever RCT outputs are still floating around if they like... and maybe users may miss out on threshold signatures for one hardfork, but probably not two.
+* Diffusive (~Diffusive@200.8.144.192) has joined
+&lt;hyc&gt; that sounds decent
+&lt;fluffypony&gt; ok
+&lt;DaveyJones&gt; ^+1
+&lt;fluffypony&gt; guys let's move on
+&lt;surae&gt; excellente
+&lt;fluffypony&gt; 3. Code + ticket discussion / Q &amp; A
+&lt;DaveyJones&gt; can i chime in for the AFK devs?
+&lt;fluffypony&gt; before we discuss any specific PRs / issues
+&lt;fluffypony&gt; I wanted to get a feel as to how we should handle the branch wrt PRs
+&lt;fluffypony&gt; ie. do we want people to push PRs to both branches where relevant
+&lt;fluffypony&gt; or must I just cherry-pick commits?
+&lt;moneromooo&gt; Push to both, or the GPG signature drops.
+* Diffusive has quit (Client Quit)
+&lt;fluffypony&gt; moneromooo: I meant cherry-pick to my fork and then PR it
+&lt;hyc&gt; ok. but tat this pre-release time, how are we deciding which PRs are eligible for the release branch?
+&lt;moneromooo&gt; fluffypony: I don't understand that.
+&lt;moneromooo&gt; If someone wants a patch to the release branch, they PR it to that branch too.
+&lt;vtnerd&gt; bug fixes should automatically be considered ... everything else is subjective
+&lt;fluffypony&gt; vtnerd: it's bug fixes only
+* tyrionmcmmaster has quit (Quit: Page closed)
+&lt;moneromooo&gt; I guess you can cherry-pick if the commit isn't signed in the first place.
+&lt;fluffypony&gt; nothing else goes in, we're in code freeze on the branch
+&lt;fluffypony&gt; moneromooo: if I cherry-pick and I sign it then it's still signed?
+&lt;vtnerd&gt; ok good, at least we are in agreement on that
+&lt;moneromooo&gt; Well, it's signed by you, yes...
+&lt;moneromooo&gt; But you're kinda not the author ? :)
+&lt;fluffypony&gt; moneromooo: with cherry-pick it lists both myself and the aithor iirc
+&lt;fluffypony&gt; *author
+&lt;moneromooo&gt; I guess nobody really cares anyway.
+&lt;moneromooo&gt; Yes, but the author's signature drops AFAIK.
+&lt;moneromooo&gt; So you could modify a large patch, sign it, and nobody would notice.
+&lt;iDunk&gt; I agree with moneromooo, that's not the way to do it.
+&lt;hyc&gt; ok, so PR directly to release branch
+&lt;fluffypony&gt; moneromooo: https://i.imgur.com/PG0YmsF.png &lt;- like that
+&lt;hyc&gt; there's 22 open PRs at the moment. only a few seem to be current bugfixes
+&lt;moneromooo&gt; Most people will just PR to master anyway, so not much trouble.
+&lt;moneromooo&gt; I'm not sure I get the point.
+&lt;fluffypony&gt; ok this is more about the fallback if the contributor doesn't PR to the branch in a timeous fashion
+&lt;moneromooo&gt; In that case, if it's really needed for the branch, cherry-pick is OK I suppose.
+* atomicman (~bbhgf@endeavour.whatbox.ca) has joined
+&lt;fluffypony&gt; ok cool
+&lt;hyc&gt; but re: the branch, I'd like #2313 and #2314 to go into the release. should help further reduce chance of corruption on powerfail.
+&lt;moneromooo&gt; Agreed.
+&lt;moneromooo&gt; I'll just fixup the target thing too.
+&lt;hyc&gt; cool
+&lt;moneromooo&gt; I think just removing the state check will be fine.
+&lt;fluffypony&gt; yes
+* shillosopher has quit (Quit: shillosopher)
+* shillosopher (~shillosop@unaffiliated/shillosopher) has joined
+&lt;fluffypony&gt; if those can be PRd to the branch that would be great
+&lt;hyc&gt; willdo
+* monero (~monero@192.30.252.40) has joined
+&lt;monero&gt; [monero] hyc opened pull request #2318: Dbcleanup (release-v0.11.0.0...dbcleanup) https://git.io/v5fO3
+* monero (~monero@192.30.252.40) has left
+&lt;fluffypony&gt; ok - anything else?
+&lt;JollyMort[m]&gt; about GUI cold signing
+&lt;JollyMort[m]&gt; any plans to add import/export outputs&amp;keyimage stuffs
+&lt;msvb-lab&gt; fluffypony: Not sure when it's appropriate to ask for consensus on (yes) increase efforts towards a hardware wallet or (no) maintain status quo.
+&lt;fluffypony&gt; what's everyone's feelings on merging 0MQ into master?
+* monero (~monero@192.30.252.34) has joined
+&lt;monero&gt; [monero] hyc opened pull request #2319: Safesync (release-v0.11.0.0...safesync) https://git.io/v5fOC
+* monero (~monero@192.30.252.34) has left
+&lt;DaveyJones&gt; so tewinget only said that he just wants further feedback
+&lt;dEBRUYNE&gt; JollyMort[m]: Jaquee isn't here afaik
+&lt;DaveyJones&gt; and jaquee asked this
+&lt;Jaquee&gt; i'm here now
+&lt;hyc&gt; I thought merging 0MQ is slated for after the release
+&lt;DaveyJones&gt; &lt;Jaquee&gt; not sure if i can make it to the meeting. have two questions. 1. updates on disk space on build machines (when can we have an android apk available for download?) 2. updates on app store and transifex accounts?
+&lt;Jaquee&gt; reading backlog
+&lt;moneromooo&gt; After the release is done, yes.
+&lt;DaveyJones&gt; oh your here :D
+&lt;fluffypony&gt; we've already branched, tho, so surely we can merge to master?
+&lt;moneromooo&gt; his here.
+&lt;fluffypony&gt; msvb-lab: the dev working group don't really control external manufacturers
+&lt;dEBRUYNE&gt; fluffypony: moneromooo wants to put in an additional review afaik
+&lt;moneromooo&gt; I've not looked at the latest changes yet.
+&lt;dEBRUYNE&gt; And tewinget is waiting for further feedback
+&lt;fluffypony&gt; ok
+&lt;Jaquee&gt; but maybe lightwallets PR can be merged? (in masteR)
+&lt;pigeons1[m]&gt; Jaquee we got the build machine so early this week on the android jobs
+&lt;rehrar&gt; regarding the transifex account, I've found an open-source, self-hosted alternative in weblate.org
+&lt;medusa_&gt; i dont think the fact if we branched mathers too much regradiing 0mq
+&lt;Jaquee&gt; pigeons1[m]: Great!
+&lt;rehrar&gt; just waiting on the new server infrastructure :)
+&lt;medusa_&gt; we should play it safe
+&lt;moneromooo&gt; If the lightwallet stuff is the same I reviewed already, it was OK to merge IIRC.
+&lt;Jaquee&gt; it's the same
+&lt;fluffypony&gt; kk
+.
+&lt;dEBRUYNE&gt; ^ Not sure we should put that up on SE already
+&lt;sn0wmonster&gt; i have a suggestion for future meetings, let me know when i can make it.
+&lt;JollyMort[m]&gt; yeah i thought that too dEBRUYNE
+&lt;JollyMort[m]&gt; surae what do you think?
+&lt;fluffypony&gt; yeah I think some of this is confidential-ish
+&lt;hyc&gt; are we still on ticket discussion?
+&lt;DaveyJones&gt; aye
+&lt;JollyMort[m]&gt; i mean, putting it in the meeting logs also makes it public
+&lt;JollyMort[m]&gt; the genie is out of the bottle
+&lt;dEBRUYNE&gt; I can just remove it from the logs
+&lt;fluffypony&gt; hyc: about to move on, but you can still bring stuff up
+&lt;hyc&gt; no that's fine
+&lt;dEBRUYNE&gt; JollyMort[m] ^
+&lt;hyc&gt; let's move on
+&lt;dEBRUYNE&gt; fluffypony: Jaquee wanted to know about the appstore accounts btw
+&lt;fluffypony&gt; surae should weigh in on that
+&lt;dEBRUYNE&gt; If you have any update on that
+&lt;Jaquee&gt; ^^
+&lt;fluffypony&gt; app store accounts are waiting on the D-U-N-S number to be sent to Apple, I've sent scans of docs to Google and M$
+&lt;fluffypony&gt; so Two Weeks™ ?
+&lt;fluffypony&gt; 4. Any additional meeting items &lt;- moving on to that
+&lt;fluffypony&gt; since it's part of it anyway
+&lt;sn0wmonster&gt; is this where i can make a suggestion?
+&lt;fluffypony&gt; sn0wmonster wanted to make a suggestion
+&lt;sn0wmonster&gt; yay
+&lt;sn0wmonster&gt; so, i noticed the meeting started only after it was obvious it was a meeting
+&lt;sn0wmonster&gt; i don't see a Meetbot (which apparently is a package in Debian),
+&lt;sn0wmonster&gt; so if you must do it this way, i was wondering if you wouldn't make it painfully obvious to everyone with a header of some kind, like this:
+* archLinuxUser (~archlinux@unaffiliated/archlinuxuser) has joined
+&lt;othe&gt; msvb-lab asked a question but got overrun, i am willing to help sponsor his hw wallet stufdlf
+&lt;othe&gt; Stuff
+&lt;sn0wmonster&gt; +-------------------------------------------------------------------------------+
+&lt;sn0wmonster&gt; |      --+ossssso+--             |
+&lt;sn0wmonster&gt; |    .-ossssssssssssso+-    Monero Developers Meeting, #monero-dev  |
+&lt;sn0wmonster&gt; |   -sosssssssssssssssos+.  August 20th, 2017 17:00 UTC   |
+&lt;msvb-lab&gt; Both FFS proposals relating to hardware wallets are on the forum now.
+&lt;sn0wmonster&gt; |  oss::osssssssssso+::ss+.       |
+&lt;sn0wmonster&gt; | +sss: `:+ossssso+:` :sss+ Agenda: Greetings, Brief review of what's been |
+&lt;sn0wmonster&gt; | ssss:   `-+sss+-``  :ssss completed since the previous meeting, Code + |
+&lt;sn0wmonster&gt; | ssss:  :.``-+-``.:` :ssss ticket discussion / Q &amp; A, Any additional |
+&lt;sn0wmonster&gt; | +ooo-  :::.` `.:::` -ooo+ meeting items, Confirm next meeting date/time |
+&lt;moneromooo&gt; No span please :/
+&lt;sn0wmonster&gt; | `````  :::::-:::::` `````       |
+&lt;moneromooo&gt; spam even ffs
+&lt;sn0wmonster&gt; |   -:::::::::::::::::::-`        |
+&lt;endogenic&gt; lol
+&lt;JollyMort[m]&gt; my eyes!
+&lt;JollyMort[m]&gt; sn0wmonster: there WAS a intro
+&lt;sn0wmonster&gt; pff, if you consider that spam, then there goes my suggestion ;)
+&lt;fluffypony&gt; also the time is set two weeks in advance
+&lt;sn0wmonster&gt; /flushq
+&lt;pigeons1[m]&gt; Sn0wmonster makes a great meeting bot
+&lt;hyc&gt; it's also announced on reddit and github
+&lt;sn0wmonster&gt; beep bop boop
+&lt;othe&gt; Ffs sake, there are 2 hw wallet proposals. Feedback appreciated.
+&lt;msvb-lab&gt; othe: If anyone has advice on what to change in those FFS, the URLs are:
+&lt;msvb-lab&gt; https://forum.getmonero.org/7/open-tasks/88149/dedicated-monero-hardware-wallet/
+&lt;hyc&gt; and was announced here a few hours earlier
+&lt;msvb-lab&gt; https://forum.getmonero.org/7/open-tasks/88160/monero-firmware-for-ledger-wallet/
+&lt;endogenic&gt; sn0wmonster: https://github.com/monero-project/meta/issues
+&lt;fluffypony&gt; sn0wmonster: https://www.reddit.com/r/Monero/comments/6uvu94/dev_kovri_meetings_later_today_1700_1800_utc/
+&lt;DaveyJones&gt; shhh listen to othe and msvb-lab
+&lt;sn0wmonster&gt; i didn't say it wasn't known, i said the *chatlog* had no introduction that the meeting had started really
+&lt;endogenic&gt; sn0wmonster: it did though ?
+&lt;JollyMort[m]&gt; i'm saying it had :) first post by fluffypony with the agenda 0. .. 1. .. 2.. ...
+&lt;JollyMort[m]&gt; maybe you missed it
+&lt;msvb-lab&gt; DaveyJones: Rather than listen, please speak whoever is interested in hardware crypto and border searches.
+&lt;rehrar&gt; but it didn't have the Monero symbol
+&lt;endogenic&gt; msvb-lab: doesn't quite seem like a dev item tho
+&lt;hyc&gt; yeah, I think we can put that meeting announcement topic to rest.
+&lt;DaveyJones&gt; msvb-lab they cannot speak if they don`t listen :D
+&lt;moneromooo&gt; In other code news: I'm still debugging sync niggles with iDunk's help (who's been doing a LOT of testing, so many thanks). It'll be ready soon (both branch and master).
+&lt;rehrar&gt; msvb-lab: we can talk about it in Community meeting next week?
+&lt;msvb-lab&gt; endogenic: Okay, let's postpone. Good idea rehrar.
+&lt;JollyMort[m]&gt; about the gui cold signing
+&lt;iDunk&gt; Yw :)
+&lt;JollyMort[m]&gt; it's still missing features
+&lt;moneromooo&gt; If someone feels like syncing, please try the sync-standby3 branch :)
+&lt;endogenic&gt; msvb-lab: no need to post-pone. maybe bring it up in #Monero ?
+&lt;dEBRUYNE&gt; rehrar, endogenic: If there's room left, why not give msvb-lab the floor for a few minutes?
+* hribayz (~hribayz@krupka.kolej.mff.cuni.cz) has joined
+&lt;moneromooo&gt; It may not be code per se, but it's tech. I think it's fine here. Still 10 minutes.
+&lt;othe&gt; I'll just sponsor it, its hilarious that there's no secure way to store xmr.
+&lt;endogenic&gt; kk
+&lt;fluffypony&gt; msvb-lab: a dedicated wallet would be cool
+&lt;rehrar&gt; well that's decided then isn't it?
+&lt;msvb-lab&gt; So the question is if we can achieve consensus on how to lower risk of another year with no wallet.
+&lt;hyc&gt; there are two proposals tho, do we have to pick one, or do both?
+&lt;msvb-lab&gt; hw wallet, i mean.
+&lt;fluffypony&gt; Ledger are already working on it, not sure if we need to double up efforts there
+&lt;dEBRUYNE&gt; Perhaps it'd be more beneficial if we have some general firmware that hw wallets could implement
+&lt;surae&gt; gosh, sorry, i got distracted. no, please don't put up a stackexchange yet. a few weeks, no problem, but right now we should maybe keep it a little quieter~
+&lt;surae&gt; if possible
+&lt;surae&gt; cat's out of the bag, but i mean
+&lt;msvb-lab&gt; hyc: One deals with dedicated hardware design, the other with porting to existing hardware.
+&lt;fluffypony&gt; msvb-lab: https://www.reddit.com/r/Monero/comments/6thv8j/ledger_hardware_wallet_monero_integration/ &lt;- this is from 6 days ago
+&lt;endogenic&gt; 2quick4u fyi
+&lt;msvb-lab&gt; fluffypony: That's probably Cedric's document Blue-something, quite good.
+&lt;dEBRUYNE&gt; &lt;msvb-lab&gt; hyc: One deals with dedicated hardware design, the other with porting to existing hardware. &lt;= Even though the former would be pretty cool, the latter is probably more beneficial
+&lt;JollyMort[m]&gt; and debruyne **** out the link then; i feel like simply removing stuff from the logs goes against some principle on transparency
+&lt;hyc&gt; looks to me like Ledger has done the hard part of figuring out the division of labor between hw wallet and Monero libraries
+&lt;Jaquee&gt; ledger said alpha around end of september iirc.
+&lt;fluffypony&gt; I don't think there's value in doubling up on the Ledger effort
+&lt;hyc&gt; ^^ agreed
+&lt;dEBRUYNE&gt; What about porting to Trezor and Keepkey though?
+&lt;Jaquee&gt; +1
+&lt;msvb-lab&gt; There have been firmware ports (to Trezor) before that have not met Monero's feature set (RingCT) or unmaintained.
+&lt;dEBRUYNE&gt; Perhaps msvb-lab is interested in finishing noodle's code?
+&lt;fluffypony&gt; msvb-lab: Trezor was more complicated than that
+&lt;msvb-lab&gt; I just hope if Cedric completes the port, that there is maintenance after that.
+&lt;fluffypony&gt; NoodleDoodle did the Trezor firmware
+&lt;JollyMort[m]&gt; Cedric is the Ledger crypto-guy
+&lt;ferretinjapan&gt; fluffypony, choice is always a good thing WRT HWE wallets, otherwise we may get centralisation of support/development/monopoly of service, etc.
+&lt;hyc&gt; I'd say we pick up whatever changes ledger comes up with and use that as a basis for other hw projects
+&lt;fluffypony&gt; then there was a bit of a disagreement between Trezor and us
+&lt;JollyMort[m]&gt; afaik
+&lt;fwrttrukjwtrijdh&gt; sorry, noticed objections above to SE questions. Will delete for now. Does same objection apply to both Ruffling and RingCT2.0 paper?
+&lt;fluffypony&gt; and then I met up with them 33c3, and they said that it's not worth us moving forward on it till Trezor 2.0
+&lt;hyc&gt; if all the wallets use the same handshakes that saves everyone effort
+&lt;fluffypony&gt; which was Coming Soon™
+&lt;moneromooo&gt; Tim Ruffing requested keeping is internal as a courtesy. I don't think anhything like that applies to Ringct 2.0.
+* Foobar__ (d5e108da@gateway/web/freenode/ip.213.225.8.218) has joined
+&lt;dEBRUYNE&gt; The 2.0 paper was posted on reddit too :P
+&lt;hyc&gt; that's as close as we'll get to a "common firmware" - other hw wallets will be based on different chips anyway
+&lt;msvb-lab&gt; Not sure how stable (management or technically) Trezor is, hoping Cedric follows through on the Ledger work is a possibility. We then do little or nothing and wait for results.
+&lt;fluffypony&gt; msvb-lab: I'd support effort on a dedicated HW wallet
+&lt;JollyMort[m]&gt; chip design etc? that sounds good
+&lt;JollyMort[m]&gt; especially if all the schematics are published
+&lt;msvb-lab&gt; Something that interests me is adding Monero specific features to a dedicated wallet, and make it as border search proof as possible (not supported by Ledger.)
+* herch has quit (Ping timeout: 260 seconds)
+&lt;JollyMort[m]&gt; so anyone can buy the parts and build it
+&lt;hyc&gt; lol. I'm not soldering surface-mount chips by myself.
+&lt;msvb-lab&gt; JollyMort[m]: Everything would be designed with KiCad and published in a github or similar.
+&lt;sn0wmonster&gt; what is not border-proof about ledger?
+&lt;msvb-lab&gt; hyc: I have a SMD lab, reflow and all.
+&lt;ferretinjapan&gt; hyc, what's the problem? All you do is put it in the oven ;)
+&lt;msvb-lab&gt; sn0wmonster: No ability to destroy the private key without battery.
+* dnaleor (~dnaleor@78-23-74-78.access.telenet.be) has joined
+&lt;fluffypony&gt; avoiding the glitching attacks just demonstrated against Trezor will be fun
+&lt;hyc&gt; let's just say I've overcooked a few microcontrollers in my day...
+&lt;endogenic&gt; hyc: you need an intern or two
+&lt;JollyMort[m]&gt; hyc baking bad :)
+&lt;msvb-lab&gt; fluffypony: Yes, glitch defense is part of the design. I'm not sure it's possible at all, but there will be research.
+&lt;fluffypony&gt; cool beans
+&lt;dEBRUYNE&gt; fluffypony: Do we still have time, I wanted to suggest something more generally?
+&lt;msvb-lab&gt; fluffypony: Randomness probably plays an important role, so we have chips like ATSHA240A.
+&lt;DaveyJones&gt; so dedicated hw of the two it will be ? so we can come to a conclusion before the end of meeting
+&lt;JollyMort[m]&gt; Jaquee: would it be too much effort to add the import/export stuffs into gui
+&lt;msvb-lab&gt; dEBRUYNE: Let's close off hw wallets now, but everyone please add a post to the FFS if you have a strong opinion.
+&lt;msvb-lab&gt; Thanks for the floor folks!
+&lt;JollyMort[m]&gt; would be nice to avoid depending on the CLI to fix cold signing glitches
+&lt;dEBRUYNE&gt; All right, I'll leave a comment later msvb-lab :)
+&lt;JollyMort[m]&gt; and some use cases require import/export stuffs
+&lt;dEBRUYNE&gt; I personally wanted to raise the idea to release more often (e.g. a new release every quarter) to (i) tighten and improve the feedback loop and (ii) decrease time spend on helping out people that incur issues that are already long fixed in master
+&lt;Jaquee&gt; JollyMort[m]: not that much effort. problem is that code is frozen in monero. so wont make into this coming release
+&lt;dEBRUYNE&gt; I spoke with fluffypony about this in private and he was concerned it would put too much pressure on contributors
+&lt;JollyMort[m]&gt; :(
+&lt;dEBRUYNE&gt; So I'd like to hear their opinion about it
+&lt;Jaquee&gt; i added some improvements yesterday
+&lt;dEBRUYNE&gt; I guess I should mainly page Jaquee, moneromooo, hyc, iDunk
+&lt;JollyMort[m]&gt; i saw, haven't tested it yet
+&lt;dEBRUYNE&gt; ^ apologies if I forgot someone :P
+* redfish has quit (Remote host closed the connection)
+&lt;hyc&gt; "release early, release often"
+&lt;JollyMort[m]&gt; i'll check it out
+&lt;moneromooo&gt; I think it'd put too much pressure on the pony.
+&lt;dEBRUYNE&gt; hyc: Right, that was kind of my basis for the idea
+&lt;Jaquee&gt; i'd love to release more often
+* redfish (~redfish@163.172.173.182) has joined
+&lt;hyc&gt; I think having another interim release would be nice
+&lt;moneromooo&gt; He barely has the time to do anything AIUI.
+&lt;dEBRUYNE&gt; moneromooo: Could this be mitigated if we had an additional maintainer?
+&lt;endogenic&gt; i think it's funny when people say "fail fast"
+&lt;fluffypony&gt; we need to bear in mind that this is security software
+&lt;dEBRUYNE&gt; I think luigi wanted to do an FFS soon for it
+&lt;moneromooo&gt; Who would you trust which can do it ?
+&lt;moneromooo&gt; hyc!
+* moneromooo flees
+&lt;hyc&gt; :P
+* Robotrock (~robert.fr@p5DF4A5E9.dip0.t-ipconnect.de) has joined
+&lt;dEBRUYNE&gt; Well luigi could merge stuff and FP release?
+&lt;fluffypony&gt; I don't think we should be pushing to release unstable software :-P
+&lt;DaveyJones&gt; hyc or the luigi1115
+&lt;fluffypony&gt; an additional maintainer won't make software magically stable :-P
+&lt;hyc&gt; true
+&lt;dEBRUYNE&gt; fluffypony: No, but it would take time away that you have to spend on merging and reviewing stuff
+&lt;ferretinjapan&gt; I'd just like to say that a backup maintainer should be seriously considered, even if the release schedule stays the same, there's nothing like redundancy...
+&lt;fluffypony&gt; we need way more eyes on PRs than that
+&lt;fluffypony&gt; ferretinjapan: we already have backups
+&lt;dEBRUYNE&gt; Also, those large merging waves inhibit the momentum of the project imo
+&lt;ferretinjapan&gt; ah, goodo
+&lt;medusa_&gt; the lack of follow up bugfix releases causes huuge amunt of support work
+&lt;fluffypony&gt; the Core Team have access, and luigi1115 is my direct backup
+&lt;fluffypony&gt; medusa_: we've already solved that
+&lt;medusa_&gt; how?
+&lt;rehrar&gt; What if one release added content, and the intermin is just bug fixes?
+&lt;fluffypony&gt; with the branch
+&lt;dEBRUYNE&gt; &lt;fluffypony&gt; I don't think we should be pushing to release unstable software :-P &lt;= Not saying we should, but if master is deemed stable we could put out a release with a few new features right?
+&lt;medusa_&gt; so this time we going to have a follow up release 100% ?
+&lt;medusa_&gt; like 2 weeks later
+&lt;fluffypony&gt; medusa_: it depends on if there are bug fixes
+&lt;dEBRUYNE&gt; There are always bug fixes
+&lt;dEBRUYNE&gt; :P
+&lt;medusa_&gt; well depends on severity i agree
+&lt;medusa_&gt; of the bug
+&lt;ferretinjapan&gt; dEBRUYNE, what about early beta releases? Say just before the freeze?
+&lt;JollyMort[m]&gt; for one thing, i would love to see cold signing stuffs added asap; feel like it's an important feature to those who don't want to use CLI for the same thing
+&lt;JollyMort[m]&gt; and be able to resolve any problem people may have by using GUI functions
+&lt;ferretinjapan&gt; or an "experimental" release?
+&lt;hyc&gt; can we just get people to use a nightly build, for bugfix verification?
+&lt;dEBRUYNE&gt; ferretinjapan: That seems suboptimal, as there would be new binaries a few weeks later
+&lt;_Slack&gt; &lt;bigreddmachine&gt; Isn't that what the nightly builds are?
+&lt;hyc&gt; and then at some point we can decide if we have something stable enough for another release
+&lt;medusa_&gt; if we potentially want to keep the branch that long, we should also slow down with merging stuff in trunk (especially 0mg)
+&lt;medusa_&gt; until we can estimate the quality of the branch somehow
+&lt;fluffypony&gt; just looking at the recent releases, I don't think there have been a lack of them
+&lt;fluffypony&gt; Sep 19, 2016: 0.10.0
+&lt;fluffypony&gt; Dec 13, 2016: 0.10.1
+&lt;fluffypony&gt; Feb 23, 2017: 0.10.2
+&lt;fluffypony&gt; Feb 24, 2017: 0.10.2.1
+&lt;fluffypony&gt; Mar 26, 2017: 0.10.3
+&lt;fluffypony&gt; Mar 26, 2017: 0.10.3.1
+&lt;medusa_&gt; otherwise we risk, dpeending on buigs we have after release, to end up in a hairy position
+&lt;hyc&gt; so it sounds like release-as-needed is working
+&lt;fluffypony&gt; yeah, I'm not really seeing a lack of releases there
+* magic_circle (~magic_cir@x590de3fd.dyn.telefonica.de) has joined
+&lt;moneromooo&gt; especially on march the 26th.
+&lt;hyc&gt; heh
+&lt;JollyMort[m]&gt; release density == nan
+&lt;ferretinjapan&gt; The last 5 months have been rather quiet, but I don't think it's all bad.
+&lt;medusa_&gt; those 1d releases dont yount
+&lt;medusa_&gt; they fix emergency stuff
+&lt;ferretinjapan&gt; You guys were busy with making sure ringct was solid after all...
+&lt;medusa_&gt; we talk about follow up releases, with 2 weeks in between
+&lt;medusa_&gt; we enever do that
+&lt;ferretinjapan&gt; and then there was that bug...
+&lt;hyc&gt; 2 weeks seems too soon for a scheduled followup
+&lt;_Slack&gt; &lt;bigreddmachine&gt; Q before meeting is over. What kinds of things need to be studied on the PoW change proposal? I'm happy to dig into that but would like some direction if possible.
+&lt;hyc&gt; and 5 months since the last release seems too long
+&lt;endogenic&gt; bidreddmachine: what problem necessitates that?
+&lt;dEBRUYNE&gt; hyc: If the release merely intends to fix bugs of the latest release, is two weeks too soon?
+&lt;endogenic&gt; the PoW change
+* onefox (~onefox@p579012D6.dip0.t-ipconnect.de) has joined
+&lt;hyc&gt; dEBRUYNE: I presume bug fix releases go out as soon as available
+&lt;dEBRUYNE&gt; But we haven't done that in the past
+&lt;hyc&gt; e.g., for emergency fixes
+&lt;dEBRUYNE&gt; That's the issue medusa_ is raising
+&lt;hyc&gt; otherwise, if it's not urgent, 2 weeks seems short.
+&lt;msvb-lab&gt; has the meeting officially ended, one hour right?
+* gethh has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+&lt;fluffypony&gt; well in the past 5 months we haven't really been able to release stable + bug fixes
+&lt;DaveyJones&gt; afaik the GUI had/has a bug that freeze's the wallet on some system thats already fixed but never got released ... thats what your talking about medusa_ ?
+&lt;_Slack&gt; &lt;bigreddmachine&gt; endogenic: some things were raised in the thread on GitHub. I wouldn't be going into it saying "this needs to happen" but rather trying to dissect the potential issues and see if there is anything to be gained.
+&lt;fluffypony&gt; because we didn't branch
+&lt;fluffypony&gt; now we branch
+* redfish has quit (Remote host closed the connection)
+&lt;fluffypony&gt; so it seems like we're discussing something we've already fixed...?
+&lt;dEBRUYNE&gt; DaveyJones: Yes, which causes a lot of support issues
+&lt;medusa_&gt; well we expect you to be around and build a bin
+&lt;medusa_&gt; if thats all fine that its all good
+&lt;hyc&gt; yeah sounds like it's fixed already
+&lt;dEBRUYNE&gt; fluffypony: For the GUI, for example, we're still helping people that incur bugs from GUI beta 2
+&lt;dEBRUYNE&gt; That were fixed a week after the release
+&lt;hyc&gt; 3 months from now we can raise the question of an interim release if there haven't already been a slew of releases
+* atomicman has quit (Ping timeout: 240 seconds)
+&lt;fluffypony&gt; dEBRUYNE: I know what the issue was, hence the branching thing
+&lt;medusa_&gt; its also a time and tacting thing
+&lt;medusa_&gt; if we plan to let the branch live that long you will need to thread the trunk differently
+&lt;dEBRUYNE&gt; fluffypony: So if I understand the branching correctly, we'll release from the branch and if too much annoying bugs are found in the release version, we'll do a follow up point release to include fixes?
+&lt;medusa_&gt; it has a lof of effects
+&lt;msvb-lab&gt; netsplit for me i guess...
+&lt;_Slack&gt; &lt;bigreddmachine&gt; With branching now, couldn't we just have monthly  release candidates or something?
+&lt;fluffypony&gt; dEBRUYNE: yes - follow-up releases are based off the branch
+&lt;rehrar&gt; I know we're already over, but can we get a brief update regarding Sarang's FFS?
+&lt;moneromooo&gt; How about we don't spam the pony yet ? Let's wait, and maybe do a release from the branch if there are bugs we want fixed.
+&lt;fluffypony&gt; @bigreddmachine no need to timeframe it, we'll release when there are bug fixes part of the branch that make it worth releasing
+&lt;fluffypony&gt; ie. major bug fixes
+&lt;hyc&gt; agreed
+&lt;_Slack&gt; &lt;bigreddmachine&gt; Fluffy, I just meant a pseudostable branch that's a bit more tested than the nightlies.
+&lt;dEBRUYNE&gt; &lt;fluffypony&gt; dEBRUYNE: yes - follow-up releases are based off the branch &lt;= All right, well, let's see how that will go then
+&lt;fluffypony&gt; not spelling errors or whatevs
+&lt;_Slack&gt; &lt;bigreddmachine&gt; But not an actual release.
+&lt;_Slack&gt; &lt;bigreddmachine&gt; Maybe that's a "2 years down the road" thing
+&lt;fluffypony&gt; @bigreddmachine you mean off the main branch or the release branch?
+&lt;moneromooo&gt; We tried that before, it was a massive pita.
+&lt;hyc&gt; can the build system do nightlies of the release branch too?
+&lt;fluffypony&gt; hyc: pretty sure, yeah
+&lt;_Slack&gt; &lt;bigreddmachine&gt; I meant as its own branch... Commits get tested, when somewhat sure moved to release candidates, which is still unstable, and then when that's tested moves to the actual release. Probably a pita like mooo said
+* fwrttrukjwtrijdh has quit (Quit: Page closed)
+&lt;fluffypony&gt; pigeons1[m]: ^^
+&lt;fluffypony&gt; yeah complete PITA
+&lt;_Slack&gt; &lt;bigreddmachine&gt; Okay just brainstorming
+&lt;pigeons&gt; yes, i'll setup jobs for the release branch
+* pizzasushibeer (adefe661@gateway/web/freenode/ip.173.239.230.97) has joined
+&lt;hyc&gt; that ought to be good enough then as far as release candidates go
+* Foobar__ has quit (Ping timeout: 260 seconds)
+&lt;fluffypony&gt; re: sarang, pero were your questions satisfied?
+&lt;pizzasushibeer&gt; As a supporter of Ledger see nothing wrong with the community funding a 2nd hw wallet initiative. More options are beneficial and im sure many of us already own multiple Bitcoin hw wallet types for a variety of reasons
+&lt;DaveyJones&gt; pero is rarely available this week @ fluffypony
+&lt;dEBRUYNE&gt; fluffypony: I think sarang was rewriting the proposal, but I am not sure if he has finished yet
+&lt;fluffypony&gt; ok
+* john_alan has quit (Quit: Connection closed for inactivity)
+&lt;pizzasushibeer&gt; If the community is willing to fund, it I see nothing wrong with moving proposal to funding required (after any more required clarifications are made)
+&lt;sn0wmonster&gt; i think i'm gonna bother these guys to make a patch for their box for Monero http://bitseed.org/
+* rehrar has quit (Ping timeout: 240 seconds)
+&lt;sn0wmonster&gt; wrong channel
+&lt;pizzasushibeer&gt; I would help contribute to the hardware wallet proposal. Im sure others agree
+&lt;pigeons&gt; if pero's questions aren't answered maybe post a forum reply reminding him that so sarang can see clearly its outstanding still
+&lt;hyc&gt; yeah I recall pero was going to be unavailable for the next week or two
+&lt;ferretinjapan&gt; pizzasushibeer, I'm another person and I agree.
+* msvb-lab has quit (Read error: Connection timed out)
+&lt;_Slack&gt; &lt;scoobybejesus&gt; sarang was about to post clarifications to his ffs a couple times recently.  it's been mentioned more than once on #mrl
+* pizzasushibeer has quit (Quit: Page closed)
+&lt;hyc&gt; ok, we're 25minutes over. any more stuff?
+&lt;dEBRUYNE&gt; Guess not :-P
+* atomicman (~bbhgf@c-98-237-104-21.hsd1.pa.comcast.net) has joined
+&lt;DaveyJones&gt; would it be possible that -site maybe gets an additional maintainer ?
+&lt;DaveyJones&gt; afaik it less to no coding stuff and maybe people like dEBRUYNE or rehrar would be able to maintain it... so no need to bother you fluffypony ^ ^
+&lt;fluffypony&gt; DaveyJones: we're working on alternatives, probably doing something based off issue helper
+&lt;DaveyJones&gt; fine :)
+&lt;JollyMort[m]&gt; binaries and .raw downloads are high-sec
+&lt;fluffypony&gt; ^^
+&lt;_Slack&gt; &lt;rehrar&gt; Ye. Responsibility is scary.
+&lt;fluffypony&gt; so issue helper could be used to trigger merges where it doesn't touch sensitive parts of the site
+&lt;_Slack&gt; &lt;rehrar&gt; Dude, that's awesome.
+&lt;_Slack&gt; &lt;rehrar&gt; For all those little merchant merges
+&lt;DaveyJones&gt; yeah i had things like merchants in mind
+&lt;dEBRUYNE&gt; And then we could give the issue helper trusted community members access to the issue helper right?
+&lt;dEBRUYNE&gt; ^ fluffypony
+&lt;_Slack&gt; &lt;rehrar&gt; We eventually should drop support for Merchants on the site tbh imo
+&lt;fluffypony&gt; dEBRUYNE: yes
+&lt;fluffypony&gt; rehrar: why?
+&lt;moneromooo&gt; It's a good, if small, incentive for people to support monero.
+&lt;moneromooo&gt; And for connecting monero spenders with monero earners.
+&lt;_Slack&gt; &lt;rehrar&gt; As Monero grows it will become gigantic eventually, but maybe that's not a huge issue.
+&lt;_Slack&gt; &lt;rehrar&gt; Just my thoughts.
+&lt;hyc&gt; success problems are nice to have. we're not there yet
+&lt;moneromooo&gt; Oh, sure. Once Monero's world reserve currency, it can go :)
+&lt;DaveyJones&gt; ^ but only then
+&lt;dEBRUYNE&gt; fluffypony: All right, seems cool. That'd also relieve you from some "low hanging fruit" work
+&lt;dEBRUYNE&gt; Which still can be quite time consuming
+&lt;fluffypony&gt; yup
+&lt;DaveyJones&gt; but maybe we should put up some kind of Disclaimer
+&lt;DaveyJones&gt; in case some service goes rogue
+&lt;sn0wmonster&gt; which judging by bitcoin's history, is not a matter of if, but when
+&lt;DaveyJones&gt; "this is just a list of merchants, and no appraisement by the core team"
+&lt;_Slack&gt; &lt;rehrar&gt; I'm actually going to be going g through all the Merchants this week to find the dead websites.
+&lt;moneromooo&gt; Warning: the monero team does not control Amazon, odd as it might seem to you.
+&lt;pigeons&gt; cryptokingdoms
+&lt;pigeons&gt; for example
+&lt;moneromooo&gt; CK's kinda back from the moribund actually.
+&lt;pigeons&gt; ok
+&lt;_Slack&gt; &lt;rehrar&gt; Meeting = end?
+&lt;DaveyJones&gt; sure
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/16","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"16"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

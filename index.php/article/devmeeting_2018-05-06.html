@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-05-06 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-05-06.html" />
+<meta name="description" content="Highlights
+
+MRL team
+	Working on refund transactions.
+		Kudelski and QuarksLabs have begun their work on the Bulletproofs audit." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-05-06.html" />
+
+    <title>DevMeeting 2018-05-06 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-05-06.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-05-06</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="2" role="article" about="/index.php/article/devmeeting_2018-05-06" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-05-06" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-05-07T03:20:03+00:00">Sun, 05/06/2018 - 23:20</span>
+          <span property="schema:dateCreated" content="2018-05-07T03:20:03+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h4>Highlights</h4>
+
+<ul><li>MRL team
+	<ul><li>Working on refund transactions.</li>
+		<li>Kudelski and QuarksLabs have begun their work on the Bulletproofs audit. Kudelski is expected to complete mid-July.</li>
+		<li>The Bulletproofs audit from Benedikt is expected to begin May 21st and complete on June 4th.</li>
+	</ul></li>
+	<li>GUI
+	<ul><li>"bad_cast" issue which affected some Linux users has been fixed.</li>
+		<li>Stoffu has fixed some lagginess that some users experienced.</li>
+		<li>Stoffu also performed some work to address daemon connectivity and stability.</li>
+		<li>Work is being done on the lack of graphics fallback on the Windows GUI.</li>
+		<li>dsc is working on the status and receive windows.
+		<ul><li>Screenshots:</li>
+			<li><a class="external free" href="https://github.com/monero-project/monero-gui/pull/1359" rel="nofollow">https://github.com/monero-project/monero-gui/pull/1359</a></li>
+			<li><a class="external free" href="https://github.com/monero-project/monero-gui/pull/1341" rel="nofollow">https://github.com/monero-project/monero-gui/pull/1341</a></li>
+		</ul></li>
+		<li>A proper installer for Windows is expected for the v0.12.1 release.
+		<ul><li>Discussions are ongoing about the install location.</li>
+			<li>Icons will be added to assist users with finding log and wallet daemon directory locations.</li>
+		</ul></li>
+	</ul></li>
+	<li>Monero Hardware / Official Hardware Wallet
+	<ul><li>Developer boards have been slightly delayed.</li>
+		<li>FFS for a proper enclosure is live.</li>
+		<li>An NFC radio test version is expected to be available at DefCon.</li>
+		<li>Purism has reached out to collaborate with the Monero team further - especially our hardware team.</li>
+	</ul></li>
+	<li>v0.12.1 builds are expected to be available on May 9th. These 'may' be test builds.
+	<ul><li>Will enable easier support for Ledger Hardware Wallets.</li>
+		<li>You can use a Ledger wallet w/ the GUI as long as it's generated by the CLI</li>
+	</ul></li>
+	<li>Deprecation of Payment ID's continue. Migration to integrated addresses in the short term and SubAddresses in the longer term.</li>
+</ul><p> </p>
+
+<h4>Full Log</h4>
+
+<pre>
+1:02 PM &lt;_Slack&gt; &lt;rehrar&gt; 1. Greetings
+1:02 PM &lt;@ArticMine&gt; Hi
+1:02 PM &lt;+moneromooo&gt; stoffu: ^
+1:02 PM &lt;xmrscott[m]&gt; Howdy
+1:02 PM &lt;Alex_LocalMonero&gt; Hello.
+1:02 PM &lt;rbrunner&gt; Hoi zäme
+1:02 PM → TinusMars joined (510bcefc@gateway/web/freenode/ip.81.11.206.252)
+1:03 PM &lt;vtnerd&gt; hi
+1:03 PM &lt;ErCiccione&gt; Hi!
+1:03 PM &lt;xmrmatterbridge&gt; &lt;oneiric&gt; hi
+1:03 PM &lt;xmrmatterbridge&gt; &lt;el00ruobuob&gt; Hi
+1:04 PM &lt;_Slack&gt; &lt;rehrar&gt; 2. Brief review of what's been completed since the previous meeting
+1:05 PM → bomb-on joined (~bomb-on@139-142-17-89.fiber.hringdu.is)
+1:05 PM &lt;_Slack&gt; &lt;rehrar&gt; Watchoo foo's been up to.
+1:06 PM &lt;sarang&gt; hiyo
+1:07 PM &lt;sarang&gt; Some of MRL went to an IEEE workshop that had some Monero focus
+1:07 PM &lt;sarang&gt; Learned of some funny bizniss that evil remote nodes can do, ways to represent rings, and, most interesting, refund txns
+1:08 PM &lt;gingeropolous&gt; evil public remote
+1:08 PM &lt;gingeropolous&gt; well, i guess one you control could get compromised
+1:09 PM &lt;sarang&gt; The proposed attacks mean that such a node could present corrupted mixins and determine true spend
+1:09 PM &lt;gingeropolous&gt; ouch
+1:09 PM &lt;sarang&gt; But we already present a warning to the user in the case that the known spend is corrupted when returned by the node
+1:10 PM → rehrar joined (~user@174-28-239-11.albq.qwest.net)
+1:10 PM &lt;rehrar&gt; I have arrived
+1:10 PM &lt;Alex_LocalMonero&gt; Hello there.
+1:10 PM &lt;sarang&gt; The only way it provides any advantage is if the node selectively returns false outputs, and this only statistically works a small amount of time
+1:10 PM &lt;@fluffypony&gt; so remote nodes are bad, mmmkay?
+1:10 PM &lt;sarang&gt; So I consider our current mitigation to be fine
+1:10 PM &lt;sarang&gt; lol
+1:10 PM &lt;gingeropolous&gt; lol
+1:10 PM &lt;xmrmatterbridge&gt; &lt;michael&gt; $ whoami(msvb)
+1:10 PM &lt;sarang&gt; But yes, you shouldn't use an evil remote node anyway
+1:10 PM &lt;rehrar&gt; oh nice, we have michael from hardware too. Update from you guys?
+1:11 PM &lt;@ArticMine&gt; There is enough deterrence since an evil node is then exposed
+1:11 PM &lt;sarang&gt; ArticMine: yes, a node that pulls this crap a lot will get blacklisted by the community
+1:11 PM &lt;sarang&gt; I consider the research useful, but not a practical problem
+1:12 PM &lt;sarang&gt; It was also responsibly disclosed, so thanks to the researchers for doing it right
+1:12 PM ⇐ Sterl quit (~Sterl@c-73-153-26-15.hsd1.co.comcast.net) Ping timeout: 248 seconds
+1:12 PM &lt;xmrmatterbridge&gt; &lt;michael&gt; rehrar: I'm on mobile, kind of read only.
+1:13 PM &lt;rehrar&gt; no worries. People can always check out your Taiga for updates
+1:13 PM &lt;rbrunner&gt; What is it whith those mobiles :)
+1:13 PM &lt;sarang&gt; Any other questions/comments for MRL?
+1:14 PM &lt;rehrar&gt; is the most secure setup to run your own full node behind a username and password, and connect to it with your mobile devices?
+1:14 PM ↔ Alex_LocalMonero nipped out  
+1:14 PM &lt;tjfkfoaofbrcdj&gt; any status updates on bulletproof audits?
+1:15 PM &lt;sarang&gt; rehrar: probably
+1:15 PM &lt;@ArticMine&gt; There is actually an advantage to using a remote node even of one also runs a full node
+1:15 PM &lt;sarang&gt; ArticMine: how?
+1:15 PM &lt;sarang&gt; blending in with many other txns?
+1:15 PM &lt;@ArticMine&gt; Hiding your IP from the network
+1:15 PM &lt;sarang&gt; tjfkfoaofbrcdj: Kudelski and QuarksLab have begun their work
+1:15 PM &lt;@ArticMine&gt; When sending a tx
+1:15 PM &lt;rehrar&gt; sarang: can you quickly check when the other guy starts also?
+1:16 PM &lt;sarang&gt; Benedikt was mid-May IIRC
+1:16 PM &lt;sarang&gt; I'm looking up his more accurate statement in my email
+1:17 PM &lt;sarang&gt; Benedikt estimates he will start on May 21, finishing by June 4
+1:17 PM &lt;rehrar&gt; ArticMine: mitigated with Kovri after release, correct?
+1:17 PM &lt;sarang&gt; Kudelski will finish by mid-July
+1:18 PM &lt;sarang&gt; I'll be checking in with all auditors this week (and weekly thereafter)
+1:18 PM &lt;@fluffypony&gt; fyi: my bandwidth is abysmal (64 bytes from 8.8.8.8: icmp_seq=14 ttl=53 time=795.821 ms) so I'm just observing in silence
+1:18 PM &lt;@ArticMine&gt; Yes of course but Kovri is not out yet
+1:18 PM → Sterl joined (~Sterl@c-73-153-26-15.hsd1.co.comcast.net)
+1:19 PM &lt;rehrar&gt; ArticMine: one day....
+1:19 PM &lt;rehrar&gt; anything else to report as being done the past couple weeks?
+1:19 PM → Zames joined (~Mutter@110.54.251.179)
+1:19 PM &lt;dEBRUYNE&gt; I guess I can provide a few updates on the GUI if peeps are interested
+1:20 PM &lt;sarang&gt; fo sho
+1:20 PM &lt;Alex_LocalMonero&gt; Please do.
+1:20 PM &lt;dEBRUYNE&gt; All right. I'll first start with the critical bugs in GUI v0.12
+1:21 PM &lt;dEBRUYNE&gt; - There was the bad_cast issue, which resulted in a subset of Linux users being unable to properly run the GUI
+1:21 PM &lt;dEBRUYNE&gt; i.e. the GUI wouldn not connect to the daemon that was running already
+1:21 PM &lt;dEBRUYNE&gt; - A subset of users reported that the GUI was laggy (even when using a remote node). This has been fixed by stoffu. It was caused by the tracking stuff
+1:22 PM &lt;dEBRUYNE&gt; Stoffu also made a commit that ensures the GUI uses the same daemon connection, which should improve stability and connectivity
+1:22 PM &lt;rehrar&gt; I love when you talk like that dEBRUYNE ;)
+1:23 PM &lt;dEBRUYNE&gt; Then for Windows users GUI v0.12 wasn't using proper graphic fallback. We're busy fixing the Win environment and are waiting on pazos for some test results. It's a bit of a pita since QT has to be built statically
+1:23 PM &lt;dEBRUYNE&gt; ^ Those are all fixes for issues in GUI v0.12
+1:23 PM ⇐ Zames quit (~Mutter@110.54.251.179) Client Quit
+1:23 PM &lt;rehrar&gt; *applause*
+1:23 PM &lt;dEBRUYNE&gt; Then dsc_ / dsc2 has also improved the Show status window + the receive page, as can be seen from here:
+1:23 PM &lt;dEBRUYNE&gt; https://github.com/monero-project/monero-gui/pull/1359 (receive page)
+1:24 PM &lt;dEBRUYNE&gt; https://github.com/monero-project/monero-gui/pull/1341
+1:24 PM &lt;dEBRUYNE&gt; Also a few other bugs present in GUI v0.12 have been fixed, but mostly minor stuff
+1:25 PM &lt;dEBRUYNE&gt; I guess that's it. One more thing I wanted to talk about is rbrunner's Windows installer. I think we should really add it for GUI v0.12.1
+1:25 PM &lt;dEBRUYNE&gt; It's (i) easier and more intuitive for the user and (ii) actually somewhat more secure
+1:25 PM &lt;rehrar&gt; add it to the website, you mean?
+1:25 PM &lt;+moneromooo&gt; Can you expand on (ii) ?
+1:26 PM &lt;dEBRUYNE&gt; moneromooo: Let me check what rbrunner said
+1:26 PM &lt;rbrunner&gt; Ah, I can take over, if you like
+1:26 PM &lt;dEBRUYNE&gt; rehrar: Yes. So we would have the installer + the portable .zip file
+1:26 PM &lt;dEBRUYNE&gt; Oh he's here actually :P
+1:26 PM &lt;dEBRUYNE&gt; Nice
+1:26 PM &lt;dEBRUYNE&gt; Sure rbrunner, go ahead
+1:26 PM &lt;rbrunner&gt; The installer copies the monero files to a place in the file system where you only can change them with admin rights
+1:27 PM &lt;rbrunner&gt; Namely C:\Program Files
+1:27 PM → isp92074 joined (4d6ff704@gateway/web/freenode/ip.77.111.247.4)
+1:27 PM &lt;rbrunner&gt; So they do not just lay around somewhere in the filesystem ...
+1:28 PM &lt;rbrunner&gt; That's not revolutionary, but the proper way, the way it should be
+1:28 PM &lt;+moneromooo&gt; So you have to get admin rights to install, and that makes it more secure ?
+1:29 PM → msvb-lab joined (~michael@p5DC7A7AF.dip0.t-ipconnect.de)
+1:29 PM &lt;+moneromooo&gt; Naively, I'd think that makes it less secure.
+1:29 PM &lt;rbrunner&gt; Yes, because the access is restricted to a well-defined point in time
+1:29 PM &lt;@ArticMine&gt; Adin rights in Windows is trivial. Most malware knows how to get it
+1:29 PM &lt;rbrunner&gt; And after that it's somewhat protected
+1:29 PM &lt;+moneromooo&gt; Oh, you mean otherwise you need admoin rights every time you run it ??
+1:30 PM &lt;rbrunner&gt; No, don't think so
+1:30 PM &lt;@ArticMine&gt; Also if the files are always in the same place it makes it easy for malware
+1:30 PM &lt;rbrunner&gt; But anyway, every program that is a "good citizen" on Windows goes there
+1:31 PM &lt;rbrunner&gt; See how much power Linux gains from everybody respecting the norms.
+1:31 PM &lt;@ArticMine&gt; Good citizen with respect to Microsoft's vision of DRM
+1:31 PM &lt;rbrunner&gt; IMHO we should do likewise on Windows
+1:31 PM &lt;rbrunner&gt; But that's probably not the main point of the installer, of course
+1:32 PM &lt;rbrunner&gt; It's simply easier for noobs, and with much easier updates
+1:32 PM ⇐ milargos quit (~milargos@213.57.220.243) Read error: Connection reset by peer
+1:32 PM &lt;rbrunner&gt; I included also icons to easily access logs
+1:32 PM &lt;rehrar&gt; that's definitely the bigger one, yes
+1:32 PM &lt;rbrunner&gt; and the wallet directory
+1:32 PM &lt;rbrunner&gt; and starting the daemon directly
+1:32 PM → milargos joined (~milargos@213.57.220.243)
+1:32 PM &lt;rbrunner&gt; and low-graphic wallet start
+1:32 PM &lt;rbrunner&gt; and and and :)
+1:33 PM &lt;rbrunner&gt; Really, the thing won't hurt
+1:33 PM &lt;dEBRUYNE&gt; If I recall correctly, most Windows programs give the user an option to run an installer or use a portable version
+1:33 PM &lt;dEBRUYNE&gt; Imo we should do too, especially if the installer provides greater convenience
+1:33 PM &lt;rbrunner&gt; Yes, and of course we don't take away the ZIP
+1:33 PM &lt;rehrar&gt; alright. michael is now able to write and give a hardware report if we're down to hear it
+1:33 PM &lt;ErCiccione&gt; is the installer to make it for 0.12.1? i would implement it in the guide if yes
+1:34 PM &lt;ErCiccione&gt; *is the installer going to
+1:34 PM &lt;rbrunner&gt; That's the funny part: You can build the installer basically *any time*
+1:34 PM &lt;rbrunner&gt; there are nearly no interdenpendencies
+1:34 PM &lt;rbrunner&gt; Just take the content of the current release ZIP, pack it, release it - *any time*
+1:34 PM &lt;msvb-lab&gt; rehrar: Oah yes, thanks.
+1:34 PM &lt;dEBRUYNE&gt; ErCiccione: Imo we should add the installer for 0.12.1. We've been trying to add it since 0.11.1.0..
+1:34 PM &lt;rehrar&gt; let's do it.
+1:35 PM &lt;rehrar&gt; I'll put it on the website
+1:35 PM &lt;msvb-lab&gt; An order of a bunch of developer boards is in but on hold due to a chinese problem (picking up at the DefCon Beijing office.)
+1:35 PM &lt;rbrunner&gt; The current installer for Helium Hydra could have been published in January, February, March ...
+1:35 PM &lt;msvb-lab&gt; And our FFS to get a proper enclosure was turned live by Luigi (thanks!) a couple days ago.
+1:36 PM ⇐ tjfkfoaofbrcdj quit (b84bd42d@gateway/web/freenode/ip.184.75.212.45) Ping timeout: 260 seconds
+1:36 PM &lt;msvb-lab&gt; On a related note, we're testing a hardware design that can be considered a wallet, but is an insecure NFC radio version.
+1:36 PM &lt;rbrunner&gt; rehrar: I'll put it on the website &lt;- Thanks for that already now
+1:36 PM &lt;msvb-lab&gt; To be given out at DefCon Vegas.
+1:36 PM &lt;msvb-lab&gt; That's all for a hardware team status report, thanks. Any questions?
+1:36 PM &lt;rehrar&gt; rbrunner: it just takes someone to move it from talk to action :D
+1:36 PM &lt;ErCiccione&gt; rehrar: would be good to have the guide on the website, at least last releases (next one is 1.1)
+1:37 PM &lt;rbrunner&gt; Yes, it's like that most of the time :)
+1:37 PM &lt;rehrar&gt; hardware questions?
+1:37 PM ⇐ Hardy8Pacocha quit (~Hardy8Pac@ns334669.ip-5-196-64.eu) Ping timeout: 256 seconds
+1:37 PM &lt;rehrar&gt; do we have a timeline for 1.1 btw?
+1:37 PM &lt;msvb-lab&gt; rehrar: Yes, hardware questions, unless you want to talk about what purism has asked.
+1:37 PM &lt;rehrar&gt; not at the moment. It's still developing.
+1:38 PM &lt;ErCiccione&gt; PDF of 1.1 will be out right after GUI 0.12.1 . It's already mostly done
+1:38 PM &lt;rehrar&gt; Preannouncement that Purism wants to collaborate with us further, especially our hardware people
+1:38 PM ⇐ al-maisan quit (~al-maisan@opentransactions/monetas/al-maisan) Quit: See you later..
+1:38 PM &lt;rehrar&gt; oops ErCiccione, that's what I meant. Do we have a timeline for 0.12.1?
+1:38 PM → medusa_ joined (~medusa_@unaffiliated/medusa-/x-0033248)
+1:39 PM &lt;+moneromooo&gt; pony said on the 9th IIRC. Not sure if still up though, he said there'd be preliminary builds, which there weren't so far.
+1:39 PM &lt;rehrar&gt; care to comment mr fluffypony?
+1:39 PM &lt;ErCiccione&gt; rehrar: afaik we have 3 PR ready to be merged. After those are merged: code freeze -&gt; refresh all translations and embed guide -&gt; 0.12.1
+1:39 PM &lt;rehrar&gt; fluffypony: "I'm not a crook" *holds up V sign*
+1:40 PM → jdoejfbeibridje joined (c045fd8d@gateway/web/freenode/ip.192.69.253.141)
+1:40 PM &lt;rehrar&gt; this will be helpful to push it out since afaiu ledger will officially realase after that
+1:41 PM &lt;rbrunner&gt; And getting rid of those syncing bug, right?
+1:41 PM → al-maisan joined (~al-maisan@opentransactions/monetas/al-maisan)
+1:41 PM &lt;dEBRUYNE&gt; I'd like for 0.12.1 to be released soon as well (if the devs say it's ready)
+1:41 PM &lt;dEBRUYNE&gt; It will significantly reduce the amount of support that is required :p
+1:42 PM &lt;dEBRUYNE&gt; + it will finally enable users to use Monero on Ledger
+1:42 PM &lt;rehrar&gt; alright, deadline tomorrow
+1:42 PM ⇐ ThisAsYou quit (sid214210@gateway/web/irccloud.com/x-yzisjjqayhdohswg)
+1:42 PM &lt;dEBRUYNE&gt; :D
+1:42 PM → ThisAsYou joined (sid214210@gateway/web/irccloud.com/x-ggqgyokqmuqrziqc)
+1:42 PM &lt;dEBRUYNE&gt; On a side note, you can use a Ledger wallet w/ the GUI as long as it's generated by the CLI
+1:42 PM &lt;@fluffypony&gt; I'm on bad Internet until later this coming week, so the plan is to finalise it then
+1:43 PM &lt;@fluffypony&gt; I think we're mostly done with merges on the CLI side
+1:43 PM &lt;dEBRUYNE&gt; For the GUI too fwiw
+1:43 PM &lt;+moneromooo&gt; There's just 3753, it seems useful, but a bit dicey maybe.
+1:44 PM &lt;rehrar&gt; Anyways now that that's settled (somewhat), let's move on for a bit here. Alex_LocalMonero wants to talk about payment IDs. He's quite supportive of them and wants to give everyone a high five for their invention.
+1:44 PM &lt;rehrar&gt; then we can talk PRs
+1:44 PM &lt;Alex_LocalMonero&gt; Thank you rehrar.
+1:44 PM &lt;dEBRUYNE&gt; I'd like for that one to be included moneromooo. Still everyday someone seems to be on the wrong chain :P
+1:44 PM &lt;Alex_LocalMonero&gt; Honorable gentlemen.
+1:44 PM &lt;Alex_LocalMonero&gt; Your fluffyness.
+1:45 PM &lt;Alex_LocalMonero&gt; It is our opinion at LocalMonero that separate payment IDs (SPIs) need to die.
+1:45 PM &lt;Alex_LocalMonero&gt; SPIs increase the complexity of Monero, a common complaint for many new users.
+1:45 PM &lt;Alex_LocalMonero&gt; SPIs increase the amount of support that is required for us to process.
+1:46 PM &lt;Alex_LocalMonero&gt; SPIs create a loss of productivity for everyone involved.
+1:46 PM ⇐ john_alan quit (sid222269@gateway/web/irccloud.com/x-oocgggtzygfxlmmc)
+1:46 PM &lt;+moneromooo&gt; That's the same point said three times.
+1:46 PM &lt;Alex_LocalMonero&gt; Not exactly.
+1:46 PM → john_alan joined (sid222269@gateway/web/irccloud.com/x-fcihtxbbrelwqtdt)
+1:46 PM &lt;+hyc&gt; I thought payment IDs were already deprecated
+1:46 PM &lt;endogenic&gt; yeah well why could just write moneromö instead
+1:46 PM &lt;vtnerd&gt; so you want it to be always an integrated paynent id?
+1:46 PM &lt;Alex_LocalMonero&gt; Yes.
+1:46 PM &lt;+moneromooo&gt; They are, and it's the destination's choice what to use, so...
+1:47 PM &lt;Alex_LocalMonero&gt; Most exchanges still use SPIs, unfortunately.
+1:47 PM &lt;endogenic&gt; anything can be put into extra tho right?
+1:47 PM &lt;Alex_LocalMonero&gt; One exchange, I believe it's Bitfinex, even started charging people $20 for recovering deposits that forgot to include payment IDs.
+1:47 PM &lt;+moneromooo&gt; Yes (within the size limit).
+1:48 PM &lt;endogenic&gt; so they could technically still keep using them
+1:48 PM &lt;Alex_LocalMonero&gt; Which is why I believe they need to completely spliced out in the RPC and CLI and GUI wallets.
+1:48 PM &lt;endogenic&gt; we moved to generating integrated addresses rather than SPIs fwiw
+1:48 PM &lt;endogenic&gt; and short PIDs which are entered are automagically treated as an integrated addr of course
+1:48 PM &lt;+moneromooo&gt; No. They stay for backward compatibility. I'd be OK with a warning though.
+1:48 PM ⇐ liberza quit (~liberza@unaffiliated/liberza) Ping timeout: 264 seconds
+1:49 PM &lt;Alex_LocalMonero&gt; moneromooo, the value from backward compatibility is far outweighed by the loss of productivity that is caused by the increased complexity.
+1:49 PM &lt;endogenic&gt; well there's the argument that long pids are a privacy issue somehow
+1:49 PM &lt;@fluffypony&gt; endogenic: agreed
+1:49 PM &lt;endogenic&gt; they rely on the client generating random and unique data
+1:50 PM &lt;@fluffypony&gt; we should just put in a notice of deprecation with a timeline
+1:50 PM &lt;rehrar&gt; do subaddresses also not address this issue?
+1:50 PM &lt;@fluffypony&gt; say something like 2 year's time
+1:50 PM &lt;@fluffypony&gt; rehrar: yes
+1:50 PM → liberza joined  ⇐ stoffu quit  
+1:50 PM &lt;rehrar&gt; in that sense, we should almost get rid of integrated addresses altogether
+1:50 PM &lt;rehrar&gt; subaddresses are just so easy from a UX perspective
+1:50 PM → stoffu joined (sid260213@gateway/web/irccloud.com/x-nmvqipkmopeyjtip)
+1:50 PM &lt;Alex_LocalMonero&gt; I would argue against that.
+1:50 PM &lt;Alex_LocalMonero&gt; Integrated addresses are much better for us to manage.
+1:51 PM &lt;endogenic&gt; subaddresses haven't been audited enough either
+1:51 PM &lt;rehrar&gt; Alex_LocalMonero: the eternal struggle of easier for the user vs easier for the vendor
+1:51 PM &lt;@fluffypony&gt; we should deprecate PIDs in favour of integrated addresses over like 2 years, and then deprecate those in favour of subaddresses over the next 2 years
+1:51 PM &lt;endogenic&gt; would agree, fwiw ^
+1:51 PM &lt;rehrar&gt; fluffypony: Monero's got like another half year left in the tank at best
+1:52 PM &lt;Alex_LocalMonero&gt; Aren't subadresses less scalable?
+1:52 PM &lt;@ArticMine&gt; That seems like a good plan
+1:52 PM &lt;endogenic&gt; Alex_LocalMonero: on a scanning side, maybe, but we can look at techniques
+1:52 PM &lt;@fluffypony&gt; and we don't remove support for receiving / parsing them
+1:52 PM &lt;@fluffypony&gt; just for creating txs with them
+1:52 PM &lt;@ArticMine&gt; Yes very important
+1:52 PM &lt;Alex_LocalMonero&gt; That's perfect.
+1:53 PM &lt;sarang&gt; endogenic: on the scanning side it reduces to a hash lookup
+1:53 PM &lt;@fluffypony&gt; Alex_LocalMonero: unless you have 500 million customers you're not going to worry
+1:53 PM &lt;@fluffypony&gt; scanning side is plenty scalable
+1:53 PM &lt;Alex_LocalMonero&gt; How dare you assume we won't have 500 million customers?
+1:53 PM &lt;@fluffypony&gt; ^^ what sarang said
+1:54 PM &lt;@fluffypony&gt; lol
+1:54 PM &lt;rehrar&gt; to get this moved along more quickly, there can be educational support instead of changing the code as well
+1:54 PM &lt;sarang&gt; If anything the scanning is just annoying if you have to do wallet recovery
+1:54 PM &lt;rehrar&gt; if we get things like Monero Integrations to only offer integrated addresses, and all other vendor tools to do the same, then it will be a natural transition.
+1:55 PM &lt;Alex_LocalMonero&gt; May I ask for the SPIs to be phased out within 1 year instead of 2 years?
+1:55 PM ↔ @Guest77943 (was Guest77943; opped) nipped out  
+1:56 PM &lt;rehrar&gt; 2 years is like a millineum in cryptocurrency world
+1:56 PM &lt;Alex_LocalMonero&gt; Exactly.
+1:56 PM &lt;+moneromooo&gt; You'd need all exchanges to have switched within that time. I don't see that happening.
+1:56 PM &lt;+moneromooo&gt; You could say it's their problem, true :)
+1:56 PM &lt;rbrunner&gt; 2 years like a millenium won't stay that way
+1:56 PM &lt;Alex_LocalMonero&gt; Exchanges aren't going to start switching until the last week in any case, I guarantee it moneromooo.
+1:56 PM &lt;@fluffypony&gt; what if we put it out as a disclosure
+1:56 PM &lt;cryptochangement&gt; rehrar: oops I was supposed to get Monero Integrations on only integrated addresses like a couple weeks ago and got distracted lol
+1:56 PM &lt;rbrunner&gt; Things *have* to calm down
+1:56 PM &lt;@fluffypony&gt; ie. it's a privacy risk, here we're responsibly disclosing, here's the list of exchanges we contacted
+1:56 PM &lt;@fluffypony&gt; here's the list that have taken action
+1:57 PM &lt;dEBRUYNE&gt; fluffypony: that would basically be a recommendation for exchanges to either use integrated addresses or subaddresses right?
+1:57 PM &lt;Alex_LocalMonero&gt; Yes.
+1:58 PM &lt;Alex_LocalMonero&gt; With a tack of passive aggressiveness.
+1:58 PM &lt;rehrar&gt; full on aggressiveness is the way to go here
+1:58 PM &lt;rehrar&gt; "don't you know Monero buys hitmen?"
+1:58 PM &lt;@ArticMine&gt; Given the long term plan the recommendation should be sub addresses
+1:58 PM &lt;Alex_LocalMonero&gt; I agree. I think this in conjunction with a 1-year phasing out timeline for SPIs is the best way to go.
+1:59 PM &lt;Alex_LocalMonero&gt; We won't bare 2 years of these goddamn SPI tickets.
+1:59 PM &lt;jdoejfbeibridje&gt; can we do a ffs for subaddress audits?
+1:59 PM &lt;Alex_LocalMonero&gt; They are clogging up our support way too much.
+1:59 PM &lt;rehrar&gt; Alex_LocalMonero: why do your business not do integrated only?
+1:59 PM &lt;Alex_LocalMonero&gt; We do do integrated only.
+1:59 PM &lt;+moneromooo&gt; Just charge them for the time. Good solution, and extra revenue stream.
+1:59 PM &lt;@luigi1111&gt; Hard to stop using them before exchanges stop requiring them
+2:00 PM &lt;rehrar&gt; ^ luigi1111 this is indeed the thing
+2:00 PM &lt;rehrar&gt; we have to force the hand of the exchanges
+2:00 PM &lt;Alex_LocalMonero&gt; The problem is that people want to withdraw from LocalMonero to places like Bittrex that use SPIs
+2:00 PM &lt;rehrar&gt; in essence, we are putting our usability for users at their mercy
+2:00 PM &lt;rehrar&gt; force the hand of the exchanges. They will switch over. Then we can move on in peace.
+2:00 PM → p0nziph0ne joined (p0nziph0ne@gateway/vpn/privateinternetaccess/p0nziph0ne)
+2:00 PM &lt;pigeons&gt; jdoejfbeibridje: I'd like to see more review of subaddresses as well
+2:01 PM &lt;+moneromooo&gt; What's your problem then ? Once you've coded that, it's a one off. People forget to use it ? Then they cry to bittrex, not you.
+2:01 PM &lt;rehrar&gt; I don't think there's any denying that SPIs are a UX nightmare
+2:01 PM &lt;+moneromooo&gt; And bitrex can charge them ^_^
+2:01 PM &lt;Alex_LocalMonero&gt; The move from integrated addresses to subaddresses doesn't incur a loss of productivity or increase in complexity.
+2:01 PM &lt;iDunk&gt; Bittrex it too afraid to ever touch anything Monero unless they have to.
+2:01 PM &lt;Alex_LocalMonero&gt; The move from SPIs to integrated addresses will lead to an overall increase in the productivity of the entire Monero ecosystem.
+2:01 PM &lt;@luigi1111&gt; Polo did finally upgrade to integrated a while back
+2:02 PM &lt;Alex_LocalMonero&gt; Yes, thank god.
+2:02 PM &lt;@luigi1111&gt; But it's a good guess bittrex won't ever without some motivation
+2:02 PM &lt;Alex_LocalMonero&gt; 100%
+2:02 PM &lt;rehrar&gt; I agree with Alex that many exchanges won't do anything until they are forced to, and at the last second at that
+2:02 PM ⇐ isp92074 quit (4d6ff704@gateway/web/freenode/ip.77.111.247.4) Ping timeout: 260 seconds
+2:03 PM &lt;Alex_LocalMonero&gt; They'd rather charge people $20 to credit the SPI-less deposits instead of updating their Monero-interfacing software.
+2:03 PM &lt;Alex_LocalMonero&gt; Which is a loss to the economy.
+2:03 PM &lt;msvb-lab&gt; Whoever can understand monero development well and will be at DefCon Las Vegas, please submit a speaking proposal for our Monero/BCOS village at:
+2:03 PM &lt;Alex_LocalMonero&gt; And a negative effect.
+2:03 PM &lt;msvb-lab&gt; https://docs.google.com/forms/d/e/1FAIpQLScnDevCkvDNQpfO-ktisAtWIx7z3M_6zX0qSbhDVRsIVEIF4w/viewform
+2:03 PM &lt;Alex_LocalMonero&gt; On the user experience.
+2:03 PM &lt;rehrar&gt; yes Alex_LocalMonero and this alone could give users a bad taste in their mouths about Monero period
+2:04 PM &lt;Alex_LocalMonero&gt; A newb is like "this Monero thing is crazy, with Bitcoin I just send to an address and that's that, with this Monero there's this weird field and because I didn't know about it now I have to pay bitfinex $20"
+2:04 PM &lt;Alex_LocalMonero&gt; "Screw this, I'll never use Monero again"
+New messages since you tabbed out
+2:04 PM &lt;iDunk&gt; rehrar: that came out right :)
+2:04 PM &lt;rehrar&gt; :P
+2:05 PM &lt;rehrar&gt; the crazy thing is, the solution is already invented and ready to go
+2:05 PM &lt;rehrar&gt; it just needs to be enforced
+2:05 PM &lt;Alex_LocalMonero&gt; Exactly.
+2:05 PM &lt;UkoeHB&gt; If it's hard to move exchanges to integrated, it will be almost impossible then move them to subaddresses.
+2:05 PM &lt;Alex_LocalMonero&gt; Subaddresses aren't such a huge upgrade for vendors.
+2:05 PM &lt;Alex_LocalMonero&gt; So there's no need to enforce it.
+2:05 PM &lt;Alex_LocalMonero&gt; Because it doesn't provide decreased complexity of a user's depositing experience.
+2:05 PM &lt;rehrar&gt; I agree with the 1 year deprecation, but I'm just a guy with a dream
+2:06 PM &lt;rehrar&gt; either way, good discussion. For those that need to go, please feel free. We're over the hour.
+2:06 PM &lt;gingeropolous&gt; "&lt;Alex_LocalMonero&gt; They'd rather charge people $20 to credit the SPI-less deposits instead of updating their Monero-interfacing software." &gt;&gt; i mentioned a while back trying to invent a way for new daemons to only work with new wallets
+2:06 PM &lt;rehrar&gt; Also, msvb-lab is correct. If you are going to defcon and would like to present something, please consider submitting a speaking proposal
+2:06 PM &lt;UkoeHB&gt; Integrated are more intuitive for laymen, and provide the same ultimate function
+2:06 PM &lt;gingeropolous&gt; i've got a feeling most exchanges just leave the wallets alone and update the daemons
+2:07 PM &lt;rehrar&gt; next meeting in two weeks time
+</pre>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"2"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>

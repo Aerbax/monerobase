@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-50954220-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="DevMeeting 2018-03-18 | Monerobase" />
+<link rel="canonical" href="devmeeting_2018-03-18.html" />
+<meta name="description" content=" 
+
+
+Highlights
+
+To allow some additional time to test all of the new features, the next Monero release has been pushed to ~April 6th: https://github.com/monero-project/monero/pull/3424
+
+	Version 0.12 &quot;Lithium Luna&quot;
+		The release is expected to be tagged and ready for testing thi" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="../../sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="devmeeting_2018-03-18.html" />
+
+    <title>DevMeeting 2018-03-18 | Monerobase</title>
+    <link rel="stylesheet" href="../../sites/default/files/css/css__wBfhyL83sORKzo__AgHv4HOGuOoSbIzIaa4clq9PXs.css%3Fpjuemb.css" media="all" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootswatch/3.3.7/united/bootstrap.min.css" media="all" />
+<link rel="stylesheet" href="../../sites/default/files/css/css_R2R9FNh48VwRxsf30Dy2We_s9-CIFNVJLM4bsKoNCis.css%3Fpjuemb.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-article has-glyphicons">
+    <a href="devmeeting_2018-03-18.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+        
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+              </div>
+
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-main-menu-menu" id="block-monerobasebs-main-menu">
+            <h2 class="sr-only" id="block-monerobasebs-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                      <li class="first">
+                                        <a href="../../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="last">
+                                        <a href="../../node/58.html" data-drupal-link-system-path="node/58">The Tip Jar</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-monerobasebs-account-menu-menu" id="block-monerobasebs-account-menu">
+            <h2 class="sr-only" id="block-monerobasebs-account-menu-menu">User account menu</h2>
+
+      
+      <ul class="menu menu--account nav navbar-nav navbar-right">
+                      <li class="first last">
+                                        <a href="../../user/login.html" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+        </div>
+                </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+          <a class="logo navbar-btn pull-left" href="../../index.html" title="Home" rel="home">
+      <img src="../../sites/default/files/monerobase-pinkie.png" alt="Home" />
+    </a>
+        
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-9">
+
+                                      <div class="highlighted">  <div class="region region-highlighted">
+        <h1 class="page-header"><span property="schema:name">DevMeeting 2018-03-18</span>
+</h1>
+
+
+  </div>
+</div>
+                  
+                                      
+                  
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <article data-history-node-id="5" role="article" about="/index.php/article/devmeeting_2018-03-18" typeof="schema:Article" class="article is-promoted full clearfix">
+
+  
+      <span property="schema:name" content="DevMeeting 2018-03-18" class="hidden"></span>
+
+
+      <footer>
+      <article typeof="schema:Person" about="/user/1">
+  </article>
+
+      <div class="author">
+        Submitted by <span rel="schema:author"><span lang="" about="/index.php/user/1" typeof="schema:Person" property="schema:name" datatype="">aerbax</span></span>
+ on <span property="schema:dateCreated" content="2018-03-18T20:01:03+00:00">Sun, 03/18/2018 - 16:01</span>
+          <span property="schema:dateCreated" content="2018-03-18T20:01:03+00:00" class="hidden"></span>
+
+      </div>
+    </footer>
+  
+  <div class="content">
+    
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="mw-body overthrow" id="content" role="main"> 
+<div class="mw-body-content" id="bodyContent">
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en" xml:lang="en">
+<h4>Highlights</h4>
+
+<ul><li>To allow some additional time to test all of the new features, the next Monero release has been pushed to ~April 6th: <a class="external free" href="https://github.com/monero-project/monero/pull/3424" rel="nofollow">https://github.com/monero-project/monero/pull/3424</a>
+
+	<ul><li>Version 0.12 "Lithium Luna"</li>
+		<li>The release is expected to be tagged and ready for testing this week.</li>
+	</ul></li>
+	<li>v0.12 "Major" Features
+	<ul><li>MultiSig</li>
+		<li>SubAddresses</li>
+		<li>Default Ring Size increase from 5 to 7</li>
+		<li>Proof of Work changes to combat ASIC's</li>
+		<li>Initial hardware wallet support for Ledger</li>
+		<li>Key reuse mitigations</li>
+	</ul></li>
+	<li>A Dark theme for the official GUI should be finalized this week.</li>
+</ul><p> </p>
+
+<h4>Full Log</h4>
+
+<pre>
+1:02 PM &lt;@fluffypony&gt; meeting time
+1:03 PM &lt;@fluffypony&gt; 1. Greetings
+1:03 PM &lt;KnifeOfPi&gt; hello!
+1:03 PM &lt;@ArticMine&gt; hi
+1:03 PM &lt;rbrunner&gt; Hoi zäme
+1:03 PM &lt;xmrscott[m]&gt; Salutations
+1:04 PM &lt;@fluffypony&gt; binaryFate luigi1111 luigi1111w smooth hyc moneromooo cryptochangement cslashm dEBRUYNE ErCiccione gingeropolous
+1:04 PM &lt;KnifeOfPi&gt; suraeNoether sarang
+1:04 PM &lt;suraeNoether&gt; howdy~
+1:04 PM &lt;ErCiccione&gt; Hi!
+1:04 PM &lt;cryptochangement&gt; hello
+1:04 PM &lt;medusa_&gt; hi
+1:05 PM &lt;@fluffypony&gt; iDunk: IPGlider JollyMort[m] stoffu NoodleDoodle pigeons redfish whoever else
+1:05 PM &lt;KnifeOfPi&gt; rehrar
+1:05 PM &lt;anonimal&gt; Hi
+1:05 PM &lt;iDunk&gt; Hi
+1:05 PM &lt;dEBRUYNE&gt; hi
+1:05 PM → +monero (voiced) joined  
+1:05 PM &lt;+monero&gt; [monero] anonimal opened pull request #3431: README: add instructions for cloning / submodules (master...README) https://git.io/vx3cU
+1:05 PM → ComatoseCarrot joined  ← +monero left  
+1:06 PM &lt;ComatoseCarrot&gt; Howdy
+1:07 PM &lt;@fluffypony&gt; 2. Brief review of what's been completed since the previous meeting
+1:08 PM &lt;gingeropolous&gt; hi
+1:08 PM &lt;suraeNoether&gt; I wrote a thing: https://github.com/b-g-goodell/research-lab/blob/in-prep/publications/bulletins/MRL-0007-multisig/draft/MRL-0007-multisig.pdf
+1:08 PM &lt;suraeNoether&gt; seekin feedback, especially on proofs
+1:08 PM &lt;KnifeOfPi&gt; a wonderful thing it seems
+1:08 PM &lt;@fluffypony&gt; awesome
+1:08 PM &lt;@fluffypony&gt; also we merged pretty much everything we need for v0.12
+1:09 PM &lt;@fluffypony&gt; so final checks before we tag
+1:09 PM &lt;@fluffypony&gt; I'd imagine we tag tomorrow if all goes well
+1:09 PM &lt;anonimal&gt; #3431?
+1:09 PM &lt;medusa_&gt; so the height got moved by..2 weeks ?
+1:09 PM &lt;anonimal&gt; Not urgent, and anyone cloning the repo will probably be on master anyway.
+1:09 PM &lt;@fluffypony&gt; anonimal: we already branched so you'd have to PR to the branch
+1:09 PM &lt;@fluffypony&gt; medusa_: yes - everyone wanted to push it
+1:10 PM &lt;@fluffypony&gt; I wanted to push it to the anniversary date
+1:10 PM &lt;@fluffypony&gt; but alas
+1:10 PM &lt;@luigi1111&gt; Hey it was my suggestion
+1:10 PM &lt;@fluffypony&gt; it seems luigi1111 and I are the only ones who are serendipitous :-P
+1:10 PM → +monero (voiced) joined  
+1:10 PM &lt;+monero&gt; [monero] anonimal closed pull request #3431: README: add instructions for cloning / submodules (master...README) https://git.io/vx3cU
+1:10 PM ← +monero left (~monero@coreteam.getmonero.org)
+1:11 PM &lt;KnifeOfPi&gt; what happens when people accuse us of procrastination? "march hard fork isn't in march anymore"
+1:11 PM &lt;@fluffypony&gt; anonimal: lol no leave the master one open too :)
+1:11 PM &lt;@luigi1111&gt; We move fork to anniversary in future
+1:11 PM &lt;@fluffypony&gt; KnifeOfPi: I think this is going to be a permanent change to April / October
+1:11 PM — anonimal facepalms
+1:11 PM &lt;anonimal&gt; Sorry
+1:11 PM &lt;@fluffypony&gt; yes what luigi1111 said
+1:11 PM &lt;cryptochangement&gt; I see #3424 was merged, so I guess we are pushed back a week now?
+1:11 PM &lt;@fluffypony&gt; cryptochangement: yes
+1:11 PM &lt;@luigi1111&gt; This is a sorta asap fork for pow
+1:11 PM &lt;@luigi1111&gt; Not asap
+1:11 PM &lt;@luigi1111&gt; But soon
+1:11 PM &lt;@ArticMine&gt; Do we have a block number / date?
+1:11 PM &lt;cryptochangement&gt; an extra week isnt going to hurt anybody lol
+1:12 PM &lt;cryptochangement&gt; april 5
+1:12 PM &lt;dEBRUYNE&gt; It's 9 days actually
+1:12 PM &lt;@luigi1111&gt; Or 11
+1:12 PM &lt;cryptochangement&gt; 1546500 ArticMine
+1:12 PM &lt;gingeropolous&gt; well good thing we can do math
+1:12 PM &lt;+moneromooo&gt; 1546000
+1:12 PM &lt;@luigi1111&gt; Some of us can some of the time
+1:12 PM → +monero (voiced) joined  
+1:12 PM &lt;+monero&gt; [monero] anonimal reopened pull request #3431: README: add instructions for cloning / submodules (master...README) https://git.io/vx3cU
+1:12 PM ← +monero left (~monero@coreteam.getmonero.org)
+1:12 PM &lt;iDunk&gt; 1546000
+1:12 PM &lt;cryptochangement&gt; oops I just noticed that haha
+1:12 PM &lt;@fluffypony&gt; lol
+1:12 PM &lt;@fluffypony&gt; well I guess we really are amateurs after all :-P
+1:12 PM &lt;@fluffypony&gt; so that pretty much covers 3. March hardfork items + code freeze
+1:13 PM &lt;@fluffypony&gt; so I guess 4. Code + ticket discussion / Q &amp; A
+1:13 PM &lt;dEBRUYNE&gt; https://github.com/monero-project/monero/pull/3424 &lt;= Title is wrong there fwiw. Code says 1546000
+1:13 PM &lt;rbrunner&gt; Yes, that happens with 24 hour programming shifts
+1:13 PM &lt;rbrunner&gt; just before HF's
+1:13 PM &lt;rbrunner&gt; .)
+1:13 PM &lt;@fluffypony&gt; dEBRUYNE: "the truth is in the code"
+1:14 PM &lt;+hyc&gt; sourcecode never lies
+1:14 PM &lt;medusa_&gt; so when do we plan to build monerod more or less ?
+1:14 PM &lt;@fluffypony&gt; so I think the next week or two is full on last-minute-brokenness-checks for this extremely-last-minute-fork
+1:14 PM &lt;KnifeOfPi&gt; just to confirm for pinkphloid: to comply with the HF, wallets just need to set min ring size to 7 and sort inputs, right?
+1:15 PM &lt;@fluffypony&gt; medusa_: tag and release in the next day or so
+1:16 PM → +monero (voiced) joined  
+1:16 PM &lt;+monero&gt; [monero] anonimal opened pull request #3432: README: add instructions for cloning / submodules (release-v0.12...README) https://git.io/vx3cp
+1:16 PM ← +monero left (~monero@coreteam.getmonero.org)
+1:16 PM &lt;@luigi1111&gt; KnifeOfPi: yes
+1:16 PM &lt;KnifeOfPi&gt; and for clarity, how is this input-sorting to be done? i'm not familiar
+1:17 PM &lt;@luigi1111&gt; Interpret key image as integer
+1:17 PM &lt;@luigi1111&gt; I think
+1:17 PM &lt;KnifeOfPi&gt; ah, i see
+1:17 PM &lt;+moneromooo&gt; big endian
+1:17 PM &lt;KnifeOfPi&gt; so it's similar to BIP69?
+1:17 PM &lt;@fluffypony&gt; sort by the recipient's name
+1:17 PM &lt;@fluffypony&gt; :-P
+1:17 PM &lt;KnifeOfPi&gt; LOL
+1:17 PM &lt;dsc_&gt; I'd like to talk about the GUI black theme redesign
+1:18 PM &lt;@fluffypony&gt; dsc_: please do
+1:18 PM &lt;dsc_&gt; Planning to merge it into master this week - possibly tomorow.
+1:18 PM &lt;dsc_&gt; Since it's almost finished :P
+1:19 PM &lt;KnifeOfPi&gt; good work !
+1:19 PM &lt;dsc_&gt; I still have a week left of vacation too, so any bugs testers come up with, I could look at.
+1:19 PM &lt;Slack_1&gt; *needkovri90 lurks
+1:19 PM &lt;dsc_&gt; ~end update~
+1:19 PM &lt;@fluffypony&gt; we can push the GUI out a little later in the week
+1:19 PM &lt;@fluffypony&gt; to give time for that
+1:19 PM &lt;dsc_&gt; fluffypony: sure
+1:19 PM &lt;cryptochangement&gt; dope
+1:19 PM &lt;cryptochangement&gt; would that then complete you FFS?
+1:19 PM &lt;@fluffypony&gt; rbrunner: what needs to be done on the installer side?
+1:19 PM &lt;dsc_&gt; cryptochangement: Ill complete the FFS when it makes it into the bins
+1:20 PM &lt;medusa_&gt; we have 1 new dll rbrunner, not sure why but it is how it is
+1:20 PM &lt;rbrunner&gt; A few little things. I am working on it.
+1:20 PM &lt;medusa_&gt; its not part of win_deploy helper script yet unfortunately
+1:20 PM &lt;rbrunner&gt; Still have to sort out some DLL hell with my installation
+1:20 PM &lt;rbrunner&gt; to really check
+1:21 PM &lt;rbrunner&gt; libssp-0.dll, I think
+1:21 PM &lt;medusa_&gt; yes!
+1:21 PM &lt;rbrunner&gt; stack protectino related
+1:21 PM &lt;rbrunner&gt; and there are now 5 ICU DLLs, but that's about it
+1:22 PM &lt;rbrunner&gt; I hope I can finish and push tomorrow
+1:24 PM &lt;ErCiccione&gt; so when code freeze for the GUI? end of next week?
+1:24 PM &lt;@fluffypony&gt; ErCiccione: whenever the GUI workgroup say they're ready
+1:25 PM &lt;@binaryFate&gt; poor ErCiccione never getting a code freeze date :P
+1:25 PM &lt;KnifeOfPi&gt; lol
+1:25 PM &lt;ErCiccione&gt; ok, i only need few days for 1184
+1:25 PM &lt;medusa_&gt; we got a few more days, depends how the cli release goes too, its dynamic
+1:26 PM &lt;KnifeOfPi&gt; when moon? when lambo? when codefreeze?
+1:26 PM &lt;ErCiccione&gt; yes binaryfate, that was my weekly try :P
+1:26 PM &lt;rbrunner&gt; We are certainly all very "agile" here
+1:27 PM &lt;@fluffypony&gt; moneromooo is our scrum master
+1:27 PM &lt;medusa_&gt; ^^
+1:28 PM &lt;@fluffypony&gt; ok so
+1:28 PM &lt;@fluffypony&gt; 5. Any additional meeting items
+1:28 PM &lt;TheCharlatan&gt; Is there are a reason for keeping the cli dynamic?
+1:28 PM &lt;gingeropolous&gt; i was wondering if we could discuss our release / hard fork schedule?
+1:28 PM &lt;iDunk&gt; I used to build a fully static GUI 1-1.5 years ago.
+1:28 PM &lt;medusa_&gt; no i didnt mean the build TheCharlatan :D just that issues can arise out of nowehere, so the actual date of the dreeze isnt known rly
+1:29 PM &lt;medusa_&gt; sorry im confused
+1:29 PM &lt;iDunk&gt; But, IIRC, the opensource Qt version license forbids statically linking Qt libs.
+1:29 PM &lt;TheCharlatan&gt; lol, if so, bitcoin would operate illegally since years.
+1:30 PM &lt;iDunk&gt; We'd probably need to buy the license.
+1:30 PM &lt;rbrunner&gt; The CLI *is* statically linked?
+1:30 PM &lt;rbrunner&gt; But not the GUI
+1:30 PM &lt;pigeons&gt; you can build the cli statically linked or link it dynamically to shared libs
+1:30 PM &lt;iDunk&gt; Ah, yes, the cli is static.
+1:30 PM → doubleyousee23 joined (~doubleyou@cpe-72-227-89-58.ne.res.rr.com)
+1:31 PM &lt;@ArticMine&gt; There is no license problem with statically linking to QT libs. The resulting license would be LGPL v3
+1:31 PM &lt;Slack_1&gt; &lt;needkovri90&gt; Do we know the status of the Monero Observer and related FFS?
+1:31 PM &lt;anonimal&gt; fluffypony: I don't want to ruin the icing on the cake of #3429 with #3432. Are more commits expected to come for branch release-v0.12 (like for #3401)?
+1:31 PM &lt;Slack_1&gt; &lt;needkovri90&gt; Hasnt been updated for a while, and I link it in the xmrtrader daily threads
+1:31 PM &lt;gingeropolous&gt; basically, it seems we pack a lot into releases. And because of our hard forks, we've ended up cutting it close multiple times now, for this that or the other reason. Would there be any benefit to focusing on consensus critical stuff for hard fork releases, and adding soft-fork stuff in between?
+1:31 PM &lt;@fluffypony&gt; anonimal: we can have extra commits to the branch, don't stress about it
+1:31 PM &lt;Slack_1&gt; &lt;needkovri90&gt; If anyone has info, I would like to relay it to the subreddit.
+1:31 PM &lt;KnifeOfPi_&gt; needmoney90: i think monerooby_doo is busy with his family
+1:31 PM &lt;anonimal&gt; k
+1:31 PM &lt;KnifeOfPi_&gt; but monero observer should be back soon
+1:32 PM &lt;@fluffypony&gt; gingeropolous: I think the problem are the unknown unknowns
+1:32 PM &lt;Slack_1&gt; &lt;needkovri90&gt; Thanks KoP
+1:32 PM &lt;KnifeOfPi_&gt; you’re welcome
+1:32 PM &lt;TheCharlatan&gt; iDunk static linking qt should be fine as long as the licence used is gpl compatible.
+1:32 PM &lt;@fluffypony&gt; eg. we wouldn't have picked a fork point in December because of the risk
+1:33 PM &lt;iDunk&gt; I must have misread something then.
+1:33 PM &lt;gingeropolous&gt; fluffypony, true. from my perspective, it would just seem easier if, for instance, all we had to worry about breaking this release was the PoW and ringsize bump
+1:33 PM &lt;gingeropolous&gt; those are the consensus critical things.
+1:33 PM &lt;gingeropolous&gt; unless the sorted input one is too.. which it seems to be
+1:33 PM &lt;@fluffypony&gt; gingeropolous: we could
+1:34 PM &lt;+moneromooo&gt; It'll just add more work.
+1:34 PM &lt;@fluffypony&gt; we could've put out a point release in Jan but there weren't any critical bug fixes
+1:34 PM &lt;@fluffypony&gt; what moneromooo said
+1:34 PM &lt;gingeropolous&gt; yeah
+1:34 PM &lt;@fluffypony&gt; if we put out a release based off master every month that's just going to create so much more work
+1:34 PM &lt;gingeropolous&gt; if we had a mid fork release thing, then it'd be a whole nother round of the release work
+1:34 PM &lt;@fluffypony&gt; because then there are bugs and urgent fixes etc. etc.
+1:35 PM thrmo → bearrorist
+1:35 PM &lt;+moneromooo&gt; The coming release is special due to the unexpected need for a PoW change and key reuse mitigations.
+1:35 PM &lt;+moneromooo&gt; The next one is not expected to have those wrenches thrown at it.
+1:36 PM &lt;@fluffypony&gt; but it'll have other wrenches :-P
+1:36 PM &lt;gingeropolous&gt; well, i guess the thought is to partition efforts into consensus critical and non-consensus
+1:36 PM &lt;cryptochangement&gt; but there is always more unexpected to expect :P
+1:36 PM &lt;+moneromooo&gt; Maybe... :)
+1:36 PM &lt;gingeropolous&gt; but i guess that happens organically
+1:37 PM &lt;+moneromooo&gt; So what would you do exactly ? Get 0.11.1.0, merge just PoW change and ring size bump, and release that ?
+1:37 PM &lt;+moneromooo&gt; Then... another release with all the other stuff ?
+1:37 PM &lt;gingeropolous&gt; yeah, like 3 months ago
+1:37 PM &lt;gingeropolous&gt; subaddresses... whatever else happened
+1:38 PM &lt;KnifeOfPi_&gt; multisig
+1:38 PM &lt;+moneromooo&gt; 3 months ago would have been useless since we just recently merged the final PoW changes.
+1:38 PM &lt;gingeropolous&gt; no, i mean the soft forky stuff thats been sitting unused by testers
+1:38 PM &lt;gingeropolous&gt; testers i.e., users
+1:38 PM &lt;+moneromooo&gt; Well, if someone wants to test, they don't need a release.
+1:38 PM → p0nziph0ne joined (p0nziph0ne@gateway/vpn/privateinternetaccess/p0nziph0ne)
+1:39 PM &lt;gingeropolous&gt; well indeed ... but more stuff gets found when more ppl use it
+1:39 PM &lt;TheCharlatan&gt; if tests are run for every pr, ci is run on all platforms and everything can be cross compiled, it should be possible to have higher frequency releases, right?
+1:39 PM &lt;+moneromooo&gt; It'd be nice, but it requires more pony time.
+1:39 PM &lt;@fluffypony&gt; TheCharlatan: that already happens
+1:39 PM &lt;@fluffypony&gt; gingeropolous: but again, 3 months ago it was unstable
+1:39 PM &lt;gingeropolous&gt; simple. clone pony
+1:39 PM &lt;@fluffypony&gt; so you release
+1:39 PM &lt;+moneromooo&gt; Do it.
+1:40 PM &lt;@fluffypony&gt; and then everyone is trying to fix brokenness and merge PRs to master and branch
+1:40 PM &lt;+moneromooo&gt; Dolly the sheep, and not Fluffy the pony...
+1:40 PM &lt;+moneromooo&gt; now*
+1:40 PM &lt;@fluffypony&gt; I think that a nice cadence is tag-and-release 3 months before forkheight
+1:41 PM &lt;@fluffypony&gt; and then testers have bins and can test
+1:41 PM &lt;KnifeOfPi_&gt; tick-tock
+1:41 PM &lt;KnifeOfPi_&gt; basically
+1:41 PM &lt;iDunk&gt; TheCharlatan: can you make Depends not destructive to the current build system ?
+1:41 PM &lt;@fluffypony&gt; and emergency things like PoW change can be put into the branch
+1:41 PM &lt;+moneromooo&gt; Except... 3 months is a bit much now that we have to poke at PoW.
+1:41 PM &lt;gingeropolous&gt; ^^
+1:41 PM &lt;+moneromooo&gt; That gives evildoers 9 months.
+1:41 PM &lt;cryptochangement&gt; wasn't the idea of a 3 month code freeze brought up in september? whatever happened to that?
+1:42 PM &lt;gingeropolous&gt; hence, splitting consensus critical from feature stuff
+1:42 PM &lt;+moneromooo&gt; What does that have to do with it...
+1:42 PM &lt;rbrunner&gt; it ... melted away?
+1:42 PM &lt;@fluffypony&gt; cryptochangement: we were going to tag and release in December
+1:42 PM &lt;@fluffypony&gt; then we stalled that to make a decision on Bulletproofs
+1:42 PM &lt;@fluffypony&gt; and then the PoW thing happened
+1:42 PM &lt;cryptochangement&gt; ah ok
+1:42 PM &lt;TheCharlatan&gt; iDunk sure, I just messed up some things along the way. Probably commited a Makefile, that I was not supposed to commit.
+1:42 PM &lt;gingeropolous&gt; so stuff just needs to stop happening, and then we'll be on schedule
+1:42 PM &lt;@fluffypony&gt; it's an unusual set of circumstances
+1:43 PM &lt;@fluffypony&gt; gingeropolous: lol
+1:43 PM &lt;gingeropolous&gt; i'll make the PR
+1:43 PM ⇐ msvb-lab quit (~michael@x55b54176.dyn.telefonica.de) Ping timeout: 256 seconds
+1:43 PM &lt;@fluffypony&gt; but yes
+1:43 PM &lt;gingeropolous&gt; well, just wanted to kick the tires on it.
+1:43 PM &lt;@fluffypony&gt; from this I'd like us to go back to 3mths
+1:44 PM &lt;@binaryFate&gt; "go back" did we ever do it?
+1:44 PM &lt;medusa_&gt; well together with the pint releases, frequency can be quite high
+1:44 PM &lt;@fluffypony&gt; moneromooo: if we merged the PoW changes 3 months before fork point that's fine, tho
+1:44 PM &lt;@fluffypony&gt; binaryFate: go back to the idea of 3 months I mean
+1:45 PM &lt;@fluffypony&gt; ok we can continue this discussion later, I think we have a solid path forward
+1:45 PM &lt;@fluffypony&gt; 6. Confirm next meeting date/time
+1:46 PM &lt;+moneromooo&gt; You'd want them to be in github for a bit though, so people like schernyk (IIRC) can see it.
+1:46 PM &lt;+moneromooo&gt; So that means PoW changes known before 3 months early.
+1:46 PM &lt;@fluffypony&gt; is everyone ok for next Sunday? the once-a-week cadence is nice until fork
+1:46 PM &lt;@fluffypony&gt; moneromooo: good point
+1:46 PM &lt;@ArticMine&gt; Sure
+1:46 PM &lt;@fluffypony&gt; moneromooo: let's think about it and figure it out
+1:46 PM — anonimal ok
+1:46 PM &lt;rbrunner&gt; Ok
+1:46 PM &lt;@fluffypony&gt; thanks for the meeting guys
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+      
+  <div class="bstag field field--name-field-tags field--type-entity-reference field--label-above">
+    <div class="field--label">Tags</div>
+          <div class="field--items">
+              <div class="field--item"><a href="../taxonomy/term/1.html" property="schema:about" hreflang="en">DevMeeting</a></div>
+              </div>
+      </div>
+
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                              <aside class="col-sm-3" role="complementary">
+              <div class="region region-sidebar-second">
+    
+<div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-monerobasebs-search" role="search">
+  
+      <h2 class="visually-hidden">Search</h2>
+    
+      <form action="https://monerobase.com/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" /><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only" name=""><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions--2"></div>
+
+</form>
+
+  </div>
+
+  </div>
+
+          </aside>
+                  </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <nav role="navigation" aria-labelledby="block-monerobasebs-footer-menu" id="block-monerobasebs-footer">
+            
+  <h2 class="visually-hidden" id="block-monerobasebs-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                      <li class="first last">
+                                        <a href="../../contact.html" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"\/search\/node":true},"statistics":{"data":{"nid":"5"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"6e8b9e2018e56017e45be6781217b2cd0b2bbc3b78d0c3e3ba56d47f547db4ee"}}</script>
+<script src="../../sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
+<script src="../../sites/default/files/js/js_f2fH9USt37hLTTE1fyT7CjmcVvMC7SAlrilqRnW_-PY.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../sites/default/files/js/js_i5SBX_d9v80iNxz7wZqRTlzbBTI23wO1LUsxHUToGTY.js"></script>
+
+  </body>
+</html>
